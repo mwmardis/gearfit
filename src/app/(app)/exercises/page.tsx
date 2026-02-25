@@ -1,8 +1,7 @@
-export default function ExercisesPage() {
-  return (
-    <div>
-      <h1 className="text-2xl font-bold">Exercises</h1>
-      <p className="text-muted-foreground">Browse the exercise library</p>
-    </div>
-  );
+import { getExercises } from "@/lib/actions/exercises";
+import { ExercisesPageClient } from "./client";
+
+export default async function ExercisesPage() {
+  const exercises = await getExercises();
+  return <ExercisesPageClient initialExercises={exercises} />;
 }
