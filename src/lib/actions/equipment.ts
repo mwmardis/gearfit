@@ -56,7 +56,7 @@ export async function createEquipmentProfile(formData: FormData) {
     .select()
     .single();
 
-  if (error) return { error: error.message };
+  if (error) throw new Error(error.message);
 
   if (equipmentIds.length > 0) {
     const items = equipmentIds.map((equipment_id) => ({
@@ -67,11 +67,10 @@ export async function createEquipmentProfile(formData: FormData) {
       .from("equipment_profile_items")
       .insert(items);
 
-    if (itemsError) return { error: itemsError.message };
+    if (itemsError) throw new Error(itemsError.message);
   }
 
   revalidatePath("/equipment");
-  return { success: true };
 }
 
 export async function setActiveProfile(profileId: string) {
@@ -81,10 +80,9 @@ export async function setActiveProfile(profileId: string) {
     .update({ is_active: true })
     .eq("id", profileId);
 
-  if (error) return { error: error.message };
+  if (error) throw new Error(error.message);
 
   revalidatePath("/equipment");
-  return { success: true };
 }
 
 export async function deleteEquipmentProfile(profileId: string) {
@@ -94,8 +92,7 @@ export async function deleteEquipmentProfile(profileId: string) {
     .delete()
     .eq("id", profileId);
 
-  if (error) return { error: error.message };
+  if (error) throw new Error(error.message);
 
   revalidatePath("/equipment");
-  return { success: true };
 }
