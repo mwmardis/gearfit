@@ -3,7 +3,10 @@
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 
-export async function signUp(formData: FormData) {
+export async function signUp(
+  _prevState: { error: string },
+  formData: FormData
+) {
   const supabase = await createClient();
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
@@ -18,13 +21,16 @@ export async function signUp(formData: FormData) {
   });
 
   if (error) {
-    throw new Error(error.message);
+    return { error: error.message };
   }
 
   redirect("/");
 }
 
-export async function signIn(formData: FormData) {
+export async function signIn(
+  _prevState: { error: string },
+  formData: FormData
+) {
   const supabase = await createClient();
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
@@ -35,7 +41,7 @@ export async function signIn(formData: FormData) {
   });
 
   if (error) {
-    throw new Error(error.message);
+    return { error: error.message };
   }
 
   redirect("/");

@@ -1,3 +1,6 @@
+"use client";
+
+import { useActionState } from "react";
 import { signUp } from "@/lib/actions/auth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,6 +15,8 @@ import {
 import Link from "next/link";
 
 export default function SignupPage() {
+  const [state, action, isPending] = useActionState(signUp, { error: "" });
+
   return (
     <div className="flex min-h-screen items-center justify-center p-4">
       <Card className="w-full max-w-sm">
@@ -20,7 +25,7 @@ export default function SignupPage() {
           <CardDescription>Create your account</CardDescription>
         </CardHeader>
         <CardContent>
-          <form className="space-y-4">
+          <form action={action} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="displayName">Display Name</Label>
               <Input
@@ -44,8 +49,11 @@ export default function SignupPage() {
                 minLength={6}
               />
             </div>
-            <Button formAction={signUp} className="w-full">
-              Create Account
+            {state.error && (
+              <p className="text-sm text-destructive">{state.error}</p>
+            )}
+            <Button type="submit" className="w-full" disabled={isPending}>
+              {isPending ? "Creating account..." : "Create Account"}
             </Button>
           </form>
           <p className="mt-4 text-center text-sm text-muted-foreground">
