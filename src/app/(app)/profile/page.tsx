@@ -1,8 +1,14 @@
-export default function ProfilePage() {
-  return (
-    <div>
-      <h1 className="text-2xl font-bold">Profile</h1>
-      <p className="text-muted-foreground">Your account settings</p>
-    </div>
-  );
+import { getProfile } from "@/lib/actions/profile";
+import { createClient } from "@/lib/supabase/server";
+import { ProfileForm } from "./client";
+
+export default async function ProfilePage() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  const profile = await getProfile();
+
+  return <ProfileForm profile={profile} email={user!.email ?? ""} />;
 }
