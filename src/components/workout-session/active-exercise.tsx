@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Plus } from "lucide-react";
+import { Plus, TrendingUp } from "lucide-react";
 import { SetLogger } from "./set-logger";
 
 interface PreviousSet {
@@ -29,6 +29,7 @@ interface ActiveExerciseProps {
   previousSets: PreviousSet[] | null;
   loggedSets: LoggedSet[];
   onLogSet: (exerciseId: string, setNumber: number, weight: number, reps: number) => void;
+  suggestIncrease?: boolean;
 }
 
 export function ActiveExercise({
@@ -40,6 +41,7 @@ export function ActiveExercise({
   previousSets,
   loggedSets,
   onLogSet,
+  suggestIncrease,
 }: ActiveExerciseProps) {
   const [extraSets, setExtraSets] = useState(0);
   const totalSets = targetSets + extraSets;
@@ -65,6 +67,12 @@ export function ActiveExercise({
         </p>
       </CardHeader>
       <CardContent className="space-y-2">
+        {suggestIncrease && (
+          <div className="flex items-center gap-2 rounded-md border border-green-500/30 bg-green-50 p-2 text-xs text-green-700 dark:bg-green-950/20 dark:text-green-400">
+            <TrendingUp className="h-4 w-4 shrink-0" />
+            You&apos;ve hit your target for 3 sessions — try adding 5 lbs!
+          </div>
+        )}
         {Array.from({ length: totalSets }, (_, i) => {
           const setNumber = i + 1;
           const previous = previousSets?.find(

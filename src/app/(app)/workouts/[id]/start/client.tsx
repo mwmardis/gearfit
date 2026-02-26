@@ -37,6 +37,7 @@ interface ActiveWorkoutClientProps {
   templateName: string;
   templateExercises: TemplateExercise[];
   previousSetsMap: Record<string, PreviousSet[] | null>;
+  overloadMap: Record<string, boolean>;
 }
 
 export function ActiveWorkoutClient({
@@ -44,6 +45,7 @@ export function ActiveWorkoutClient({
   templateName,
   templateExercises,
   previousSetsMap,
+  overloadMap,
 }: ActiveWorkoutClientProps) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
@@ -129,6 +131,7 @@ export function ActiveWorkoutClient({
             previousSets={previousSetsMap[te.exercise_id] ?? null}
             loggedSets={loggedSets[te.exercise_id] ?? []}
             onLogSet={handleLogSet}
+            suggestIncrease={overloadMap[te.exercise_id] ?? false}
           />
         ))}
       </div>
