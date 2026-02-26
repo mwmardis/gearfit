@@ -11,9 +11,9 @@ export default async function HistoryPage() {
     getTrainingStreak(),
   ]);
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return (
     <HistoryClient
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       initialSessions={sessions as any}
       initialYear={year}
       initialMonth={month}
