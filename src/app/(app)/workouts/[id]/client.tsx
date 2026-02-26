@@ -1,12 +1,13 @@
 "use client";
 
-import { useTransition } from "react";
+import { useState, useTransition } from "react";
 import { Button } from "@/components/ui/button";
 import { TemplateExerciseList } from "@/components/workouts/template-exercise-list";
 import { AddExerciseDialog } from "@/components/workouts/add-exercise-dialog";
 import { cloneTemplate, deleteTemplate } from "@/lib/actions/templates";
+import { toggleShareTemplate } from "@/lib/actions/sharing";
 import Link from "next/link";
-import { Copy, Trash2, Play } from "lucide-react";
+import { Copy, Trash2, Play, Share2, Check } from "lucide-react";
 
 interface Exercise {
   id: string;
@@ -39,6 +40,8 @@ interface TemplateDetailClientProps {
     id: string;
     name: string;
     description: string | null;
+    is_shared: boolean;
+    share_token: string | null;
     template_exercises: TemplateExercise[];
   };
   allExercises: Exercise[];
@@ -49,6 +52,9 @@ export function TemplateDetailClient({
   allExercises,
 }: TemplateDetailClientProps) {
   const [isPending, startTransition] = useTransition();
+  const [isShared, setIsShared] = useState(template.is_shared);
+  const [shareToken, setShareToken] = useState(template.share_token);
+  const [copied, setCopied] = useState(false);
 
   const existingExerciseIds = template.template_exercises.map(
     (te) => te.exercise_id
@@ -64,6 +70,20 @@ export function TemplateDetailClient({
     if (!confirm("Delete this workout template? This cannot be undone.")) return;
     startTransition(async () => {
       await deleteTemplate(template.id);
+    });
+  }
+
+  function handleShare() {
+    startTransition(async () => {
+      const result = await toggleShareTemplate(template.id);
+      setIsShared(result.shared);
+      if (result.shareToken) {
+        setShareToken(result.shareToken);
+        const url = `${window.location.origin}/share/${result.shareToken}`;
+        await navigator.clipboard.writeText(url);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      }
     });
   }
 
@@ -94,6 +114,18 @@ export function TemplateDetailClient({
           existingExerciseIds={existingExerciseIds}
         />
         <Button
+          variant={isShared ? "default" : "outline"}
+          disabled={isPending}
+          onClick={handleShare}
+        >
+          {copied ? (
+            <Check className="mr-2 h-4 w-4" />
+          ) : (
+            <Share2 className="mr-2 h-4 w-4" />
+          )}
+          {copied ? "Link Copied!" : isShared ? "Unshare" : "Share"}
+        </Button>
+        <Button
           variant="outline"
           disabled={isPending}
           onClick={handleClone}
@@ -111,6 +143,12 @@ export function TemplateDetailClient({
           Delete
         </Button>
       </div>
+
+      {isShared && shareToken && (
+        <p className="text-xs text-muted-foreground">
+          Shared at: /share/{shareToken}
+        </p>
+      )}
 
       <TemplateExerciseList
         templateId={template.id}
