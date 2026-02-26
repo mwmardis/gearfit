@@ -4,6 +4,7 @@ import {
   getLastSessionForExercise,
 } from "@/lib/actions/sessions";
 import { getExerciseHistory } from "@/lib/actions/history";
+import { getExercises } from "@/lib/actions/exercises";
 import { shouldSuggestIncrease } from "@/lib/utils/progressive-overload";
 import { ActiveWorkoutClient } from "./client";
 import { notFound } from "next/navigation";
@@ -24,8 +25,11 @@ export default async function StartWorkoutPage({
     notFound();
   }
 
-  // Create a new session
-  const session = await startSession(id);
+  // Create a new session and fetch all exercises for swapping
+  const [session, allExercises] = await Promise.all([
+    startSession(id),
+    getExercises(),
+  ]);
 
   // Fetch previous session data and overload hints for each exercise
   const previousSetsMap: Record<
@@ -62,6 +66,7 @@ export default async function StartWorkoutPage({
       templateExercises={template.template_exercises}
       previousSetsMap={previousSetsMap}
       overloadMap={overloadMap}
+      allExercises={allExercises}
     />
   );
 }

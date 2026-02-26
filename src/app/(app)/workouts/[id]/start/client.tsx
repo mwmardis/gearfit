@@ -4,6 +4,7 @@ import { useState, useEffect, useTransition, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { ActiveExercise } from "@/components/workout-session/active-exercise";
 import { FinishWorkoutDialog } from "@/components/workout-session/finish-workout-dialog";
+import { SwapExerciseDialog } from "@/components/workout-session/swap-exercise-dialog";
 import { logSet, finishSession } from "@/lib/actions/sessions";
 import { Timer } from "lucide-react";
 
@@ -32,12 +33,25 @@ interface LoggedSet {
   reps: number;
 }
 
+interface AllExercise {
+  id: string;
+  name: string;
+  exercise_muscles: {
+    role: string;
+    muscle: { name: string; muscle_group: string } | null;
+  }[];
+  exercise_equipment: {
+    equipment: { name: string } | null;
+  }[];
+}
+
 interface ActiveWorkoutClientProps {
   sessionId: string;
   templateName: string;
   templateExercises: TemplateExercise[];
   previousSetsMap: Record<string, PreviousSet[] | null>;
   overloadMap: Record<string, boolean>;
+  allExercises: AllExercise[];
 }
 
 export function ActiveWorkoutClient({
@@ -46,6 +60,7 @@ export function ActiveWorkoutClient({
   templateExercises,
   previousSetsMap,
   overloadMap,
+  allExercises,
 }: ActiveWorkoutClientProps) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
@@ -53,6 +68,10 @@ export function ActiveWorkoutClient({
   const [elapsed, setElapsed] = useState(0);
   const [loggedSets, setLoggedSets] = useState<
     Record<string, LoggedSet[]>
+  >({});
+  // Track swapped exercises: templateExerciseId -> { exerciseId, exerciseName }
+  const [swaps, setSwaps] = useState<
+    Record<string, { exerciseId: string; exerciseName: string }>
   >({});
 
   useEffect(() => {
@@ -120,20 +139,39 @@ export function ActiveWorkoutClient({
 
       {/* Exercise cards */}
       <div className="space-y-4">
-        {templateExercises.map((te) => (
-          <ActiveExercise
-            key={te.id}
-            exerciseId={te.exercise_id}
-            exerciseName={te.exercise?.name ?? "Unknown Exercise"}
-            targetSets={te.target_sets}
-            targetReps={te.target_reps}
-            targetWeight={te.target_weight}
-            previousSets={previousSetsMap[te.exercise_id] ?? null}
-            loggedSets={loggedSets[te.exercise_id] ?? []}
-            onLogSet={handleLogSet}
-            suggestIncrease={overloadMap[te.exercise_id] ?? false}
-          />
-        ))}
+        {templateExercises.map((te) => {
+          const swap = swaps[te.id];
+          const exerciseId = swap?.exerciseId ?? te.exercise_id;
+          const exerciseName = swap?.exerciseName ?? te.exercise?.name ?? "Unknown Exercise";
+
+          return (
+            <ActiveExercise
+              key={te.id}
+              exerciseId={exerciseId}
+              exerciseName={exerciseName}
+              targetSets={te.target_sets}
+              targetReps={te.target_reps}
+              targetWeight={te.target_weight}
+              previousSets={previousSetsMap[exerciseId] ?? null}
+              loggedSets={loggedSets[exerciseId] ?? []}
+              onLogSet={handleLogSet}
+              suggestIncrease={overloadMap[exerciseId] ?? false}
+              swapSlot={
+                <SwapExerciseDialog
+                  currentExerciseId={exerciseId}
+                  currentExerciseName={exerciseName}
+                  allExercises={allExercises}
+                  onSwap={(newId, newName) =>
+                    setSwaps((prev) => ({
+                      ...prev,
+                      [te.id]: { exerciseId: newId, exerciseName: newName },
+                    }))
+                  }
+                />
+              }
+            />
+          );
+        })}
       </div>
 
       {/* Finish button */}

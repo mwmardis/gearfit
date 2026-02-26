@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { type ReactNode } from "react";
 import { Plus, TrendingUp } from "lucide-react";
 import { SetLogger } from "./set-logger";
 
@@ -30,6 +31,7 @@ interface ActiveExerciseProps {
   loggedSets: LoggedSet[];
   onLogSet: (exerciseId: string, setNumber: number, weight: number, reps: number) => void;
   suggestIncrease?: boolean;
+  swapSlot?: ReactNode;
 }
 
 export function ActiveExercise({
@@ -42,6 +44,7 @@ export function ActiveExercise({
   loggedSets,
   onLogSet,
   suggestIncrease,
+  swapSlot,
 }: ActiveExerciseProps) {
   const [extraSets, setExtraSets] = useState(0);
   const totalSets = targetSets + extraSets;
@@ -61,10 +64,13 @@ export function ActiveExercise({
             {completedCount}/{totalSets}
           </Badge>
         </div>
-        <p className="text-xs text-muted-foreground">
-          Target: {targetSets} × {targetReps}
-          {targetWeight ? ` @ ${targetWeight} lbs` : ""}
-        </p>
+        <div className="flex items-center justify-between">
+          <p className="text-xs text-muted-foreground">
+            Target: {targetSets} × {targetReps}
+            {targetWeight ? ` @ ${targetWeight} lbs` : ""}
+          </p>
+          {swapSlot}
+        </div>
       </CardHeader>
       <CardContent className="space-y-2">
         {suggestIncrease && (
