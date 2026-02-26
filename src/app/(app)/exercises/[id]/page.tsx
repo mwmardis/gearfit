@@ -1,6 +1,8 @@
 import { getExercise } from "@/lib/actions/exercises";
+import { getExerciseHistory, getPersonalBests } from "@/lib/actions/history";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ExerciseProgressChart } from "@/components/exercises/exercise-progress-chart";
 import { notFound } from "next/navigation";
 
 interface ExerciseDetailPageProps {
@@ -17,6 +19,11 @@ export default async function ExerciseDetailPage({
   } catch {
     notFound();
   }
+
+  const [history, personalBests] = await Promise.all([
+    getExerciseHistory(id),
+    getPersonalBests(id),
+  ]);
 
   const primaryMuscles = exercise.exercise_muscles
     .filter((em: { role: string }) => em.role === "primary")
@@ -100,6 +107,8 @@ export default async function ExerciseDetailPage({
           </div>
         </CardContent>
       </Card>
+
+      <ExerciseProgressChart data={history} personalBests={personalBests} />
     </div>
   );
 }
