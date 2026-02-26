@@ -6,6 +6,7 @@ import { signOut } from "@/lib/actions/auth";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { ThemeToggle } from "@/components/theme-toggle";
 import {
   LayoutDashboard,
   Dumbbell,
@@ -71,6 +72,7 @@ export function Sidebar({ user, profile }: SidebarProps) {
             {profile?.display_name ?? user.email}
           </p>
         </div>
+        <ThemeToggle />
         <form action={signOut}>
           <Button variant="ghost" size="icon" type="submit" className="h-8 w-8">
             <LogOut className="h-4 w-4" />
