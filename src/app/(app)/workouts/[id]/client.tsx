@@ -115,9 +115,10 @@ export function TemplateDetailClient({
         equipmentProfileName={equipmentProfileName}
         equipmentNames={equipmentNames}
         templateId={template.id}
-        existingExerciseNames={template.template_exercises.map(
-          (te: { exercise: { name: string } }) => te.exercise.name
-        )}
+        existingExerciseNames={template.template_exercises
+          .filter((te) => te.exercise !== null)
+          .map((te) => te.exercise!.name)
+        }
         nextOrderIndex={template.template_exercises.length}
       />
 

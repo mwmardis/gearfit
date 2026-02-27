@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { normalizeMuscleNames } from "../ai";
+import { normalizeMuscleNames } from "@/lib/validators/muscles";
 
 const DB_MUSCLES = [
   "Chest", "Triceps", "Biceps", "Forearms",

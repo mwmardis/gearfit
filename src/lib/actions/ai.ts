@@ -4,16 +4,7 @@ import { createClient } from "@/lib/supabase/server";
 import { revalidatePath } from "next/cache";
 import type { GeminiExerciseSuggestion } from "@/lib/ai/types";
 
-export function normalizeMuscleNames(
-  names: string[],
-  dbMuscleNames: string[]
-): string[] {
-  return names
-    .map((name) =>
-      dbMuscleNames.find((db) => db.toLowerCase() === name.toLowerCase())
-    )
-    .filter((n): n is string => n !== undefined);
-}
+import { normalizeMuscleNames } from "@/lib/validators/muscles";
 
 export async function createExerciseFromSuggestion(
   suggestion: GeminiExerciseSuggestion,
