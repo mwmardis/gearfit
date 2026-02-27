@@ -5,6 +5,7 @@ import { MuscleCoverage } from "@/components/dashboard/muscle-coverage";
 import { TodaysWorkout } from "@/components/dashboard/todays-workout";
 import { RecentSessions } from "@/components/dashboard/recent-sessions";
 import { QuickActions } from "@/components/dashboard/quick-actions";
+import { Flame } from "lucide-react";
 
 export default async function DashboardPage() {
   const supabase = await createClient();
@@ -15,7 +16,6 @@ export default async function DashboardPage() {
   const [coverage, templates, recentSessionsData] = await Promise.all([
     getWeeklyMuscleCoverage(),
     getTemplates(),
-    // Fetch last 5 completed sessions
     supabase
       .from("workout_sessions")
       .select(
@@ -33,10 +33,8 @@ export default async function DashboardPage() {
       .limit(5),
   ]);
 
-  // Most recently updated template for "today's workout"
   const todaysTemplate = templates.length > 0 ? templates[0] : null;
 
-  // Format recent sessions
   const recentSessions = (recentSessionsData.data ?? []).map((s) => ({
     id: s.id,
     date: s.date,
@@ -45,20 +43,37 @@ export default async function DashboardPage() {
     totalSets: (s.session_sets as unknown as { id: string }[]).length,
   }));
 
+  const firstName = user?.user_metadata?.display_name?.split(" ")[0] ?? "there";
+
   return (
-    <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold">Dashboard</h1>
-        <p className="text-muted-foreground">Welcome to GearFit</p>
+    <div className="stagger-children space-y-8">
+      {/* Hero greeting */}
+      <div className="relative">
+        <div className="flex items-center gap-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-energy shadow-lg">
+            <Flame className="h-5 w-5 text-white" />
+          </div>
+          <div>
+            <h1 className="font-display text-3xl font-extrabold tracking-tight">
+              Hey, <span className="gradient-text">{firstName}</span>
+            </h1>
+            <p className="text-sm text-muted-foreground">
+              Let&apos;s crush it today
+            </p>
+          </div>
+        </div>
       </div>
 
+      {/* Today's workout — hero card */}
       <TodaysWorkout template={todaysTemplate} />
 
-      <div className="grid gap-4 md:grid-cols-2">
+      {/* Two-column grid */}
+      <div className="grid gap-6 md:grid-cols-2">
         <MuscleCoverage coverage={coverage} />
         <QuickActions />
       </div>
 
+      {/* Recent sessions */}
       <RecentSessions sessions={recentSessions} />
     </div>
   );
