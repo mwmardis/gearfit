@@ -96,3 +96,53 @@ export async function deleteEquipmentProfile(profileId: string) {
 
   revalidatePath("/equipment");
 }
+
+const VALID_CATEGORIES = [
+  "free_weights",
+  "benches",
+  "racks",
+  "machines",
+  "bodyweight",
+  "accessories",
+] as const;
+
+export function validateCustomEquipmentInput(
+  name: string,
+  category: string
+): { valid: boolean; error?: string } {
+  if (!name || name.trim().length === 0) {
+    return { valid: false, error: "Equipment name is required" };
+  }
+  if (name.length > 100) {
+    return { valid: false, error: "Equipment name must be 100 characters or less" };
+  }
+  if (!VALID_CATEGORIES.includes(category as (typeof VALID_CATEGORIES)[number])) {
+    return { valid: false, error: "Invalid equipment category" };
+  }
+  return { valid: true };
+}
+
+export async function createCustomEquipment(formData: FormData) {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) throw new Error("Not authenticated");
+
+  const name = (formData.get("name") as string).trim();
+  const category = formData.get("category") as string;
+
+  const validation = validateCustomEquipmentInput(name, category);
+  if (!validation.valid) throw new Error(validation.error);
+
+  const { data, error } = await supabase
+    .from("equipment")
+    .insert({ name, category, is_custom: true, created_by: user.id })
+    .select()
+    .single();
+
+  if (error) throw new Error(error.message);
+
+  revalidatePath("/equipment");
+  return data;
+}
