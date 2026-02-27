@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { validateCustomEquipmentInput } from "../equipment";
+import { validateCustomEquipmentInput } from "@/lib/validators/equipment";
 
 describe("validateCustomEquipmentInput", () => {
   it("rejects empty name", () => {

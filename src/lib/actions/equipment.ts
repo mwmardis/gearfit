@@ -97,30 +97,9 @@ export async function deleteEquipmentProfile(profileId: string) {
   revalidatePath("/equipment");
 }
 
-const VALID_CATEGORIES = [
-  "free_weights",
-  "benches",
-  "racks",
-  "machines",
-  "bodyweight",
-  "accessories",
-] as const;
+import { validateCustomEquipmentInput } from "@/lib/validators/equipment";
 
-export function validateCustomEquipmentInput(
-  name: string,
-  category: string
-): { valid: boolean; error?: string } {
-  if (!name || name.trim().length === 0) {
-    return { valid: false, error: "Equipment name is required" };
-  }
-  if (name.length > 100) {
-    return { valid: false, error: "Equipment name must be 100 characters or less" };
-  }
-  if (!VALID_CATEGORIES.includes(category as (typeof VALID_CATEGORIES)[number])) {
-    return { valid: false, error: "Invalid equipment category" };
-  }
-  return { valid: true };
-}
+export { validateCustomEquipmentInput };
 
 export async function createCustomEquipment(formData: FormData) {
   const supabase = await createClient();
@@ -129,8 +108,10 @@ export async function createCustomEquipment(formData: FormData) {
   } = await supabase.auth.getUser();
   if (!user) throw new Error("Not authenticated");
 
-  const name = (formData.get("name") as string).trim();
-  const category = formData.get("category") as string;
+  const rawName = formData.get("name");
+  const name = typeof rawName === "string" ? rawName.trim() : "";
+  const rawCategory = formData.get("category");
+  const category = typeof rawCategory === "string" ? rawCategory : "";
 
   const validation = validateCustomEquipmentInput(name, category);
   if (!validation.valid) throw new Error(validation.error);
