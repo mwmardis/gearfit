@@ -1,7 +1,10 @@
 "use client";
 
-import { useTransition } from "react";
-import { createEquipmentProfile } from "@/lib/actions/equipment";
+import { useState, useTransition } from "react";
+import {
+  createEquipmentProfile,
+  createCustomEquipment,
+} from "@/lib/actions/equipment";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -29,6 +32,9 @@ export function EquipmentProfileForm({
   onClose,
 }: EquipmentProfileFormProps) {
   const [isPending, startTransition] = useTransition();
+  const [customName, setCustomName] = useState("");
+  const [customCategory, setCustomCategory] = useState("accessories");
+  const [newEquipmentIds, setNewEquipmentIds] = useState<string[]>([]);
 
   const grouped = equipment.reduce(
     (acc, item) => {
@@ -39,6 +45,17 @@ export function EquipmentProfileForm({
     },
     {} as Record<string, Equipment[]>
   );
+
+  async function handleAddCustom() {
+    const formData = new FormData();
+    formData.set("name", customName);
+    formData.set("category", customCategory);
+    startTransition(async () => {
+      const newEquipment = await createCustomEquipment(formData);
+      setNewEquipmentIds((prev) => [...prev, newEquipment.id]);
+      setCustomName("");
+    });
+  }
 
   function handleSubmit(formData: FormData) {
     startTransition(async () => {
@@ -60,6 +77,39 @@ export function EquipmentProfileForm({
       </div>
       <div className="space-y-4">
         <Label>Available Equipment</Label>
+        <div className="space-y-2 border-b pb-4 mb-4">
+          <label className="text-sm font-medium">Add Custom Equipment</label>
+          <div className="flex gap-2">
+            <Input
+              placeholder="e.g. TRX Bands"
+              value={customName}
+              onChange={(e) => setCustomName(e.target.value)}
+              className="flex-1"
+            />
+            <select
+              value={customCategory}
+              onChange={(e) => setCustomCategory(e.target.value)}
+              className="rounded-md border px-2 text-sm"
+            >
+              {Object.entries(categoryLabels).map(([key, label]) => (
+                <option key={key} value={key}>
+                  {label}
+                </option>
+              ))}
+            </select>
+            <Button
+              type="button"
+              size="sm"
+              onClick={handleAddCustom}
+              disabled={!customName.trim() || isPending}
+            >
+              Add
+            </Button>
+          </div>
+        </div>
+        {newEquipmentIds.map((id) => (
+          <input key={id} type="hidden" name="equipment" value={id} />
+        ))}
         {Object.entries(grouped).map(([category, items]) => (
           <div key={category}>
             <h4 className="mb-2 text-sm font-medium text-muted-foreground">
