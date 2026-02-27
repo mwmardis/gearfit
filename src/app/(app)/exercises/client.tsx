@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { ExerciseFilters } from "@/components/exercises/exercise-filters";
 import { ExerciseCard } from "@/components/exercises/exercise-card";
+import { AICopilotPanel } from "@/components/ai/ai-copilot-panel";
 
 interface Exercise {
   id: string;
@@ -18,10 +19,14 @@ interface Exercise {
 
 interface ExercisesPageClientProps {
   initialExercises: Exercise[];
+  equipmentProfileName: string | null;
+  equipmentNames: string[];
 }
 
 export function ExercisesPageClient({
   initialExercises,
+  equipmentProfileName,
+  equipmentNames,
 }: ExercisesPageClientProps) {
   const [search, setSearch] = useState("");
   const [muscleGroup, setMuscleGroup] = useState("");
@@ -61,6 +66,11 @@ export function ExercisesPageClient({
         onSearchChange={setSearch}
         onMuscleGroupChange={setMuscleGroup}
         onAvailableOnlyChange={setAvailableOnly}
+      />
+
+      <AICopilotPanel
+        equipmentProfileName={equipmentProfileName}
+        equipmentNames={equipmentNames}
       />
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
