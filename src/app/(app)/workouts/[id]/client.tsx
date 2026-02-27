@@ -8,6 +8,7 @@ import { cloneTemplate, deleteTemplate } from "@/lib/actions/templates";
 import { toggleShareTemplate } from "@/lib/actions/sharing";
 import Link from "next/link";
 import { Copy, Trash2, Play, Share2, Check } from "lucide-react";
+import { AICopilotPanel } from "@/components/ai/ai-copilot-panel";
 
 interface Exercise {
   id: string;
@@ -45,11 +46,15 @@ interface TemplateDetailClientProps {
     template_exercises: TemplateExercise[];
   };
   allExercises: Exercise[];
+  equipmentProfileName: string | null;
+  equipmentNames: string[];
 }
 
 export function TemplateDetailClient({
   template,
   allExercises,
+  equipmentProfileName,
+  equipmentNames,
 }: TemplateDetailClientProps) {
   const [isPending, startTransition] = useTransition();
   const [isShared, setIsShared] = useState(template.is_shared);
@@ -105,6 +110,16 @@ export function TemplateDetailClient({
           </Button>
         </div>
       </div>
+
+      <AICopilotPanel
+        equipmentProfileName={equipmentProfileName}
+        equipmentNames={equipmentNames}
+        templateId={template.id}
+        existingExerciseNames={template.template_exercises.map(
+          (te: { exercise: { name: string } }) => te.exercise.name
+        )}
+        nextOrderIndex={template.template_exercises.length}
+      />
 
       <div className="flex gap-2">
         <AddExerciseDialog
