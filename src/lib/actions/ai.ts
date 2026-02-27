@@ -93,3 +93,57 @@ export async function createExerciseFromSuggestion(
   revalidatePath("/exercises");
   return exercise;
 }
+
+export async function saveSuggestion(
+  suggestion: GeminiExerciseSuggestion & {
+    existingExerciseId?: string;
+    workoutType: string;
+  }
+) {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) throw new Error("Not authenticated");
+
+  const { error } = await supabase.from("saved_ai_suggestions").insert({
+    user_id: user.id,
+    exercise_name: suggestion.name,
+    exercise_id: suggestion.existingExerciseId ?? null,
+    primary_muscles: suggestion.primaryMuscles,
+    secondary_muscles: suggestion.secondaryMuscles,
+    suggested_sets: suggestion.suggestedSets,
+    suggested_reps: suggestion.suggestedReps,
+    description: suggestion.description,
+    instructions: suggestion.instructions,
+    workout_type: suggestion.workoutType,
+  });
+
+  if (error) throw new Error(error.message);
+}
+
+export async function getSavedSuggestions() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) throw new Error("Not authenticated");
+
+  const { data, error } = await supabase
+    .from("saved_ai_suggestions")
+    .select("*")
+    .order("created_at", { ascending: false });
+
+  if (error) throw new Error(error.message);
+  return data;
+}
+
+export async function deleteSavedSuggestion(id: string) {
+  const supabase = await createClient();
+  const { error } = await supabase
+    .from("saved_ai_suggestions")
+    .delete()
+    .eq("id", id);
+
+  if (error) throw new Error(error.message);
+}
