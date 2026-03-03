@@ -41,7 +41,7 @@ export async function generateExerciseRecommendations(
   systemPrompt: string,
   userPrompt: string
 ): Promise<GeminiExerciseSuggestion[]> {
-  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
   const result = await model.generateContent({
     contents: [{ role: "user", parts: [{ text: userPrompt }] }],

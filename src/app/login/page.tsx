@@ -19,7 +19,7 @@ export default function LoginPage() {
   const [state, action, isPending] = useActionState(signIn, { error: "" });
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center p-4 bg-mesh-light dark:bg-mesh-dark">
+    <div className="relative flex min-h-screen items-center justify-center p-4 bg-mesh">
       {/* Decorative blobs */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />

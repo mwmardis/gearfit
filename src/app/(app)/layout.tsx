@@ -22,7 +22,7 @@ export default async function AppLayout({
     .single();
 
   return (
-    <div className="flex min-h-screen bg-mesh-light dark:bg-mesh-dark">
+    <div className="flex min-h-screen bg-mesh">
       <Sidebar user={user} profile={profile} />
       <main className="flex-1 pb-20 md:pb-0">
         <div className="container mx-auto max-w-4xl p-4 md:p-8">
