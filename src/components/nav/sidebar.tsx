@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { signOut } from "@/lib/actions/auth";
+import { handleSignOut } from "@/lib/actions/auth";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -97,7 +97,7 @@ export function Sidebar({ user, profile }: SidebarProps) {
         </div>
         <div className="mt-3 flex items-center gap-1">
           <ThemeToggle />
-          <form action={signOut} className="flex-1">
+          <form action={handleSignOut} className="flex-1">
             <Button
               variant="ghost"
               size="sm"
