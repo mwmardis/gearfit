@@ -231,3 +231,88 @@ export const verificationTokens = pgTable("authjs_verification_tokens", {
   token: text("token").notNull().unique(),
   expires: timestamp("expires", { withTimezone: true }).notNull(),
 });
+
+// ── Relations ─────────────────────────────────────────────
+
+export const equipmentProfilesRelations = relations(equipmentProfiles, ({ many }) => ({
+  equipmentProfileItems: many(equipmentProfileItems),
+}));
+
+export const equipmentProfileItemsRelations = relations(equipmentProfileItems, ({ one }) => ({
+  equipmentProfile: one(equipmentProfiles, {
+    fields: [equipmentProfileItems.equipmentProfileId],
+    references: [equipmentProfiles.id],
+  }),
+  equipment: one(equipment, {
+    fields: [equipmentProfileItems.equipmentId],
+    references: [equipment.id],
+  }),
+}));
+
+export const exercisesRelations = relations(exercises, ({ many }) => ({
+  exerciseEquipment: many(exerciseEquipment),
+  exerciseMuscles: many(exerciseMuscles),
+}));
+
+export const exerciseEquipmentRelations = relations(exerciseEquipment, ({ one }) => ({
+  exercise: one(exercises, {
+    fields: [exerciseEquipment.exerciseId],
+    references: [exercises.id],
+  }),
+  equipment: one(equipment, {
+    fields: [exerciseEquipment.equipmentId],
+    references: [equipment.id],
+  }),
+}));
+
+export const exerciseMusclesRelations = relations(exerciseMuscles, ({ one }) => ({
+  exercise: one(exercises, {
+    fields: [exerciseMuscles.exerciseId],
+    references: [exercises.id],
+  }),
+  muscle: one(muscles, {
+    fields: [exerciseMuscles.muscleId],
+    references: [muscles.id],
+  }),
+}));
+
+export const workoutTemplatesRelations = relations(workoutTemplates, ({ many }) => ({
+  templateExercises: many(templateExercises),
+}));
+
+export const templateExercisesRelations = relations(templateExercises, ({ one }) => ({
+  template: one(workoutTemplates, {
+    fields: [templateExercises.templateId],
+    references: [workoutTemplates.id],
+  }),
+  exercise: one(exercises, {
+    fields: [templateExercises.exerciseId],
+    references: [exercises.id],
+  }),
+}));
+
+export const workoutSessionsRelations = relations(workoutSessions, ({ one, many }) => ({
+  template: one(workoutTemplates, {
+    fields: [workoutSessions.templateId],
+    references: [workoutTemplates.id],
+  }),
+  sessionSets: many(sessionSets),
+}));
+
+export const sessionSetsRelations = relations(sessionSets, ({ one }) => ({
+  session: one(workoutSessions, {
+    fields: [sessionSets.sessionId],
+    references: [workoutSessions.id],
+  }),
+  exercise: one(exercises, {
+    fields: [sessionSets.exerciseId],
+    references: [exercises.id],
+  }),
+}));
+
+export const savedAiSuggestionsRelations = relations(savedAiSuggestions, ({ one }) => ({
+  exercise: one(exercises, {
+    fields: [savedAiSuggestions.exerciseId],
+    references: [exercises.id],
+  }),
+}));

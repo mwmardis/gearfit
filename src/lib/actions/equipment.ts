@@ -1,112 +1,82 @@
+// src/lib/actions/equipment.ts
 "use server";
 
-import { createClient } from "@/lib/supabase/server";
+import { db } from "@/lib/db";
+import { equipment, equipmentProfiles, equipmentProfileItems } from "@/lib/db/schema";
+import { eq, and, asc } from "drizzle-orm";
+import { requireAuth } from "@/lib/auth-utils";
 import { revalidatePath } from "next/cache";
+import { validateCustomEquipmentInput } from "@/lib/validators/equipment";
+
+export { validateCustomEquipmentInput };
 
 export async function getEquipmentList() {
-  const supabase = await createClient();
-  const { data, error } = await supabase
-    .from("equipment")
-    .select("*")
-    .order("category")
-    .order("name");
-
-  if (error) throw error;
-  return data;
+  return db
+    .select()
+    .from(equipment)
+    .orderBy(asc(equipment.category), asc(equipment.name));
 }
 
 export async function getEquipmentProfiles() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) throw new Error("Not authenticated");
+  const { profileId } = await requireAuth();
 
-  const { data, error } = await supabase
-    .from("equipment_profiles")
-    .select(
-      `
-      *,
-      equipment_profile_items (
-        equipment_id,
-        equipment:equipment (id, name, category)
-      )
-    `
-    )
-    .eq("user_id", user.id)
-    .order("created_at", { ascending: false });
+  const profilesData = await db.query.equipmentProfiles.findMany({
+    where: eq(equipmentProfiles.userId, profileId),
+    with: {
+      equipmentProfileItems: {
+        with: {
+          equipment: true,
+        },
+      },
+    },
+    orderBy: (ep, { desc }) => [desc(ep.createdAt)],
+  });
 
-  if (error) throw error;
-  return data;
+  return profilesData;
 }
 
 export async function createEquipmentProfile(formData: FormData) {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) throw new Error("Not authenticated");
+  const { profileId } = await requireAuth();
 
   const name = formData.get("name") as string;
   const equipmentIds = formData.getAll("equipment") as string[];
 
-  const { data: profile, error } = await supabase
-    .from("equipment_profiles")
-    .insert({ user_id: user.id, name, is_active: false })
-    .select()
-    .single();
-
-  if (error) throw new Error(error.message);
+  const [profile] = await db
+    .insert(equipmentProfiles)
+    .values({ userId: profileId, name, isActive: false })
+    .returning();
 
   if (equipmentIds.length > 0) {
-    const items = equipmentIds.map((equipment_id) => ({
-      equipment_profile_id: profile.id,
-      equipment_id,
-    }));
-    const { error: itemsError } = await supabase
-      .from("equipment_profile_items")
-      .insert(items);
-
-    if (itemsError) throw new Error(itemsError.message);
+    await db.insert(equipmentProfileItems).values(
+      equipmentIds.map((equipmentId) => ({
+        equipmentProfileId: profile.id,
+        equipmentId,
+      }))
+    );
   }
 
   revalidatePath("/equipment");
 }
 
 export async function setActiveProfile(profileId: string) {
-  const supabase = await createClient();
-  const { error } = await supabase
-    .from("equipment_profiles")
-    .update({ is_active: true })
-    .eq("id", profileId);
-
-  if (error) throw new Error(error.message);
+  await db
+    .update(equipmentProfiles)
+    .set({ isActive: true })
+    .where(eq(equipmentProfiles.id, profileId));
 
   revalidatePath("/equipment");
 }
 
 export async function deleteEquipmentProfile(profileId: string) {
-  const supabase = await createClient();
-  const { error } = await supabase
-    .from("equipment_profiles")
-    .delete()
-    .eq("id", profileId);
-
-  if (error) throw new Error(error.message);
+  await db
+    .delete(equipmentProfiles)
+    .where(eq(equipmentProfiles.id, profileId));
 
   revalidatePath("/equipment");
 }
 
-import { validateCustomEquipmentInput } from "@/lib/validators/equipment";
-
-export { validateCustomEquipmentInput };
-
 export async function createCustomEquipment(formData: FormData) {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) throw new Error("Not authenticated");
+  const { profileId } = await requireAuth();
 
   const rawName = formData.get("name");
   const name = typeof rawName === "string" ? rawName.trim() : "";
@@ -116,13 +86,10 @@ export async function createCustomEquipment(formData: FormData) {
   const validation = validateCustomEquipmentInput(name, category);
   if (!validation.valid) throw new Error(validation.error);
 
-  const { data, error } = await supabase
-    .from("equipment")
-    .insert({ name, category, is_custom: true, created_by: user.id })
-    .select()
-    .single();
-
-  if (error) throw new Error(error.message);
+  const [data] = await db
+    .insert(equipment)
+    .values({ name, category, isCustom: true, createdBy: profileId })
+    .returning();
 
   revalidatePath("/equipment");
   return data;
