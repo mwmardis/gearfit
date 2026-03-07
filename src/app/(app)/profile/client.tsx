@@ -2,7 +2,7 @@
 
 import { useTransition, useState } from "react";
 import { updateProfile } from "@/lib/actions/profile";
-import { signOut } from "@/lib/actions/auth";
+import { handleSignOut } from "@/lib/actions/auth";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -22,7 +22,7 @@ interface ProfileFormProps {
 export function ProfileForm({ profile, email }: ProfileFormProps) {
   const [isPending, startTransition] = useTransition();
   const [saved, setSaved] = useState(false);
-  const [units, setUnits] = useState(profile.preferred_units);
+  const [units, setUnits] = useState(profile.preferredUnits);
 
   function handleSubmit(formData: FormData) {
     setSaved(false);
@@ -55,7 +55,7 @@ export function ProfileForm({ profile, email }: ProfileFormProps) {
               <Input
                 id="display_name"
                 name="display_name"
-                defaultValue={profile.display_name ?? ""}
+                defaultValue={profile.displayName ?? ""}
                 placeholder="Your name"
               />
             </div>
@@ -107,7 +107,7 @@ export function ProfileForm({ profile, email }: ProfileFormProps) {
                 type="number"
                 min={1}
                 max={10}
-                defaultValue={profile.overload_sessions_threshold}
+                defaultValue={profile.overloadSessionsThreshold}
               />
               <p className="text-xs text-muted-foreground">
                 Number of consecutive sessions hitting target reps before
@@ -123,7 +123,7 @@ export function ProfileForm({ profile, email }: ProfileFormProps) {
                   type="number"
                   min={0.5}
                   step={0.5}
-                  defaultValue={profile.overload_increment_lbs}
+                  defaultValue={profile.overloadIncrementLbs}
                 />
               </div>
               <div className="space-y-2">
@@ -134,7 +134,7 @@ export function ProfileForm({ profile, email }: ProfileFormProps) {
                   type="number"
                   min={0.5}
                   step={0.5}
-                  defaultValue={profile.overload_increment_kg}
+                  defaultValue={profile.overloadIncrementKg}
                 />
               </div>
             </div>
@@ -154,7 +154,7 @@ export function ProfileForm({ profile, email }: ProfileFormProps) {
           <CardTitle className="text-base">Account Actions</CardTitle>
         </CardHeader>
         <CardContent>
-          <form action={signOut}>
+          <form action={handleSignOut}>
             <Button variant="outline" type="submit">
               <LogOut className="mr-2 h-4 w-4" />
               Sign Out

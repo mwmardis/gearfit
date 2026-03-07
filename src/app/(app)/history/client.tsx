@@ -9,11 +9,11 @@ interface Session {
   id: string;
   date: string;
   completed: boolean;
-  duration_minutes: number | null;
+  durationMinutes: number | null;
   notes: string | null;
   template: { id: string; name: string } | null;
-  session_sets: {
-    exercise_id: string;
+  sessionSets: {
+    exerciseId: string;
     exercise: { name: string } | null;
   }[];
 }

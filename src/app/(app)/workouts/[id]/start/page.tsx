@@ -39,21 +39,21 @@ export default async function StartWorkoutPage({
   const overloadMap: Record<string, boolean> = {};
 
   await Promise.all(
-    template.template_exercises.map(
-      async (te: { exercise_id: string; target_reps: number }) => {
+    template.templateExercises.map(
+      async (te: { exerciseId: string; targetReps: number }) => {
         const [previousSets, history] = await Promise.all([
-          getLastSessionForExercise(te.exercise_id),
-          getExerciseHistory(te.exercise_id, 3),
+          getLastSessionForExercise(te.exerciseId),
+          getExerciseHistory(te.exerciseId, 3),
         ]);
 
-        previousSetsMap[te.exercise_id] = previousSets;
+        previousSetsMap[te.exerciseId] = previousSets;
 
         // Check progressive overload: did the user hit target reps in the last 3 sessions?
         if (history.length >= 3) {
           const recentSessions = history.slice(-3).reverse().map((h) => ({
-            sets: [{ reps: Math.round(h.totalVolume / (h.maxWeight || 1)), targetReps: te.target_reps }],
+            sets: [{ reps: Math.round(h.totalVolume / (h.maxWeight || 1)), targetReps: te.targetReps }],
           }));
-          overloadMap[te.exercise_id] = shouldSuggestIncrease(recentSessions, 3);
+          overloadMap[te.exerciseId] = shouldSuggestIncrease(recentSessions, 3);
         }
       }
     )
@@ -63,7 +63,7 @@ export default async function StartWorkoutPage({
     <ActiveWorkoutClient
       sessionId={session.id}
       templateName={template.name}
-      templateExercises={template.template_exercises}
+      templateExercises={template.templateExercises}
       previousSetsMap={previousSetsMap}
       overloadMap={overloadMap}
       allExercises={allExercises}

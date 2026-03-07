@@ -12,8 +12,8 @@ interface TemplateCardProps {
     id: string;
     name: string;
     description: string | null;
-    updated_at: string;
-    template_exercises: {
+    updatedAt: Date;
+    templateExercises: {
       id: string;
       exercise: { name: string } | null;
     }[];
@@ -21,7 +21,7 @@ interface TemplateCardProps {
 }
 
 export function TemplateCard({ template }: TemplateCardProps) {
-  const exerciseCount = template.template_exercises.length;
+  const exerciseCount = template.templateExercises.length;
 
   return (
     <Link href={`/workouts/${template.id}`}>
@@ -36,7 +36,7 @@ export function TemplateCard({ template }: TemplateCardProps) {
         </CardHeader>
         <CardContent>
           <div className="mb-2 flex flex-wrap gap-1">
-            {template.template_exercises.slice(0, 4).map((te) => (
+            {template.templateExercises.slice(0, 4).map((te) => (
               <Badge key={te.id} variant="secondary" className="text-xs">
                 {te.exercise?.name ?? "Unknown"}
               </Badge>

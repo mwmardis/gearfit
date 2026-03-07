@@ -25,17 +25,17 @@ export default async function ExerciseDetailPage({
     getPersonalBests(id),
   ]);
 
-  const primaryMuscles = exercise.exercise_muscles
+  const primaryMuscles = exercise.exerciseMuscles
     .filter((em: { role: string }) => em.role === "primary")
     .map((em: { muscle: { name: string } | null }) => em.muscle?.name)
     .filter(Boolean);
 
-  const secondaryMuscles = exercise.exercise_muscles
+  const secondaryMuscles = exercise.exerciseMuscles
     .filter((em: { role: string }) => em.role === "secondary")
     .map((em: { muscle: { name: string } | null }) => em.muscle?.name)
     .filter(Boolean);
 
-  const equipmentNames = exercise.exercise_equipment
+  const equipmentNames = exercise.exerciseEquipment
     .map(
       (ee: { equipment: { name: string } | null }) => ee.equipment?.name
     )

@@ -7,10 +7,10 @@ interface SessionSummaryProps {
   session: {
     id: string;
     date: string;
-    duration_minutes: number | null;
+    durationMinutes: number | null;
     template: { name: string } | null;
-    session_sets: {
-      exercise_id: string;
+    sessionSets: {
+      exerciseId: string;
       exercise: { name: string } | null;
     }[];
   };
@@ -19,9 +19,9 @@ interface SessionSummaryProps {
 export function SessionSummary({ session }: SessionSummaryProps) {
   // Get unique exercise names
   const exercises = new Map<string, string>();
-  for (const set of session.session_sets) {
-    if (set.exercise && !exercises.has(set.exercise_id)) {
-      exercises.set(set.exercise_id, set.exercise.name);
+  for (const set of session.sessionSets) {
+    if (set.exercise && !exercises.has(set.exerciseId)) {
+      exercises.set(set.exerciseId, set.exercise.name);
     }
   }
 
@@ -49,10 +49,10 @@ export function SessionSummary({ session }: SessionSummaryProps) {
                 )}
               </div>
             </div>
-            {session.duration_minutes && (
+            {session.durationMinutes && (
               <span className="flex items-center gap-1 text-xs text-muted-foreground">
                 <Clock className="h-3 w-3" />
-                {session.duration_minutes}m
+                {session.durationMinutes}m
               </span>
             )}
           </div>

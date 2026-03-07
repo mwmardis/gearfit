@@ -22,13 +22,13 @@ interface EquipmentPageClientProps {
   profiles: {
     id: string;
     name: string;
-    is_active: boolean;
-    user_id: string;
-    created_at: string;
-    updated_at: string;
-    equipment_profile_items: {
-      equipment_id: string;
-      equipment: { id: string; name: string; category: string | null } | null;
+    isActive: boolean;
+    userId: string;
+    createdAt: Date;
+    updatedAt: Date;
+    equipmentProfileItems: {
+      equipmentId: string;
+      equipment: { id: string; name: string; category: string | null };
     }[];
   }[];
 }

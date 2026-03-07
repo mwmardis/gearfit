@@ -8,14 +8,14 @@ import { getSavedSuggestions, deleteSavedSuggestion } from "@/lib/actions/ai";
 
 interface SavedSuggestion {
   id: string;
-  exercise_name: string;
-  primary_muscles: string[];
-  secondary_muscles: string[];
-  suggested_sets: number;
-  suggested_reps: number;
+  exerciseName: string;
+  primaryMuscles: string[];
+  secondaryMuscles: string[];
+  suggestedSets: number;
+  suggestedReps: number;
   description: string | null;
-  workout_type: string;
-  exercise_id: string | null;
+  workoutType: string;
+  exerciseId: string | null;
 }
 
 interface SavedSuggestionsTabProps {
@@ -52,8 +52,8 @@ export function SavedSuggestionsTab({ onAdd, addedIds }: SavedSuggestionsTabProp
         <div key={s.id} className="rounded-lg border p-3 space-y-2">
           <div className="flex items-start justify-between gap-2">
             <div>
-              <span className="font-semibold">{s.exercise_name}</span>
-              <Badge variant="outline" className="ml-2 text-xs">{s.workout_type}</Badge>
+              <span className="font-semibold">{s.exerciseName}</span>
+              <Badge variant="outline" className="ml-2 text-xs">{s.workoutType}</Badge>
             </div>
             <div className="flex gap-1 shrink-0">
               <Button
@@ -75,15 +75,15 @@ export function SavedSuggestionsTab({ onAdd, addedIds }: SavedSuggestionsTabProp
             </div>
           </div>
           <div className="flex flex-wrap gap-1">
-            {s.primary_muscles.map((m) => (
+            {s.primaryMuscles.map((m) => (
               <Badge key={m} variant="default" className="text-xs">{m}</Badge>
             ))}
-            {s.secondary_muscles.map((m) => (
+            {s.secondaryMuscles.map((m) => (
               <Badge key={m} variant="secondary" className="text-xs">{m}</Badge>
             ))}
           </div>
           <p className="text-xs text-muted-foreground">
-            {s.suggested_sets} sets x {s.suggested_reps} reps
+            {s.suggestedSets} sets x {s.suggestedReps} reps
           </p>
         </div>
       ))}

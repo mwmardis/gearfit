@@ -44,7 +44,7 @@ export default async function DashboardPage() {
   const recentSessions = recentSessionsData.map((s) => ({
     id: s.id,
     date: s.date,
-    duration_minutes: s.durationMinutes,
+    durationMinutes: s.durationMinutes,
     template: s.templateName ? { name: s.templateName } : null,
     totalSets: Number(s.totalSets),
   }));

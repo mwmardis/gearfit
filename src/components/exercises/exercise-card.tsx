@@ -11,23 +11,23 @@ interface ExerciseCardProps {
   exercise: {
     id: string;
     name: string;
-    exercise_equipment: {
+    exerciseEquipment: {
       equipment: { id: string; name: string } | null;
     }[];
-    exercise_muscles: {
+    exerciseMuscles: {
       role: string;
-      muscle: { id: string; name: string; muscle_group: string } | null;
+      muscle: { id: string; name: string; muscleGroup: string } | null;
     }[];
   };
 }
 
 export function ExerciseCard({ exercise }: ExerciseCardProps) {
-  const primaryMuscles = exercise.exercise_muscles
+  const primaryMuscles = exercise.exerciseMuscles
     .filter((em) => em.role === "primary")
     .map((em) => em.muscle?.name)
     .filter(Boolean);
 
-  const equipmentNames = exercise.exercise_equipment
+  const equipmentNames = exercise.exerciseEquipment
     .map((ee) => ee.equipment?.name)
     .filter(Boolean);
 

@@ -17,17 +17,17 @@ import { Input } from "@/components/ui/input";
 
 interface TemplateExercise {
   id: string;
-  exercise_id: string;
-  order_index: number;
-  target_sets: number;
-  target_reps: number;
-  target_weight: number | null;
+  exerciseId: string;
+  orderIndex: number;
+  targetSets: number;
+  targetReps: number;
+  targetWeight: string | null;
   exercise: {
     id: string;
     name: string;
-    exercise_muscles: {
+    exerciseMuscles: {
       role: string;
-      muscle: { name: string; muscle_group: string } | null;
+      muscle: { name: string; muscleGroup: string } | null;
     }[];
   } | null;
 }
@@ -91,7 +91,7 @@ export function TemplateExerciseList({
   return (
     <div className="space-y-2">
       {exercises.map((te, index) => {
-        const primaryMuscles = (te.exercise?.exercise_muscles ?? [])
+        const primaryMuscles = (te.exercise?.exerciseMuscles ?? [])
           .filter((em) => em.role === "primary")
           .map((em) => em.muscle?.name)
           .filter(Boolean);
@@ -143,7 +143,7 @@ export function TemplateExerciseList({
                   <Input
                     type="number"
                     min={1}
-                    defaultValue={te.target_sets}
+                    defaultValue={te.targetSets}
                     className="h-7 w-14 text-xs"
                     onBlur={(e) =>
                       handleUpdateField(te.id, "target_sets", e.target.value)
@@ -155,7 +155,7 @@ export function TemplateExerciseList({
                   <Input
                     type="number"
                     min={1}
-                    defaultValue={te.target_reps}
+                    defaultValue={te.targetReps}
                     className="h-7 w-14 text-xs"
                     onBlur={(e) =>
                       handleUpdateField(te.id, "target_reps", e.target.value)
@@ -167,7 +167,7 @@ export function TemplateExerciseList({
                   <Input
                     type="number"
                     min={0}
-                    defaultValue={te.target_weight ?? ""}
+                    defaultValue={te.targetWeight ?? ""}
                     placeholder="—"
                     className="h-7 w-16 text-xs"
                     onBlur={(e) =>

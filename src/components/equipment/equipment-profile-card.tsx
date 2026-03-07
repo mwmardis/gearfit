@@ -20,10 +20,10 @@ interface EquipmentProfileCardProps {
   profile: {
     id: string;
     name: string;
-    is_active: boolean;
-    equipment_profile_items: {
-      equipment_id: string;
-      equipment: { id: string; name: string; category: string | null } | null;
+    isActive: boolean;
+    equipmentProfileItems: {
+      equipmentId: string;
+      equipment: { id: string; name: string; category: string | null };
     }[];
   };
 }
@@ -31,16 +31,16 @@ interface EquipmentProfileCardProps {
 export function EquipmentProfileCard({ profile }: EquipmentProfileCardProps) {
   const [isPending, startTransition] = useTransition();
 
-  const equipmentNames = profile.equipment_profile_items
+  const equipmentNames = profile.equipmentProfileItems
     .map((item) => item.equipment?.name)
     .filter(Boolean);
 
   return (
-    <Card className={profile.is_active ? "border-primary" : ""}>
+    <Card className={profile.isActive ? "border-primary" : ""}>
       <CardHeader className="pb-2">
         <div className="flex items-center justify-between">
           <CardTitle className="text-lg">{profile.name}</CardTitle>
-          {profile.is_active && <Badge variant="default">Active</Badge>}
+          {profile.isActive && <Badge variant="default">Active</Badge>}
         </div>
         <CardDescription>
           {equipmentNames.length} piece{equipmentNames.length !== 1 ? "s" : ""}{" "}
@@ -56,7 +56,7 @@ export function EquipmentProfileCard({ profile }: EquipmentProfileCardProps) {
           ))}
         </div>
         <div className="flex gap-2">
-          {!profile.is_active && (
+          {!profile.isActive && (
             <Button
               size="sm"
               variant="outline"

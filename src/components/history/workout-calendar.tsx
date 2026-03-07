@@ -8,7 +8,7 @@ import { ChevronLeft, ChevronRight, Flame } from "lucide-react";
 interface Session {
   id: string;
   date: string;
-  duration_minutes: number | null;
+  durationMinutes: number | null;
   template: { name: string } | null;
 }
 

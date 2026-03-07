@@ -8,12 +8,12 @@ import { AICopilotPanel } from "@/components/ai/ai-copilot-panel";
 interface Exercise {
   id: string;
   name: string;
-  exercise_equipment: {
+  exerciseEquipment: {
     equipment: { id: string; name: string } | null;
   }[];
-  exercise_muscles: {
+  exerciseMuscles: {
     role: string;
-    muscle: { id: string; name: string; muscle_group: string } | null;
+    muscle: { id: string; name: string; muscleGroup: string } | null;
   }[];
 }
 
@@ -42,9 +42,9 @@ export function ExercisesPageClient({
 
     if (muscleGroup) {
       result = result.filter((ex) =>
-        ex.exercise_muscles.some(
+        ex.exerciseMuscles.some(
           (em) =>
-            em.muscle?.muscle_group === muscleGroup && em.role === "primary"
+            em.muscle?.muscleGroup === muscleGroup && em.role === "primary"
         )
       );
     }
