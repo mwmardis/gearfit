@@ -1,26 +1,24 @@
+// src/lib/actions/sessions.ts
 "use server";
 
-import { createClient } from "@/lib/supabase/server";
+import { db } from "@/lib/db";
+import { workoutSessions, sessionSets, workoutTemplates, exercises } from "@/lib/db/schema";
+import { eq, and } from "drizzle-orm";
+import { requireAuth, getOptionalAuth } from "@/lib/auth-utils";
 import { revalidatePath } from "next/cache";
 
 export async function startSession(templateId?: string) {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) throw new Error("Not authenticated");
+  const { profileId } = await requireAuth();
 
-  const { data, error } = await supabase
-    .from("workout_sessions")
-    .insert({
-      user_id: user.id,
-      template_id: templateId ?? null,
+  const [data] = await db
+    .insert(workoutSessions)
+    .values({
+      userId: profileId,
+      templateId: templateId ?? null,
       date: new Date().toISOString().split("T")[0],
     })
-    .select()
-    .single();
+    .returning();
 
-  if (error) throw error;
   return data;
 }
 
@@ -32,43 +30,38 @@ export async function logSet(
   reps: number,
   rpe?: number | null
 ) {
-  const supabase = await createClient();
-
-  // Check if set already exists (upsert by session + exercise + set_number)
-  const { data: existing } = await supabase
-    .from("session_sets")
-    .select("id")
-    .eq("session_id", sessionId)
-    .eq("exercise_id", exerciseId)
-    .eq("set_number", setNumber)
-    .maybeSingle();
+  // Check if set already exists
+  const [existing] = await db
+    .select({ id: sessionSets.id })
+    .from(sessionSets)
+    .where(
+      and(
+        eq(sessionSets.sessionId, sessionId),
+        eq(sessionSets.exerciseId, exerciseId),
+        eq(sessionSets.setNumber, setNumber)
+      )
+    )
+    .limit(1);
 
   if (existing) {
-    const { error } = await supabase
-      .from("session_sets")
-      .update({ weight, reps, rpe: rpe ?? null })
-      .eq("id", existing.id);
-    if (error) throw error;
+    await db
+      .update(sessionSets)
+      .set({ weight: String(weight), reps, rpe: rpe != null ? String(rpe) : null })
+      .where(eq(sessionSets.id, existing.id));
   } else {
-    const { error } = await supabase.from("session_sets").insert({
-      session_id: sessionId,
-      exercise_id: exerciseId,
-      set_number: setNumber,
-      weight,
+    await db.insert(sessionSets).values({
+      sessionId,
+      exerciseId,
+      setNumber,
+      weight: String(weight),
       reps,
-      rpe: rpe ?? null,
+      rpe: rpe != null ? String(rpe) : null,
     });
-    if (error) throw error;
   }
 }
 
 export async function deleteSet(setId: string) {
-  const supabase = await createClient();
-  const { error } = await supabase
-    .from("session_sets")
-    .delete()
-    .eq("id", setId);
-  if (error) throw error;
+  await db.delete(sessionSets).where(eq(sessionSets.id, setId));
 }
 
 export async function finishSession(
@@ -76,92 +69,63 @@ export async function finishSession(
   durationMinutes: number,
   notes?: string
 ) {
-  const supabase = await createClient();
-  const { error } = await supabase
-    .from("workout_sessions")
-    .update({
+  await db
+    .update(workoutSessions)
+    .set({
       completed: true,
-      duration_minutes: durationMinutes,
+      durationMinutes,
       notes: notes || null,
-      updated_at: new Date().toISOString(),
+      updatedAt: new Date(),
     })
-    .eq("id", sessionId);
+    .where(eq(workoutSessions.id, sessionId));
 
-  if (error) throw error;
   revalidatePath("/history");
   revalidatePath("/workouts");
 }
 
 export async function getLastSessionForExercise(exerciseId: string) {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) return null;
+  const authUser = await getOptionalAuth();
+  if (!authUser) return null;
 
-  // Find the most recent completed session that has sets for this exercise
-  const { data: sets } = await supabase
-    .from("session_sets")
-    .select(
-      `
-      set_number,
-      weight,
-      reps,
-      rpe,
-      session:workout_sessions!inner (
-        id,
-        date,
-        completed,
-        user_id
-      )
-    `
-    )
-    .eq("exercise_id", exerciseId)
-    .eq("session.user_id", user.id)
-    .eq("session.completed", true)
-    .order("created_at", { ascending: false })
-    .limit(20);
+  const sets = await db.query.sessionSets.findMany({
+    where: eq(sessionSets.exerciseId, exerciseId),
+    with: {
+      session: true,
+    },
+    orderBy: (s, { desc }) => [desc(s.createdAt)],
+    limit: 20,
+  });
 
-  if (!sets || sets.length === 0) return null;
+  const completedSets = sets.filter(
+    (s) => s.session.userId === authUser.profileId && s.session.completed
+  );
 
-  // Group by session and take the most recent one
-  const sessionId = (sets[0].session as unknown as { id: string }).id;
-  const lastSets = sets
-    .filter(
-      (s) => (s.session as unknown as { id: string }).id === sessionId
-    )
-    .sort((a, b) => a.set_number - b.set_number);
+  if (completedSets.length === 0) return null;
+
+  const sessionId = completedSets[0].session.id;
+  const lastSets = completedSets
+    .filter((s) => s.session.id === sessionId)
+    .sort((a, b) => a.setNumber - b.setNumber);
 
   return lastSets.map((s) => ({
-    set_number: s.set_number,
-    weight: s.weight,
+    set_number: s.setNumber,
+    weight: Number(s.weight),
     reps: s.reps,
-    rpe: s.rpe,
+    rpe: s.rpe ? Number(s.rpe) : null,
   }));
 }
 
 export async function getSession(id: string) {
-  const supabase = await createClient();
-  const { data, error } = await supabase
-    .from("workout_sessions")
-    .select(
-      `
-      *,
-      template:workout_templates (id, name),
-      session_sets (
-        id,
-        exercise_id,
-        set_number,
-        weight,
-        reps,
-        rpe,
-        exercise:exercises (id, name)
-      )
-    `
-    )
-    .eq("id", id)
-    .single();
+  const result = await db.query.workoutSessions.findFirst({
+    where: eq(workoutSessions.id, id),
+    with: {
+      template: true,
+      sessionSets: {
+        with: { exercise: true },
+      },
+    },
+  });
 
-  if (error) throw error;
-  return data;
+  if (!result) throw new Error("Session not found");
+  return result;
 }
