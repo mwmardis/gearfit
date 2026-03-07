@@ -1,5 +1,9 @@
+// src/app/api/ai/recommend-exercises/route.ts
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "@/lib/supabase/server";
+import { auth } from "@/lib/auth";
+import { db } from "@/lib/db";
+import { exercises, equipment } from "@/lib/db/schema";
+import { or, eq } from "drizzle-orm";
 import { generateExerciseRecommendations } from "@/lib/ai/gemini";
 import { buildSystemPrompt, buildUserPrompt } from "@/lib/ai/prompts";
 import type { ExerciseRecommendation, RecommendRequest } from "@/lib/ai/types";
@@ -23,16 +27,15 @@ function checkRateLimit(userId: string): boolean {
 
 export async function POST(request: NextRequest) {
   try {
-    const supabase = await createClient();
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
-
-    if (!user) {
+    const session = await auth();
+    if (!session?.user) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    if (!checkRateLimit(user.id)) {
+    const userId = session.user.id;
+    const profileId = (session.user as { profileId?: string }).profileId;
+
+    if (!checkRateLimit(userId)) {
       return NextResponse.json(
         { error: "Too many requests. Please wait a minute." },
         { status: 429 }
@@ -55,19 +58,20 @@ export async function POST(request: NextRequest) {
       body.existingExercises ?? []
     );
 
-    const suggestions = await generateExerciseRecommendations(
-      systemPrompt,
-      userPrompt
-    );
+    const suggestions = await generateExerciseRecommendations(systemPrompt, userPrompt);
 
     // Fuzzy match against existing exercises in DB
-    const { data: dbExercises } = await supabase
-      .from("exercises")
-      .select("id, name")
-      .or(`is_custom.eq.false,created_by.eq.${user.id}`);
+    const dbExercises = await db
+      .select({ id: exercises.id, name: exercises.name })
+      .from(exercises)
+      .where(
+        profileId
+          ? or(eq(exercises.isCustom, false), eq(exercises.createdBy, profileId))
+          : eq(exercises.isCustom, false)
+      );
 
     const recommendations: ExerciseRecommendation[] = suggestions.map((s) => {
-      const match = dbExercises?.find(
+      const match = dbExercises.find(
         (e) => e.name.toLowerCase() === s.name.toLowerCase()
       );
       return {

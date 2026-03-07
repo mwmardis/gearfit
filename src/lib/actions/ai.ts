@@ -1,83 +1,79 @@
+// src/lib/actions/ai.ts
 "use server";
 
-import { createClient } from "@/lib/supabase/server";
+import { db } from "@/lib/db";
+import {
+  exercises,
+  muscles,
+  exerciseMuscles,
+  equipment,
+  exerciseEquipment,
+  savedAiSuggestions,
+} from "@/lib/db/schema";
+import { eq, or } from "drizzle-orm";
+import { requireAuth } from "@/lib/auth-utils";
 import { revalidatePath } from "next/cache";
 import type { GeminiExerciseSuggestion } from "@/lib/ai/types";
-
 import { normalizeMuscleNames } from "@/lib/validators/muscles";
 
 export async function createExerciseFromSuggestion(
   suggestion: GeminiExerciseSuggestion,
   equipmentNames: string[]
 ) {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) throw new Error("Not authenticated");
+  const { profileId } = await requireAuth();
 
-  // Create the exercise
-  const { data: exercise, error: exerciseError } = await supabase
-    .from("exercises")
-    .insert({
+  const [exercise] = await db
+    .insert(exercises)
+    .values({
       name: suggestion.name,
       description: suggestion.description,
       instructions: suggestion.instructions,
-      is_custom: true,
-      created_by: user.id,
+      isCustom: true,
+      createdBy: profileId,
     })
-    .select()
-    .single();
-
-  if (exerciseError) throw new Error(exerciseError.message);
+    .returning();
 
   // Get muscle IDs
-  const { data: muscles } = await supabase.from("muscles").select("id, name");
-  if (muscles) {
-    const dbMuscleNames = muscles.map((m) => m.name);
-    const primaryMatched = normalizeMuscleNames(
-      suggestion.primaryMuscles,
-      dbMuscleNames
-    );
-    const secondaryMatched = normalizeMuscleNames(
-      suggestion.secondaryMuscles,
-      dbMuscleNames
-    );
+  const allMuscles = await db.select().from(muscles);
+  if (allMuscles.length > 0) {
+    const dbMuscleNames = allMuscles.map((m) => m.name);
+    const primaryMatched = normalizeMuscleNames(suggestion.primaryMuscles, dbMuscleNames);
+    const secondaryMatched = normalizeMuscleNames(suggestion.secondaryMuscles, dbMuscleNames);
 
     const muscleRows = [
       ...primaryMatched.map((name) => ({
-        exercise_id: exercise.id,
-        muscle_id: muscles.find((m) => m.name === name)!.id,
+        exerciseId: exercise.id,
+        muscleId: allMuscles.find((m) => m.name === name)!.id,
         role: "primary" as const,
       })),
       ...secondaryMatched.map((name) => ({
-        exercise_id: exercise.id,
-        muscle_id: muscles.find((m) => m.name === name)!.id,
+        exerciseId: exercise.id,
+        muscleId: allMuscles.find((m) => m.name === name)!.id,
         role: "secondary" as const,
       })),
     ];
 
     if (muscleRows.length > 0) {
-      await supabase.from("exercise_muscles").insert(muscleRows);
+      await db.insert(exerciseMuscles).values(muscleRows);
     }
   }
 
   // Link to equipment
-  const { data: equipment } = await supabase
-    .from("equipment")
-    .select("id, name")
-    .or(`is_custom.eq.false,created_by.eq.${user.id}`);
+  const allEquipment = await db
+    .select()
+    .from(equipment)
+    .where(or(eq(equipment.isCustom, false), eq(equipment.createdBy, profileId)));
 
-  if (equipment) {
+  if (allEquipment.length > 0) {
     const equipmentRows = equipmentNames
       .map((name) =>
-        equipment.find((e) => e.name.toLowerCase() === name.toLowerCase())
+        allEquipment.find((e) => e.name.toLowerCase() === name.toLowerCase())
       )
       .filter((e): e is NonNullable<typeof e> => e !== undefined)
-      .map((e) => ({ exercise_id: exercise.id, equipment_id: e.id }));
+      .map((e) => ({ exerciseId: exercise.id, equipmentId: e.id }));
 
     if (equipmentRows.length > 0) {
-      await supabase.from("exercise_equipment").insert(equipmentRows);
+      await db.insert(exerciseEquipment).values(equipmentRows);
     }
   }
 
@@ -91,50 +87,32 @@ export async function saveSuggestion(
     workoutType: string;
   }
 ) {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) throw new Error("Not authenticated");
+  const { profileId } = await requireAuth();
 
-  const { error } = await supabase.from("saved_ai_suggestions").insert({
-    user_id: user.id,
-    exercise_name: suggestion.name,
-    exercise_id: suggestion.existingExerciseId ?? null,
-    primary_muscles: suggestion.primaryMuscles,
-    secondary_muscles: suggestion.secondaryMuscles,
-    suggested_sets: suggestion.suggestedSets,
-    suggested_reps: suggestion.suggestedReps,
+  await db.insert(savedAiSuggestions).values({
+    userId: profileId,
+    exerciseName: suggestion.name,
+    exerciseId: suggestion.existingExerciseId ?? null,
+    primaryMuscles: suggestion.primaryMuscles,
+    secondaryMuscles: suggestion.secondaryMuscles,
+    suggestedSets: suggestion.suggestedSets,
+    suggestedReps: suggestion.suggestedReps,
     description: suggestion.description,
     instructions: suggestion.instructions,
-    workout_type: suggestion.workoutType,
+    workoutType: suggestion.workoutType,
   });
-
-  if (error) throw new Error(error.message);
 }
 
 export async function getSavedSuggestions() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) throw new Error("Not authenticated");
+  const { profileId } = await requireAuth();
 
-  const { data, error } = await supabase
-    .from("saved_ai_suggestions")
-    .select("*")
-    .order("created_at", { ascending: false });
-
-  if (error) throw new Error(error.message);
-  return data;
+  return db
+    .select()
+    .from(savedAiSuggestions)
+    .where(eq(savedAiSuggestions.userId, profileId))
+    .orderBy(savedAiSuggestions.createdAt);
 }
 
 export async function deleteSavedSuggestion(id: string) {
-  const supabase = await createClient();
-  const { error } = await supabase
-    .from("saved_ai_suggestions")
-    .delete()
-    .eq("id", id);
-
-  if (error) throw new Error(error.message);
+  await db.delete(savedAiSuggestions).where(eq(savedAiSuggestions.id, id));
 }
