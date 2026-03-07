@@ -48,6 +48,18 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     }),
   ],
   callbacks: {
+    authorized({ auth, request: { nextUrl } }) {
+      const isLoggedIn = !!auth?.user;
+      const publicPaths = ["/login", "/signup", "/share"];
+      const isPublicPath = publicPaths.some((path) =>
+        nextUrl.pathname.startsWith(path)
+      );
+
+      if (!isLoggedIn && !isPublicPath) {
+        return false; // Redirects to signIn page
+      }
+      return true;
+    },
     async jwt({ token, user }) {
       if (user) {
         token.profileId = (user as { profileId?: string }).profileId;
