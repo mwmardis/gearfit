@@ -1,6 +1,9 @@
 import { getWeeklyMuscleCoverage } from "@/lib/actions/history";
 import { getTemplates } from "@/lib/actions/templates";
-import { createClient } from "@/lib/supabase/server";
+import { auth } from "@/lib/auth";
+import { db } from "@/lib/db";
+import { workoutSessions, workoutTemplates } from "@/lib/db/schema";
+import { eq, desc, and, sql } from "drizzle-orm";
 import { MuscleCoverage } from "@/components/dashboard/muscle-coverage";
 import { TodaysWorkout } from "@/components/dashboard/todays-workout";
 import { RecentSessions } from "@/components/dashboard/recent-sessions";
@@ -8,42 +11,45 @@ import { QuickActions } from "@/components/dashboard/quick-actions";
 import { Flame } from "lucide-react";
 
 export default async function DashboardPage() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const session = await auth();
+  const profileId = (session?.user as { profileId?: string })?.profileId;
 
   const [coverage, templates, recentSessionsData] = await Promise.all([
     getWeeklyMuscleCoverage(),
     getTemplates(),
-    supabase
-      .from("workout_sessions")
-      .select(
-        `
-        id,
-        date,
-        duration_minutes,
-        template:workout_templates (name),
-        session_sets (id)
-      `
-      )
-      .eq("user_id", user!.id)
-      .eq("completed", true)
-      .order("date", { ascending: false })
-      .limit(5),
+    profileId
+      ? db
+          .select({
+            id: workoutSessions.id,
+            date: workoutSessions.date,
+            durationMinutes: workoutSessions.durationMinutes,
+            templateName: workoutTemplates.name,
+            totalSets: sql<number>`(select count(*) from session_sets where session_id = ${workoutSessions.id})`.as("total_sets"),
+          })
+          .from(workoutSessions)
+          .leftJoin(workoutTemplates, eq(workoutSessions.templateId, workoutTemplates.id))
+          .where(
+            and(
+              eq(workoutSessions.userId, profileId),
+              eq(workoutSessions.completed, true)
+            )
+          )
+          .orderBy(desc(workoutSessions.date))
+          .limit(5)
+      : Promise.resolve([]),
   ]);
 
   const todaysTemplate = templates.length > 0 ? templates[0] : null;
 
-  const recentSessions = (recentSessionsData.data ?? []).map((s) => ({
+  const recentSessions = recentSessionsData.map((s) => ({
     id: s.id,
     date: s.date,
-    duration_minutes: s.duration_minutes,
-    template: s.template as unknown as { name: string } | null,
-    totalSets: (s.session_sets as unknown as { id: string }[]).length,
+    duration_minutes: s.durationMinutes,
+    template: s.templateName ? { name: s.templateName } : null,
+    totalSets: Number(s.totalSets),
   }));
 
-  const firstName = user?.user_metadata?.display_name?.split(" ")[0] ?? "there";
+  const firstName = session?.user?.name?.split(" ")[0] ?? "there";
 
   return (
     <div className="stagger-children space-y-8">

@@ -1,5 +1,5 @@
 import { getSharedTemplate, importSharedTemplate } from "@/lib/actions/sharing";
-import { createClient } from "@/lib/supabase/server";
+import { auth } from "@/lib/auth";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -22,10 +22,8 @@ export default async function SharePage({ params }: SharePageProps) {
   }
 
   // Check if user is logged in
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const session = await auth();
+  const user = session?.user;
 
   const importAction = importSharedTemplate.bind(null, token);
 
