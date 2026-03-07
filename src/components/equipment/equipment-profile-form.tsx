@@ -9,9 +9,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import type { Database } from "@/lib/database.types";
+import { type InferSelectModel } from "drizzle-orm";
+import { equipment as equipmentTable } from "@/lib/db/schema";
 
-type Equipment = Database["public"]["Tables"]["equipment"]["Row"];
+type Equipment = InferSelectModel<typeof equipmentTable>;
 
 interface EquipmentProfileFormProps {
   equipment: Equipment[];

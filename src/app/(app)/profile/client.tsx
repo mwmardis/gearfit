@@ -9,9 +9,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { LogOut, Save } from "lucide-react";
-import type { Database } from "@/lib/database.types";
+import { type InferSelectModel } from "drizzle-orm";
+import { profiles } from "@/lib/db/schema";
 
-type Profile = Database["public"]["Tables"]["profiles"]["Row"];
+type Profile = InferSelectModel<typeof profiles>;
 
 interface ProfileFormProps {
   profile: Profile;
