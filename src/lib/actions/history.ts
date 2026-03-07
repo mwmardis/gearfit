@@ -1,118 +1,82 @@
+// src/lib/actions/history.ts
 "use server";
 
-import { createClient } from "@/lib/supabase/server";
+import { db } from "@/lib/db";
+import { workoutSessions, sessionSets, exercises, exerciseMuscles, muscles } from "@/lib/db/schema";
+import { eq, and, gte, lte, desc, asc } from "drizzle-orm";
+import { requireAuth, getOptionalAuth } from "@/lib/auth-utils";
 
 export async function getSessionsByMonth(year: number, month: number) {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) throw new Error("Not authenticated");
+  const { profileId } = await requireAuth();
 
-  // month is 0-indexed (0 = January)
   const startDate = new Date(year, month, 1).toISOString().split("T")[0];
   const endDate = new Date(year, month + 1, 0).toISOString().split("T")[0];
 
-  const { data, error } = await supabase
-    .from("workout_sessions")
-    .select(
-      `
-      id,
-      date,
-      completed,
-      duration_minutes,
-      notes,
-      template:workout_templates (id, name),
-      session_sets (
-        exercise_id,
-        exercise:exercises (name)
-      )
-    `
-    )
-    .eq("user_id", user.id)
-    .eq("completed", true)
-    .gte("date", startDate)
-    .lte("date", endDate)
-    .order("date", { ascending: false });
-
-  if (error) throw error;
-  return data ?? [];
+  return db.query.workoutSessions.findMany({
+    where: and(
+      eq(workoutSessions.userId, profileId),
+      eq(workoutSessions.completed, true),
+      gte(workoutSessions.date, startDate),
+      lte(workoutSessions.date, endDate)
+    ),
+    with: {
+      template: true,
+      sessionSets: {
+        with: { exercise: true },
+      },
+    },
+    orderBy: [desc(workoutSessions.date)],
+  }) ?? [];
 }
 
 export async function getHistorySession(id: string) {
-  const supabase = await createClient();
-  const { data, error } = await supabase
-    .from("workout_sessions")
-    .select(
-      `
-      *,
-      template:workout_templates (id, name),
-      session_sets (
-        id,
-        exercise_id,
-        set_number,
-        weight,
-        reps,
-        rpe,
-        exercise:exercises (id, name)
-      )
-    `
-    )
-    .eq("id", id)
-    .single();
+  const result = await db.query.workoutSessions.findFirst({
+    where: eq(workoutSessions.id, id),
+    with: {
+      template: true,
+      sessionSets: {
+        with: { exercise: true },
+      },
+    },
+  });
 
-  if (error) throw error;
-  return data;
+  if (!result) throw new Error("Session not found");
+  return result;
 }
 
 export async function getExerciseHistory(exerciseId: string, limit = 20) {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) return [];
+  const authUser = await getOptionalAuth();
+  if (!authUser) return [];
 
-  const { data, error } = await supabase
-    .from("session_sets")
-    .select(
-      `
-      weight,
-      reps,
-      set_number,
-      session:workout_sessions!inner (
-        id,
-        date,
-        completed,
-        user_id
-      )
-    `
-    )
-    .eq("exercise_id", exerciseId)
-    .eq("session.user_id", user.id)
-    .eq("session.completed", true)
-    .order("created_at", { ascending: false })
-    .limit(limit * 10);
+  const sets = await db.query.sessionSets.findMany({
+    where: eq(sessionSets.exerciseId, exerciseId),
+    with: { session: true },
+    orderBy: (s, { desc }) => [desc(s.createdAt)],
+    limit: limit * 10,
+  });
 
-  if (error) throw error;
-  if (!data || data.length === 0) return [];
+  const userSets = sets.filter(
+    (s) => s.session.userId === authUser.profileId && s.session.completed
+  );
 
-  // Group by session date, compute max weight per session
+  if (userSets.length === 0) return [];
+
   const sessionMap = new Map<
     string,
     { date: string; maxWeight: number; totalVolume: number }
   >();
 
-  for (const set of data) {
-    const session = set.session as unknown as { date: string };
-    const date = session.date;
+  for (const set of userSets) {
+    const date = set.session.date;
+    const weight = Number(set.weight);
+    const volume = weight * set.reps;
     const existing = sessionMap.get(date);
-    const volume = set.weight * set.reps;
 
     if (existing) {
-      existing.maxWeight = Math.max(existing.maxWeight, set.weight);
+      existing.maxWeight = Math.max(existing.maxWeight, weight);
       existing.totalVolume += volume;
     } else {
-      sessionMap.set(date, { date, maxWeight: set.weight, totalVolume: volume });
+      sessionMap.set(date, { date, maxWeight: weight, totalVolume: volume });
     }
   }
 
@@ -122,69 +86,57 @@ export async function getExerciseHistory(exerciseId: string, limit = 20) {
 }
 
 export async function getPersonalBests(exerciseId: string) {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) return null;
+  const authUser = await getOptionalAuth();
+  if (!authUser) return null;
 
-  const { data, error } = await supabase
-    .from("session_sets")
-    .select(
-      `
-      weight,
-      reps,
-      session:workout_sessions!inner (
-        user_id,
-        completed
-      )
-    `
-    )
-    .eq("exercise_id", exerciseId)
-    .eq("session.user_id", user.id)
-    .eq("session.completed", true);
+  const sets = await db.query.sessionSets.findMany({
+    where: eq(sessionSets.exerciseId, exerciseId),
+    with: { session: true },
+  });
 
-  if (error) throw error;
-  if (!data || data.length === 0) return null;
+  const userSets = sets.filter(
+    (s) => s.session.userId === authUser.profileId && s.session.completed
+  );
+
+  if (userSets.length === 0) return null;
 
   let maxWeight = 0;
   let maxReps = 0;
   let maxVolume = 0;
 
-  for (const set of data) {
-    maxWeight = Math.max(maxWeight, set.weight);
+  for (const set of userSets) {
+    const weight = Number(set.weight);
+    maxWeight = Math.max(maxWeight, weight);
     maxReps = Math.max(maxReps, set.reps);
-    maxVolume = Math.max(maxVolume, set.weight * set.reps);
+    maxVolume = Math.max(maxVolume, weight * set.reps);
   }
 
   return { maxWeight, maxReps, maxVolume };
 }
 
 export async function getTrainingStreak() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) return 0;
+  const authUser = await getOptionalAuth();
+  if (!authUser) return 0;
 
-  // Get all completed session dates in the last 52 weeks
   const startDate = new Date();
   startDate.setDate(startDate.getDate() - 365);
 
-  const { data, error } = await supabase
-    .from("workout_sessions")
-    .select("date")
-    .eq("user_id", user.id)
-    .eq("completed", true)
-    .gte("date", startDate.toISOString().split("T")[0])
-    .order("date", { ascending: false });
+  const sessionsData = await db
+    .select({ date: workoutSessions.date })
+    .from(workoutSessions)
+    .where(
+      and(
+        eq(workoutSessions.userId, authUser.profileId),
+        eq(workoutSessions.completed, true),
+        gte(workoutSessions.date, startDate.toISOString().split("T")[0])
+      )
+    )
+    .orderBy(desc(workoutSessions.date));
 
-  if (error) throw error;
-  if (!data || data.length === 0) return 0;
+  if (sessionsData.length === 0) return 0;
 
-  // Group by ISO week and count consecutive weeks
   const weeks = new Set<string>();
-  for (const session of data) {
+  for (const session of sessionsData) {
     const d = new Date(session.date);
     const weekStart = new Date(d);
     weekStart.setDate(d.getDate() - d.getDay());
@@ -194,13 +146,11 @@ export async function getTrainingStreak() {
   const sortedWeeks = Array.from(weeks).sort().reverse();
   let streak = 0;
 
-  // Check if current week has a session
   const now = new Date();
   const currentWeekStart = new Date(now);
   currentWeekStart.setDate(now.getDate() - now.getDay());
   const currentWeekKey = currentWeekStart.toISOString().split("T")[0];
 
-  // Also check last week (in case we're early in the week)
   const lastWeekStart = new Date(currentWeekStart);
   lastWeekStart.setDate(lastWeekStart.getDate() - 7);
   const lastWeekKey = lastWeekStart.toISOString().split("T")[0];
@@ -212,12 +162,8 @@ export async function getTrainingStreak() {
     : sortedWeeks.indexOf(lastWeekKey);
 
   for (let i = startIdx; i < sortedWeeks.length; i++) {
-    const expectedWeek = new Date(
-      i === startIdx ? sortedWeeks[startIdx] : sortedWeeks[startIdx]
-    );
-    expectedWeek.setDate(
-      expectedWeek.getDate() - (i - startIdx) * 7
-    );
+    const expectedWeek = new Date(sortedWeeks[startIdx]);
+    expectedWeek.setDate(expectedWeek.getDate() - (i - startIdx) * 7);
     const expectedKey = expectedWeek.toISOString().split("T")[0];
 
     if (sortedWeeks[i] === expectedKey) {
@@ -231,56 +177,42 @@ export async function getTrainingStreak() {
 }
 
 export async function getWeeklyMuscleCoverage() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) return [];
+  const authUser = await getOptionalAuth();
+  if (!authUser) return [];
 
-  // Get sessions from this week (Sunday to Saturday)
   const now = new Date();
   const weekStart = new Date(now);
   weekStart.setDate(now.getDate() - now.getDay());
   weekStart.setHours(0, 0, 0, 0);
 
-  const { data: sets, error } = await supabase
-    .from("session_sets")
-    .select(
-      `
-      exercise_id,
-      exercise:exercises!inner (
-        exercise_muscles (
-          role,
-          muscle:muscles (name, muscle_group)
-        )
-      ),
-      session:workout_sessions!inner (
-        user_id,
-        completed,
-        date
-      )
-    `
-    )
-    .eq("session.user_id", user.id)
-    .eq("session.completed", true)
-    .gte("session.date", weekStart.toISOString().split("T")[0]);
+  const sets = await db.query.sessionSets.findMany({
+    with: {
+      exercise: {
+        with: {
+          exerciseMuscles: {
+            with: { muscle: true },
+          },
+        },
+      },
+      session: true,
+    },
+  });
 
-  if (error) throw error;
-  if (!sets || sets.length === 0) return [];
+  const userSets = sets.filter(
+    (s) =>
+      s.session.userId === authUser.profileId &&
+      s.session.completed &&
+      new Date(s.session.date) >= weekStart
+  );
 
-  // Count sets per muscle group
+  if (userSets.length === 0) return [];
+
   const coverage = new Map<string, number>();
 
-  for (const set of sets) {
-    const exercise = set.exercise as unknown as {
-      exercise_muscles: {
-        role: string;
-        muscle: { name: string; muscle_group: string } | null;
-      }[];
-    };
-    for (const em of exercise.exercise_muscles) {
+  for (const set of userSets) {
+    for (const em of set.exercise.exerciseMuscles) {
       if (em.role === "primary" && em.muscle) {
-        const group = em.muscle.muscle_group;
+        const group = em.muscle.muscleGroup;
         coverage.set(group, (coverage.get(group) ?? 0) + 1);
       }
     }
