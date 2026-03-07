@@ -1,111 +1,72 @@
+// src/lib/actions/templates.ts
 "use server";
 
-import { createClient } from "@/lib/supabase/server";
+import { db } from "@/lib/db";
+import { workoutTemplates, templateExercises } from "@/lib/db/schema";
+import { eq } from "drizzle-orm";
+import { requireAuth } from "@/lib/auth-utils";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 export async function getTemplates() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) throw new Error("Not authenticated");
+  const { profileId } = await requireAuth();
 
-  const { data, error } = await supabase
-    .from("workout_templates")
-    .select(
-      `
-      *,
-      template_exercises (
-        id,
-        exercise_id,
-        order_index,
-        target_sets,
-        target_reps,
-        target_weight,
-        exercise:exercises (id, name)
-      )
-    `
-    )
-    .eq("user_id", user.id)
-    .order("updated_at", { ascending: false });
-
-  if (error) throw error;
-  return data ?? [];
+  return db.query.workoutTemplates.findMany({
+    where: eq(workoutTemplates.userId, profileId),
+    with: {
+      templateExercises: {
+        with: { exercise: true },
+      },
+    },
+    orderBy: (t, { desc }) => [desc(t.updatedAt)],
+  }) ?? [];
 }
 
 export async function getTemplate(id: string) {
-  const supabase = await createClient();
-  const { data, error } = await supabase
-    .from("workout_templates")
-    .select(
-      `
-      *,
-      template_exercises (
-        id,
-        exercise_id,
-        order_index,
-        target_sets,
-        target_reps,
-        target_weight,
-        exercise:exercises (
-          id,
-          name,
-          exercise_muscles (
-            role,
-            muscle:muscles (name, muscle_group)
-          )
-        )
-      )
-    `
-    )
-    .eq("id", id)
-    .single();
+  const result = await db.query.workoutTemplates.findFirst({
+    where: eq(workoutTemplates.id, id),
+    with: {
+      templateExercises: {
+        with: {
+          exercise: {
+            with: {
+              exerciseMuscles: {
+                with: { muscle: true },
+              },
+            },
+          },
+        },
+        orderBy: (te, { asc }) => [asc(te.orderIndex)],
+      },
+    },
+  });
 
-  if (error) throw error;
-
-  // Sort template exercises by order_index
-  data.template_exercises.sort(
-    (
-      a: { order_index: number },
-      b: { order_index: number }
-    ) => a.order_index - b.order_index
-  );
-
-  return data;
+  if (!result) throw new Error("Template not found");
+  return result;
 }
 
 export async function createTemplate(formData: FormData) {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) throw new Error("Not authenticated");
-
+  const { profileId } = await requireAuth();
   const name = formData.get("name") as string;
   const description = (formData.get("description") as string) || null;
 
-  const { data, error } = await supabase
-    .from("workout_templates")
-    .insert({ name, description, user_id: user.id })
-    .select()
-    .single();
+  const [data] = await db
+    .insert(workoutTemplates)
+    .values({ name, description, userId: profileId })
+    .returning();
 
-  if (error) throw error;
   redirect(`/workouts/${data.id}`);
 }
 
 export async function updateTemplate(id: string, formData: FormData) {
-  const supabase = await createClient();
   const name = formData.get("name") as string;
   const description = (formData.get("description") as string) || null;
 
-  const { error } = await supabase
-    .from("workout_templates")
-    .update({ name, description, updated_at: new Date().toISOString() })
-    .eq("id", id);
+  await db
+    .update(workoutTemplates)
+    .set({ name, description, updatedAt: new Date() })
+    .where(eq(workoutTemplates.id, id));
 
-  if (error) throw error;
   revalidatePath(`/workouts/${id}`);
   revalidatePath("/workouts");
 }
@@ -115,21 +76,16 @@ export async function addExerciseToTemplate(
   exerciseId: string,
   orderIndex: number
 ) {
-  const supabase = await createClient();
-
-  const { error } = await supabase.from("template_exercises").insert({
-    template_id: templateId,
-    exercise_id: exerciseId,
-    order_index: orderIndex,
+  await db.insert(templateExercises).values({
+    templateId,
+    exerciseId,
+    orderIndex,
   });
 
-  if (error) throw error;
-
-  // Touch the template's updated_at
-  await supabase
-    .from("workout_templates")
-    .update({ updated_at: new Date().toISOString() })
-    .eq("id", templateId);
+  await db
+    .update(workoutTemplates)
+    .set({ updatedAt: new Date() })
+    .where(eq(workoutTemplates.id, templateId));
 
   revalidatePath(`/workouts/${templateId}`);
 }
@@ -138,13 +94,10 @@ export async function removeExerciseFromTemplate(
   templateExerciseId: string,
   templateId: string
 ) {
-  const supabase = await createClient();
-  const { error } = await supabase
-    .from("template_exercises")
-    .delete()
-    .eq("id", templateExerciseId);
+  await db
+    .delete(templateExercises)
+    .where(eq(templateExercises.id, templateExerciseId));
 
-  if (error) throw error;
   revalidatePath(`/workouts/${templateId}`);
 }
 
@@ -152,17 +105,15 @@ export async function reorderTemplateExercises(
   templateId: string,
   exerciseIds: string[]
 ) {
-  const supabase = await createClient();
-
-  // Update each exercise's order_index
-  const updates = exerciseIds.map((id, index) =>
-    supabase
-      .from("template_exercises")
-      .update({ order_index: index })
-      .eq("id", id)
+  await Promise.all(
+    exerciseIds.map((id, index) =>
+      db
+        .update(templateExercises)
+        .set({ orderIndex: index })
+        .where(eq(templateExercises.id, id))
+    )
   );
 
-  await Promise.all(updates);
   revalidatePath(`/workouts/${templateId}`);
 }
 
@@ -171,80 +122,48 @@ export async function updateTemplateExercise(
   templateId: string,
   data: { target_sets?: number; target_reps?: number; target_weight?: number | null }
 ) {
-  const supabase = await createClient();
-  const { error } = await supabase
-    .from("template_exercises")
-    .update(data)
-    .eq("id", id);
+  await db
+    .update(templateExercises)
+    .set({
+      ...(data.target_sets !== undefined && { targetSets: data.target_sets }),
+      ...(data.target_reps !== undefined && { targetReps: data.target_reps }),
+      ...(data.target_weight !== undefined && { targetWeight: data.target_weight ? String(data.target_weight) : null }),
+    })
+    .where(eq(templateExercises.id, id));
 
-  if (error) throw error;
   revalidatePath(`/workouts/${templateId}`);
 }
 
 export async function cloneTemplate(id: string) {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) throw new Error("Not authenticated");
+  const { profileId } = await requireAuth();
 
-  // Fetch original template with exercises
-  const { data: original, error: fetchError } = await supabase
-    .from("workout_templates")
-    .select(
-      `
-      *,
-      template_exercises (
-        exercise_id,
-        order_index,
-        target_sets,
-        target_reps,
-        target_weight
-      )
-    `
-    )
-    .eq("id", id)
-    .single();
+  const original = await db.query.workoutTemplates.findFirst({
+    where: eq(workoutTemplates.id, id),
+    with: { templateExercises: true },
+  });
 
-  if (fetchError) throw fetchError;
+  if (!original) throw new Error("Template not found");
 
-  // Create new template
-  const { data: newTemplate, error: createError } = await supabase
-    .from("workout_templates")
-    .insert({
+  const [newTemplate] = await db
+    .insert(workoutTemplates)
+    .values({
       name: `${original.name} (Copy)`,
       description: original.description,
-      user_id: user.id,
+      userId: profileId,
     })
-    .select()
-    .single();
+    .returning();
 
-  if (createError) throw createError;
-
-  // Copy exercises
-  if (original.template_exercises.length > 0) {
-    const exercises = original.template_exercises.map(
-      (te: {
-        exercise_id: string;
-        order_index: number;
-        target_sets: number;
-        target_reps: number;
-        target_weight: number | null;
-      }) => ({
-        template_id: newTemplate.id,
-        exercise_id: te.exercise_id,
-        order_index: te.order_index,
-        target_sets: te.target_sets,
-        target_reps: te.target_reps,
-        target_weight: te.target_weight,
-      })
+  if (original.templateExercises.length > 0) {
+    await db.insert(templateExercises).values(
+      original.templateExercises.map((te) => ({
+        templateId: newTemplate.id,
+        exerciseId: te.exerciseId,
+        orderIndex: te.orderIndex,
+        targetSets: te.targetSets,
+        targetReps: te.targetReps,
+        targetWeight: te.targetWeight,
+      }))
     );
-
-    const { error: exercisesError } = await supabase
-      .from("template_exercises")
-      .insert(exercises);
-
-    if (exercisesError) throw exercisesError;
   }
 
   revalidatePath("/workouts");
@@ -252,13 +171,8 @@ export async function cloneTemplate(id: string) {
 }
 
 export async function deleteTemplate(id: string) {
-  const supabase = await createClient();
-  const { error } = await supabase
-    .from("workout_templates")
-    .delete()
-    .eq("id", id);
+  await db.delete(workoutTemplates).where(eq(workoutTemplates.id, id));
 
-  if (error) throw error;
   revalidatePath("/workouts");
   redirect("/workouts");
 }
