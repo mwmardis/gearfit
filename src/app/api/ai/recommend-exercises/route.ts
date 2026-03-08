@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const userId = session.user.id;
+    const userId = session.user.id!;
     const profileId = (session.user as { profileId?: string }).profileId;
 
     if (!checkRateLimit(userId)) {

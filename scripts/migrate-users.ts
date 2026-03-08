@@ -10,7 +10,14 @@ const db = drizzle(sql);
 
 // Supabase exports users as JSON via their management API
 // Get this from: supabase auth admin listUsers() or dashboard export
-const supabaseUsers = [
+interface SupabaseUser {
+  id: string;
+  email: string;
+  encrypted_password: string;
+  raw_user_meta_data?: { display_name?: string };
+}
+
+const supabaseUsers: SupabaseUser[] = [
   // Paste exported users here, format:
   // { id: "uuid", email: "...", encrypted_password: "$2a$...", raw_user_meta_data: { display_name: "..." } }
 ];

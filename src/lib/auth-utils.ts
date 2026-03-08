@@ -11,7 +11,7 @@ export async function requireAuth(): Promise<{ userId: string; profileId: string
     throw new Error("Not authenticated");
   }
   return {
-    userId: session.user.id,
+    userId: session.user.id!,
     profileId: session.user.profileId,
   };
 }
@@ -23,7 +23,7 @@ export async function getOptionalAuth(): Promise<{ userId: string; profileId: st
   const session = await auth();
   if (!session?.user?.profileId) return null;
   return {
-    userId: session.user.id,
+    userId: session.user.id!,
     profileId: session.user.profileId,
   };
 }

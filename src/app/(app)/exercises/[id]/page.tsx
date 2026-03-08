@@ -28,18 +28,18 @@ export default async function ExerciseDetailPage({
   const primaryMuscles = exercise.exerciseMuscles
     .filter((em: { role: string }) => em.role === "primary")
     .map((em: { muscle: { name: string } | null }) => em.muscle?.name)
-    .filter(Boolean);
+    .filter((name): name is string => !!name);
 
   const secondaryMuscles = exercise.exerciseMuscles
     .filter((em: { role: string }) => em.role === "secondary")
     .map((em: { muscle: { name: string } | null }) => em.muscle?.name)
-    .filter(Boolean);
+    .filter((name): name is string => !!name);
 
   const equipmentNames = exercise.exerciseEquipment
     .map(
       (ee: { equipment: { name: string } | null }) => ee.equipment?.name
     )
-    .filter(Boolean);
+    .filter((name): name is string => !!name);
 
   return (
     <div className="space-y-6">
