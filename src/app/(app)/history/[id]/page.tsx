@@ -31,8 +31,8 @@ export default async function SessionDetailPage({
     }
   >();
 
-  for (const set of session.session_sets) {
-    const exerciseId = set.exercise_id;
+  for (const set of session.sessionSets) {
+    const exerciseId = set.exerciseId;
     const exerciseName =
       (set.exercise as { name: string } | null)?.name ?? "Unknown";
 
@@ -44,10 +44,10 @@ export default async function SessionDetailPage({
       });
     }
     exerciseGroups.get(exerciseId)!.sets.push({
-      set_number: set.set_number,
-      weight: set.weight,
+      set_number: set.setNumber,
+      weight: Number(set.weight),
       reps: set.reps,
-      rpe: set.rpe,
+      rpe: set.rpe ? Number(set.rpe) : null,
     });
   }
 
@@ -78,10 +78,10 @@ export default async function SessionDetailPage({
             <Calendar className="h-4 w-4" />
             {dateStr}
           </span>
-          {session.duration_minutes && (
+          {session.durationMinutes && (
             <span className="flex items-center gap-1">
               <Clock className="h-4 w-4" />
-              {session.duration_minutes} min
+              {session.durationMinutes} min
             </span>
           )}
         </div>

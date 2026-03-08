@@ -17,10 +17,10 @@ interface PreviousSet {
 
 interface TemplateExercise {
   id: string;
-  exercise_id: string;
-  target_sets: number;
-  target_reps: number;
-  target_weight: number | null;
+  exerciseId: string;
+  targetSets: number;
+  targetReps: number;
+  targetWeight: string | null;
   exercise: {
     id: string;
     name: string;
@@ -36,11 +36,11 @@ interface LoggedSet {
 interface AllExercise {
   id: string;
   name: string;
-  exercise_muscles: {
+  exerciseMuscles: {
     role: string;
-    muscle: { name: string; muscle_group: string } | null;
+    muscle: { name: string; muscleGroup: string } | null;
   }[];
-  exercise_equipment: {
+  exerciseEquipment: {
     equipment: { name: string } | null;
   }[];
 }
@@ -141,7 +141,7 @@ export function ActiveWorkoutClient({
       <div className="space-y-4">
         {templateExercises.map((te) => {
           const swap = swaps[te.id];
-          const exerciseId = swap?.exerciseId ?? te.exercise_id;
+          const exerciseId = swap?.exerciseId ?? te.exerciseId;
           const exerciseName = swap?.exerciseName ?? te.exercise?.name ?? "Unknown Exercise";
 
           return (
@@ -149,9 +149,9 @@ export function ActiveWorkoutClient({
               key={te.id}
               exerciseId={exerciseId}
               exerciseName={exerciseName}
-              targetSets={te.target_sets}
-              targetReps={te.target_reps}
-              targetWeight={te.target_weight}
+              targetSets={te.targetSets}
+              targetReps={te.targetReps}
+              targetWeight={te.targetWeight ? Number(te.targetWeight) : null}
               previousSets={previousSetsMap[exerciseId] ?? null}
               loggedSets={loggedSets[exerciseId] ?? []}
               onLogSet={handleLogSet}

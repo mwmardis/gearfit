@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { signOut } from "@/lib/actions/auth";
+import { handleSignOut } from "@/lib/actions/auth";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -16,10 +16,10 @@ import {
   LogOut,
   Flame,
 } from "lucide-react";
-import type { User as SupabaseUser } from "@supabase/supabase-js";
-import type { Database } from "@/lib/database.types";
+import type { User as AuthUser } from "next-auth";
+import type { profiles } from "@/lib/db/schema";
 
-type Profile = Database["public"]["Tables"]["profiles"]["Row"];
+type Profile = typeof profiles.$inferSelect;
 
 const navItems = [
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
@@ -31,13 +31,13 @@ const navItems = [
 ];
 
 interface SidebarProps {
-  user: SupabaseUser;
+  user: AuthUser;
   profile: Profile | null;
 }
 
 export function Sidebar({ user, profile }: SidebarProps) {
   const pathname = usePathname();
-  const initials = (profile?.display_name ?? user.email ?? "U")
+  const initials = (profile?.displayName ?? user.email ?? "U")
     .slice(0, 2)
     .toUpperCase();
 
@@ -88,7 +88,7 @@ export function Sidebar({ user, profile }: SidebarProps) {
           </Avatar>
           <div className="flex-1 min-w-0">
             <p className="truncate text-sm font-semibold">
-              {profile?.display_name ?? user.email}
+              {profile?.displayName ?? user.email}
             </p>
             <p className="truncate text-xs text-muted-foreground">
               {user.email}
@@ -97,7 +97,7 @@ export function Sidebar({ user, profile }: SidebarProps) {
         </div>
         <div className="mt-3 flex items-center gap-1">
           <ThemeToggle />
-          <form action={signOut} className="flex-1">
+          <form action={handleSignOut} className="flex-1">
             <Button
               variant="ghost"
               size="sm"

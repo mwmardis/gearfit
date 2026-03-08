@@ -8,7 +8,7 @@ interface TodaysWorkoutProps {
   template: {
     id: string;
     name: string;
-    template_exercises: {
+    templateExercises: {
       id: string;
       exercise: { name: string } | null;
     }[];
@@ -61,7 +61,7 @@ export function TodaysWorkout({ template }: TodaysWorkoutProps) {
                 {template.name}
               </p>
               <div className="mt-3 flex flex-wrap gap-1.5">
-                {template.template_exercises.slice(0, 5).map((te) => (
+                {template.templateExercises.slice(0, 5).map((te) => (
                   <Badge
                     key={te.id}
                     variant="secondary"
@@ -70,9 +70,9 @@ export function TodaysWorkout({ template }: TodaysWorkoutProps) {
                     {te.exercise?.name ?? "Unknown"}
                   </Badge>
                 ))}
-                {template.template_exercises.length > 5 && (
+                {template.templateExercises.length > 5 && (
                   <Badge variant="outline" className="rounded-lg text-xs">
-                    +{template.template_exercises.length - 5} more
+                    +{template.templateExercises.length - 5} more
                   </Badge>
                 )}
               </div>

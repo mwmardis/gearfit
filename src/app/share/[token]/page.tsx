@@ -1,5 +1,5 @@
 import { getSharedTemplate, importSharedTemplate } from "@/lib/actions/sharing";
-import { createClient } from "@/lib/supabase/server";
+import { auth } from "@/lib/auth";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -22,10 +22,8 @@ export default async function SharePage({ params }: SharePageProps) {
   }
 
   // Check if user is logged in
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const session = await auth();
+  const user = session?.user;
 
   const importAction = importSharedTemplate.bind(null, token);
 
@@ -43,26 +41,26 @@ export default async function SharePage({ params }: SharePageProps) {
         <Card>
           <CardHeader>
             <CardTitle className="text-base">
-              Exercises ({template.template_exercises.length})
+              Exercises ({template.templateExercises.length})
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
             {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-            {(template.template_exercises as any[]).map(
+            {(template.templateExercises as any[]).map(
               (te: {
                 id: string;
-                target_sets: number;
-                target_reps: number;
-                target_weight: number | null;
+                targetSets: number;
+                targetReps: number;
+                targetWeight: string | null;
                 exercise: {
                   name: string;
-                  exercise_muscles: {
+                  exerciseMuscles: {
                     role: string;
                     muscle: { name: string } | null;
                   }[];
                 } | null;
               }) => {
-                const primaryMuscles = (te.exercise?.exercise_muscles ?? [])
+                const primaryMuscles = (te.exercise?.exerciseMuscles ?? [])
                   .filter((em: { role: string }) => em.role === "primary")
                   .map((em: { muscle: { name: string } | null }) => em.muscle?.name)
                   .filter(Boolean);
@@ -82,8 +80,8 @@ export default async function SharePage({ params }: SharePageProps) {
                       </div>
                     </div>
                     <p className="text-xs text-muted-foreground whitespace-nowrap">
-                      {te.target_sets}×{te.target_reps}
-                      {te.target_weight ? ` @${te.target_weight}` : ""}
+                      {te.targetSets}×{te.targetReps}
+                      {te.targetWeight ? ` @${te.targetWeight}` : ""}
                     </p>
                   </div>
                 );

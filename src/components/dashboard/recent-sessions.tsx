@@ -5,7 +5,7 @@ import { Clock, ChevronRight, Activity } from "lucide-react";
 interface RecentSession {
   id: string;
   date: string;
-  duration_minutes: number | null;
+  durationMinutes: number | null;
   template: { name: string } | null;
   totalSets: number;
 }
@@ -88,10 +88,10 @@ export function RecentSessions({ sessions }: RecentSessionsProps) {
               </div>
             </div>
             <div className="flex items-center gap-2">
-              {session.duration_minutes && (
+              {session.durationMinutes && (
                 <span className="flex items-center gap-1 rounded-lg bg-muted/50 px-2 py-1 text-xs font-medium text-muted-foreground">
                   <Clock className="h-3 w-3" />
-                  {session.duration_minutes}m
+                  {session.durationMinutes}m
                 </span>
               )}
               <ChevronRight className="h-4 w-4 text-muted-foreground/50 transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />

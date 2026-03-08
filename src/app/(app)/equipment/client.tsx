@@ -12,22 +12,23 @@ import {
 import { EquipmentProfileForm } from "@/components/equipment/equipment-profile-form";
 import { EquipmentProfileCard } from "@/components/equipment/equipment-profile-card";
 import { Plus } from "lucide-react";
-import type { Database } from "@/lib/database.types";
+import { type InferSelectModel } from "drizzle-orm";
+import { equipment as equipmentTable } from "@/lib/db/schema";
 
-type Equipment = Database["public"]["Tables"]["equipment"]["Row"];
+type Equipment = InferSelectModel<typeof equipmentTable>;
 
 interface EquipmentPageClientProps {
   equipment: Equipment[];
   profiles: {
     id: string;
     name: string;
-    is_active: boolean;
-    user_id: string;
-    created_at: string;
-    updated_at: string;
-    equipment_profile_items: {
-      equipment_id: string;
-      equipment: { id: string; name: string; category: string | null } | null;
+    isActive: boolean;
+    userId: string;
+    createdAt: Date;
+    updatedAt: Date;
+    equipmentProfileItems: {
+      equipmentId: string;
+      equipment: { id: string; name: string; category: string | null };
     }[];
   }[];
 }

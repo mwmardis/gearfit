@@ -16,11 +16,11 @@ import { rankSwapSuggestions } from "@/lib/utils/exercise-swap";
 interface Exercise {
   id: string;
   name: string;
-  exercise_muscles: {
+  exerciseMuscles: {
     role: string;
-    muscle: { name: string; muscle_group: string } | null;
+    muscle: { name: string; muscleGroup: string } | null;
   }[];
-  exercise_equipment: {
+  exerciseEquipment: {
     equipment: { name: string } | null;
   }[];
 }
@@ -44,12 +44,12 @@ export function SwapExerciseDialog({
     const current = allExercises.find((e) => e.id === currentExerciseId);
     if (!current) return [];
 
-    const primaryMuscles = current.exercise_muscles
+    const primaryMuscles = current.exerciseMuscles
       .filter((em) => em.role === "primary")
       .map((em) => em.muscle?.name ?? "")
       .filter(Boolean);
 
-    const secondaryMuscles = current.exercise_muscles
+    const secondaryMuscles = current.exerciseMuscles
       .filter((em) => em.role === "secondary")
       .map((em) => em.muscle?.name ?? "")
       .filter(Boolean);
@@ -58,7 +58,7 @@ export function SwapExerciseDialog({
     const candidates = allExercises
       .filter((e) => {
         if (e.id === currentExerciseId) return false;
-        const ePrimary = e.exercise_muscles
+        const ePrimary = e.exerciseMuscles
           .filter((em) => em.role === "primary")
           .map((em) => em.muscle?.name ?? "")
           .filter(Boolean);
@@ -67,15 +67,15 @@ export function SwapExerciseDialog({
       .map((e) => ({
         id: e.id,
         name: e.name,
-        primaryMuscles: e.exercise_muscles
+        primaryMuscles: e.exerciseMuscles
           .filter((em) => em.role === "primary")
           .map((em) => em.muscle?.name ?? "")
           .filter(Boolean),
-        secondaryMuscles: e.exercise_muscles
+        secondaryMuscles: e.exerciseMuscles
           .filter((em) => em.role === "secondary")
           .map((em) => em.muscle?.name ?? "")
           .filter(Boolean),
-        equipment: e.exercise_equipment
+        equipment: e.exerciseEquipment
           .map((ee) => ee.equipment?.name)
           .filter(Boolean) as string[],
       }));

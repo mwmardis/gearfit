@@ -13,25 +13,25 @@ import { AICopilotPanel } from "@/components/ai/ai-copilot-panel";
 interface Exercise {
   id: string;
   name: string;
-  exercise_muscles: {
+  exerciseMuscles: {
     role: string;
-    muscle: { name: string; muscle_group: string } | null;
+    muscle: { name: string; muscleGroup: string } | null;
   }[];
 }
 
 interface TemplateExercise {
   id: string;
-  exercise_id: string;
-  order_index: number;
-  target_sets: number;
-  target_reps: number;
-  target_weight: number | null;
+  exerciseId: string;
+  orderIndex: number;
+  targetSets: number;
+  targetReps: number;
+  targetWeight: string | null;
   exercise: {
     id: string;
     name: string;
-    exercise_muscles: {
+    exerciseMuscles: {
       role: string;
-      muscle: { name: string; muscle_group: string } | null;
+      muscle: { name: string; muscleGroup: string } | null;
     }[];
   } | null;
 }
@@ -41,9 +41,9 @@ interface TemplateDetailClientProps {
     id: string;
     name: string;
     description: string | null;
-    is_shared: boolean;
-    share_token: string | null;
-    template_exercises: TemplateExercise[];
+    isShared: boolean;
+    shareToken: string | null;
+    templateExercises: TemplateExercise[];
   };
   allExercises: Exercise[];
   equipmentProfileName: string | null;
@@ -57,12 +57,12 @@ export function TemplateDetailClient({
   equipmentNames,
 }: TemplateDetailClientProps) {
   const [isPending, startTransition] = useTransition();
-  const [isShared, setIsShared] = useState(template.is_shared);
-  const [shareToken, setShareToken] = useState(template.share_token);
+  const [isShared, setIsShared] = useState(template.isShared);
+  const [shareToken, setShareToken] = useState(template.shareToken);
   const [copied, setCopied] = useState(false);
 
-  const existingExerciseIds = template.template_exercises.map(
-    (te) => te.exercise_id
+  const existingExerciseIds = template.templateExercises.map(
+    (te) => te.exerciseId
   );
 
   function handleClone() {
@@ -115,17 +115,17 @@ export function TemplateDetailClient({
         equipmentProfileName={equipmentProfileName}
         equipmentNames={equipmentNames}
         templateId={template.id}
-        existingExerciseNames={template.template_exercises
+        existingExerciseNames={template.templateExercises
           .filter((te) => te.exercise !== null)
           .map((te) => te.exercise!.name)
         }
-        nextOrderIndex={template.template_exercises.length}
+        nextOrderIndex={template.templateExercises.length}
       />
 
       <div className="flex gap-2">
         <AddExerciseDialog
           templateId={template.id}
-          currentExerciseCount={template.template_exercises.length}
+          currentExerciseCount={template.templateExercises.length}
           exercises={allExercises}
           existingExerciseIds={existingExerciseIds}
         />
@@ -168,7 +168,7 @@ export function TemplateDetailClient({
 
       <TemplateExerciseList
         templateId={template.id}
-        exercises={template.template_exercises}
+        exercises={template.templateExercises}
       />
     </div>
   );

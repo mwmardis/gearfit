@@ -17,9 +17,9 @@ import { addExerciseToTemplate } from "@/lib/actions/templates";
 interface Exercise {
   id: string;
   name: string;
-  exercise_muscles: {
+  exerciseMuscles: {
     role: string;
-    muscle: { name: string; muscle_group: string } | null;
+    muscle: { name: string; muscleGroup: string } | null;
   }[];
 }
 
@@ -80,7 +80,7 @@ export function AddExerciseDialog({
         />
         <div className="flex-1 overflow-y-auto space-y-1 min-h-0">
           {filtered.map((exercise) => {
-            const primaryMuscles = exercise.exercise_muscles
+            const primaryMuscles = exercise.exerciseMuscles
               .filter((em) => em.role === "primary")
               .map((em) => em.muscle?.name)
               .filter(Boolean);

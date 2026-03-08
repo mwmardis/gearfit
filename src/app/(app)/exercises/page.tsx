@@ -5,9 +5,9 @@ import { ExercisesPageClient } from "./client";
 export default async function ExercisesPage() {
   const exercises = await getExercises();
   const profiles = await getEquipmentProfiles();
-  const activeProfile = profiles.find((p: { is_active: boolean }) => p.is_active);
+  const activeProfile = profiles.find((p: { isActive: boolean }) => p.isActive);
   const equipmentNames = activeProfile
-    ? activeProfile.equipment_profile_items.map(
+    ? activeProfile.equipmentProfileItems.map(
         (item: { equipment: { name: string } }) => item.equipment.name
       )
     : [];

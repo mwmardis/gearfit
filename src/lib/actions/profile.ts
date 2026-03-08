@@ -1,53 +1,46 @@
+// src/lib/actions/profile.ts
 "use server";
 
-import { createClient } from "@/lib/supabase/server";
+import { db } from "@/lib/db";
+import { profiles } from "@/lib/db/schema";
+import { eq } from "drizzle-orm";
+import { requireAuth } from "@/lib/auth-utils";
 import { revalidatePath } from "next/cache";
 
 export async function getProfile() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) throw new Error("Not authenticated");
+  const { profileId } = await requireAuth();
 
-  const { data, error } = await supabase
-    .from("profiles")
-    .select("*")
-    .eq("id", user.id)
-    .single();
+  const [profile] = await db
+    .select()
+    .from(profiles)
+    .where(eq(profiles.id, profileId))
+    .limit(1);
 
-  if (error) throw error;
-  return data;
+  if (!profile) throw new Error("Profile not found");
+  return profile;
 }
 
 export async function updateProfile(formData: FormData) {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) throw new Error("Not authenticated");
+  const { profileId } = await requireAuth();
 
   const displayName = formData.get("display_name") as string;
   const preferredUnits = formData.get("preferred_units") as string;
-  const overloadSessionsThreshold = Number(
-    formData.get("overload_sessions_threshold")
-  );
+  const overloadSessionsThreshold = Number(formData.get("overload_sessions_threshold"));
   const overloadIncrementLbs = Number(formData.get("overload_increment_lbs"));
   const overloadIncrementKg = Number(formData.get("overload_increment_kg"));
 
-  const { error } = await supabase
-    .from("profiles")
-    .update({
-      display_name: displayName || null,
-      preferred_units: preferredUnits,
-      overload_sessions_threshold: overloadSessionsThreshold,
-      overload_increment_lbs: overloadIncrementLbs,
-      overload_increment_kg: overloadIncrementKg,
-      updated_at: new Date().toISOString(),
+  await db
+    .update(profiles)
+    .set({
+      displayName: displayName || null,
+      preferredUnits,
+      overloadSessionsThreshold,
+      overloadIncrementLbs: String(overloadIncrementLbs),
+      overloadIncrementKg: String(overloadIncrementKg),
+      updatedAt: new Date(),
     })
-    .eq("id", user.id);
+    .where(eq(profiles.id, profileId));
 
-  if (error) throw error;
   revalidatePath("/profile");
   revalidatePath("/", "layout");
 }

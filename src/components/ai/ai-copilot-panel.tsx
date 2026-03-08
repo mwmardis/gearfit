@@ -97,25 +97,25 @@ export function AICopilotPanel({
   }
 
   async function handleAddFromSaved(saved: {
-    exercise_name: string;
-    exercise_id: string | null;
-    primary_muscles: string[];
-    secondary_muscles: string[];
-    suggested_sets: number;
-    suggested_reps: number;
+    exerciseName: string;
+    exerciseId: string | null;
+    primaryMuscles: string[];
+    secondaryMuscles: string[];
+    suggestedSets: number;
+    suggestedReps: number;
     description: string | null;
   }) {
     startTransition(async () => {
-      let exerciseId = saved.exercise_id;
+      let exerciseId = saved.exerciseId;
 
       if (!exerciseId) {
         const newExercise = await createExerciseFromSuggestion(
           {
-            name: saved.exercise_name,
-            primaryMuscles: saved.primary_muscles,
-            secondaryMuscles: saved.secondary_muscles,
-            suggestedSets: saved.suggested_sets,
-            suggestedReps: saved.suggested_reps,
+            name: saved.exerciseName,
+            primaryMuscles: saved.primaryMuscles,
+            secondaryMuscles: saved.secondaryMuscles,
+            suggestedSets: saved.suggestedSets,
+            suggestedReps: saved.suggestedReps,
             description: saved.description ?? "",
             instructions: "",
           },
@@ -129,7 +129,7 @@ export function AICopilotPanel({
         setOrderCounter((c) => c + 1);
       }
 
-      setAddedIds((prev) => new Set(prev).add(saved.exercise_name));
+      setAddedIds((prev) => new Set(prev).add(saved.exerciseName));
     });
   }
 
