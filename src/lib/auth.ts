@@ -9,7 +9,9 @@ import bcrypt from "bcryptjs";
 export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: DrizzleAdapter(db, {
     usersTable: users,
+    // @ts-expect-error - DrizzleAdapter types expect snake_case JS properties but our schema uses camelCase. Runtime is correct.
     accountsTable: accounts,
+    // @ts-expect-error - same as above
     sessionsTable: sessions,
     verificationTokensTable: verificationTokens,
   }),
