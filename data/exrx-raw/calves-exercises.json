@@ -1,0 +1,1049 @@
+[
+  {
+    "name": "Barbell Standing Leg Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/BBStandingCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Barbell",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Set barbell on power rack upper chest height with calf block under barbell. Position back of shoulders under barbell with both hands to sides. Position toes and balls of feet on calf block with arches and heels extending off. Lean barbell against rack and raise from supports by extending knees and hips. Support barbell against verticals with both hands to sides.",
+    "execution": "Raise heels by extending ankles as high as possible. Lower heels by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Cable Belt Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/CBStandingCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Cable",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place cable belt or dip belt around waist. Kneel before low pulley and attach belt to cable. Stand on calf block and grasp support bar for balance. Position toes and balls of feet on calf block with arches and heels extending off.",
+    "execution": "Raise heels by extending ankles as high as possible. Lower heels by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Cable One Arm Single Leg Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/CBOneArmSingleLegCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Cable",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand facing low pulley with platform on floor. Bend over and grasp stirrup attachment with one hand. Stand on edge of platform and grasp support bar for balance. Position toes and balls of feet on platform with arches and heels extending off. Lift one leg up off of floor.",
+    "execution": "Raise heel by extending ankle as high as possible. Lower heel by bending ankle until calf is stretched. Repeat."
+  },
+  {
+    "name": "Dumbbell Standing Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/DBStandingCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae",
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp dumbbell in one hand to side. Position toes and balls of feet on calf block with arches and heels extending off. Place hand on support for balance.",
+    "execution": "Raise heels by extending ankles as high as possible. Lower heels by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Dumbbell Single Leg Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/DBSingleLegCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp dumbbell in one hand to side. Position toes and balls of feet on calf block with arches and heels extending off. Place hand on support for balance. Lift other leg to rear by bending knee.",
+    "execution": "Raise heel by extending ankle as high as possible. Lower heel by bending ankle until calf is stretched. Repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Lever 45° Calf Press (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/LV45CalfPress",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat with back on padded support. Place feet on platform. Grasp handles to sides and extend hips and knees. Place toes and balls of feet on lower portion of platform with heels and arches extending off.",
+    "execution": "Push platform by extending ankles as far as possible. Return by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Lever Calf Extension (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/LVSeatedCalfExtensionHammer",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat and position forefeet on lever platform. Grasp handles to sides and straighten knees.",
+    "execution": "Push lever by extending ankle as far as possible. Return by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Lever Standing Calf Raise (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/LVStandingCalfRaisePL",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place shoulders under padded lever. Position toes and balls of feet on calf block with arches and heels extending off. Grasp handles or sides of padded lever. Stand erect by extending hips and knees.",
+    "execution": "Raise heels by extending ankles as high as possible. Lower heels by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Lever 45° Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/LV45CalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on machine with low back against padding and grasp handles to sides. Position toes and balls of feet on lower portion of platform or foot bar with arches and heels extending off. Straighten knees.",
+    "execution": "Raise heels by extending ankles as high as possible. Lower heels by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Lever Calf Extension",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/LVSeatedCalfExtension",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat and position forefeet on horizontal foot bar. Grasp handles to sides and straighten knees.",
+    "execution": "Push lever by extending ankles as far as possible. Return by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Lever Donkey Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/LVDonkeyCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Serratus Anterior",
+      "Pectoralis Minor",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position lower back and hips under padded lever. Place forearms on supports. Position toes and balls of feet on calf block with arches and heels extending off. Straighten knees.",
+    "execution": "Raise heels by extending ankles as high as possible. Lower heels by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Lever Seated Calf Press",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/LVSeatedCalfPress",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place seat away from platform. Sit on seat with lower back against back of seat. Place toes and balls of feet on lower portion of platform with heels and arches extending off. Grasp handles to sides and straighten knees.",
+    "execution": "Push lever by extending ankles as far as possible. Return by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Lever Standing Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/LVStandingCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place shoulders under padded lever. Position toes and balls of feet on calf block with arches and heels extending off. Grasp handles or sides of padded lever. Stand erect by extending hips and knees.",
+    "execution": "Raise heels by extending ankles as high as possible. Lower heels by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Sled 45° Calf Press",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/SL45CalfPress",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Sled",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat with back on padded support. Place feet on platform. Grasp handles to sides and extend hips and knees. Place toes and balls of feet on lower portion of platform with heels and arches extending off.",
+    "execution": "Push sled by extending ankles as far as possible. Return by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Sled 45° Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/SL45CalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Sled",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on machine with lower back against padding and grasp handles to sides. Position toes and balls of feet on foot platform with arches and heels extending off. Straighten knees.",
+    "execution": "Raise heels by extending ankles as high as possible. Lower heels by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Sled Donkey Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/SLDonkeyCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Sled",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Serratus Anterior",
+      "Pectoralis Minor",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position lower back and hips under upper pad. Place forearms on supports. Position toes and balls of feet on calf block with arches and heels extending off. Straighten knees.",
+    "execution": "Raise heels by extending ankles as high as possible. Lower heels by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Sled Lying Calf Press",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/SLLyingCalfPress",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Sled",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position sled away from platform. Lie supine on sled with shoulders against pad and place feet on platform. Grasp handles to sides and straighten knees. Place toes and balls of feet on lower portion of platform with heels and arches extending off.",
+    "execution": "Push sled away from platform by extending ankles as far as possible. Return by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Sled Seated Calf Press",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/SLSeatedCalfPress",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Sled",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place seat away from platform. Sit on seat and place feet on platform. Grasp handles to sides and extend hips and knees. Place toes and balls of feet on lower portion of platform with heels and arches extending off.",
+    "execution": "Push sled by extending ankles as far as possible. Return by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Sled Standing Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/SLStandingCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Sled",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place shoulders under padded bars. Position toes and balls of feet on calf block with arches and heels extending off. Grasp handles or sides of padded bars. Stand erect by extending hips and knees.",
+    "execution": "Raise heels by extending ankles as high as possible. Lower heels by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Smith Standing Leg Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/SMStandingCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Smith",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position bar on upper chest height and place calf block under bar. Position back of shoulders under bar and grasp bar to sides. Position toes and balls of feet on calf block with arches and heels extending off. Disengage bar by rotating bar back. Stand erect by extending knees and hips.",
+    "execution": "Raise heels by extending ankles as high as possible. Lower heels by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Weighted Single Leg Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/WTSingleLegCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Weighted",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Hang weight from dip belt around waist. Position toes and ball of foot on calf block end of platform with heel and arch extending off. Place hand or hands on support for balance. Lift other leg to rear by bending knee.",
+    "execution": "Raise heel by extending ankle as high as possible. Lower heel by bending ankle until calf is stretched. Repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Standing Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/BWStandingCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position toes and balls of feet on calf block with arches and heels extending off. Place hand on support for balance.",
+    "execution": "Raise heels by extending ankles as high as possible. Lower heels by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Single Leg Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/BWSingleLegCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position toes and balls of feet on calf block or elevation with heels and arches extending off. Place hand or hands on support for balance. Lift one leg to rear by bending knee.",
+    "execution": "Raise heel by extending ankle as high as possible. Lower heel by bending ankle until calf is stretched. Repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Self-assisted Single Leg Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/ASSingleLegCalfRaiseSelf",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Self-assisted",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position toes and balls of feet on calf block with heels and arches extending off. Place hands on support for assistance. Lift one leg to rear by bending knee.",
+    "execution": "Raise heel by extending ankle as high as possible, assisting with upper body as little as possible. Lower heel by bending ankle until calf is stretched. Repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Suspended Forward Angled Single Leg Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Gastrocnemius/STSingleLegForwardAngledCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Gastrocnemius",
+    "equipment": "Suspended",
+    "synergists": [
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques",
+      "Hip External Rotators",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Serratus Anterior",
+      "Triceps Brachii",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Deltoid, Posterior",
+      "Coracobrachialis",
+      "Rectus Abdominis",
+      "Quadriceps",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand facing suspension trainer handles positioned hip to waist high. Grasp handles with overhand grip. Step back so body is angled forward with arms extended approximately perpendicular to body. Feet should be pointed forward. Lift one leg forward by flexing at hip and knee.",
+    "execution": "Raise heel by extending ankle as high as possible. Allow body to travel forward and upward in same direction as body is orientated. Lower heel allowing foot to come back down flat on floor. Repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Floor Board Straight Leg Calf Stretch",
+    "url": "https://exrx.net/Stretches/Gastrocnemius/FloorBoard",
+    "bodyRegion": "Calves",
+    "targetMuscle": "",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Face wall with both knees slightly bent. Position fore foot on wall with heel on floor.",
+    "execution": "Straighten knees and lean body toward wall. Hold stretch . Repeat with opposite leg."
+  },
+  {
+    "name": "Pike Straight Leg Calf Stretch",
+    "url": "https://exrx.net/Stretches/Gastrocnemius/Bentover",
+    "bodyRegion": "Calves",
+    "targetMuscle": "",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "",
+    "execution": ""
+  },
+  {
+    "name": "Step Straight Leg Calf Stretch",
+    "url": "https://exrx.net/Stretches/Gastrocnemius/Step",
+    "bodyRegion": "Calves",
+    "targetMuscle": "",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Position toes and balls of feet on stair step or calf block with arches and heels extending off. Use railing or wall for balance.",
+    "execution": "With knees straight, shift body weight to one foot. Hold stretch. Repeat with opposite leg."
+  },
+  {
+    "name": "Wall Straight Leg Calf Stretch",
+    "url": "https://exrx.net/Stretches/Gastrocnemius/Wall",
+    "bodyRegion": "Calves",
+    "targetMuscle": "",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Place both hands on wall with arms extended. Lean against wall with one leg bent forward and other leg extended back with knee straight and foot positioned directly forward.",
+    "execution": "Push rear heal to floor and move hips slightly forward. Hold stretch. Repeat with opposite leg."
+  },
+  {
+    "name": "Safety Bar Seated Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Soleus/SBSeatedCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Soleus",
+    "equipment": "Barbell",
+    "synergists": [
+      "Gastrocnemius"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Place safety bar on rack approximately lower leg height with calf block slightly rear of safety bar. Sit on bench facing safety bar and place toes on lower portion of platform with heels extending off. Scoot forward to edge of bench and position lower thighs under safety bar. Grasp bar to sides and lift bar from rack by pushing heels up. Slide back to center of bench.",
+    "execution": "Lower heels by bending ankles until calves are stretched. Raise heels by extending ankles as high as possible. Repeat."
+  },
+  {
+    "name": "Lever Seated Calf Raise (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/Soleus/LVSeatedCalfRaiseH",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Soleus",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Gastrocnemius"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on seat facing lever. Place forefeet on platform with heels extending off. Position lower thighs under lever pads. Grasp handles if available or place hands on lever pad. Lift lever slightly by pushing heels up. Release support lever.",
+    "execution": "Lower heels by bending ankles until calves are stretched. Raise heels by extending ankles as high as possible. Repeat."
+  },
+  {
+    "name": "Lever Seated Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Soleus/LVSeatedCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Soleus",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Gastrocnemius"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on seat facing lever. Reach forward and pull hand lever toward body. Place forefeet on platform with heels extending off. Position lower thighs under lever pads. Release hand lever by pushing away from body. Place hands on top of thigh pads.",
+    "execution": "Raise heels by extending ankles as high as possible. Lower heels by bending ankles until calves are stretched. Repeat."
+  },
+  {
+    "name": "Smith Seated Calf Raise",
+    "url": "https://exrx.net/WeightExercises/Soleus/SMSeatedCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Soleus",
+    "equipment": "Smith",
+    "synergists": [
+      "Gastrocnemius"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Position bar slightly higher than lower leg height. Wrap bar pad around center of bar. Place calf block under bar and bench near bar. Sit on bench facing bar and place toes on lower portion of platform with heels extending off. Grasp bar to sides and extend ankles to raise knees so lower thighs are under padded bar. Push heels further up. Disengage bar by rotating bar back.",
+    "execution": "Lower heels by bending ankles until calves are stretched. Raise heels by extending ankles as high as possible. Repeat."
+  },
+  {
+    "name": "Floor Board Bent Knee Calf Stretch",
+    "url": "https://exrx.net/Stretches/Soleus/FloorBoard",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Soleus",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Face wall with both knees slightly bent. Position fore foot on wall with heel on floor.",
+    "execution": "Straighten knee of rear leg and lean body toward wall. Hold stretch. Repeat with opposite leg."
+  },
+  {
+    "name": "Seated Bent Leg Calf Stretch",
+    "url": "https://exrx.net/Stretches/Soleus/Seated",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Soleus",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Sit on floor or mat. Place heel on floor or mat with bent knee upright. Grasp top of forefoot.",
+    "execution": "Pull forefoot toward shin. Repeat with opposite leg."
+  },
+  {
+    "name": "Step Bent Knee Calf Stretch",
+    "url": "https://exrx.net/Stretches/Soleus/Step",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Soleus",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Position toes and balls of feet on stair step or calf block with arches and heels extending off. Place support leg up to higher steps. Use railing or wall for balance. Bend rear knee.",
+    "execution": "Allow rear heel to lower below step. Hold stretch for 20 seconds. Repeat with opposite leg."
+  },
+  {
+    "name": "Wall Bent Knee Calf Stretch",
+    "url": "https://exrx.net/Stretches/Soleus/Wall",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Soleus",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Place both hands on wall with arms extended. Lean against wall with one leg bent forward and other leg extended back. Bend rear knee slightly, positioned foot directly forward, and place heal to floor.",
+    "execution": "Lower knee until just before heel raises. Hold stretch for 20 seconds. Repeat with opposite leg."
+  },
+  {
+    "name": "Safety Bar Reverse Calf Raise",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/SBReverseCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Barbell",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Standing facing safety barbell on rack upper chest height and calf block on floor just below. Position heels on forward edge of calf block. Place hands on bar to each sides or on vertical rack bars. Position head in yoke with padded bar around shoulders. Dismount bar from rack by standing erect with safety bar, away yet close to rack.",
+    "execution": "Pull forefeet up toward body as far as possible. Return by extending feet until toes are pointed downward. Repeat."
+  },
+  {
+    "name": "Cable Reverse Calf Raise",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/CBReverseCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Cable",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place cable belt or dip belt around waist. Kneel before low pulley and attach it to cable. Stand and position heels on forward edge of platform. Grasp support bar for balance.",
+    "execution": "Pull forefeet up toward body as far as possible. Return by extending feet until toes are pointed downward. Repeat."
+  },
+  {
+    "name": "Cable Single Leg Reverse Calf Raise",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/CBSingleLegReverseCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Cable",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Place cable belt or dip belt around waist. Kneel before low pulley and attach it to cable. Stand and position heel on forward edge of platform. Raise other leg off block. Grasp support bar for balance.",
+    "execution": "Pull forefoot up toward body as far as possible. Return by extending feet until toes are pointed downward. Repeat."
+  },
+  {
+    "name": "Dumbbell Reverse Calf Raise",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/DBReverseCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Dumbbell",
+    "synergists": [],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp dumbbell in one hand to side. Position heels on forward edge of platform. Grasp support with other hand for balance.",
+    "execution": "Pull forefoot of both feet up toward body as far as possible. Return by extending feet until toes are pointed downward. Repeat."
+  },
+  {
+    "name": "Dumbbell Single Leg Reverse Calf Raise",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/DBSingleLegRevCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Dumbbell",
+    "synergists": [],
+    "stabilizers": [
+      "Gluteus Medius",
+      "Gluteus Maximus",
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp dumbbell in one hand to side. Position one heel on forward edge of platform. Grasp support with other hand for balance. Lift other leg to rear by bending knee.",
+    "execution": "Pull forefoot up toward body as far as possible. Return by extending foot until toes are pointed downward. Repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Lever 45° Reverse Calf Press (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/LV45ReverseCalfPress",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat with back on padded support. Place feet very high on platform, grasp handles to sides, and extend knees.",
+    "execution": "Pull forefoot back toward body as far as possible while pushing platform with heels. Return feet down to platform and repeat."
+  },
+  {
+    "name": "Lever 45° Reverse Calf Raise (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/LV45ReverseCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on machine with lower back against padding. Grasp handles to sides and place feet on top portion of platform. Straighten knees and position heels on top edge of platform.",
+    "execution": "Pull forefoot of both feet up and back toward body as far as possible. Return by extending feet return to platform. Repeat."
+  },
+  {
+    "name": "Lever Reverse Calf Raise (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/LVReverseCalfRaisePL",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place shoulders under padded lever. Stand erect by extending hips and knees. Position heels on forward edge of platform placed under padded lever. Grasp handles or sides of padded lever.",
+    "execution": "Pull forefoot of both feet up toward body as far as possible. Return by extending feet until toes are pointed downward. Repeat."
+  },
+  {
+    "name": "Lever Reverse Calf Extension (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/LVSeatedReverseCalfExtHammer",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat and position heels on lever platform with fore feet extended off top. Grasp handles to sides and straighten knees.",
+    "execution": "Pull forefoot back toward body as far as possible while pushing platform with heels. Return feet down to platform and repeat."
+  },
+  {
+    "name": "Lever Reverse Calf Extension",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/LVReverseCalfExtension",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Lever (selectorized)",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat and position heels on lever platform with fore feet extended off top. Grasp handles to sides and straighten knees.",
+    "execution": "Pull forefoot back toward body as far as possible while pushing platform with heels. Return feet down to platform and repeat."
+  },
+  {
+    "name": "Lever Reverse Calf Raise",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/LVReverseCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Lever (selectorized)",
+    "synergists": [],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place shoulders under padded lever. Stand erect by extending hips and knees. Position heels on forward edge of platform placed under padded lever. Grasp handles or sides of padded lever.",
+    "execution": "Pull forefoot of both feet up toward body as far as possible. Return by extending feet until toes are pointed downward. Repeat."
+  },
+  {
+    "name": "Sled 45° Reverse Calf Press",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/SL45ReverseCalfPress",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Sled",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat with back on padded support. Place feet very high on platform, grasp handles to sides, and extend knees.",
+    "execution": "Pull forefoot back toward body as far as possible while pushing platform with heels. Return feet down to platform and repeat."
+  },
+  {
+    "name": "Sled 45° Reverse Calf Raise (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/SL45ReverseCalfRaisePL",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Sled",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on machine with lower back against padding. Grasp handles to sides and place feet on platform. Straighten knees and position heels on top edge of platform.",
+    "execution": "Pull forefoot of both feet up and back toward body as far as possible. Return by extending feet until toes are pointed away from body. Repeat."
+  },
+  {
+    "name": "Sled 45° Reverse Calf Raise (on hack press)",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/SL45ReverseCalfRaiseHackPress",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Sled",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on machine with lower back against padding. Grasp handles to sides and place feet on top portion of platform. Straighten knees and position heels on top edge of platform.",
+    "execution": "Pull forefoot of both feet up and back toward body as far as possible. Return by extending feet return to platform. Repeat."
+  },
+  {
+    "name": "Sled Hack Reverse Calf Raise",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/SLHackReverseCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Sled",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie supine on back pad with shoulders against pads. Place feet very high on platform. Extend hips and knees. Release dock levers.",
+    "execution": "Pull forefoot of both feet up toward body as far as possible. Return by extending feet until toes are pointed away from body. Repeat."
+  },
+  {
+    "name": "Sled Lying Reverse Calf Press",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/SLLyingReverseCalfPress",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Sled",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position sled away from platform. Lie supine on sled with shoulders against pad and place feet very high on platform. Grasp handles to sides and straighten knees.",
+    "execution": "Pull forefoot back toward body as far as possible while pushing platform with heels. Return feet down to platform and repeat."
+  },
+  {
+    "name": "Sled Seated Reverse Calf Press",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/SLSeatedReverseCalfPress",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Sled",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat and place feet very high on platform. Grasp handles to sides and extend knees.",
+    "execution": "Pull forefoot back toward body as far as possible while pushing platform with heels. Return feet down to platform and repeat."
+  },
+  {
+    "name": "Smith Reverse Calf Raise",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/SMReverseCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Smith",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position bar upper chest height and place calf block under bar. Position back of shoulders under bar and grasp bar to sides. Position heels on forward edge of calf block. Disengage bar by rotating bar back. Stand erect with knees and hips straight.",
+    "execution": "Pull forefoot of both feet up toward body as far as possible. Return by extending feet until toes are pointed downward. Repeat."
+  },
+  {
+    "name": "Reverse Calf Raise",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/BWReverseCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Body Weight",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position heels on forward edge of calf block or platform. Grasp support with other hand for balance.",
+    "execution": "Pull forefoot of both feet up toward body as far as possible. Return by extending feet until toes are pointed downward. Repeat."
+  },
+  {
+    "name": "Single Leg Reverse Calf Raise",
+    "url": "https://exrx.net/WeightExercises/TibialisAnterior/BWSingleLegRevCalfRaise",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Body Weight",
+    "synergists": [],
+    "stabilizers": [
+      "Gluteus Medius",
+      "Gluteus Maximus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Position one heel on forward edge of platform. Grasp support with other hand for balance. Lift other leg to rear by bending knee.",
+    "execution": "Pull forefoot up toward body as far as possible. Return by extending foot until toes are pointed downward. Repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Kneeling Shin Stretch",
+    "url": "https://exrx.net/Stretches/TibialisAnterior/Kneeling",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Kneel on both knees with buttocks over both heels and feet extend back.",
+    "execution": "Sit down on or toward heels. Hold stretch."
+  },
+  {
+    "name": "Standing Shin Stretch",
+    "url": "https://exrx.net/Stretches/TibialisAnterior/Standing",
+    "bodyRegion": "Calves",
+    "targetMuscle": "Tibialis Anterior",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Stand and touch wall or stationary object for balance. Grasp forefoot behind.",
+    "execution": "Pull forefoot to lower back. Hold stretch. Repeat with opposite side."
+  }
+]

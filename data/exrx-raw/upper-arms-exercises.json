@@ -1,0 +1,1358 @@
+[
+  {
+    "name": "Machine-assisted Triceps Dip",
+    "url": "https://exrx.net/WeightExercises/Triceps/ASTriDip",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Assisted",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Coracobrachialis",
+      "Biceps Brachii"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Mount [shoulder width dip bar](../../WeightTraining/Tips#DipBar), arms straight with shoulders above hands. Step down onto assistance lever. Keep hips and knees straight.",
+    "execution": "Lower body until slight stretch is felt in shoulders. Push body up until arms are straight. Repeat."
+  },
+  {
+    "name": "Machine-assisted Triceps Dip (kneeling)",
+    "url": "https://exrx.net/WeightExercises/Triceps/ASTriDipKneeling",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Assisted",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Mount [shoulder width dip bar](../../WeightTraining/Tips#DipBar), arms straight with shoulders above hands. Kneel on padded platform, lowering it down slightly so hips are slightly bent.",
+    "execution": "Lower body until slight stretch is felt in shoulders. Push body up until arms are straight. Repeat."
+  },
+  {
+    "name": "Barbell Close Grip Bench Press",
+    "url": "https://exrx.net/WeightExercises/Triceps/BBCloseGripBenchPress",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Barbell",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Coracobrachialis",
+      "Biceps Brachii"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie on bench and grasp barbell from rack with shoulder width grip.",
+    "execution": "Lower weight to chest with elbows close to body. Push barbell back up until arms are straight. Repeat."
+  },
+  {
+    "name": "Barbell Lying Triceps Extension",
+    "url": "https://exrx.net/WeightExercises/Triceps/BBLyingTriExt",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Barbell",
+    "synergists": [],
+    "stabilizers": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Major, Sternal",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Coracobrachialis",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie on bench with narrow overhand grip on barbell. Position barbell over forehead with arms extended.",
+    "execution": "Lower bar by bending elbows. As bar nears head, move elbows slightly back just enough to allow bar to clear around curvature of head. Extend arms. As bar clears head, reposition elbows to their former position until arms are fully extended. Repeat."
+  },
+  {
+    "name": "Barbell Lying Triceps Extension \"Skull Crusher\"",
+    "url": "https://exrx.net/WeightExercises/Triceps/BBLyingTriExtSC",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Barbell",
+    "synergists": [],
+    "stabilizers": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Major, Sternal",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Coracobrachialis",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie on bench with narrow overhand grip on barbell. Position barbell over shoulders with arms extended.",
+    "execution": "Lower bar to forehead by bending elbows. Extend arms and repeat."
+  },
+  {
+    "name": "Barbell Triceps Extension",
+    "url": "https://exrx.net/WeightExercises/Triceps/BBTriExt",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Barbell",
+    "synergists": [],
+    "stabilizers": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Clavicular",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on utility weight bench with barbell. Position barbell overhead with narrow overhand grip.",
+    "execution": "Lower barbell behind upper shoulders by flexing elbows allowing forearms to travel behind upper arms with elbows remaining overhead. Raise barbell overhead by extending elbows until arms are positioned straight and vertical. Lower and repeat."
+  },
+  {
+    "name": "Cable Bent-over Triceps Extension",
+    "url": "https://exrx.net/WeightExercises/Triceps/CBBentoverTriExt",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Cable",
+    "synergists": [],
+    "stabilizers": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Clavicular",
+      "Wrist Flexors",
+      "Rectus Abdominis",
+      "Obliques"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp cable bar from medium-high pulley with narrow or shoulder width overhand grip. Turn body away from pulley apparatus and position turned cable bar behind neck. Bend over downward with cable bar positioned behind neck, gripped at each side. Lunge forward with one leg. Allow elbows to be pulled back under cable resistance.",
+    "execution": "Extend forearms forward until elbows are straight. Allow cable bar to return back over neck. Repeat."
+  },
+  {
+    "name": "Cable Lying Triceps Extension",
+    "url": "https://exrx.net/WeightExercises/Triceps/CBLyingTriExt",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Cable",
+    "synergists": [],
+    "stabilizers": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Major, Sternal",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Coracobrachialis",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie on bench and grasp bar with narrow overhand grip. With arms extended, position bar over face.",
+    "execution": "Lower bar by bending elbow. As bar nears head, move elbows slightly back just enough to allow bar to clear around curvature of head. Extend arm. As bar clears head, reposition elbows to its former position until arm is fully extended. Repeat."
+  },
+  {
+    "name": "Cable Pushdown",
+    "url": "https://exrx.net/WeightExercises/Triceps/CBPushdown",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Cable",
+    "synergists": [],
+    "stabilizers": [
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Minor",
+      "Trapezius, Lower",
+      "Rectus Abdominis",
+      "Obliques",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Face high pulley and grasp cable attachment with narrow overhand grip. Position elbows to side.",
+    "execution": "Extend arms down. Return until forearm is close to upper arm. Repeat."
+  },
+  {
+    "name": "Cable One Arm Pushdown",
+    "url": "https://exrx.net/WeightExercises/Triceps/CBOneArmPushdown",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Cable",
+    "synergists": [],
+    "stabilizers": [
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Minor",
+      "Trapezius, Lower",
+      "Obliques",
+      "Rectus Abdominis",
+      "Wrist Extensors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp dumbbell cable attachment with underhand grip. Position elbow to side.",
+    "execution": "Extend arm down. Return until forearm is close to upper arm. Repeat. Continue with opposite arm."
+  },
+  {
+    "name": "Cable Pushdown (with back support)",
+    "url": "https://exrx.net/WeightExercises/Triceps/CBPushdownSupport",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Cable",
+    "synergists": [],
+    "stabilizers": [
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Minor",
+      "Trapezius, Lower",
+      "Rectus Abdominis",
+      "Obliques",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place back against vertical back support. Grasp cable attachment from high pulley with narrow overhand grip. Position elbows to side.",
+    "execution": "Extend arms down. Return until forearm is close to upper arm. Repeat."
+  },
+  {
+    "name": "Cable Pushdown (with V-bar)",
+    "url": "https://exrx.net/WeightExercises/Triceps/CBPushdownVBar",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Cable",
+    "synergists": [],
+    "stabilizers": [
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Minor",
+      "Trapezius, Lower",
+      "Rectus Abdominis",
+      "Obliques",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Face high pulley and grasp V-bar attachment with narrow overhand grip. Position elbows to side.",
+    "execution": "Extend arms down. Return until forearm is close to upper arm. Repeat."
+  },
+  {
+    "name": "Cable Triceps Dip",
+    "url": "https://exrx.net/WeightExercises/Triceps/CBTriDip",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Cable",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Coracobrachialis",
+      "Biceps Brachii"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Step between [shoulder width dip bars](../../WeightTraining/Tips#DipBar) with dip belt around waist. Kneel as close to low pulley and attach cable to dip belt. Stand up and mount dip bar, arms straight with shoulders above hands. Keep hips straight.",
+    "execution": "Lower body by bending arms until slight stretch is felt in shoulders. Push body up until arms are straight. Repeat."
+  },
+  {
+    "name": "Cable Triceps Extension",
+    "url": "https://exrx.net/WeightExercises/Triceps/CBTriExt",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Cable",
+    "synergists": [],
+    "stabilizers": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Clavicular",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand or sit on bench or seat with back support just below shoulders. Position cable bar behind neck or shoulders with narrow overhand grip. Position elbows overhead.",
+    "execution": "Raise cable bar overhead by extending elbows until arms are positioned straight and vertical. Lower cable bar behind neck by flexing elbows allowing forearms to travel behind upper arms with elbows remaining overhead. Repeat."
+  },
+  {
+    "name": "Cable Triceps Extension (with rope)",
+    "url": "https://exrx.net/WeightExercises/Triceps/CBStandingTricepsExtensionRope",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Cable",
+    "synergists": [],
+    "stabilizers": [
+      "Deltoid, Anterior",
+      "Pectoralis\n  Major, Clavicular",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "From low pulley cable, grasp ends of rope attachment just under enlarged ends. Raise one arm over head while turning body away from pulley. Face away from pulley with feet staggered. Position ends of ropes behind head or neck and elbows upward over head.",
+    "execution": "Raise ends of rope overhead by extending forearms until arms are straight. Lower rope attachment until forearms are against upper arms. Repeat."
+  },
+  {
+    "name": "Dumbbell Kickback",
+    "url": "https://exrx.net/WeightExercises/Triceps/DBKickback",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Dumbbell",
+    "synergists": [],
+    "stabilizers": [
+      "Deltoid, Posterior",
+      "Latissimus Dorsi",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Extensor Carpi Ulnaris",
+      "Flexor Carpi Ulnaris"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Kneel over bench with arm supporting body. Grasp dumbbell. Position upper arm parallel to floor.",
+    "execution": "Extend arm until it is straight. Return and repeat. Continue with opposite arm."
+  },
+  {
+    "name": "Dumbbell Lying Triceps Extension",
+    "url": "https://exrx.net/WeightExercises/Triceps/DBLyingTriExt",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Dumbbell",
+    "synergists": [],
+    "stabilizers": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Major, Sternal",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Coracobrachialis",
+      "Extensor Carpi Ulnaris",
+      "Flexor Carpi Ulnaris"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie on bench and position dumbbells over head with arms extended.",
+    "execution": "Lower dumbbells by bending elbow until they are to sides of head. Extend arm. Repeat."
+  },
+  {
+    "name": "Dumbbell One Arm Triceps Extension (on bench)",
+    "url": "https://exrx.net/WeightExercises/Triceps/DBOneArmTriExtBench",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Dumbbell",
+    "synergists": [],
+    "stabilizers": [
+      "Wrist Extensors",
+      "Flexor Carpi Ulnaris"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position dumbbell behind neck with elbow positioned upward.",
+    "execution": "Extend arm until straight while maintaining upper arm's vertical position throughout exercise. Return until dumbbell is behind neck or shoulder and repeat. Continue with opposite arm."
+  },
+  {
+    "name": "Dumbbell Triceps Extension",
+    "url": "https://exrx.net/WeightExercises/Triceps/DBTriExt",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Dumbbell",
+    "synergists": [],
+    "stabilizers": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Clavicular",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position one dumbbell over head with both hands under inner plate (heart shaped grip).",
+    "execution": "With elbows over head, lower forearm behind upper arm by flexing elbows. Flex wrists at bottom to avoid hitting dumbbell on back of neck. Raise dumbbell over head by extending elbows while hyperextending wrists. Return and repeat."
+  },
+  {
+    "name": "Lever Triceps Dip (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/Triceps/LVTriDipH",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Coracobrachialis",
+      "Biceps Brachii"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit upright on seat. If possible, place handles in narrow position. Grasp handles.",
+    "execution": "Push levers down with elbows pointing back. Allow lever bar to raise until shoulders are slightly stretched. Repeat."
+  },
+  {
+    "name": "Lever Triceps Extension (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/Triceps/LVTriExtGripless",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [],
+    "stabilizers": [
+      "Pectoralis Major, Sternal",
+      "Deltoid, Posterior",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Pectoralis Minor",
+      "Trapezius, Lower"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat. Place forearms on lever pad and back of upper arms, parallel on padding with elbows in line with lever's fulcrum.",
+    "execution": "Push lever down until arms are fully extended. Return and repeat."
+  },
+  {
+    "name": "Lever Triceps Dip",
+    "url": "https://exrx.net/WeightExercises/Triceps/LVTriDip",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "If possible, place handles in narrow position. Sit on seat with back against pad. Grasp handles and position elbows back.",
+    "execution": "Push levers down by straightening arms downward. Allow lever bar to raise with elbows pointing back until shoulders are slightly stretched. Repeat."
+  },
+  {
+    "name": "Lever Triceps Dip",
+    "url": "https://exrx.net/WeightExercises/Triceps/LVTriDip2",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "If possible, place handles in narrow position. Sit on seat with legs under pads. Grasp handles and position elbows back.",
+    "execution": "Push levers down by straightening arms downward. Allow lever bar to raise with elbows pointing back until shoulders are slightly stretched. Repeat."
+  },
+  {
+    "name": "Lever Triceps Extension",
+    "url": "https://exrx.net/WeightExercises/Triceps/LVTriExt",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Lever (selectorized)",
+    "synergists": [],
+    "stabilizers": [
+      "Pectoralis Major, Sternal",
+      "Deltoid, Posterior",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Pectoralis Minor",
+      "Trapezius, Lower",
+      "Extensor Carpi Ulnaris",
+      "Flexor Carpi Ulnaris"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat. Grasp handles and place back of upper arms parallel on padding with elbows approximately in line with lever's fulcrum.",
+    "execution": "Push lever down until arms are fully extended. Return until forearms contact upper arms. Repeat."
+  },
+  {
+    "name": "Lever Triceps Extension (with preacher pad)",
+    "url": "https://exrx.net/WeightExercises/Triceps/LVTriExtPreacherPad",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Lever (selectorized)",
+    "synergists": [],
+    "stabilizers": [
+      "Pectoralis Major, Sternal",
+      "Deltoid, Posterior",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Pectoralis Minor",
+      "Trapezius, Lower",
+      "Extensor Carpi Ulnaris",
+      "Flexor Carpi Ulnaris"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat. Grasp handles and place back of upper arms parallel on padding with elbows approximately in line with lever's fulcrum.",
+    "execution": "Push lever down until arms are fully extended. Return until forearms contact upper arms. Repeat."
+  },
+  {
+    "name": "Sled Standing Triceps Dip",
+    "url": "https://exrx.net/WeightExercises/Triceps/SLStandingTricepsDip",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Sled",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand between handles facing machine. Grasp parallel handles and position elbows back. Squat down slightly by bending hips and knees, just enough to raise selected weight up from remaining weight stack.",
+    "execution": "Push levers down by straightening arms downward. Allow lever bar to raise with elbows pointing back until slight stretch is felt in shoulders. Repeat."
+  },
+  {
+    "name": "Smith Close Grip Bench Press",
+    "url": "https://exrx.net/WeightExercises/Triceps/SMCloseGripBenchPress",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Smith",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Coracobrachialis",
+      "Biceps Brachii"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie on bench with bar above chest and grasp bar with shoulder width or slightly narrower grip. Disengage bar by rotating bar back.",
+    "execution": "Lower weight to chest with elbows close to body. Push bar back up until arms are straight. Repeat."
+  },
+  {
+    "name": "Weighted Bench Dip",
+    "url": "https://exrx.net/WeightExercises/Triceps/WtBenchDip",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Weighted",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Coracobrachialis",
+      "Biceps Brachii"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on inside of one of two benches placed parallel, slightly less than leg's length away. Place hands on edge of bench. Straighten arms, slide rear end off of edge of bench and position heels on adjacent bench with legs straight. Have assistant place weight on lap near hips.",
+    "execution": "Lower body by bending arms until slight stretch is felt in chest or shoulder, or rear end touches floor. Raise body and repeat."
+  },
+  {
+    "name": "Weighted Triceps Dip",
+    "url": "https://exrx.net/WeightExercises/Triceps/WtTriDip",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Weighted",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Coracobrachialis",
+      "Biceps Brachii"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place weight on dip belt around waist or place dumbbell between lower legs just above feet. Mount [shoulder width dip bar](../../WeightTraining/Tips#DipBar), arms straight with shoulders above hands. Keep hips straight.",
+    "execution": "Lower body until slight stretch is felt in shoulders. Push body up until arms are straight. Repeat."
+  },
+  {
+    "name": "Band-assisted Triceps Dip",
+    "url": "https://exrx.net/WeightExercises/Triceps/ASTricepsDipBand",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Band-assisted",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Coracobrachialis",
+      "Biceps Brachii"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place one foot on middle of exercise band with ends looped on [shoulder width dip bars](../../WeightTraining/Tips#DipBar). Push band down partially by extending leg. Mount dip bar with arms straight and shoulders above hands. Place other foot on exercise band next to other foot. Keep hips straight.",
+    "execution": "Lower body until slight stretch is felt in shoulders. Push body up until arms are straight. Repeat."
+  },
+  {
+    "name": "Bench Dip",
+    "url": "https://exrx.net/WeightExercises/Triceps/BWBenchDip",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on inside of one of two benches placed parallel, slightly less than leg's length away. Place hands on edge of bench, straighten arms, slide rear end off of bench, and position heels on adjacent bench with legs straight.",
+    "execution": "Lower body by bending arms until slight stretch is felt in chest or shoulder, or rear end touches floor. Raise body and repeat."
+  },
+  {
+    "name": "Bench Dip (heels on floor)",
+    "url": "https://exrx.net/WeightExercises/Triceps/BWBenchDipFloor",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Coracobrachialis",
+      "Biceps Brachii"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on side of bench. Place hands on edge of bench. Position feet away from bench. Straighten arms, slide rear end off of edge of bench, and rest heels on floor with legs straight.",
+    "execution": "Lower body by bending arms until slight stretch is felt in chest or shoulder, or rear end touches floor. Raise your body and repeat."
+  },
+  {
+    "name": "Close Grip Push-up",
+    "url": "https://exrx.net/WeightExercises/Triceps/BWCloseGripPushup",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Serratus Anterior",
+      "Pectoralis Minor",
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie prone with forefeet on floor and hands under shoulders or slightly narrower. Position body up off floor with extended arms and body straight.",
+    "execution": "Keeping body straight, lower body to floor by bending arms. Push body up until arms are extended. Repeat."
+  },
+  {
+    "name": "Close Grip Incline Push-up (on bar)",
+    "url": "https://exrx.net/WeightExercises/Triceps/BWCloseGripInclinePushupBar",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps",
+      "Gastrocnemius",
+      "Soleus"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp horizontal bar (lower than chest height) with hands shoulder width or slightly narrower. Position forefeet back from bar with arms and body straight. Arms should be perpendicular to body.",
+    "execution": "Keeping body straight, lower chest to bar by bending arms. Push body up until arms are extended. Repeat."
+  },
+  {
+    "name": "Close Grip Push-up (on knees)",
+    "url": "https://exrx.net/WeightExercises/Triceps/BWCloseGripPushupKnees",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie prone on floor with hands under shoulders or slightly narrower. Position body up off floor with extended arms and body straight.",
+    "execution": "Keeping body straight, lower body to floor by bending arms. Push body up until arms are extended. Repeat."
+  },
+  {
+    "name": "Triceps Dip",
+    "url": "https://exrx.net/WeightExercises/Triceps/BWTriDip",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Coracobrachialis",
+      "Biceps Brachii"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Mount [shoulder width dip bar](../../WeightTraining/Tips#DipBar), arms straight with shoulders above hands. Keep hips straight.",
+    "execution": "Lower body until slight stretch is felt in shoulders. Push body up until arms are straight. Repeat."
+  },
+  {
+    "name": "Suspended Triceps Extension",
+    "url": "https://exrx.net/WeightExercises/Triceps/STTricepsExtension",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Suspended",
+    "synergists": [],
+    "stabilizers": [
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Deltoid, Posterior",
+      "Coracobrachialis",
+      "Pectoralis Minor",
+      "Serratus Anterior",
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps",
+      "Gastrocnemius",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp handles and step forward between suspension trainers. Position arms downward and slightly forward, nearly parallel with suspension straps. Lean forward, placing upper body weight onto handles with arms straight, while stepping back onto forefeet so body is leaning forward at desired angle. Straighten body, so torso is in-line with legs.",
+    "execution": "Lower body by bending elbows, allowing head to travel between suspension handles. Raise body up and back up until arms are extended. Repeat."
+  },
+  {
+    "name": "Self-assisted Triceps Dip",
+    "url": "https://exrx.net/WeightExercises/Triceps/ASTricepsDipSelf",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Self-assisted",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand on bench or elevation between parallel bars. Mount [shoulder width dip bar](../../WeightTraining/Tips#DipBar), arms straight with shoulders above hands. Bend knees and place toes on bench or elevation behind and below body.",
+    "execution": "Lower body by bending arms back. If necessary, use minimal assistance of lower body to control descent, allowing knees to bend, keeping toes in contact with bench or elevation. When slight stretch is felt in chest or shoulders push body up until arms are straight. Repeat with minimal assistance from legs."
+  },
+  {
+    "name": "Overhead Triceps Stretch",
+    "url": "https://exrx.net/Stretches/Triceps/Overhead",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Put one arm overhead. Position forearm as close as possible to upper arm. Grasp elbow overhead with other hand.",
+    "execution": "Pull elbow back and toward head. Hold stretch. Repeat with opposite arm."
+  },
+  {
+    "name": "Towel Triceps Stretch",
+    "url": "https://exrx.net/Stretches/Triceps/Towel",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Triceps Brachii",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Grasp near end of towel or rope. Position towel behind head so towel dangles down behind body. Reach behind back or waist with opposite hand and grasp opposite end of towel. Position upper arm close to back side of head.",
+    "execution": "Pull towel downward with lower arm. Hold stretch. Repeat with opposite arm."
+  },
+  {
+    "name": "Barbell Curl",
+    "url": "https://exrx.net/WeightExercises/Biceps/BBCurl",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Biceps Brachii",
+    "equipment": "Barbell",
+    "synergists": [
+      "Brachialis",
+      "Brachioradialis"
+    ],
+    "stabilizers": [
+      "Deltoid, Anterior",
+      "Coracobrachialis",
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp bar with shoulder width underhand grip.",
+    "execution": "With elbows to side, raise bar until forearms are vertical. Lower until arms are fully extended. Repeat."
+  },
+  {
+    "name": "Cable Curl",
+    "url": "https://exrx.net/WeightExercises/Biceps/CBCurl",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Biceps Brachii",
+    "equipment": "Cable",
+    "synergists": [
+      "Brachialis",
+      "Brachioradialis"
+    ],
+    "stabilizers": [
+      "Deltoid, Anterior",
+      "Coracobrachialis",
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp low pulley cable bar with shoulder width underhand grip. Stand close to pulley.",
+    "execution": "With elbows to side, raise bar until forearms are vertical. Lower until arms are fully extended. Repeat."
+  },
+  {
+    "name": "Cable Isolateral Curl",
+    "url": "https://exrx.net/WeightExercises/Biceps/CBCurlStirrups",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Biceps Brachii",
+    "equipment": "Cable",
+    "synergists": [
+      "Brachialis",
+      "Brachioradialis"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae",
+      "Wrist Flexors",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand between or facing double low pulleys. Grasp stirrups to each side, palms facing forward.",
+    "execution": "Pull stirrups forward and upward toward shoulders while keeping elbows stationary. Return until arms are fully extended. Repeat."
+  },
+  {
+    "name": "Cable One Arm Curl",
+    "url": "https://exrx.net/WeightExercises/Biceps/CBOneArmCurl",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Biceps Brachii",
+    "equipment": "Cable",
+    "synergists": [
+      "Brachialis",
+      "Brachioradialis"
+    ],
+    "stabilizers": [
+      "Deltoid, Anterior",
+      "Coracobrachialis",
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Face low pulley and grasp stirrup cable attachment to one side with underhand grip.",
+    "execution": "With elbow to side, raise bar until forearms are vertical. Lower until arms are fully extended. Repeat. Continue with opposite arm."
+  },
+  {
+    "name": "Dumbbell Curl",
+    "url": "https://exrx.net/WeightExercises/Biceps/DBCurl",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Biceps Brachii",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Brachialis",
+      "Brachioradialis"
+    ],
+    "stabilizers": [
+      "Deltoid, Anterior",
+      "Coracobrachialis",
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position two dumbbells to sides, palms facing in, arms straight.",
+    "execution": "With elbows to sides, raise one dumbbell and rotate forearm until forearm is vertical and palm faces shoulder. Lower to original position and repeat with opposite arm. Continue to alternate between sides."
+  },
+  {
+    "name": "Dumbbell Incline Curl",
+    "url": "https://exrx.net/WeightExercises/Biceps/DBInclineCurl",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Biceps Brachii",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Brachialis",
+      "Brachioradialis"
+    ],
+    "stabilizers": [
+      "Deltoid, Anterior",
+      "Coracobrachialis",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit back on 45-60 degree incline bench. With arms hanging down straight, position two dumbbells with palms facing inward.",
+    "execution": "With elbows back to sides, raise one dumbbell and rotate forearm until forearm is vertical and palm faces shoulder. Lower to original position and repeat with opposite arm. Continue to alternate between sides."
+  },
+  {
+    "name": "Inverted Biceps Row",
+    "url": "https://exrx.net/WeightExercises/BackGeneral/BWUnderhandSupineRow",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Biceps Brachii",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Infraspinatus",
+      "Teres Minor",
+      "Brachialis",
+      "Brachioradialis",
+      "Pectoralis Major, Sternal"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Hamstrings",
+      "Gluteus Maximus"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lay on back under fixed horizontal bar. Grasp bar with shoulder width underhand grip.",
+    "execution": "Keeping body straight, pull body up to bar. Return until arms are extended and shoulders are stretched forward. Repeat."
+  },
+  {
+    "name": "Doorway Biceps Stretch",
+    "url": "https://exrx.net/Stretches/Biceps/Doorway",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Biceps Brachii",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Stand at end of wall or in doorway facing perpendicular to wall. Position front of straight arm and palm on surface of wall. Situate arm around same height of shoulder with elbow positioned away from wall.",
+    "execution": "Turn body away from positioned arm. Hold stretch. Repeat with opposite arm."
+  },
+  {
+    "name": "Seated Biceps Stretch",
+    "url": "https://exrx.net/Stretches/Biceps/Seated",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Biceps Brachii",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Sit on floor or mat. Lean back and place hands flat on floor close together behind body with fingers positioned away from body.",
+    "execution": "Scoot hips forward away from hands. Hold stretch."
+  },
+  {
+    "name": "Barbell Preacher Curl",
+    "url": "https://exrx.net/WeightExercises/Brachialis/BBPreacherCurl",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Brachialis",
+    "equipment": "Barbell",
+    "synergists": [
+      "Biceps Brachii",
+      "Brachioradialis"
+    ],
+    "stabilizers": [
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on preacher bench placing back of arms on pad. Grasp curl bar with shoulder width underhand grip.",
+    "execution": "Raise bar until forearms are vertical. Lower barbell until arms are fully extended. Repeat."
+  },
+  {
+    "name": "Barbell Prone Incline Curl",
+    "url": "https://exrx.net/WeightExercises/Brachialis/BBProneInclineCurl",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Brachialis",
+    "equipment": "Barbell",
+    "synergists": [
+      "Biceps Brachii",
+      "Brachioradialis"
+    ],
+    "stabilizers": [
+      "Wrist Flexors",
+      "Trapezius, Middle",
+      "Rhomboids"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie prone on incline bench with shoulders near top of incline. Knees can rest on seat or legs can be straddled to sides. From low rack or partner, grasp curl bar with shoulder width underhand grip.",
+    "execution": "Raise bar until arms are flexed. Lower barbell until arms are fully extended. Repeat."
+  },
+  {
+    "name": "Cable Concentration Curl",
+    "url": "https://exrx.net/WeightExercises/Brachialis/CBConcentrationCurl",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Brachialis",
+    "equipment": "Cable",
+    "synergists": [
+      "Biceps Brachii",
+      "Brachioradialis"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae",
+      "Obliques",
+      "Erector Spinae",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Facing low pulley cable, sit on seat or bench with legs apart to each side. Grasp stirrup attachment. Place upper arm against inner thigh.",
+    "execution": "Pull stirrup to front of shoulder until elbow is completely flexed. Lower stirrup until arm is fully extended. Repeat. Continue with opposite arm."
+  },
+  {
+    "name": "Cable Preacher Curl",
+    "url": "https://exrx.net/WeightExercises/Brachialis/CBPreacherCurl",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Brachialis",
+    "equipment": "Cable",
+    "synergists": [
+      "Biceps Brachii",
+      "Brachioradialis"
+    ],
+    "stabilizers": [
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on preacher bench placing back of arms on pad. Grasp cable bar with shoulder width underhand grip.",
+    "execution": "Raise cable bar toward shoulders. Lower cable bar until arms are fully extended. Repeat."
+  },
+  {
+    "name": "Cable Isolateral Preacher Curl",
+    "url": "https://exrx.net/WeightExercises/Brachialis/CBPreacherCurlStirrups",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Brachialis",
+    "equipment": "Cable",
+    "synergists": [
+      "Biceps Brachii",
+      "Brachioradialis"
+    ],
+    "stabilizers": [
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp cable stirrups with each hand. Sit on preacher bench placing back of arms on pad with palms up.",
+    "execution": "Raise both stirrups upward toward shoulders. Lower stirrups until arm is fully extended. Repeat."
+  },
+  {
+    "name": "Dumbbell Preacher Curl",
+    "url": "https://exrx.net/WeightExercises/Brachialis/DBPreacherCurl",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Brachialis",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Biceps Brachii",
+      "Brachioradialis"
+    ],
+    "stabilizers": [
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp dumbbell and sit on preacher bench. With arm bent and palm facing shoulder, place back of arm down on pad.",
+    "execution": "Lower dumbbell until arm is fully extended. Raise dumbbell until forearm is vertical. Repeat. Continue with opposite arm."
+  },
+  {
+    "name": "Lever Isolateral Preacher Curl (arms high, plate loaded)",
+    "url": "https://exrx.net/WeightExercises/Brachialis/LVPreacherCurlHighPL",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Brachialis",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Biceps Brachii",
+      "Brachioradialis"
+    ],
+    "stabilizers": [
+      "Wrist Flexors",
+      "Triceps Brachii, Long Head"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on curl machine. Grasp lever handles with underhand grip. Align elbows near same pivot point as fulcrum of lever while placing back of arms up on pads.",
+    "execution": "Pull lever handles toward shoulders. Return handles until arms are fully extended. Repeat."
+  },
+  {
+    "name": "Lever Preacher Curl",
+    "url": "https://exrx.net/WeightExercises/Brachialis/LVPreacherCurl",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Brachialis",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Biceps Brachii",
+      "Brachioradialis"
+    ],
+    "stabilizers": [
+      "Wrist Flexors",
+      "Triceps Brachii, Long Head"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on curl machine placing back of arms on pad. Grasp lever handles with underhand grip. Align elbows near same pivot point as fulcrum of lever.",
+    "execution": "Raise lever handles toward shoulders. Lower handles until arms are fully extended. Repeat."
+  },
+  {
+    "name": "Suspended Arm Curl",
+    "url": "https://exrx.net/WeightExercises/Brachialis/STArmCurl",
+    "bodyRegion": "Upper Arms",
+    "targetMuscle": "Brachialis",
+    "equipment": "Suspended",
+    "synergists": [
+      "Biceps Brachii",
+      "Brachioradialis"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Gluteus Maximus",
+      "Hamstrings",
+      "Wrist Flexors",
+      "Trapezius, Middle",
+      "Rhomboids"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp suspension handles and momentarily step back until arms are extended forward and straight. While keeping arms straight and shoulders back, step forward so body is reclined back. Position palms up or slightly inward.",
+    "execution": "Keeping body straight, bring handles toward top of shoulders by flexing arms, while keeping elbows pointed forward. Return by straightening arms and repeat."
+  }
+]

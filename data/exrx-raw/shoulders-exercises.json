@@ -1,0 +1,1454 @@
+[
+  {
+    "name": "Barbell Front Raise",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/BBFrontRaise",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Barbell",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Lateral",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Wrist Extensors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp barbell with overhand grip with elbows straight or slightly bent.",
+    "execution": "Raise barbell forward and upward until upper arms are above horizontal. Lower and repeat."
+  },
+  {
+    "name": "Barbell Military Press",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/BBMilitaryPress",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Barbell",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Triceps Brachii",
+      "Deltoid, Lateral",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp barbell from rack or [clean](../OlympicLifts/PowerClean) barbell from floor with overhand grip, slightly wider than shoulder width. Position bar in front of neck.",
+    "execution": "Press bar upward until arms are extended overhead. Lower to front of neck and repeat."
+  },
+  {
+    "name": "Barbell Seated Military Press",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/BBSeatedMilitaryPress",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Barbell",
+    "synergists": [
+      "Deltoid, Lateral",
+      "Supraspinatus",
+      "Triceps Brachii",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations",
+      "Triceps, Long Head"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp barbell with slightly wider than shoulder width overhand grip from rack. Position bar near upper chest.",
+    "execution": "Press bar upward until arms are extended overhead. Return to upper chest and repeat."
+  },
+  {
+    "name": "Cable Isolateral Seated Front Raise",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/CBSeatedFrontRaise",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Cable",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Lateral",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Wrist Extensors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on seat above twin cable pulleys. Grasp stirrups on each side. Sit upright with arms straight down to each side with palms facing back.",
+    "execution": "Raise stirrups forward and upward until upper arms are well above horizontal. Lower and repeat."
+  },
+  {
+    "name": "Cable Alternating Isolateral Front Raise",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/CBAlternatingFrontRaise",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Cable",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Lateral",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Wrist Extensors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand with low double pulleys behind. Grasp stirrup attachments, one in each hand. Stand away from pulley slightly with arms back somewhat at side and elbows straight or slightly bent.",
+    "execution": "Raise one stirrup forward and upward until upper arm is well above horizontal. Lower and repeat with opposite arm, alternating between arms."
+  },
+  {
+    "name": "Cable One Arm Front Raise",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/CBFrontRaise",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Cable",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Lateral",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Wrist Extensors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp stirrup attachment. Stand away from pulley slightly with arm back somewhat at side and elbow straight or slightly bent.",
+    "execution": "Raise stirrup forward and upward until upper arm is well above horizontal. Lower and repeat. Repeat with opposite arm."
+  },
+  {
+    "name": "Cable Isolateral Shoulder Press",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/CBShoulderPress",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Cable",
+    "synergists": [
+      "Deltoid, Lateral",
+      "Supraspinatus",
+      "Triceps Brachii",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat and grasp stirrups from low to medium low position from each side. Position stirrups to each side of shoulders with elbows down to sides and stirrups above or slightly narrower than elbows.",
+    "execution": "Push stirrups upward until arms are extended overhead. Return stirrups to sides of shoulders and repeat."
+  },
+  {
+    "name": "Dumbbell Arnold Press",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/DBArnoldPress",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Deltoid, Lateral",
+      "Supraspinatus",
+      "Triceps Brachii",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with two dumbbells position in front of shoulders, palms facing body and elbows under wrists.",
+    "execution": "Initiate movement by bringing elbows out to sides. Continue to raise elbows outward while pressing dumbbells overhead until arms are straight. Lower to front of shoulders in opposite pattern and repeat."
+  },
+  {
+    "name": "Dumbbell Front Raise",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/DBFrontRaise",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Lateral",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Wrist Extensors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp dumbbells in both hands. Position dumbbells in front of upper legs with elbows straight or slightly bent.",
+    "execution": "Raise dumbbells forward and upward until upper arms are above horizontal. Lower and repeat."
+  },
+  {
+    "name": "Dumbbell Alternating Front Raise",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/DBAlternatingFrontRaise",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Lateral",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Wrist Extensors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp dumbbells in both hands. Position dumbbells in front of upper legs with elbows straight or slightly bent.",
+    "execution": "Raise one dumbbell forward and upward with palms positioned downward until upper arm is above horizontal. Lower and repeat with opposite arm, alternating between arms."
+  },
+  {
+    "name": "Dumbbell Shoulder Press",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/DBShoulderPress",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Deltoid, Lateral",
+      "Supraspinatus",
+      "Triceps Brachii",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations",
+      "Pectoralis Major, Clavicular",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position dumbbells to each side of shoulders with elbows below wrists.",
+    "execution": "Press dumbbells upward until arms are extended overhead. Lower to sides of shoulders and repeat."
+  },
+  {
+    "name": "Dumbbell One Arm Shoulder Press",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/DBOneArmShoulderPress",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Deltoid, Lateral",
+      "Supraspinatus",
+      "Triceps Brachii",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations",
+      "Pectoralis Major, Clavicular",
+      "Coracobrachialis",
+      "Obliques",
+      "Psoas major",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with dumbbells positioned near shoulder with elbow below wrists.",
+    "execution": "Press dumbbell upward until arm is extended overhead. Lower to side of shoulder and repeat."
+  },
+  {
+    "name": "Lever Reclined Shoulder Press (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/LVReclinedShoulderPressPL",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Deltoid, Lateral",
+      "Supraspinatus",
+      "Triceps Brachii",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie on back pad facing up. Grasp lever handles on each side with overhand grip.",
+    "execution": "Press lever until arms are extended. Lower and repeat."
+  },
+  {
+    "name": "Lever Shoulder Press",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/LVShoulderPress",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Deltoid, Lateral",
+      "Supraspinatus",
+      "Pectoralis Major, Clavicular",
+      "Triceps Brachii",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Set and grasp lever handles to each side with overhand grip.",
+    "execution": "Press lever upward until arms are extended overhead. Lower and repeat."
+  },
+  {
+    "name": "Lever Shoulder Press (parallel grip)",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/LVShoulderPressParGrip",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Triceps Brachii",
+      "Deltoid, Lateral",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat and grasp parallel bar grips in front of shoulders on each side.",
+    "execution": "Press lever upward until arms are extended overhead. Lower and repeat."
+  },
+  {
+    "name": "Sled Shoulder Press",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/SLShoulderPress",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Sled",
+    "synergists": [
+      "Deltoid, Lateral",
+      "Supraspinatus",
+      "Pectoralis Major, Clavicular",
+      "Triceps Brachii",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Set and grasp lever handles to each side with overhand grip.",
+    "execution": "Press handles upward until arms are extended overhead. Lower and repeat."
+  },
+  {
+    "name": "Smith Shoulder Press",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/SMShoulderPress",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Smith",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Triceps Brachii",
+      "Deltoid, Lateral",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on bench with bar positioned in front of shoulders. Grasp bar with wide overhand grip. Disengage bar by raising and rotating bar back.",
+    "execution": "Press bar upward until arms are extended overhead. Lower bar to front of shoulders and repeat."
+  },
+  {
+    "name": "Pike Press (between benches)",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/BWPikePress",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Triceps Brachii",
+      "Deltoid, Lateral",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Serratus Anterior",
+      "Quadriceps",
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Sartorius",
+      "Rectus Abdominis",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Kneel on two benches positioned side by side slightly apart at end nearest head. Place hands on ends of benches. With forefeet on opposite ends of bench, raise rear end high up with arms, back, and knees straight. Adjust feet so they are somewhat close to hands while keeping back and legs straight.",
+    "execution": "Lower head between ends of benches by bending arms. Push body back up to original position by extending arms. Repeat."
+  },
+  {
+    "name": "Elevated Pike Press (between benches)",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/BWDeclinePikePress",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Triceps Brachii",
+      "Deltoid, Lateral",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Quadriceps",
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Sartorius",
+      "Rectus Abdominis",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand between two incline benches positioned side by side slightly apart at end nearest head. Place hands on ends of benches and straighten arms. Position forefeet on opposite ends of bench. Raise rear end high up with arms, back, and knees straight.",
+    "execution": "Lower head between ends of benches by bending arms. Push body back up to original position by extending arms. Repeat."
+  },
+  {
+    "name": "Suspended Front Raise",
+    "url": "https://exrx.net/WeightExercises/DeltoidAnterior/STFrontRaise",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Suspended",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Lateral",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Gluteus Maximus",
+      "Hamstrings",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Wrist Extensors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp suspension handles and momentarily step back until arms are extended forward and straight. While keeping arms straight and shoulders back, step forward so body reclines back behind suspension handles. Position body and legs straight at desired angle, hanging from handles with arms straight and palms facing downward.",
+    "execution": "Raise arms upward overhead by flexing shoulders with arms straight. Return and lower body back until arms are extended straight forward in original position. Repeat."
+  },
+  {
+    "name": "Doorway Front Deltoid Stretch",
+    "url": "https://exrx.net/Stretches/DeltoidAnterior/Doorway",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Anterior Deltoid",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Stand at end of wall or in doorway facing perpendicular to wall. Position palm on surface of wall slightly lower than shoulder. Bend elbow slightly.",
+    "execution": "Turn body away from positioned arm. Hold stretch. Repeat with opposite arm."
+  },
+  {
+    "name": "Wall Front Deltoid Stretch",
+    "url": "https://exrx.net/Stretches/DeltoidAnterior/Wall",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Anterior Deltoid",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Face away from wall. Bend over and place hands slightly wider than shoulder width as high as possible on wall with fingers positioned upward.",
+    "execution": "Bring rear end and back toward wall and squat down. Hold stretch for 20 seconds."
+  },
+  {
+    "name": "Barbell Upright Row",
+    "url": "https://exrx.net/WeightExercises/DeltoidLateral/BBUprightRow",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Lateral",
+    "equipment": "Barbell",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Supraspinatus",
+      "Brachialis",
+      "Brachioradialis",
+      "Biceps Brachii",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations",
+      "Infraspinatus",
+      "Teres Minor"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp bar with shoulder width or slightly narrower overhand grip.",
+    "execution": "Pull bar to neck with elbows leading. Allow wrists to flex as bar rises. Lower and repeat."
+  },
+  {
+    "name": "Cable Isolateral Lateral Raise",
+    "url": "https://exrx.net/WeightExercises/DeltoidLateral/CBLateralRaise",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Lateral",
+    "equipment": "Cable",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Supraspinatus",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Wrist Extensors"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "With low pulleys to each side, grasp left stirrup with right hand and right stirrup with left hand. Stand upright.",
+    "execution": "With elbows slightly bent, raise arms to sides until elbows are shoulder height. Lower and repeat."
+  },
+  {
+    "name": "Cable One Arm Lateral Raise",
+    "url": "https://exrx.net/WeightExercises/DeltoidLateral/CBOneArmLateralRaise",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Lateral",
+    "equipment": "Cable",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Supraspinatus",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Wrist Extensors"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp stirrup cable attachment. Stand facing with side of resting arm toward low pulley. Grasp ballet bar if available.",
+    "execution": "With elbow slightly bent, raise arm to side away from low pulley until elbow is shoulder height. Lower and repeat. Continue with opposite arm."
+  },
+  {
+    "name": "Cable Upright Row",
+    "url": "https://exrx.net/WeightExercises/DeltoidLateral/CBUprightRow",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Lateral",
+    "equipment": "Cable",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Supraspinatus",
+      "Brachialis",
+      "Brachioradialis",
+      "Biceps Brachii",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations",
+      "Infraspinatus",
+      "Teres Minor"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp cable bar with shoulder width or slightly narrower overhand grip. Stand close to pulley.",
+    "execution": "Pull bar to neck with elbows leading. Allow wrists to flex as bar rises. Lower and repeat."
+  },
+  {
+    "name": "Cable One Arm Upright Row",
+    "url": "https://exrx.net/WeightExercises/DeltoidLateral/CBOneArmUprightRow",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Lateral",
+    "equipment": "Cable",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Supraspinatus",
+      "Brachialis",
+      "Brachioradialis",
+      "Biceps Brachii",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations",
+      "Infraspinatus",
+      "Teres Minor"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp stirrup on low pulley with overhand grip. Stand with side of arm with stirrup away from pulley machine, arm against front of body. Place other hand on ballet bar or side of pulley column for support.",
+    "execution": "Pull stirrup to front side of chest with elbow leading. Allow wrist to flex as stirrup is lifted. Lower and repeat. Position body in opposite orientation and continue with other arm."
+  },
+  {
+    "name": "Cable Upright Row (with rope attachment)",
+    "url": "https://exrx.net/WeightExercises/DeltoidLateral/CBUprightRowRope",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Lateral",
+    "equipment": "Cable",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Supraspinatus",
+      "Brachialis",
+      "Brachioradialis",
+      "Biceps Brachii",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations",
+      "Infraspinatus",
+      "Teres Minor"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp each side of rope with overhand grip, just under rope ends. Stand close to pulley.",
+    "execution": "Pull rope ends to front of shoulders with elbows leading. Allow wrists to flex as stirrups are lifted. Lower and repeat."
+  },
+  {
+    "name": "Dumbbell Incline Lateral Raise",
+    "url": "https://exrx.net/WeightExercises/DeltoidLateral/DBInclineLateralRaise",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Lateral",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Deltoid, Posterior",
+      "Supraspinatus",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Wrist Extensors",
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp dumbbell in one hand. Lie on 30° to 45° incline bench with opposite side of body on incline, arm over top of bench, lower leg positioned on front side of seat, and upper leg on back side of seat. Position dumbbell inside of lower leg, just in front of upper leg.",
+    "execution": "Raise dumbbell from until upper arm is perpendicular to torso. Maintain slight fixed bend in elbow throughout exercise. Lower dumbbell to front of upper leg and repeat."
+  },
+  {
+    "name": "Dumbbell Lateral Raise",
+    "url": "https://exrx.net/WeightExercises/DeltoidLateral/DBLateralRaise",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Lateral",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Supraspinatus",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Wrist Extensors"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp dumbbells in front of thighs with elbows slightly bent. Bend over slightly with hips and knees bent slightly.",
+    "execution": "Raise upper arms to sides until slightly bent elbows are shoulder height while maintaining elbows' height above or equal to wrists. Lower and repeat."
+  },
+  {
+    "name": "Dumbbell Lying Lateral Raise",
+    "url": "https://exrx.net/WeightExercises/DeltoidLateral/DBLyingLateralRaise",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Lateral",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Deltoid, Posterior",
+      "Supraspinatus",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Wrist Extensors",
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie on side with legs separated for support. Grasp dumbbell in front of thigh.",
+    "execution": "Raise dumbbell from floor until arm is vertical. Maintain fixed elbow position (10° to 30° angle) throughout exercise. Lower and repeat."
+  },
+  {
+    "name": "Dumbbell Upright Row",
+    "url": "https://exrx.net/WeightExercises/DeltoidLateral/DBUprightRow",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Lateral",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Supraspinatus",
+      "Brachialis",
+      "Brachioradialis",
+      "Biceps Brachii",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations",
+      "Infraspinatus",
+      "Teres Minor"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp dumbbells and stand with palms facing front of thighs.",
+    "execution": "Pull dumbbells to front of shoulders or front sides of chest with elbows leading out to sides. Allow wrists to flex as dumbbells rise upward. Lower and repeat."
+  },
+  {
+    "name": "Dumbbell One Arm Upright Row",
+    "url": "https://exrx.net/WeightExercises/DeltoidLateral/DBOneArmUprightRow",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Lateral",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Supraspinatus",
+      "Brachialis",
+      "Brachioradialis",
+      "Biceps Brachii",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations",
+      "Infraspinatus",
+      "Teres Minor"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp dumbbells with palms facing front of thighs. Position other hand for support.",
+    "execution": "Pull dumbbell to front side of chest with elbow leading. Allow wrist to flex as dumbbell rises upward. Lower and repeat. Continue with opposite arm."
+  },
+  {
+    "name": "Lever Isolateral Lateral Raise",
+    "url": "https://exrx.net/WeightExercises/DeltoidLateral/LVLateralRaise2",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Lateral",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Supraspinatus",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit in machine. Situate bent arms between padded lever and sides of body. Grasp handles if available.",
+    "execution": "Raise arms to sides until upper arms are horizontal. Return and repeat."
+  },
+  {
+    "name": "Smith Upright Row",
+    "url": "https://exrx.net/WeightExercises/DeltoidLateral/SMUprightRow",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Lateral",
+    "equipment": "Smith",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Supraspinatus",
+      "Brachialis",
+      "Brachioradialis",
+      "Biceps Brachii",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations",
+      "Infraspinatus",
+      "Teres Minor"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand behind bar mid-thigh height. Grasp bar with shoulder width or slightly narrower overhand grip. Disengage bar by rotating bar back and stand upright.",
+    "execution": "Pull bar to neck with elbows leading. Allow wrists to flex as bar rises. Lower and repeat."
+  },
+  {
+    "name": "Side Deltoid Stretch",
+    "url": "https://exrx.net/Stretches/DeltoidLateral/SideDelt",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Lateral Deltoid",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Position arm across chest. Place opposite hand on elbow.",
+    "execution": "Push elbow toward chest. Hold stretch. Repeat with opposite arm."
+  },
+  {
+    "name": "Suspended Y Lateral Raise",
+    "url": "https://exrx.net/WeightExercises/DeltoidLateral/STYShoulderRaise",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Lateral",
+    "equipment": "Suspended",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Supraspinatus",
+      "Trapezius, Lower",
+      "Trapezius, Middle",
+      "Serratus Anterior, Inferior Digitations",
+      "Teres Minor",
+      "Infraspinatus",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Gluteus Maximus",
+      "Hamstrings",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Wrist Extensors"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp suspension handles and momentarily step back until arms are extended forward and straight. While keeping arms straight and shoulders back, step forward so body reclines back behind suspension handles. Position body and legs straight at desired angle hanging from handles with arms straight and palms angled inward.",
+    "execution": "Raise arms upward and outward in shape of a Y while keeping arms straight. Return and lower body back in opposite motion until arms are extended straight forward in original position. Repeat."
+  },
+  {
+    "name": "Barbell Rear Delt Row",
+    "url": "https://exrx.net/WeightExercises/DeltoidPosterior/BBRearDeltRow",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Posterior",
+    "equipment": "Barbell",
+    "synergists": [
+      "Infraspinatus",
+      "Teres Minor",
+      "Deltoid, Lateral",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Brachialis",
+      "Brachioradialis",
+      "Biceps Brachii"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Hamstrings",
+      "Gluteus Maximus",
+      "Adductor Magnus",
+      "Quadriceps"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Bend knees slightly and bend over bar with back straight, approximately horizontal. Grasp bar with wide overhand grip.",
+    "execution": "Keeping upper arm perpendicular to torso, pull barbell up toward upper chest until upper arms are just beyond horizontal. Return and repeat."
+  },
+  {
+    "name": "Cable Rear Delt Row",
+    "url": "https://exrx.net/WeightExercises/DeltoidPosterior/CBRearDeltRow",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Posterior",
+    "equipment": "Cable",
+    "synergists": [
+      "Infraspinatus",
+      "Teres Minor",
+      "Deltoid, Lateral",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Brachialis",
+      "Brachioradialis"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Hamstrings",
+      "Gluteus Maximus",
+      "Adductor Magnus"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit slightly forward on bench or platform in order to grasp cable bar attachment. With elbow width overhand grip, straighten torso upright and slide hips back until knees are only slightly bent.",
+    "execution": "Pull cable attachment toward upper chest, just below neck, with elbows up out to sides until elbows travel slightly behind back. Keep upper arms horizontal, perpendicular to trunk. Return until arms are extended and shoulders are stretched forward. Repeat."
+  },
+  {
+    "name": "Cable Standing Rear Delt Row (with rope)",
+    "url": "https://exrx.net/WeightExercises/DeltoidPosterior/CBStandingRearDeltRowRope",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Posterior",
+    "equipment": "Cable",
+    "synergists": [
+      "Infraspinatus",
+      "Teres Minor",
+      "Deltoid, Lateral",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Brachialis",
+      "Brachioradialis",
+      "Biceps Brachii"
+    ],
+    "stabilizers": [
+      "Erector Spinae"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand facing rope attachment on pulley cable positioned head height or slightly higher. Grasp each end of rope just above enlarged ends. Step back with one foot so arms and shoulders are positioned straight forward with cable taut. Lean back slightly and point elbows outward.",
+    "execution": "Pull rope to upper chest or neck, keeping elbows at shoulder height until elbows travel slightly behind back. Keep upper arms perpendicular to trunk. Return until arms are extended forward. Repeat."
+  },
+  {
+    "name": "Cable Isolateral Standing Rear Delt Row",
+    "url": "https://exrx.net/WeightExercises/DeltoidPosterior/CBStandingRearDeltRowStirrups",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Posterior",
+    "equipment": "Cable",
+    "synergists": [
+      "Infraspinatus",
+      "Teres Minor",
+      "Deltoid, Lateral",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Brachialis",
+      "Brachioradialis",
+      "Biceps Brachii"
+    ],
+    "stabilizers": [
+      "Erector Spinae"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand facing twin pulley cables positioned shoulder height. Grasp stirrup cable attachment in each hand. Step back with one foot so arms and shoulders are positioned straight forward with cable taut. Point elbows outward.",
+    "execution": "Pull stirrups out to sides, keeping elbows at shoulder height until elbows travel slightly behind back. Allow wrists to follow elbows. Keep upper arms horizontal, perpendicular to trunk. Return until arms are extended and shoulders are stretched forward. Repeat."
+  },
+  {
+    "name": "Dumbbell Rear Delt Row",
+    "url": "https://exrx.net/WeightExercises/DeltoidPosterior/DBRearDeltRow",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Posterior",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Infraspinatus",
+      "Teres Minor",
+      "Deltoid, Lateral",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Brachialis",
+      "Brachioradialis",
+      "Rhomboids"
+    ],
+    "stabilizers": [
+      "Triceps Brachii",
+      "Obliques",
+      "Psoas major",
+      "Quadratus lumborum",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Kneel over side of bench with arm and leg to side. Grasp dumbbell.",
+    "execution": "Pull dumbbell up out to side with upper arm perpendicular to trunk until upper arm is just beyond horizontal. Lower and repeat."
+  },
+  {
+    "name": "Dumbbell Rear Lateral Raise",
+    "url": "https://exrx.net/WeightExercises/DeltoidPosterior/DBRearLateralRaise",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Posterior",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Infraspinatus",
+      "Teres Minor",
+      "Deltoid, Lateral",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids"
+    ],
+    "stabilizers": [
+      "Triceps Brachii",
+      "Wrist Extensors",
+      "Erector Spinae",
+      "Hamstrings",
+      "Gluteus Maximus",
+      "Adductor Magnus",
+      "Quadriceps"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp dumbbells to each side. Bend knees and bend over through hips with back flat, close to horizontal. Position elbows with slight bend and palms facing together.",
+    "execution": "Raise upper arms to sides until elbows are shoulder height. Maintain upper arms perpendicular to torso and fixed elbow position (10° to 30° angle) throughout exercise. Maintain height of elbows above wrists by raising \"pinkie finger\" side up. Lower and repeat."
+  },
+  {
+    "name": "Dumbbell Seated Rear Lateral Raise",
+    "url": "https://exrx.net/WeightExercises/DeltoidPosterior/DBSeatedRearLateralRaise",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Posterior",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Infraspinatus",
+      "Teres Minor",
+      "Deltoid, Lateral",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids"
+    ],
+    "stabilizers": [
+      "Triceps Brachii"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on edge of bench with feet placed beyond knees. Bend over and rest torso on thighs. Grasp dumbbells with each hand under legs. Position elbows with slight bend with palms facing together behind ankles (as shown) or just to sides of ankles.",
+    "execution": "Raise upper arms to sides until elbows are shoulder height. Maintain upper arms perpendicular to torso and fixed elbow position (10° to 30° angle) throughout exercise. Maintain elbows height above wrists by raising \"pinkie finger\" side up. Lower and repeat."
+  },
+  {
+    "name": "Lever Isolateral Rear Delt Row (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/DeltoidPosterior/LVRearDeltRowC",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Posterior",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Infraspinatus",
+      "Teres Minor",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Brachialis",
+      "Brachioradialis",
+      "Biceps Brachii"
+    ],
+    "stabilizers": [
+      "Deltoid, Lateral"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place seat at low position. Sit on seat with chest against pad and grasp upper handles.",
+    "execution": "Pull lever with elbows up out to sides until upper arms are just beyond parallel, keeping upper arm horizontal, perpendicular to torso. Return and repeat."
+  },
+  {
+    "name": "Lever Seated Rear Delt Row",
+    "url": "https://exrx.net/WeightExercises/DeltoidPosterior/LVRearDeltRow",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Posterior",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Infraspinatus",
+      "Teres Minor",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Brachialis",
+      "Brachioradialis",
+      "Latissimus Dorsi",
+      "Biceps Brachii"
+    ],
+    "stabilizers": [
+      "Deltoid, Lateral"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place seat at low position. Sit on seat with chest against pad and grasp upper handles.",
+    "execution": "Pull lever with elbows up out to sides until upper arms are just beyond parallel, keeping upper arm horizontal, perpendicular to torso. Return and repeat."
+  },
+  {
+    "name": "Lever Isolateral Seated Reverse Fly (pronated parallel grip)",
+    "url": "https://exrx.net/WeightExercises/DeltoidPosterior/LVReverseFlyPronated",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Posterior",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Infraspinatus",
+      "Teres Minor",
+      "Deltoid, Lateral",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids"
+    ],
+    "stabilizers": [
+      "Triceps Brachii",
+      "Wrist Extensors"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit in machine with chest against pad. Grasp parallel handles from inside with thumbs down at shoulder height.",
+    "execution": "Keeping elbows pointed high, pull handles apart and to rear until elbows are just behind back. Return and repeat."
+  },
+  {
+    "name": "Smith Rear Delt Row",
+    "url": "https://exrx.net/WeightExercises/DeltoidPosterior/SMRearDeltRow",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Posterior",
+    "equipment": "Smith",
+    "synergists": [
+      "Infraspinatus",
+      "Teres Minor",
+      "Deltoid, Lateral",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Brachialis",
+      "Brachioradialis",
+      "Rhomboids"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Hamstrings",
+      "Gluteus Maximus",
+      "Adductor Magnus",
+      "Quadriceps"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand near low smith bar. Bend knees and bend over bar with back straight. Grasp bar with wide overhand grip. Disengage bar by rotating bar back.",
+    "execution": "Keeping upper arm perpendicular to torso, pull bar up toward upper chest until upper arms are just beyond parallel to floor. Return and repeat."
+  },
+  {
+    "name": "Rear Delt Inverted Row (high bar)",
+    "url": "https://exrx.net/WeightExercises/DeltoidPosterior/BWRearDeltInvertedRowHigh",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Posterior",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Infraspinatus",
+      "Teres Minor",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Brachialis",
+      "Brachioradialis"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Hamstrings",
+      "Gluteus Maximus",
+      "Deltoid, Lateral"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand facing horizontal bar positioned lower to upper chest height. Step toward bar so chest makes contact. Grasp bar with wide overhand grip. Raise elbows up to shoulder height. Place feet forward on floor so body is reclined back with legs, hips and spine straight.",
+    "execution": "Lower body while keeping body straight, elbows high, and upper arms perpendicular to torso, until arms are extended straight. Pull shoulders toward bar while keeping elbows up high until upper arms are parallel to one another, or just beyond. Repeat."
+  },
+  {
+    "name": "Suspended Rear Delt Row",
+    "url": "https://exrx.net/WeightExercises/DeltoidPosterior/STRearDeltRow",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Posterior",
+    "equipment": "Suspended",
+    "synergists": [
+      "Infraspinatus",
+      "Teres Minor",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Brachialis",
+      "Brachioradialis"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Hamstrings",
+      "Gluteus Maximus",
+      "Deltoid, Lateral"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp suspension handles and momentarily step back until arms are extended forward and straight. While keeping arms straight and shoulders back, step forward so body reclines back behind suspension handles.  \nPosition body and legs straight at desired angle hanging from handles with arms straight. Internally rotate shoulders so elbows are positioned directly outwards.",
+    "execution": "Pull body up while keeping elbows pointed directly out to each side and body and legs straight. Pull until elbows are directly lateral to each side without allowing elbows to drop. Return until arms are extended straight and shoulders are stretched forward, maintaining high elbow position. Repeat."
+  },
+  {
+    "name": "Suspended Reverse Fly",
+    "url": "https://exrx.net/WeightExercises/DeltoidPosterior/STReverseFly",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Deltoid, Posterior",
+    "equipment": "Suspended",
+    "synergists": [
+      "Infraspinatus",
+      "Teres Minor",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Hamstrings",
+      "Gluteus Maximus",
+      "Deltoid, Lateral"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp suspension handles and momentarily step back until arms are extended forward and straight. While keeping arms straight and shoulders back, step forward so body reclines back behind suspension handles. Position body and legs straight at desired angle hanging from handles with arms straight. Internally rotate shoulders so elbows are positioned directly outwards with arms straight or slightly bent. Shoulder should be positioned approximately 90° relative to torso position.",
+    "execution": "Pull handles out to sides while keeping stiff elbow position and maintaining shoulder at 90° plane to torso throughout exercise. Raise up until upper arms are in-line to one another. Return to original position in same plane and repeat."
+  },
+  {
+    "name": "Rear Deltoid Stretch",
+    "url": "https://exrx.net/Stretches/DeltoidPosterior/RearDelt",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Posterior Deltoid",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Position arm across neck. Place opposite hand on elbow.",
+    "execution": "Push elbow toward neck. Hold stretch. Repeat with opposite arm."
+  },
+  {
+    "name": "Cable Front Lateral Raise",
+    "url": "https://exrx.net/WeightExercises/Supraspinatus/CBFrontLateralRaise",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Supraspinatus",
+    "equipment": "Cable",
+    "synergists": [
+      "Deltoid, Lateral",
+      "Deltoid, Anterior",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Wrist Extensors"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp dumbbell cable attachment. Stand facing side with resting arm toward low pulley. Grasp ballet bar if available for support. Internally rotate shoulders so elbows point out to sides.",
+    "execution": "With elbow straight or slightly bent, raise upper arm away from low pulley to side, slightly to front (30°) until upper arm is shoulder height. Lower and repeat. Continue with opposite arm."
+  },
+  {
+    "name": "Dumbbell Front Lateral Raise",
+    "url": "https://exrx.net/WeightExercises/Supraspinatus/DBFrontLateralRaise",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Supraspinatus",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Deltoid, Lateral",
+      "Deltoid, Anterior",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Wrist Extensors"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp dumbbell and position in front of thigh with arm straight. Turn pinkie finger side outward.",
+    "execution": "Raise arms to side, slightly to front until shoulder height or slightly higher. Lower and repeat. Continue with opposite arm."
+  },
+  {
+    "name": "Dumbbell Full Can Lateral Raise",
+    "url": "https://exrx.net/WeightExercises/Supraspinatus/DBFullCanLateralRaise",
+    "bodyRegion": "Shoulders",
+    "targetMuscle": "Supraspinatus",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Deltoid, Lateral",
+      "Deltoid, Anterior",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Wrist Extensors"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp dumbbells with each hand with palms facing forward.",
+    "execution": "Raise arms to side with thumb side up. Lower and repeat."
+  }
+]
