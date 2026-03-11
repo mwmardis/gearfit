@@ -1,0 +1,3522 @@
+[
+  {
+    "name": "Barbell Bent Knee Good-morning",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BBBentKneeGoodMorning",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Barbell",
+    "synergists": [
+      "Adductor Magnus",
+      "Hamstrings"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Quadriceps"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Position barbell on back of shoulders and grasp bar to sides.",
+    "execution": "Keeping back straight, bend hips to lower torso forward until parallel to floor. Bend knees slightly during descent. Raise torso until hips are extended. Repeat."
+  },
+  {
+    "name": "Barbell Deadlift",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BBDeadlift",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Barbell",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Hamstrings",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Trapezius, Middle",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Rhomboids"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "With feet flat beneath bar squat down and grasp bar with shoulder width or slightly wider overhand or mixed grip.",
+    "execution": "Lift bar by extending hips and knees to full extension. Pull shoulders back at top of lift if rounded. Return weights to floor by bending hips back while allowing knees to bend forward, keeping back straight and knees pointed same direction as feet. Repeat."
+  },
+  {
+    "name": "Barbell Stiff Leg Deadlift",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BBStiffLegDeadlift",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Barbell",
+    "synergists": [
+      "Erector Spinae",
+      "Adductor Magnus",
+      "Hamstrings"
+    ],
+    "stabilizers": [
+      "Quadriceps",
+      "Trapezius, Middle",
+      "Rhomboids",
+      "Latissimus Dorsi",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Trapezius, Lower",
+      "Rectus Abdominis",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with shoulder width or narrower stance on 5\" to 8\" (13-20 cm) platform with feet flat beneath bar. Bend over and grasp barbell with shoulder width or slightly wider overhand or mixed grip.",
+    "execution": "With knees bent, lift bar by extending at hips until standing upright. Pull shoulders back at top of lift if rounded. Extend knees at top if desired. Lower bar to top of feet by bending hips. Bend knees slightly during descent and keep waist straight, flexing only slightly at bottom. Repeat."
+  },
+  {
+    "name": "Barbell Straight-back Stiff-leg Deadlift",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BBStrBackStiffLegDeadlift",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Barbell",
+    "synergists": [
+      "Hamstrings",
+      "Adductor Magnus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Quadriceps",
+      "Trapezius, Middle",
+      "Rhomboids",
+      "Latissimus Dorsi",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Trapezius, Lower"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp barbell from rack or [deadlift](../ErectorSpinae/BBDeadlift) from floor with shoulder width or slightly wider overhand or mixed grip. Stand with shoulder width or narrower stance.",
+    "execution": "With back straight, lower bar to top of feet by bending hips. Bend knees slightly during descent and keep waist straight. Place weight onto floor. With knees still bent, lift bar by straightening hips until standing upright. Pull shoulders back if rounded. Extend knees at top if desired. Repeat."
+  },
+  {
+    "name": "Barbell Hip Thrust",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BBHipThrust",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Barbell",
+    "synergists": [
+      "Quadriceps"
+    ],
+    "stabilizers": [
+      "Erector Spinae"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on floor with long side of bench behind back. Roll barbell back and center over hips. Position upper back on corner of bench. Place feet on floor approximately shoulder width with knees bent. Grasp bar to each side.",
+    "execution": "Raise bar upward by extending hips until straight. Lower and repeat."
+  },
+  {
+    "name": "Barbell Lunge",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BBLunge",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Barbell",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Tibialis Anterior",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "[Clean](../OlympicLifts/Clean) bar from floor or dismount bar from rack. From rack with barbell upper chest height, position bar on back of shoulders and grasp barbell to sides.",
+    "execution": "Lunge forward with first leg. Land on heel, then forefoot. Lower body by flexing knee and hip of front leg until knee of rear leg is almost in contact with floor. Return to original standing position by forcibly extending hip and knee of forward leg. Repeat by alternating lunge with opposite leg."
+  },
+  {
+    "name": "Barbell Rear Lunge",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BBRearLunge",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Barbell",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Hamstrings",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "From rack with barbell upper chest height, position bar on back of shoulders and grasp barbell to sides. Dismount bar from rack.",
+    "execution": "Step back with one leg while bending supporting leg. Plant forefoot far back on floor. Lower body by flexing knee and hip of supporting leg until knee of rear leg is almost in contact with floor. Return to original standing position by extending hip and knee of forward supporting leg and return rear leg next to supporting leg. Repeat movement with opposite legs alternating between sides."
+  },
+  {
+    "name": "Barbell Single Leg Split Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BBSingleLegSplitSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Barbell",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand facing away from bench. Position bar on back of shoulders and grasp barbell to sides. Extend leg back and place top of foot on bench.",
+    "execution": "Squat down by flexing knee and hip of front leg until knee of rear leg is almost in contact with floor. Return to original standing position by extending hip and knee of forward leg. Repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Barbell Single Leg Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BBSingleLegSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Barbell",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Erector Spinae"
+    ],
+    "stabilizers": [
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques",
+      "Rectus Abdominis",
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Quadriceps",
+      "Deltoid, Anterior",
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Lateral",
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations",
+      "Levator Scapulae",
+      "Wrist Extensors"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand with arms extended out in front holding barbell. Balance on one leg with opposite leg extended forward off of ground.",
+    "execution": "Squat down as far as possible while keeping leg elevated off of floor. Keep supporting knee pointed same direction as foot supporting. Raise body back up to original position until knee and hip of supporting leg is straight. Return and repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Barbell Split Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BBSplitSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Barbell",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Hamstrings",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Position barbell on back of shoulders and grasp barbell to sides. Stand with feet far apart; one foot forward and other foot behind.",
+    "execution": "Squat down by flexing knee and hip of front leg. Allow heel of rear foot to rise up while knee of rear leg bends slightly until it almost makes contact with floor. Return to original standing position by extending hip and knee of forward leg. Repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Barbell Squat (low bar)",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BBSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Barbell",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Erector Spinae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "From rack with barbell at upper chest height, position bar low on back of shoulders. Grasp barbell to sides. Dismount bar from rack and stand with wide stance.",
+    "execution": "Squat down by bending hips back while allowing knees to bend forward slightly, keeping back straight and knees pointed same direction as feet. Descend until thighs are just past parallel to floor. Extend hips and knees until legs are straight. Return and repeat."
+  },
+  {
+    "name": "Barbell Front Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BBFrontSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Barbell",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Deltoid, Anterior",
+      "Deltoid, Lateral",
+      "Supraspinatus",
+      "Pectoralis Major, Clavicular",
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae",
+      "Trapezius, Lower",
+      "Serratus Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "From rack with barbell upper chest height, position bar in front of shoulders. Cross arms and place hands on top of barbell with upper arms parallel to floor. Dismount bar from rack.",
+    "execution": "Squat down by bending hips back while allowing knees to bend forward, keeping back straight and knees pointed same direction as feet. Descend until thighs are just past parallel. Extend knees and hips until legs are straight. Return and repeat."
+  },
+  {
+    "name": "Safety Barbell Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/SBSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Barbell",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Erector Spinae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Standing facing safety barbell on rack upper chest height. Position head in yoke with padded bar around shoulders. Hands can be placed on ends of yoke (as shown) or on safety bar out to sides. Dismount bar from rack and step back.",
+    "execution": "Squat down by bending hips back while allowing knees to bend slightly forward, keeping back straight and knees pointed same direction as feet. Descend until thighs are just past parallel to floor. Stand by extending hips and knees until legs are straight. Repeat."
+  },
+  {
+    "name": "Barbell Step-up",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BBStepUp",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Barbell",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Gastrocnemius",
+      "Hamstrings",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques",
+      "Rectus Abdominis",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand facing side of bench. Position bar on back of shoulders and grasp barbell to sides.",
+    "execution": "Place foot of first leg on bench. Stand on bench by extending hip and knee of first leg and place foot of second leg on bench. Step down with second leg by flexing hip and knee of first leg. Return to original standing position by placing foot of first leg to floor. Repeat first step with opposite leg alternating first steps between legs."
+  },
+  {
+    "name": "Cable Glute Kickback",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/CBGluteKickback",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Cable",
+    "synergists": [
+      "Adductor Magnus",
+      "Hamstrings"
+    ],
+    "stabilizers": [
+      "Obliques",
+      "Erector Spinae",
+      "Quadratus Lumborum",
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Attach ankle cuff to low pulley. With cuff on one ankle, grasp ballet bar with both hands and step far back with other foot. Arms remain extended to support body leaning forward. Leg with ankle cuff attached is flexed at hip and knee.",
+    "execution": "Pull cable attachment back by extending hip and knee. Return leg to original position and repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Cable Rear Lunge",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/CBRearLunge",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Cable",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Hamstrings",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Trapezius, Upper",
+      "Trapezius, Lower",
+      "Levator Scapulae",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand between two very low pulleys with shoulder width or narrower stance. Squat down and grasp stirrup attachments to each side. Stand upright with arms straight down to sides.",
+    "execution": "Step back with one leg while bending supporting leg. Plant forefoot far back on floor. Lower body by flexing knee and hip of supporting leg until knee of rear leg is almost in contact with floor. Return to original standing position by extending hip and knee of forward supporting leg and return rear leg next to supporting leg. Repeat movement with opposite legs alternating between sides."
+  },
+  {
+    "name": "Cable Split Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/CBLungeTwoArm",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Cable",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Hamstrings",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae",
+      "Erector Spinae",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand between two very low cable pulleys. Grasp stirrup attachments with each hand. Place one leg far forward and opposite leg far back to rear.",
+    "execution": "Squat down by flexing knee and hip of front leg. Allow heel of rear foot to rise up while knee of rear leg bends slightly until it almost makes contact with floor. Return to original straddle position by extending hip and knee of forward leg. Repeat. Continue with legs in opposite position."
+  },
+  {
+    "name": "Cable Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/CBSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Cable",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with feet shoulder width or slightly wider on platform between very low and close pulley cables. Squat down with knees slightly beyond foot and shoulder above feet. Grasp stirrups to each side with arms straight.",
+    "execution": "Keeping chest high and back straight, raise stirrups by extending knees and hips until legs are straight. Squat down by bending hips back while allowing knees to bend forward slightly, keeping back straight and knees pointed same direction as feet. Squat down until thighs are just past parallel to floor. Return and repeat."
+  },
+  {
+    "name": "Cable Standing Hip Extension",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/CBStandingHipExtension",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Cable",
+    "synergists": [
+      "Hamstrings"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Obliques",
+      "Quadratus Lumborum",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Rectus Abdominis"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Attach ankle cuff to low pulley. With cuff on one ankle, grasp ballet bar with both hands and step back with other foot. Elbows remain straight. Attached leg is straight and foot is slightly off floor.",
+    "execution": "Pull cable attachment back by extending hip. Return leg to original position. Repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Cable Bent-over Hip Extension",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/CBBentOverHipExtension",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Cable",
+    "synergists": [
+      "Hamstrings"
+    ],
+    "stabilizers": [
+      "Obliques",
+      "Erector Spinae",
+      "Quadratus Lumborum",
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Attach ankle cuff to low pulley. With cuff on one ankle, grasp ballet bar with both hands and step far back with other foot. Arms remain extended to support body leaning forward. Leg with ankle cuff attached in slightly bent with foot off floor.",
+    "execution": "Pull cable attachment back by extending hip. Return leg to original position and repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Cable Step-up",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/CBStepUp",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Cable",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand behind elevated platform and low and close pulley cables to sides. Grasp stirrups at each side of platform. Stand upright with arms straight down at sides.",
+    "execution": "Place foot of first leg on elevated platform. Stand on elevated platform by extending hip and knee of first leg and place foot of second leg on bench. Step down with second leg by flexing hip and knee of first leg. Return to original standing position by placing foot of first leg to lower position. Repeat first step with opposite leg alternating first steps between legs."
+  },
+  {
+    "name": "Cable Stiff Leg Deadlift",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/CBStiffLegDeadlift",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Cable",
+    "synergists": [
+      "Erector Spinae",
+      "Adductor Magnus",
+      "Hamstrings"
+    ],
+    "stabilizers": [
+      "Quadriceps",
+      "Trapezius, Middle",
+      "Rhomboids",
+      "Latissimus Dorsi",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand on elevated platform between two very low pulleys with shoulder width or narrower stance. Squat down and grasp stirrup attachments to each side. Stand upright with arms straight down to sides.",
+    "execution": "Bow forward by bending hips. Bend knees slightly during descent and keep waist straight, flexing low back at bottom. With knees slightly bent, raise torso by extending at waist, then hips, gradually extending knees until standing upright. Pull shoulders back slightly if rounded. Repeat."
+  },
+  {
+    "name": "Cable Straight-back Stiff-leg Deadlift",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/CBStrBackStiffLegDeadlift",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Cable",
+    "synergists": [
+      "Hamstrings",
+      "Adductor Magnus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Quadriceps",
+      "Trapezius, Middle",
+      "Rhomboids",
+      "Latissimus Dorsi",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Trapezius, Lower"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand between two very low pulleys with shoulder width or narrower stance. Squat down and grasp stirrup attachments to each side. Stand upright with arms straight down to sides.",
+    "execution": "With back straight, bow forward by bending hips and bend knees slightly during descent. Raise torso by extending hips while gradually extending knees until standing upright. Pull shoulders back slightly if rounded. Repeat."
+  },
+  {
+    "name": "Dumbbell Lunge",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/DBLunge",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Hamstrings",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae",
+      "Tibialis Anterior",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand with dumbbells grasped to sides.",
+    "execution": "Lunge forward with first leg. Land on heel then forefoot. Lower body by flexing knee and hip of front leg until knee of rear leg is almost in contact with floor. Return to original standing position by forcibly extending hip and knee of forward leg. Repeat by alternating lunge with opposite leg."
+  },
+  {
+    "name": "Dumbbell Rear Lunge",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/DBRearLunge",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Hamstrings",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Trapezius, Upper",
+      "Trapezius, Lower",
+      "Levator Scapulae",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand with dumbbells grasped to sides.",
+    "execution": "Step back with one leg while bending supporting leg. Plant forefoot far back on floor. Lower body by flexing knee and hip of supporting leg until knee of rear leg is almost in contact with floor. Return to original standing position by extending hip and knee of forward supporting leg and return rear leg next to supporting leg. Repeat movement with opposite legs alternating between sides."
+  },
+  {
+    "name": "Dumbbell Split Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/DBSplitSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Hamstrings",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand with dumbbells grasped to sides. Stand with feet far apart; one foot forward and other foot behind.",
+    "execution": "Squat down by flexing knee and hip of front leg. Allow heel of rear foot to rise up while knee of rear leg bends slightly until it almost makes contact with floor. Return to original standing position by extending hip and knee of forward leg. Repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Dumbbell Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/DBSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae",
+      "Rhomboids"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with dumbbells grasped to sides.",
+    "execution": "Squat down by bending hips back while allowing knees to bend forward slightly, keeping back straight and knees pointed same direction as feet. Descend until thighs are just past parallel to floor. Extend knees and hips until legs are straight. Return and repeat."
+  },
+  {
+    "name": "Dumbbell Front Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/DBFrontSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with dumbbells grasped to sides. Clean dumbbells up to shoulders so side of each dumbbell rests on top of each shoulder. Balance dumbbells on shoulder by holding on to dumbbells with elbows flaring outward. Position feet shoulder width or slightly narrower apart.",
+    "execution": "Squat down by bending hips back while allowing knees to bend forward slightly, keeping back straight and knees pointed same direction as feet. Descend until thighs are just past parallel to floor. Extend knees and hips until legs are straight. Return and repeat."
+  },
+  {
+    "name": "Dumbbell Step-up",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/DBStepUp",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with dumbbells grasped to sides facing side of bench.",
+    "execution": "Place foot of first leg on bench. Stand on bench by extending hip and knee of first leg and place foot of second leg on bench. Step down with second leg by flexing hip and knee of first leg. Return to original standing position by placing foot of first leg to floor. Repeat first step with opposite leg, alternating first steps between legs."
+  },
+  {
+    "name": "Dumbbell Step Down",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/DBStepDown",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Hold dumbbells in each hand down to sides and stand with one foot on bench. Position foot on bench to side, forward of straight knee.",
+    "execution": "Stand on bench by straightening leg and pushing body upward. Step down returning foot off of bench to floor and repeat. Continue with opposite position."
+  },
+  {
+    "name": "Lever Deadlift (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVDeadlift",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Trapezius, Middle",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Rhomboids"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand between lever handles to sides. Squat down with feet flat and grasp handles to sides.",
+    "execution": "Lift lever by extending hips and knees to full extension. Pull shoulders back at top of lift if rounded. Return weight by bending hips back while allowing knees to bend forward slightly, keeping back straight and knees pointed same direction as feet. Repeat."
+  },
+  {
+    "name": "Lever Stiff Leg Deadlift (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVStiffLegDeadlift",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Erector Spinae",
+      "Adductor Magnus",
+      "Hamstrings"
+    ],
+    "stabilizers": [
+      "Quadriceps",
+      "Trapezius, Middle",
+      "Rhomboids",
+      "Latissimus Dorsi",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand between lever handles with shoulder width or narrower stance. Squat down and grasp handles to each side. Stand upright with arms straight down to sides.",
+    "execution": "Bow forward by bending hips. Bend knees slightly during descent and keep waist straight, flexing low back at bottom. With knees slightly bent, raise torso by extending at waist, then hips, gradually extending knees until standing upright. Pull shoulders back slightly if rounded. Repeat."
+  },
+  {
+    "name": "Lever Straight-back Stiff-leg Deadlift (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVStrBackStiffLegDeadlift",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Hamstrings",
+      "Adductor Magnus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Quadriceps",
+      "Trapezius, Middle",
+      "Rhomboids",
+      "Latissimus Dorsi",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Trapezius, Lower"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand between lever handles with shoulder width or narrower stance. Squat down and grasp handles to each side. Stand upright with arms straight down to sides.",
+    "execution": "With back straight, bow forward by bending hips and bend knees slightly during descent. Raise torso by extending hips while gradually extending knees until standing upright. Pull shoulders back slightly if rounded. Repeat."
+  },
+  {
+    "name": "Lever 45° Leg Press (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LV45LegPress",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Hamstrings",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on machine with back on padded support. Place feet slightly high on platform. Extend hips and knees. Release dock lever and grasp handles to sides.",
+    "execution": "Flex hips and knees to lower lever until hips are completely flexed. Push platform by extending knees and hips. Repeat."
+  },
+  {
+    "name": "Lever Lying Leg Press (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVLyingLegPressH",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Climb up steps to top of machine. Lie supine on horizontal padded platform with shoulders against pad. Place feet equally spaced and slightly high on platform. Grip handles above shoulder pads.",
+    "execution": "Push lever platform away by extending hips and knees until knees are straight. Return lever platform by flexing hips and knees until knees are just short of complete flexion or until hips are completely flexed. Repeat."
+  },
+  {
+    "name": "Lever Lying Hip Extension (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVLyingHipExtensionH",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Adductor Magnus"
+    ],
+    "stabilizers": [
+      "Erector Spinae"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie on bench with knees legs over pads. Align hip joints with lever fulcrum. Strap hips down with belt. Grasp handles at each side.",
+    "execution": "Extend hips and knees until legs are straight. Return to original position by flexing hips and knees. Repeat."
+  },
+  {
+    "name": "Lever Reverse Hyper-extension (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVReverseHyperextension",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Hamstrings"
+    ],
+    "stabilizers": [
+      "Erector Spinae"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Place one leg in strap so it is positioned above ankle. Step up onto step built on side of apparatus with other foot. Lay torso and waist on bench and grasp handles. Place stepping foot inside of strap, just in front of leg already in strap. Position legs side by side. Feet should be above floor with legs hanging straight down.",
+    "execution": "Raise lever by extending hips as high as possible with legs nearly straight. Lower legs to original position. Repeat."
+  },
+  {
+    "name": "Lever Single Leg Split Squat (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVSingleLegSplitSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Hamstrings",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Trapezius, Upper",
+      "Trapezius, Lower",
+      "Levator Scapulae",
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand between lever handles to sides. Extend leg back and place top of foot on cross bar. Squat down and grasp handles to sides.",
+    "execution": "With chest high, lift lever by extending hips and knees to full extension. Return until knee of rear leg is almost in contact with floor. Repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Lever Single Leg Squat (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVSingleLegSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Hamstrings",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand between handles facing away from fulcrum. Grasp both handles to sides and stand upright. Cross lower leg above knee of supporting leg.",
+    "execution": "Bend knee forward slightly while allowing hips to bend back behind, keeping back straight and knee pointed same direction of foot. Squat down as low as possible. Extend knee and hip until leg is straight. Return and repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Lever Split Squat (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVSplitSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Hamstrings",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Trapezius, Upper",
+      "Trapezius, Lower",
+      "Levator Scapulae",
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand between lever handles to sides. Place forefoot of one foot on floor to rear and other foot slightly forward. Squat down and grasp handles to sides.",
+    "execution": "With chest high, lift lever by extending hips and knees to full extension. Return until knee of rear leg is almost in contact with floor and repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Lever Squat (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVSquatPL",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Squat down to place shoulders under padded lever. Place feet shoulder width apart slightly in front of shoulders. Extend knees and hips until legs are straight. Release support lever.",
+    "execution": "Squat down by bending hips back while allowing knees to bend forward slightly, keeping back straight and knees pointed same direction as feet. Descend by bending knees and hip until thighs are just past parallel to floor. Lift lever up by extending knees and hips until legs are straight. Repeat."
+  },
+  {
+    "name": "Lever Front Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVFrontSquatPL",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Step onto platform facing padded levers. Squat down to place shoulders under padded lever. Place feet shoulder width apart on platform. Extend knees and hips until legs are straight. Release support lever if it does not disengage by itself.",
+    "execution": "Lower lever by bending hips back while allowing knees to bend forward slightly, keeping back straight and knees pointed same direction as feet. Descend until thighs are just past parallel to floor. Lift lever up by extending knees and hips until legs are straight. Repeat."
+  },
+  {
+    "name": "Lever Bent-over Hip Extension",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVBentOverHipExtension",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Adductor Magnus"
+    ],
+    "stabilizers": [
+      "Obliques",
+      "Erector Spinae",
+      "Quadratus Lumborum",
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Step up onto platform. Position belly on wide pad, forearms on padded arm rest, and grip handles. Position bottom of foot on foot lever with lower leg under pad.",
+    "execution": "Push foot lever back by extending hip. Return leg to original position. Repeat. Reposition and continue with opposite leg."
+  },
+  {
+    "name": "Lever Lying Hip Extension",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVLyingHipExtension",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Adductor Magnus"
+    ],
+    "stabilizers": [
+      "Erector Spinae"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "With leg lever positioned in the lower position, lie supine on machine with legs over padded bar. Align hip joints with lever fulcrum. Strap hips down with belt if available. Release leg lever and adjust until leg lever is in upper position. Grasp handles to sides of head.",
+    "execution": "Push padded leg bar down until hips are extended. Return and repeat."
+  },
+  {
+    "name": "Lever Standing Hip Extension",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVStandingHipExtension",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Hamstrings",
+      "Adductor Magnus"
+    ],
+    "stabilizers": [
+      "Obliques",
+      "Erector Spinae",
+      "Quadratus Lumborum",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Rectus Abdominis"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand on platform facing to one side and grasp bar for support. Place leg nearest machine on padded roller while standing on other leg.",
+    "execution": "Lower lever by extending hip. Return until knee is higher than hip. Repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Lever Standing Hip Extension (with abdominal pad)",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVStandingHipExtensionTech",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Adductor Magnus",
+      "Hamstrings"
+    ],
+    "stabilizers": [
+      "Obliques",
+      "Erector Spinae",
+      "Quadratus Lumborum",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Triceps Brachii",
+      "Rectus Abdominis"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand on platform so front of hips are against edge of abdominal pad. Position flexed leg over padded roller while standing on other leg. Grasp handles with both hands.",
+    "execution": "Extend lever back by extending hip and straightening leg. Return by flexing hip and knee. Repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Lever Seated Leg Press",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVSeatedLegPress",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Hamstrings",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on machine with back on padded support. Place feet slightly high on platform. Grasp handles to sides.",
+    "execution": "Extend knees and hips until knees are fully extended. Return until hips are completely flexed. Repeat."
+  },
+  {
+    "name": "Lever Bent-over Glute Kickback",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVBentOverRearKick",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Adductor Magnus",
+      "Quadriceps"
+    ],
+    "stabilizers": [
+      "Obliques",
+      "Erector Spinae",
+      "Quadratus Lumborum",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Coracobrachialis"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lean over padded surface and grasp handles. Bend knee and position foot against lever platform or pedal.",
+    "execution": "Push platform or pedal back by extending leg. Return leg to original position. Repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Lever Kneeling Glute Kickback",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVKneelingHipExtension",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Adductor Magnus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Quadratus Lumborum",
+      "Obliques",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Coracobrachialis"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Kneel on machine by placing one knee on lower pad. Rest torso on middle pad, place forearms on padded arm rest, and grip handles. Position other foot of other leg up to lever platform.",
+    "execution": "Push platform back by extending leg back. Return leg to original position and repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Lever Standing Glute Kickback",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVSingleLegStandingLegPress",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus"
+    ],
+    "stabilizers": [
+      "Obliques",
+      "Erector Spinae",
+      "Quadratus Lumborum",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Coracobrachialis"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Step on left platform with left foot. Grasp handle bars to each side. Place right foot on highest lever platform.",
+    "execution": "Push platform down by extending leg until straight. Return leg to original position. Repeat. Continue with opposite leg positions."
+  },
+  {
+    "name": "Lever Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Squat down to place shoulders under padded lever. Place feet shoulder width apart slightly in front of shoulders.",
+    "execution": "Raise lever up by extending knees and hips until legs are straight. Squat down by bending hips back while allowing knees to bend forward slightly, keeping back straight and knees pointed same direction as feet. Descend until thighs are just past parallel to floor. Return and repeat."
+  },
+  {
+    "name": "Lever V-Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/LVVSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position shoulders under shoulder pads with back against back pad. Place feet on platform, shoulder or hip width apart. Squeeze hand lever. Keeping hand lever squeezed, squat down by bending hips and knees until knees or hips are just short of complete flexion. Release hand lever and raise up on sled just slightly until weight stack is engaged (click is heard).",
+    "execution": "Raise lever by extending knees and hips until legs are straight. Squat down with knees pointed same direction as feet. Descend until knees or hips are near complete flexion. Repeat."
+  },
+  {
+    "name": "Sled Kneeling Glute Kickback",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/SLKneelingHipExtension",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Sled",
+    "synergists": [
+      "Adductor Magnus"
+    ],
+    "stabilizers": [
+      "Obliques",
+      "Erector Spinae",
+      "Quadratus Lumborum",
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Kneel on machine by placing knees on lower pad and feet against bars to rear, if available. Place forearms on padded armrest, and grip handles. Position one foot up so middle of sole is positioned under foot bar.",
+    "execution": "Push foot bar up by extending leg back as far as possible. Return leg to original position and repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Sled Standing Glute Kickback",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/SLStandingHipExtension",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Sled",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus"
+    ],
+    "stabilizers": [
+      "Obliques",
+      "Erector Spinae",
+      "Quadratus Lumborum",
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Straddle sled and place foot on pedal. Place chest on pad and grasp handles.",
+    "execution": "Push platform back by extending leg back until straight. Return leg to original position. Repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Sled 45° Leg Press",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/SL45LegPress",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Sled",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Hamstrings",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on machine with back on padded support. Place feet slightly high on platform. Extend hips and knees. Release dock lever and grasp handles to sides.",
+    "execution": "Lower sled by flexing hips and knees until knees are just short of complete flexion or until hips are completely flexed. Return by extending knees and hips. Repeat."
+  },
+  {
+    "name": "Sled Lying Leg Press",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/SLLyingLegPress",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Sled",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Hamstrings",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie supine on platform with shoulders against pad. Place feet slightly high on platform.",
+    "execution": "Extend hips and knees. Return until hips are completely flexed. Repeat."
+  },
+  {
+    "name": "Sled Seated Leg Press",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/SLSeatedLegPress",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Sled",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Hamstrings",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on machine with back on padded support. Place feet slightly high on platform. Grasp handles to sides.",
+    "execution": "Extend knees and hips until knees are fully extended. Return until hips are completely flexed. Repeat."
+  },
+  {
+    "name": "Sled Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/SLSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Sled",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Squat down to place shoulders under padded bars. Lean back against back pad if available. Place feet shoulder width apart, slightly in front of shoulders.",
+    "execution": "If hand or lever lock is available, disengage weight, squat to lowest position and re-engage lock. Lift sled by extending knees and hips until legs are straight. Lower sled by bending knees forward slightly while allowing hips to bend back behind, keeping back straight and knees pointed same direction as feet. Descend until thighs are just past parallel to floor. Return and repeat."
+  },
+  {
+    "name": "Sled Hack Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/SLHackSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Sled",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie supine on platform with shoulders against pad. Place feet high up on platform. Extend hips and knees. Release dock levers.",
+    "execution": "Lower sled by flexing hips and knees until hips are completely flexed. Raise sled by extending knees and hips. Repeat."
+  },
+  {
+    "name": "Smith Bent Knee Good-morning",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/SMBentKneeGoodMorning",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Smith",
+    "synergists": [
+      "Adductor Magnus",
+      "Hamstrings"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Quadriceps"
+    ],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "strength",
+    "preparation": "Position bar on back of shoulders. Disengage bar by rotating bar back. Grasp bar to sides.",
+    "execution": "Bend hips to lower torso forward until parallel to floor. Bend knees slightly during descent. Raise torso until hips are extended. Repeat."
+  },
+  {
+    "name": "Smith Deadlift",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/SMDeadlift",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Smith",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Hamstrings",
+      "Soleus",
+      "Hamstrings",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Trapezius, Middle",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Rhomboids"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with shoulder width or narrower stance with feet flat beneath bar. Grasp bar with shoulder width or slightly wider mixed grip or slightly wider. Disengage bar by rotating bar back.",
+    "execution": "Return weight toward floor by bending hips back while allowing knees to bend forward slightly, keeping back straight and knees pointed same direction as feet. Lift bar by extending hips and knees to full extension. Pull shoulders back at top of lift if rounded. Return and repeat."
+  },
+  {
+    "name": "Smith Stiff Leg Deadlift",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/SMStiffLegDeadlift",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Smith",
+    "synergists": [
+      "Erector Spinae",
+      "Adductor Magnus",
+      "Hamstrings"
+    ],
+    "stabilizers": [
+      "Quadriceps",
+      "Trapezius, Middle",
+      "Rhomboids",
+      "Latissimus Dorsi",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with shoulder width or narrower stance on elevated platform with thigh against bar. Grasp bar with shoulder width or slightly wider overhand grip. Disengage bar by rotating bar back.",
+    "execution": "With knees slightly bent, lower bar toward top of feet by bending hips. Keep waist straight, flexing only slightly at bottom. Lift bar by extending at hips until standing upright. Pull shoulders back slightly if rounded. Extend knees at top if desired. Repeat."
+  },
+  {
+    "name": "Smith Straight-back Stiff-leg Deadlift",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/SMStrBackStiffLegDeadlift",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Smith",
+    "synergists": [
+      "Adductor Magnus",
+      "Hamstrings"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Quadriceps",
+      "Trapezius, Middle",
+      "Rhomboids",
+      "Latissimus Dorsi",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Trapezius, Lower"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand with shoulder width or narrower stance with thigh against bar. Grasp bar with shoulder width or slightly wider overhand grip. Disengage bar by rotating bar back.",
+    "execution": "With knees bent, lower bar toward top feet by bending hips and keeping waist straight. Lift bar by extending at hips until standing upright. Pull shoulders back slightly if rounded. Extend knees at top if desired. Repeat."
+  },
+  {
+    "name": "Smith Rear Lunge",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/SMRearLunge",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Smith",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "With bar upper chest height, position bar on back of shoulders and grasp bar to sides. Place feet under bar or slightly forward. Straighten legs so weight is lifted. Disengage bar by rotating bar back. Place feet slightly forward.",
+    "execution": "Step back with one leg while bending supporting leg. Plant forefoot far back on floor. Lower body by flexing knee and hip of supporting leg until knee of rear leg is almost in contact with floor. Return to original standing position by extending hip and knee of forward supporting leg and return rear leg next to supporting leg. Repeat movement with opposite legs, alternating between sides."
+  },
+  {
+    "name": "Smith Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/SMSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Smith",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Erector Spinae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "With bar upper chest height, position bar on back of shoulders and grasp bar to sides. Place feet slightly forward. Disengage bar by rotating bar back.",
+    "execution": "Squat down by bending hips back while allowing knees to bend forward slightly, keeping back straight and knees pointed same direction as feet. Descend until thighs are just past parallel to floor. Extend knees and hips until legs are straight. Return and repeat."
+  },
+  {
+    "name": "Weighted Reverse Hyper-extension",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/WtReverseHyperextension",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Weighted",
+    "synergists": [
+      "Hamstrings"
+    ],
+    "stabilizers": [
+      "Erector Spinae"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Place sandbag or medicine ball between ankles. Lay torso and waist on bench and grasp handles. Feet should be above floor with legs straight.",
+    "execution": "Raise weight by extending hips as high as possible until legs are nearly straight. Lower legs to original position. Repeat."
+  },
+  {
+    "name": "Weighted Single Leg Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/WtSingleLegSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Weighted",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Erector Spinae"
+    ],
+    "stabilizers": [
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques",
+      "Rectus Abdominis",
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Quadriceps",
+      "Deltoid, Anterior",
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Lateral",
+      "Coracobrachialis",
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations",
+      "Levator Scapulae",
+      "Wrist Extensors"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand with arms extended out in front, holding medicine ball or weight plate. Balance on one leg with opposite leg extended forward off of ground.",
+    "execution": "Squat down as far as possible while keeping leg elevated off of floor. Keep supporting knee pointed same direction as foot supporting. Raise body back up to original position until knee and hip of supporting leg is straight. Return and repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Kettlebell Front Squat",
+    "url": "https://exrx.net/WeightExercises/Kettlebell/KBFrontSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Weighted",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Hold two kettlebells in front of shoulders, one with each arm positioned close to body. Stand with feet shoulder width or slightly wider.",
+    "execution": "Bend knees slightly forward while allowing hips to bend back behind, keeping back taut and knees pointed same direction as feet. Descend until thighs are just past parallel to floor. Extend knees and hips until legs are straight. Return and repeat."
+  },
+  {
+    "name": "Lunge",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BWLunge",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with hands on hips or in front of body.",
+    "execution": "Lunge forward with first leg. Land on heel, then forefoot. Lower body by flexing knee and hip of front leg until knee of rear leg is almost in contact with floor. Return to original standing position by forcibly extending hip and knee of forward leg. Repeat by alternating lunge with opposite leg.\n\nWeighted versions of this exercise would normally be considered auxiliary in context of other basic exercises (ie: Barbell Squat, Sled Leg Press). However, in the context of 'body weight' only program, this exercise can be considered basic."
+  },
+  {
+    "name": "Rear Lunge",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BWRearLunge",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Hamstrings",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with hands on hips or in front of body.",
+    "execution": "Step back with one leg while bending supporting leg. Plant forefoot far back on floor. Lower body by flexing knee and hip of supporting leg until knee of rear leg is almost in contact with floor. Return to original standing position by extending hip and knee of forward supporting leg and return rear leg next to supporting leg. Repeat movement with opposite legs alternating between sides."
+  },
+  {
+    "name": "Single Leg Squat (pistol)",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BWSingleLegSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques",
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Quadriceps"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with arms extended out in front. Balance on one leg with opposite leg extended forward off of ground.",
+    "execution": "Squat down as far as possible while keeping leg elevated off of floor. Keep back as straight as possible and supporting knee pointed same direction as foot supporting. Raise body back up to original position until knee and hip of supporting leg is straight. Repeat and continue with opposite leg."
+  },
+  {
+    "name": "Single Leg Box Squat (pistol)",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BWSingleLegBoxSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques",
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Quadriceps"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand in front of adjustable height bench or box. Extend arms out in front of body. Balance on one leg with opposite leg extended forward off of ground.",
+    "execution": "Squat down while keeping leg elevated off of floor. Keep back straight and supporting knee pointed same direction as foot supporting. Once bottocks makes contact with bench or box, raise body back up to original position until knee and hip of supporting leg is straight. Repeat and continue with opposite leg."
+  },
+  {
+    "name": "Single Leg Stiff-leg Deadlift",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BWSingleLegStiffLegDeadlift",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Hamstrings",
+      "Adductor Magnus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Quadriceps",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques",
+      "Gluteus Maximus"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand with feet together and hands just in front of thighs. Lift leg slightly so foot is just off floor.",
+    "execution": "Lower torso forward and downward while raising lifted leg back behind. Keep back straight and knee of supporting leg slightly bend. Keep hip and knee of lifted leg extended throughout movement. Once stretch is felt or hands contact floor, return to original position by raising torso while lowering lifted leg. Straighten knee of supporting leg as torso becomes upright. Repeat."
+  },
+  {
+    "name": "Split Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BWSplitSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with hands on hips. Position feet far apart; one foot forward and other foot behind.",
+    "execution": "Squat down by flexing knee and hip of front leg. Allow heel of rear foot to rise up while knee of rear leg bends slightly until it almost makes contact with floor. Return to original standing position by extending hip and knee of forward leg. Repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Single Leg Split Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BWSingleLegSplitSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Hamstrings",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand facing away from bench. Extend leg back and place top of foot on bench.",
+    "execution": "Squat down by flexing knee and hip of front leg until knee of rear leg is almost in contact with floor. Return to original standing position by extending hip and knee of forward leg and repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BWSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with arms extended forward.",
+    "execution": "Squat down by bending hips back while allowing knees to bend forward slightly, keeping back straight and knees pointed same direction as feet. Descend until thighs are just past parallel to floor. Squat up by extending knees and hips until legs are straight. Return and repeat."
+  },
+  {
+    "name": "Step-up",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BWStepUp",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand facing step or side of bench.",
+    "execution": "Place foot of first leg on bench. Stand on bench by extending hip and knee of first leg and place foot of second leg on bench. Step down with second leg by flexing hip and knee of first leg. Return to original standing position by placing foot of first leg to floor. Repeat first step with opposite leg, alternating first steps between legs."
+  },
+  {
+    "name": "Step-down",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/BWStepDown",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with one foot on bench or elevated surface. Position foot on elevated surface to side, forward of straight knee.",
+    "execution": "Stand on bench by straightening leg and pushing body upward. Step down returning foot off of bench to floor and repeat. Continue with opposite position."
+  },
+  {
+    "name": "Self-assisted Single Leg Squat (leg wrapped)",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/AsSingleLegSquatLegSelf",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Self-assisted",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques",
+      "Rectus Abdominis"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with hand on hip height elevated surface or other tall, sturdy structure for support. Stand on one leg by wrapping leg around back of supporting leg so top of lifted foot is on outside of supporting leg's ankle.",
+    "execution": "Squat down by bending knee forward and hip back behind. Keep back straight and supporting knee pointed same direction as foot supporting. Descend until thigh is just past parallel to floor. Return to standing position with minimal assistance from wrapped leg. Stand to original position until knee and hip of supporting leg are straight. Return and repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Self-assisted Step-down",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/ASStepDownSelf",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Self-assisted",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Gastrocnemius"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with one foot on bench or elevated surface. Position foot on elevated surface to side and forward of straight knee.",
+    "execution": "Stand on bench by straightening leg and pushing body upward. Step down returning foot off of bench to floor and repeat. Continue with opposite position."
+  },
+  {
+    "name": "Suspended Hip Bridge",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/STHipBridge",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Suspended",
+    "synergists": [],
+    "stabilizers": [
+      "Erector Spinae",
+      "Hamstrings",
+      "Sartorius",
+      "Popliteus",
+      "Gastrocnemius"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on floor facing suspension trainer loops in low position. Grasp bottom of loops, then lay supine. Raise legs and place heels in loops with soles contacting handles. Lie down supine on mat so knees and hips are bent with suspension straps hanging vertical. Place arms off to sides.",
+    "execution": "Raise hips up by extending hips until fully extended. Lower hips until hips and back make contact with mat. Repeat."
+  },
+  {
+    "name": "Suspended Single Leg Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/STSingleLegSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Suspended",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus",
+      "Erector Spinae"
+    ],
+    "stabilizers": [
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques",
+      "Rectus Abdominis",
+      "Trapezius, Middle",
+      "Rhomboids",
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Quadriceps"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp suspension handles and momentarily step back until arms are extended forward and straight. While keeping arms straight and shoulders back, step forward so body reclines back behind suspension handles. Position body and legs straight at desired angle hanging from handles with arms straight. Balance on one leg with opposite leg extended forward off of ground.",
+    "execution": "Squat down as far as possible while keeping leg elevated off of floor. Keep supporting knee pointed same direction as foot supporting. Raise body back, up to original position until knee and hip of supporting leg is straight. Repeat and continue with opposite leg."
+  },
+  {
+    "name": "Suspended Single Leg Split Squat",
+    "url": "https://exrx.net/WeightExercises/GluteusMaximus/STSplitSquat",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Suspended",
+    "synergists": [
+      "Quadriceps",
+      "Adductor Magnus",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp one or both suspension trainer handle(s) in lower position. Step and face away from suspension trainers. Balance on one leg while raising foot from behind and slipping single foot in loop(s). Release handle with hand and position leg back so it is supported behind body by suspension trainer. Place hands on hips and maintain balance throughout exercise.",
+    "execution": "Squat down by flexing knee and hip of front leg until knee of rear leg is almost in contact with floor. Return to original standing position by extending hip and knee of forward leg and repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Lying Glute Stretch",
+    "url": "https://exrx.net/Stretches/GluteusMaximus/Lying",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Lie on floor or mat. Bend knees with feet on floor. Cross lower leg over thigh of other leg. Grasp back of thigh of lower leg with both hands.",
+    "execution": "Pull leg toward torso. Hold stretch. Repeat with opposite leg."
+  },
+  {
+    "name": "Lying Glute Stretch",
+    "url": "https://exrx.net/Stretches/GluteusMaximus/LyingModified",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Lie on floor or mat. Bend knees with feet on floor. Cross lower leg over thigh of other leg. Grasp foot and knee with both hands.",
+    "execution": "Pull leg toward torso. Hold stretch. Repeat with opposite leg."
+  },
+  {
+    "name": "PNF Lying Glute Stretch",
+    "url": "https://exrx.net/Stretches/GluteusMaximus/PNFLying",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Instruct participant to lie on floor or mat. Kneel beside participant. Bend participant's knee and hip and rotate leg cross wise. Position outside of participant's knee on nearest shoulder with participants lower leg extended under arm. Position near ankle on participant's opposite lower leg.",
+    "execution": "Extend or place hands on mat to each side of participant. Push participant's leg by leaning toward participant. Repeat with opposite leg."
+  },
+  {
+    "name": "Lying Wall Glute Stretch",
+    "url": "https://exrx.net/Stretches/GluteusMaximus/LyingWall",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Sit on floor with hip and thigh against wall. Lift back of legs up against wall by pivoting on hips and lying on back. Cross lower leg over thigh of straight leg.",
+    "execution": "Bend knee of straight leg while lowering heel on wall. Hold stretch. Repeat with opposite leg."
+  },
+  {
+    "name": "Seated Glute Stretch (chair)",
+    "url": "https://exrx.net/Stretches/GluteusMaximus/Seated",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Sit on chair or bench with ankles positioned below knees. Cross lower leg over thigh of opposite leg.",
+    "execution": "Lean down, lowering torso toward thighs. Hold stretch. Repeat with opposite leg."
+  },
+  {
+    "name": "Seated Glute Stretch",
+    "url": "https://exrx.net/Stretches/GluteusMaximus/SeatedFloor",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Sit on floor or mat reclining back with support of both arms behind body. Bend knees approximately 90 degrees with feet on floor. Cross lower leg (just above ankle) over thigh of opposite leg.",
+    "execution": "Bring torso upright by walking hands closer to hips, keeping arms straight. Lean forward and hold stretch. Repeat with opposite leg."
+  },
+  {
+    "name": "PNF Seated Glute Stretch",
+    "url": "https://exrx.net/Stretches/GluteusMaximus/PNFSeated",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Instruct participant to sit on floor or mat, reclining back with support of both arms behind body, and feet on floor and knees bent. Have them cross their lower leg (just above ankle) over thigh of opposite leg. Position chest on participant's back and grasp participant's lower knee and upper ankle.",
+    "execution": "Push participant's torso toward legs. Hold stretch. Repeat with legs in opposite position"
+  },
+  {
+    "name": "Squatting Glute Stretch",
+    "url": "https://exrx.net/Stretches/GluteusMaximus/Squatting",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Maximus",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Stand toward fixed bar, approximately waist height. Grasp bar with both hands, arms extended. Bend knees and hips slightly. Cross lower leg over lower thigh of opposite leg.",
+    "execution": "Squat lower and lean forward toward crossed leg. Hold stretch . Repeat with opposite leg."
+  },
+  {
+    "name": "Cable Hip Abduction",
+    "url": "https://exrx.net/WeightExercises/HipAbductor/CBHipAbduction",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Medius",
+    "equipment": "Cable",
+    "synergists": [
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Tensor Fasciae Latae"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand in front of low pulley facing to one side. Attach cable cuff to far ankle. Step out away from stack and grasp ballet bar. Stand on near foot and allow far leg to cross in front.",
+    "execution": "Move leg to opposite side of low pulley by abduction hip. Return and repeat. Turn around and continue with opposite leg."
+  },
+  {
+    "name": "Cable Seated Hip Internal Rotation",
+    "url": "https://exrx.net/WeightExercises/HipAbductor/CBSeatedHipInternalRotation",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Medius",
+    "equipment": "Cable",
+    "synergists": [
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Tensor Fasciae Latae",
+      "Piriformis"
+    ],
+    "stabilizers": [
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Tensor Fasciae Latae",
+      "Gluteus Maximus"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on bench or chair with low pulley to side. Attach cable ankle cuff to ankle furthest pulley. Place foot of stationary leg just forward of foot attached to cable. Grasp bench and handle bar on cable column if available. Position thighs of both legs side by side, perpendicular to cable. Raise foot attached to cable slightly off of floor.",
+    "execution": "Keeping knee of attached leg bent approximately 90°, pull cable attachment away from pulley by rotating hip as far as possible. Return foot behind stationary foot and toward pulley. Repeat. Place ankle cuff on opposite leg and continue facing opposite direction."
+  },
+  {
+    "name": "Dumbbell Lying Hip Abduction",
+    "url": "https://exrx.net/WeightExercises/HipAbductor/DBLyingHipAbduction",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Medius",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie on side on floor or mat. Extend top leg down straight and position lower leg back underneath. Grasping dumbbell with hand of arm furthest from floor, position dumbbell as low as possible on top side of thigh.",
+    "execution": "Raise weighted leg up off ground as high as possible, keeping dumbbell positioned on side of upper thigh. Return to leg to floor and repeat. Repeat and continue with opposite leg."
+  },
+  {
+    "name": "Lever Seated Hip Abduction (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/HipAbductor/LVSeatedHipAbductionH",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Medius",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Gluteus Maximus",
+      "Piriformis",
+      "Obturator externus"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand near side of apparatus. Place one leg onto far padded lever and sit on seat. Lift other leg onto other padded lever. Lean back onto back pad. Grasp handles to sides.",
+    "execution": "Move legs away from one another as far as possible. Return and repeat."
+  },
+  {
+    "name": "Lever Seated Hip Abduction",
+    "url": "https://exrx.net/WeightExercises/HipAbductor/LVSeatedHipAbduction",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Medius",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Gluteus Maximus",
+      "Piriformis",
+      "Obturator externus"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on machine with legs inside of side pads. If available, place heels on foot bars. Release and pull lever brace to position legs together. Engage lever into locked position. Lie back and grasp bars to sides.",
+    "execution": "Move legs apart as far as possible. Return and repeat."
+  },
+  {
+    "name": "Lever Standing Hip Abduction",
+    "url": "https://exrx.net/WeightExercises/HipAbductor/LVStandHipAbduction",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Medius",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Adjust platform so lever fulcrum is same height as hip articulation. Adjust roller in low position. Face machine and grasp bars to sides. Place outside of thigh against roller pad and shift body weight to opposite leg.",
+    "execution": "Raise leg against roller pad to side by abduction hip. Return and repeat. Reposition roller pad lever and continue with opposite leg."
+  },
+  {
+    "name": "Weighted Lying Hip Abduction",
+    "url": "https://exrx.net/WeightExercises/HipAbductor/WtLyingHipAbduction",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Medius",
+    "equipment": "Weighted",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on floor or mat with bar, plates loaded on one side. Sit on hip with knees bent and place bar on outside of shoe with weight plate(s) positioned beyond foot. Holding on to opposite end of bar, lie on side with weighted leg extended out straight and lower leg bent underneath.",
+    "execution": "Raise weighted leg up off ground as high as possible. Balance bar on side of foot while holding onto closest side of bar. Return to floor and repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Cable Twist",
+    "url": "https://exrx.net/WeightExercises/Obliques/CBTwist",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Medius",
+    "equipment": "Weighted",
+    "synergists": [
+      "Tensor fasciae latae",
+      "Gluteus medius",
+      "Gluteus minimus, anterior fibers",
+      "Adductors, Hip",
+      "Psoas major",
+      "Quadratus lumborum",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Erector Spinae",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Deltoid, Lateral",
+      "Deltoid, Posterior",
+      "Triceps",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp stirrup from shoulder height cable pulley with both hands. Step and turn lower body away from pulley until near arm is horizontal and straight. Position feet wide apart facing away from pulley, furthest foot further away from pulley. Raise heel of nearest foot off floor. Bend knees of both legs slightly. Place far hand over other hand or interlace fingers.",
+    "execution": "Keeping arms straight, rotate torso to opposite side until cable makes contact with shoulder. Return to original position and repeat. Continue with opposite side."
+  },
+  {
+    "name": "Side Bridge Hip Abduction",
+    "url": "https://exrx.net/WeightExercises/HipAbductor/BWSideBridgeHipAbduction",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Tensor Fasciae Latae",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Obliques",
+      "Quadratus lumborum",
+      "Psoas major",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis"
+    ],
+    "stabilizers": [
+      "Latissimus dorsi",
+      "Coracobrachialis",
+      "Pectoralis minor",
+      "Levator Scapulae"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie on side with legs straight, one leg on top of the other. Place forearm under shoulder perpendicular to body.",
+    "execution": "Keeping side of bottom foot on ground, raise hips up off ground while raising upper leg upward away from lower leg. Return to original position and repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Suspended Hip Abduction",
+    "url": "https://exrx.net/WeightExercises/HipAbductor/STHipAbduction",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Medius",
+    "equipment": "Suspended",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "stabilizers": [
+      "Gluteus Maximus",
+      "Hamstrings",
+      "Erector Spinae"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on floor facing suspension trainer loops in low position. Grasp bottom of loops, then lay supine. Raise legs and place heels in loops with soles contacting handles. Extend legs out and place arms on floor off to sides. Straighten low back, knees, and hips, raising back and hips off of floor.",
+    "execution": "Pull legs apart as far as possible. Return by placing legs together and repeat."
+  },
+  {
+    "name": "Suspended Side Bend",
+    "url": "https://exrx.net/WeightExercises/Obliques/STSideBend",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Obliques",
+    "equipment": "Suspended",
+    "synergists": [
+      "Quadratus lumborum",
+      "Psoas major",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Tensor Fasciae Latae",
+      "Adductors, Hip",
+      "Pectineus",
+      "Gracilis",
+      "Gluteus Maximus, Lower Fibers",
+      "Deltoid, Anterior",
+      "Deltoid, Lateral",
+      "Supraspinatus",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations",
+      "Brachialis",
+      "Brachioradialis",
+      "Biceps Brachii",
+      "Coracobrachialis",
+      "Wrist Flexors",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Triceps, Long Head"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp handles, step away, and face body to one side of suspension trainer anchor. Hold handles above head with arms bent. Stand far enough away to make suspension trainer straps taut. Step in just enough to achieve desired lean of body, while keeping tension on suspension trainer straps.",
+    "execution": "Lower hips away from direction of suspension trainer anchor by laterally flexing spine. Return to original upright position and repeat. Reposition body facing opposite direction. Continue with other side."
+  },
+  {
+    "name": "Lying Crossover Stretch",
+    "url": "https://exrx.net/Stretches/HipAbductors/LyingCrossover",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Medius",
+    "equipment": "Suspended",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "On floor or mat, lie supine with arms extended to sides. Lift one leg straight up.",
+    "execution": "Lower leg to opposite side toward hand. Hold stretch. Repeat with opposite side."
+  },
+  {
+    "name": "PNF Lying Crossover Stretch",
+    "url": "https://exrx.net/Stretches/HipAbductors/PNFLyingCrossover",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Medius",
+    "equipment": "Suspended",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Instruct participant to lie on floor or mat. Kneel beside participant. Bend participant's near knee and hip. Place hand on outside of participant's near knee and opposite hand on participant's shoulder.",
+    "execution": "Push participant's knee to opposite side while backing participant's shoulder down. Hold stretch. Repeat with opposite side."
+  },
+  {
+    "name": "Seated Hip Internal Rotator Stretch",
+    "url": "https://exrx.net/Stretches/HipAbductors/SeatedHipInternalRotator",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Medius",
+    "equipment": "Suspended",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Sit on floor or mat and cross lower leg over thigh of straight leg.",
+    "execution": "Push knee toward floor. Hold stretch. Repeat with opposite side."
+  },
+  {
+    "name": "Seated Hip Internal Rotator Stretch (bent leg under)",
+    "url": "https://exrx.net/Stretches/HipAbductors/SeatedHipInternalRotatorBentLegUnder",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Medius",
+    "equipment": "Suspended",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Sit on floor or mat and place extended leg on top of inside of bent lower leg positioned perpendicular.",
+    "execution": "Straighten extended knee pushing bent knee toward floor. Hold stretch. Repeat with opposite side."
+  },
+  {
+    "name": "Seated Pretzel Stretch",
+    "url": "https://exrx.net/Stretches/HipAbductors/Pretzel",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Medius",
+    "equipment": "Suspended",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Sit on floor or mat with knees straight. Place one foot on floor to outside of other knee. Turn torso toward side of bent knee supporting body with extended arm behind. Place elbow of opposite arm to outside of bent knee.",
+    "execution": "Push side of knee with elbow so bent leg further crosses thigh of straight leg. Hold stretch. Repeat with opposite side."
+  },
+  {
+    "name": "Standing Iliotibial Stretch",
+    "url": "https://exrx.net/Stretches/HipAbductors/StandingIliotibial",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Medius",
+    "equipment": "Suspended",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Stand erect with legs crossed, outsides of feet together.",
+    "execution": "Maintaining complete extension of hip, shift body weight to rear leg allowing hip of leg in front to drop. Hold stretch. Repeat with opposite side."
+  },
+  {
+    "name": "Wall Iliotibial Stretch",
+    "url": "https://exrx.net/Stretches/HipAbductors/WallIliotibial",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Gluteus Medius",
+    "equipment": "Suspended",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Stand with feet together and side toward wall, slightly greater than arm's length away. Place closest hand on wall and opposite hand on hip.",
+    "execution": "With legs and hip straight, lower hip toward wall. Hold stretch . Repeat with opposite side."
+  },
+  {
+    "name": "Cable Lying Leg Raise (on bench)",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/CBLyingLegRaiseBench",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Cable",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Attach cable ankle straps to both ankles. Sit on end of bench facing pulley at bench height. Attach cable to both ankle straps. Lie supine on bench until cable is taut. Grasp sides of bench behind head.",
+    "execution": "Raise legs by flexing hips and knees until thighs are past perpendicular to torso or before hips raise off of bench. Return until hips and knees are extended. Repeat."
+  },
+  {
+    "name": "Cable Lying Straight Leg Raise",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/CBLyingStraightLegRaise",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Cable",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Sartorius",
+      "Pectineus",
+      "Rectus Femoris",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Attach cable ankle straps to both ankles, then attach ankle straps to cable. Lie supine on floor, mat, or bench back far enough so cable is taut. Grasp support behind head.",
+    "execution": "With knees straight, raise legs by flexing hips until thighs are just past perpendicular to torso or before hips raise off of mat. Return until hips are extended. Repeat."
+  },
+  {
+    "name": "Cable Standing Leg Raise",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/CBStandingLegRaise",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Cable",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Attach cable ankle cuff to one ankle. Stand facing away from low pulley. Step forward with opposite leg so leg with cuff is pulled back. Grasp lateral bars or other prop for support.",
+    "execution": "Raise knee by flexing hip while allowing lower leg to bend back under resistance. When thigh is just beyond horizontal, lower leg until hip and knee is extended. Repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Lever Hip Flexion",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/LVHipFlexion",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Lever",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Quadratus Lumborum"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand on platform facing to one side and grasp bar for support. Position front of leg nearest to machine against padded roller while standing on other leg.",
+    "execution": "Raise lever by flexing hip until knee is higher than hip. Return until hip is extended. Repeat. Continue with opposite leg."
+  },
+  {
+    "name": "Lever Vertical Leg Raise",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/LVVerticalLegRaise",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Lever",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Pectoralis Minor",
+      "Pectoralis Major, Sternal",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp handles slightly to front and stand on foot bar with knees slightly bent and hips against pad.",
+    "execution": "With back straight, raise legs as high as possible by flexing hips. Return and repeat."
+  },
+  {
+    "name": "Weighted Decline Sit-up",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/WtDeclineSitup",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Weighted",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on apparatus with lower leg secured under padded bar. Hold weight in front of chest (as shown) or [behind neck](https://player.vimeo.com/video/226791809?autoplay=1&loop=1&muted=1) or use no weight.",
+    "execution": "Lower body back until hips are almost extended. Raise body by flexing hips until torso is upright. Repeat."
+  },
+  {
+    "name": "Weighted Hanging Leg Raise",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/WtHangLegRaise",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Weighted",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Rectus Femoris"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand under high bar or pull-up handles. Place weight between ankles or feet. Reach up and grasp high bar or handles. Hang with legs straight and feet off of floor.",
+    "execution": "Raise legs by flexing hips and knees until hips are completely flexed or knees are well above hips. Return until hips and knees are extended. Repeat."
+  },
+  {
+    "name": "Weighted Incline Leg Raise",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/WtInclineLegRaise",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Weighted",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps",
+      "Pectoralis Major, Sternal",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Triceps, Long Head",
+      "Coracobrachialis",
+      "Rectus Femoris"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on incline board. Place weight between feet or use no weight. Lie supine on incline board with torso elevated. Grasp feet hooks or sides of board for support.",
+    "execution": "Raise legs by flexing hips and knees until hips are completely flexed. Return until hips and knees are extended. Repeat."
+  },
+  {
+    "name": "Weighted Lying Leg Raise",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/WtLyingLegRaise",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Weighted",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on end of bench. Place weight between feet. Lie supine on bench. Grasp bench on each side behind head for support.",
+    "execution": "Raise legs by flexing hips and knees until hips are completely flexed. Return until hips and knees are extended. Repeat."
+  },
+  {
+    "name": "Weighted Roman Chair Sit-up",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/WtRomanChairSitup",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Weighted",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on apparatus with lower leg secured under padded bar. Hold weight to front of chest or behind neck or use no weight.",
+    "execution": "Lower body back until hips are almost extended. Raise body by flexing hips until torso is upright. Repeat."
+  },
+  {
+    "name": "Weighted Seated Leg Raise",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/WtSeatedLegRaise",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Weighted",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Rectus Femoris"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on edge of bench with legs extended to floor. Place weight between ankles. Grasp edge of bench. Lean torso back and balance bodyweight on edge of bench.",
+    "execution": "Raise legs by flexing hips and knees while pulling torso slightly forward to maintain balance. Return by extending hips and knees and lean torso back to counter balance. Repeat."
+  },
+  {
+    "name": "Weighted Vertical Leg Raise",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/WtVerticalLegRaise",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Weighted",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Latissimus Dorsi",
+      "Pectoralis Minor",
+      "Pectoralis Major, Sternal",
+      "Coracobrachialis",
+      "Trapezius, Lower",
+      "Rectus Femoris"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand in vertical leg raise apparatus. Place weight between ankles or feet. Position forearms on padded parallel bars with hands on handles and back on vertical pad. Hang with legs straight and feet off of floor.",
+    "execution": "Raise legs by flexing hips and knees until hips are completely flexed or knees are well above hips. Return until hips and knees are extended. Repeat."
+  },
+  {
+    "name": "Weighted Vertical Leg Raise (on parallel bars)",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/WtVerticalLegRaisePB",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Weighted",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Latissimus Dorsi",
+      "Deltoid, Posterior",
+      "Pectoralis Minor",
+      "Pectoralis Major, Sternal",
+      "Deltoid, Anterior",
+      "Trapezius, Lower",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand between parallel bars and place weight between ankles. Grip bar on each side with overhand grip. Lift body off floor and balance body upright with arms and legs positioned straight.",
+    "execution": "Raise legs by flexing hips and knees until thighs are just past parallel to floor. Return until hips and knees are extended. Repeat."
+  },
+  {
+    "name": "Weighted Vertical Straight Leg Raise",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/WtVerticalStraightLegRaise",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Weighted",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Sartorius",
+      "Pectineus",
+      "Rectus Femoris",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps",
+      "Latissimus Dorsi",
+      "Pectoralis Minor",
+      "Pectoralis Major, Sternal",
+      "Coracobrachialis",
+      "Trapezius, Lower"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand in vertical leg raise apparatus. Place weight between ankles or feet. Position forearms on padded parallel bars with hands on handles and back on vertical pad. Hang with legs straight and feet off of floor.",
+    "execution": "With knees straight, raise legs by flexing hips until thighs are just past parallel to floor. Return until hips are extended. Repeat."
+  },
+  {
+    "name": "Hanging Leg Raise",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/BWHangingLegRaise",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Rectus Femoris"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp and hang from high bar with slightly wider than shoulder width overhand grip.",
+    "execution": "Raise legs by flexing hips and knees until hips are completely flexed or knees are well above hips. Return until hips and knees are extended downward. Repeat."
+  },
+  {
+    "name": "Hanging Straight Leg Raise",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/BWHangingStraightLegRaise",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Sartorius",
+      "Pectineus",
+      "Rectus Femoris",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp and hang from high bar with slightly wider than shoulder width overhand grip.",
+    "execution": "With knees straight, raise legs by flexing hips until hips are completely flexed or knees are well above hips. Return until hips are extended downward. Repeat."
+  },
+  {
+    "name": "Incline Leg Raise",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/BWInclineLegRaise",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Pectoralis Major, Sternal",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Triceps, Long Head",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie supine on incline board with torso elevated. Grasp feet hooks or sides of board for support.",
+    "execution": "Raise legs by flexing hips and knees until hips are completely flexed. Return until hips and knees are extended. Repeat."
+  },
+  {
+    "name": "Incline Straight Leg Raise",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/BWInclineStraightLegRaise",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Sartorius",
+      "Pectineus",
+      "Rectus Femoris",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps",
+      "Pectoralis Major, Sternal",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Triceps, Long Head",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on incline board. Lie supine on incline board with torso elevated. Grasp feet rollers or sides of board for support.",
+    "execution": "With knees straight, raise legs by flexing hips until hips are completely flexed. Return until hips and knees are extended. Repeat."
+  },
+  {
+    "name": "Lying Leg Raise (on bench)",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/BWLyingLegRaise",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie supine on bench. Place hands under lower buttock on each side to support pelvis.",
+    "execution": "Raise legs by flexing hips and knees until thighs are completely flexed. Return until hips and knees are extended. Repeat."
+  },
+  {
+    "name": "Lying Leg Raise (on floor)",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/BWLyingLegRaiseFloor",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie supine on mat or floor. Place hands under lower buttock on each side to support pelvis.",
+    "execution": "Raise legs by flexing hips and knees until thighs are completely flexed. Return until hips and knees are extended. Repeat."
+  },
+  {
+    "name": "Lying Straight Leg Raise",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/BWStraightLegRaise",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Sartorius",
+      "Pectineus",
+      "Rectus Femoris",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie supine on bench or mat. Place hands under lower buttock on each side to support pelvis.",
+    "execution": "Keeping knees straight, raise legs by flexing hips until hips are completely flexed. Return until hips and knees are extended. Repeat."
+  },
+  {
+    "name": "Seated Leg Raise",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/BWSeatedLegRaise",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on edge of bench with legs extended to floor. Place weight between ankles or use no weight. Grasp edge of bench. Lean torso back and balance body weight on edge of bench.",
+    "execution": "Raise legs by flexing hips and knees while pulling torso slightly forward to maintain balance. Return by extending hips and knees and lean torso back to counter balance. Repeat."
+  },
+  {
+    "name": "Vertical Leg Raise",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/BWVerticalLegRaise",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Latissimus Dorsi",
+      "Pectoralis Minor",
+      "Pectoralis Major, Sternal",
+      "Coracobrachialis",
+      "Trapezius, Lower"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Position forearms on padded parallel bars with hands on handles, and back on vertical pad.",
+    "execution": "Raise legs by flexing hips and knees until hips are completely flexed or knees are well above hips. Return until hips and knees are extended. Repeat."
+  },
+  {
+    "name": "Vertical Leg Raise (on parallel bars)",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/BWVerticalLegRaisePB",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Latissimus Dorsi",
+      "Deltoid, Posterior",
+      "Pectoralis Minor",
+      "Pectoralis Major, Sternal",
+      "Deltoid, Anterior",
+      "Trapezius, Lower",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand between parallel bars and grip bar on each side with overhand grip. Lift body off floor and balance body upright with arms and legs positioned straight.",
+    "execution": "Raise legs by flexing hips and knees until hips are completely flexed. Return until hips and knees are extended. Repeat."
+  },
+  {
+    "name": "Vertical Straight Leg Raise",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/BWVerticalStraightLegRaise",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Sartorius",
+      "Pectineus",
+      "Rectus Femoris",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps",
+      "Latissimus Dorsi",
+      "Pectoralis Minor",
+      "Pectoralis Major, Sternal",
+      "Coracobrachialis",
+      "Trapezius, Lower"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Position forearms on padded parallel bars with hands on handles, and back on vertical pad.",
+    "execution": "With knees straight, raise legs by flexing hips until thighs are just pass parallel to floor. Return until hips are extended. Repeat."
+  },
+  {
+    "name": "Roman Chair Sit-up",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/BWRomanChairSitup",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on chair or bench with lower leg secured under low over hang or heavy bar. Place hands on waist, chest, neck, or head depending upon desired difficulty.",
+    "execution": "Lower body back until hips are almost extended. Raise body by flexing hips until torso is upright. Repeat."
+  },
+  {
+    "name": "Suspended Mountain Climber",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/STMountainClimber",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Suspended",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps",
+      "Pectoralis Major",
+      "Serratus Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on floor facing suspension trainer loops in low position. Place right foot in left lower loop. Cross left leg over right leg placed in right lower loop. Turn body to right and place hands on floor, shoulder width apart. Turn body to kneel on hands and knees. Reposition hands (shoulder width or slightly wider) at desired distance from suspension trainer so that body is square with suspension trainer straps. With arms straight, raise knees from ground so body is supported by arms and suspension trainer. Bend one leg so knee is pointing down while keeping other leg extended out straight.",
+    "execution": "Simultaneously alternate leg positions by straightening bent leg behind, while bending straight leg forward. Repeat."
+  },
+  {
+    "name": "Suspended Pike",
+    "url": "https://exrx.net/WeightExercises/HipFlexors/STPike",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Suspended",
+    "synergists": [
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis",
+      "Rectus Femoris"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps",
+      "Pectoralis major",
+      "Deltoid, Anterior",
+      "Serratus Anterior",
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on floor facing suspension trainer loops in low position. Place right foot in left lower loop. Cross left leg over right leg placed in right lower loop. Turn body to right and place hands on floor shoulder width apart. Turn body to kneel on hands and knees. Reposition hands (shoulder width or slightly wider) at desired distance from suspension trainer so that body is square with suspension trainer straps. With arms straight, raise knees from ground, so body is supported by arms and suspension trainer.",
+    "execution": "Raise rear end up as high as possible by bending hips. Pull feet toward hands, while keeping knees straight. Return by extending hips to original straight body position. Repeat."
+  },
+  {
+    "name": "Bent-over Lunging Hip Flexor Stretch",
+    "url": "https://exrx.net/Stretches/HipFlexors/BentoverLungeHipFlexor",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Suspended",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Kneel down and position one leg extended behind. Balancing with hands positioned on floor to sides. Rear knee is extended off floor. Body weight is supported on both forefeet.",
+    "execution": "Straighten hip of rear leg by pushing hips down and forward. Hold stretch. Repeat with opposite side."
+  },
+  {
+    "name": "Kneeling Hip Flexor Stretch",
+    "url": "https://exrx.net/Stretches/HipFlexors/KneelingHipFlexor",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Suspended",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Lunge forward with knee on padded mat. Position foot beyond forward knee. Place hands on knee.",
+    "execution": "Straighten hip of rear leg by pushing hips forward. Hold stretch. Repeat with opposite side."
+  },
+  {
+    "name": "Lever Hip Flexor Stretch",
+    "url": "https://exrx.net/Stretches/HipFlexors/PCHipFlexor",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Suspended",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Flip seat all way back. Stand facing bar with supporting foot slightly forward under, or near apparatus. Grasp handle bars for support. Place top of other foot back on top edge of shin pad.",
+    "execution": "Squat down with back straight while straightening hip of rear leg by pushing hips forward. Hold stretch. Repeat with opposite side."
+  },
+  {
+    "name": "Standing Hip Flexor Stretch",
+    "url": "https://exrx.net/Stretches/HipFlexors/Standing",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Iliopsoas",
+    "equipment": "Suspended",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Stand facing bench or elevated platform, approximately legs length away. Place one foot on bench or platform.",
+    "execution": "Slowly lunge forward by bending forward leg. With chest high, straighten hip of rear leg by pushing hips forward. Hold stretch. Repeat with opposite side."
+  },
+  {
+    "name": "Cable Seated Hip External Rotation",
+    "url": "https://exrx.net/WeightExercises/HipExternalRotator/CBSeatedHipExternalRotation",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Deep Hip External Rotators",
+    "equipment": "Cable",
+    "synergists": [
+      "Gemellus superior",
+      "Gemellus inferior",
+      "Obturator internus",
+      "Obturator externus",
+      "Quadratus femoris",
+      "Gluteus maximus",
+      "Sartorius",
+      "Gluteus medius, posterior fibers"
+    ],
+    "stabilizers": [
+      "Adductors, Hip",
+      "Pectineus",
+      "Gracilis",
+      "Piriformis",
+      "Gluteus Maximus"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on bench or chair with low pulley to side. Attach cable ankle cuff to ankle, nearest pulley. Place far stationary foot slightly forward. Grasp lower thigh of leg with attached cuff, position it along side thigh of stationary leg while keeping foot slightly above floor.",
+    "execution": "Keeping knee of attached leg bent approximately 90°, pull cable attachment under thigh of stationary leg by rotating hip. Return until slight stretch is felt in hip, then repeat. Place ankle cuff on opposite leg and continue facing opposite direction."
+  },
+  {
+    "name": "Lever Landmine Power Twist (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/Power/LVPowerTwist",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Deep Hip External Rotators",
+    "equipment": "Cable",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": null,
+    "category": "strength",
+    "preparation": "Stand to one side, near loaded end of barbell, opposite of landmine lever. Squat down and grasp end of barbell with one hand near end and other hand just below, thumbs facing back (toward nearest end of barbell). Lift end of barbell up to one side, upper thigh level. Stand with feet apart with each foot equal distance from landmine. Orientate foot and leg nearest to bar about 45 degrees toward (under) bar. Bend legs and raise heel of opposite leg (rear leg) so forefoot remains on floor.",
+    "execution": "Move end of barbell upward, across, and downward to opposite side while shifting stance to opposite orientation by pivoting on forefeet and planting new forward foot. Immediately return to opposite side in same pattern and repeat."
+  },
+  {
+    "name": "Seated Hip External Rotator Stretch",
+    "url": "https://exrx.net/Stretches/HipExternalRotators/SeatedHipExternalRotator",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Deep Hip External Rotators",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Sit on floor or mat and with one leg straight and other leg bent approximately 90 degrees out to side.",
+    "execution": "Lower bent knee beside straight leg. Hold stretch. Repeat with opposite side."
+  },
+  {
+    "name": "Lever Piriformis Stretch",
+    "url": "https://exrx.net/Stretches/HipExternalRotators/PCPiriformis",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Deep Hip External Rotators",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Sit on seat in forward position with lower leg on shin pad, feet on foot rest. Place hands through wrist straps. Hold upper bar with overhand grip, both hands left of center. Position left leg extended toward right center.",
+    "execution": "Push and lower seat back. Repeat with opposite leg."
+  },
+  {
+    "name": "Lying Piriformis Stretch (single leg)",
+    "url": "https://exrx.net/Stretches/HipExternalRotators/LyingPiriformisMod",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Deep Hip External Rotators",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Lie on floor or mat. Lift one leg and grasp ankle and knee with both hands.",
+    "execution": "Pull thigh toward torso while keeping knee over torso. Hold stretch. Repeat with opposite leg."
+  },
+  {
+    "name": "PNF Lying Piriformis Stretch",
+    "url": "https://exrx.net/Stretches/HipExternalRotators/PNFLyingPiriformis",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Deep Hip External Rotators",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Instruct participant to lie on floor or mat with legs bent. Stand near their feet facing them. Assist them crossing their thighs, placing outside of one knee close to top of their other knee. Bend over participant's hips, position their foot of closest bent leg on your chest or shoulder while grasping their lower leg, in addition to knee of opposite leg with other hand.",
+    "execution": "Push your bodyweight down on foot while pushing down on side of participant's knee. Hold stretch. Repeat with legs in opposite position."
+  },
+  {
+    "name": "Seated Piriformis Stretch (chair or bench)",
+    "url": "https://exrx.net/Stretches/HipExternalRotators/SeatedPiriformisChair",
+    "bodyRegion": "Hips",
+    "targetMuscle": "Deep Hip External Rotators",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Sit on chair of bench with feet on floor and knees bent approximately 90 degrees. Cross thighs by placing back of knee on thigh of other leg. Grasp lower leg.",
+    "execution": "Lean forward pulling body toward legs. Hold stretch. Repeat with opposite leg."
+  }
+]

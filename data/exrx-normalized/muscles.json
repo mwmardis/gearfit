@@ -1,0 +1,262 @@
+[
+  {
+    "name": "Adductor Brevis",
+    "muscleGroup": "Adductors"
+  },
+  {
+    "name": "Adductor Longus",
+    "muscleGroup": "Adductors"
+  },
+  {
+    "name": "Adductor Magnus",
+    "muscleGroup": "Adductors"
+  },
+  {
+    "name": "Adductors, Hip",
+    "muscleGroup": "Adductors"
+  },
+  {
+    "name": "Biceps Brachii",
+    "muscleGroup": "Biceps"
+  },
+  {
+    "name": "Biceps Brachii, Short Head",
+    "muscleGroup": "Biceps"
+  },
+  {
+    "name": "Brachialis",
+    "muscleGroup": "Biceps"
+  },
+  {
+    "name": "Brachioradialis",
+    "muscleGroup": "Biceps"
+  },
+  {
+    "name": "Coracobrachialis",
+    "muscleGroup": "Biceps"
+  },
+  {
+    "name": "Deltoid, Anterior",
+    "muscleGroup": "Shoulders"
+  },
+  {
+    "name": "Deltoid, Lateral",
+    "muscleGroup": "Shoulders"
+  },
+  {
+    "name": "Deltoid, Posterior",
+    "muscleGroup": "Shoulders"
+  },
+  {
+    "name": "Erector Spinae",
+    "muscleGroup": "Back"
+  },
+  {
+    "name": "Erector Spinae, Cervicis & Capitis Fibers",
+    "muscleGroup": "Back"
+  },
+  {
+    "name": "Extensor Carpi Radialis",
+    "muscleGroup": "Forearms"
+  },
+  {
+    "name": "Extensor Carpi Ulnaris",
+    "muscleGroup": "Forearms"
+  },
+  {
+    "name": "Flexor Carpi Radialis",
+    "muscleGroup": "Forearms"
+  },
+  {
+    "name": "Flexor Carpi Ulnaris",
+    "muscleGroup": "Forearms"
+  },
+  {
+    "name": "Gastrocnemius",
+    "muscleGroup": "Calves"
+  },
+  {
+    "name": "Gluteus Maximus",
+    "muscleGroup": "Glutes"
+  },
+  {
+    "name": "Gluteus Maximus, Lower Fibers",
+    "muscleGroup": "Glutes"
+  },
+  {
+    "name": "Gluteus Medius",
+    "muscleGroup": "Glutes"
+  },
+  {
+    "name": "Gluteus Minimus",
+    "muscleGroup": "Glutes"
+  },
+  {
+    "name": "Gracilis",
+    "muscleGroup": "Adductors"
+  },
+  {
+    "name": "Hamstrings",
+    "muscleGroup": "Hamstrings"
+  },
+  {
+    "name": "Hip External Rotators",
+    "muscleGroup": "Hip Rotators"
+  },
+  {
+    "name": "Iliocostalis Lumborum",
+    "muscleGroup": "Back"
+  },
+  {
+    "name": "Iliocostalis Thoracis",
+    "muscleGroup": "Back"
+  },
+  {
+    "name": "Iliopsoas",
+    "muscleGroup": "Hip Flexors"
+  },
+  {
+    "name": "Infraspinatus",
+    "muscleGroup": "Shoulders"
+  },
+  {
+    "name": "Latissimus Dorsi",
+    "muscleGroup": "Back"
+  },
+  {
+    "name": "Levator Scapulae",
+    "muscleGroup": "Trapezius"
+  },
+  {
+    "name": "Obliques",
+    "muscleGroup": "Core"
+  },
+  {
+    "name": "Pectineus",
+    "muscleGroup": "Hip Flexors"
+  },
+  {
+    "name": "Pectoralis Major",
+    "muscleGroup": "Chest"
+  },
+  {
+    "name": "Pectoralis Major, Clavicular",
+    "muscleGroup": "Chest"
+  },
+  {
+    "name": "Pectoralis Major, Sternal",
+    "muscleGroup": "Chest"
+  },
+  {
+    "name": "Pectoralis Minor",
+    "muscleGroup": "Chest"
+  },
+  {
+    "name": "Piriformis",
+    "muscleGroup": "Hip Rotators"
+  },
+  {
+    "name": "Psoas Major",
+    "muscleGroup": "Hip Flexors"
+  },
+  {
+    "name": "Quadratus Lumborum",
+    "muscleGroup": "Core"
+  },
+  {
+    "name": "Quadriceps",
+    "muscleGroup": "Quadriceps"
+  },
+  {
+    "name": "Rectus Abdominis",
+    "muscleGroup": "Core"
+  },
+  {
+    "name": "Rectus Femoris",
+    "muscleGroup": "Quadriceps"
+  },
+  {
+    "name": "Rhomboids",
+    "muscleGroup": "Back"
+  },
+  {
+    "name": "Sartorius",
+    "muscleGroup": "Hip Flexors"
+  },
+  {
+    "name": "Serratus Anterior",
+    "muscleGroup": "Core"
+  },
+  {
+    "name": "Serratus Anterior, Inferior Digitations",
+    "muscleGroup": "Core"
+  },
+  {
+    "name": "Soleus",
+    "muscleGroup": "Calves"
+  },
+  {
+    "name": "Splenius",
+    "muscleGroup": "Neck"
+  },
+  {
+    "name": "Sternocleidomastoid",
+    "muscleGroup": "Neck"
+  },
+  {
+    "name": "Subscapularis",
+    "muscleGroup": "Shoulders"
+  },
+  {
+    "name": "Supraspinatus",
+    "muscleGroup": "Shoulders"
+  },
+  {
+    "name": "Tensor Fasciae Latae",
+    "muscleGroup": "Hip Flexors"
+  },
+  {
+    "name": "Teres Major",
+    "muscleGroup": "Back"
+  },
+  {
+    "name": "Teres Minor",
+    "muscleGroup": "Shoulders"
+  },
+  {
+    "name": "Tibialis Anterior",
+    "muscleGroup": "Calves"
+  },
+  {
+    "name": "Transverse Abdominis",
+    "muscleGroup": "Core"
+  },
+  {
+    "name": "Trapezius, Lower",
+    "muscleGroup": "Trapezius"
+  },
+  {
+    "name": "Trapezius, Middle",
+    "muscleGroup": "Trapezius"
+  },
+  {
+    "name": "Trapezius, Upper",
+    "muscleGroup": "Trapezius"
+  },
+  {
+    "name": "Triceps Brachii",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "name": "Triceps Brachii, Long Head",
+    "muscleGroup": "Triceps"
+  },
+  {
+    "name": "Wrist Extensors",
+    "muscleGroup": "Forearms"
+  },
+  {
+    "name": "Wrist Flexors",
+    "muscleGroup": "Forearms"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  { "region": "Neck", "url": "https://exrx.net/Lists/ExList/NeckWt", "type": "weight" },
+  { "region": "Shoulders", "url": "https://exrx.net/Lists/ExList/ShouldWt", "type": "weight" },
+  { "region": "Upper Arms", "url": "https://exrx.net/Lists/ExList/ArmWt", "type": "weight" },
+  { "region": "Forearms", "url": "https://exrx.net/Lists/ExList/ForeArmWt", "type": "weight" },
+  { "region": "Back", "url": "https://exrx.net/Lists/ExList/BackWt", "type": "weight" },
+  { "region": "Chest", "url": "https://exrx.net/Lists/ExList/ChestWt", "type": "weight" },
+  { "region": "Waist", "url": "https://exrx.net/Lists/ExList/WaistWt", "type": "weight" },
+  { "region": "Hips", "url": "https://exrx.net/Lists/ExList/HipsWt", "type": "weight" },
+  { "region": "Thighs", "url": "https://exrx.net/Lists/ExList/ThighWt", "type": "weight" },
+  { "region": "Calves", "url": "https://exrx.net/Lists/ExList/CalfWt", "type": "weight" }
+]

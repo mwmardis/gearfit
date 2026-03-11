@@ -1,0 +1,2670 @@
+[
+  {
+    "name": "Barbell Push Crunch",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/BBPushCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Barbell",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Serratus Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Position feet under foot pad and lie supine on steep incline bench. Pull barbell from floor or grasp from rack behind with overhand grip. Position barbell over chest with shoulder width or slightly wider grip.",
+    "execution": "Flex waist to raise upper torso from bench, keeping low back on bench. Return until back of shoulders contact padded incline board. Repeat."
+  },
+  {
+    "name": "Cable Kneeling Crunch",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/CBKneelingCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Cable",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Triceps, Long Head",
+      "Rhomboids",
+      "Trapezius, Lower",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Coracobrachialis",
+      "Pectoralis Minor",
+      "Serratus Anterior"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Kneel below high pulley. Grasp cable rope attachment with both hands. Place wrists against head. Position hips back and flex hips, allowing resistance on cable pulley to lift torso upward so spine is hyperextended.",
+    "execution": "With hips stationary, flex waist so elbows travel toward middle of thighs. Return and repeat."
+  },
+  {
+    "name": "Cable Seated Crunch",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/CBSeatedCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Cable",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit with back support away from medium high pulley. Grasp cable rope attachment with both hands and place securely over both shoulders. Allow weight to lift chest up with spine arched back slightly.",
+    "execution": "With hips stationary, flex waist so elbows travel toward hips. Return and repeat."
+  },
+  {
+    "name": "Cable Standing Overhead Crunch",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/CBStandingOverheadCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Cable",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Triceps, Long Head",
+      "Rhomboids",
+      "Trapezius, Lower",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Coracobrachialis",
+      "Pectoralis Minor",
+      "Serratus Anterior"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand below high pulley. Grasp cable rope attachment and place wrists against head. Squat down slightly with hips flexed, allowing resistance on cable pulley to lift torso upward so spine is hyperextended.",
+    "execution": "With knees and hips stationary, flex waist so elbows travel toward middle of thighs. Return and repeat."
+  },
+  {
+    "name": "Dumbbell Push Crunch",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/DBPushCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Serratus Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "With dumbbells in each hand, position feet under foot pad and lie supine on steep incline bench. Position dumbbells straight over shoulders.",
+    "execution": "Flex waist to raise upper torso from bench, keeping low back on bench. Return until back of shoulders contact padded incline bench. Repeat."
+  },
+  {
+    "name": "Lever Lying Crunch (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/LVLyingCrunchPL",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Pectoralis Major, Sternal",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Triceps, Long Head"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie on machine with feet on foot bar. Place forearms on bars at sides or grasp handles above to each side.",
+    "execution": "With hips stationary, raise upper back pad by flexing waist. Return and repeat."
+  },
+  {
+    "name": "Lever Seated Leg Raise Crunch (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/LVSeatedLegRaiseCrunchPL",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Pectineus",
+      "Sartorius",
+      "Pectoralis Major, Sternal",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Triceps, Long Head"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on machine with back against back support and lower legs under padded bar. Grasp handles above to each side.",
+    "execution": "Pull handles down while pulling lower leg bar up by flexing waist and pelvis. Return and repeat."
+  },
+  {
+    "name": "Lever Seated Crunch",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/LVSeatedCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Pectoralis Major, Sternal",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Triceps, Long Head"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on machine with back and hips against back supports. If available, place lower legs under pads or on platform. Grasp handles above and position back of arm against pads to each side.",
+    "execution": "With hips stationary, flex waist so elbows travel downward. Return and repeat."
+  },
+  {
+    "name": "Lever Seated Crunch (arm bar)",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/LVSeatedCrunchArmBar",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Pectoralis Major, Sternal",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Triceps, Long Head",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on machine with back and hips against padded supports. Place feet on floor or feet bars so thigh is approximately horizontal. Grasp handles and position forearms on bars or pads.",
+    "execution": "With hips stationary, flex waist so arms and upper torso travel forward and downward. Return and repeat."
+  },
+  {
+    "name": "Lever Seated Crunch (arm pad)",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/LVSeatedCrunchArmPad",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Pectoralis Major, Sternal",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Triceps, Long Head"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Position seat so shoulders are same height of padded lever. Sit on machine and place arms over lever pad. Push padded lever down slightly until shoulder is fixed at approximately 90º or slightly greater.",
+    "execution": "With hips stationary, flex waist in \"C\" shape so elbows point downward. Return and repeat."
+  },
+  {
+    "name": "Sled Leg Hip Raise (ab coaster)",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/SLLegHipRaise",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Sled",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Sartorius",
+      "Rectus Femoris",
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Pectoralis Major, Sternal",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Triceps, Long Head"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Straddle machine facing handles. Grasp handles on each side and place forearms on pads. Place shins on padded sled with knees forward and feet hanging off of back end. Sit back toward heels without bending over.",
+    "execution": "Slide forward and up by pulling knees up high. Deliberately attempt to flex waist in a \"C\" shape. Return sled down and back arching spine in opposite direction while keeping hips bent. Repeat."
+  },
+  {
+    "name": "Weighted Crunch",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/WtCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Weighted",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie supine on bench with head hanging off and knees and hips bent. Hold plate behind neck.",
+    "execution": "Flex waist to raise upper torso from bench. Keep low back on bench and raise torso up as high as possible. Return until back of shoulders contact padded incline board. Repeat."
+  },
+  {
+    "name": "Weighted Crunch (plate on chest)",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/WtCrunchX",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Weighted",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie supine on mat with lower legs on bench. Hold plate on chest with both hands.",
+    "execution": "Flex waist to raise upper torso from mat. Keep low back on mat and raise torso up as high as possible. Return until back of shoulders contact mat. Repeat."
+  },
+  {
+    "name": "Weighted Crunch (on stability ball)",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/WtBallCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Weighted",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on exercise ball. Walk forward on ball and lie back on ball with shoulders and head hanging off and knees and hips bent. Gently hyperextend back to contour of ball. Hold plate behind neck or on chest with both hands or use no weight.",
+    "execution": "Flex waist to raise upper torso. Return to original position. Repeat."
+  },
+  {
+    "name": "Weighted Incline Crunch",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/WtInclineCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Weighted",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Hook feet under support and lie supine on incline bench with hips bent. Hold plate behind neck or clasp hands behind neck with no weight.",
+    "execution": "Flex waist to raise upper torso from bench. Keep low back on bench and raise torso up as high as possible. Return until back of shoulders contact padded incline board. Repeat."
+  },
+  {
+    "name": "Weighted Incline Crunch (arms crossed)",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/WtInclineCrunchX",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Weighted",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Hook feet under foot brace and lie supine on incline board with hips bent. Hold plate on chest with both hands or use no weight.",
+    "execution": "Flex waist to raise upper torso from bench. Keep low back on bench and raise torso up as high as possible. Return until back of shoulders contact padded incline board. Repeat."
+  },
+  {
+    "name": "Weighted Incline Sit-up",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/WtInclineSitUp",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Weighted",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Hook feet under support and lie supine on incline bench with hips bent. Hold plate behind neck or clasp hands behind neck with no weight.",
+    "execution": "Raise torso from bench by bending waist and hips. Return until back of shoulders contact padded incline board. Repeat."
+  },
+  {
+    "name": "Weighted Incline Sit-up (arms crossed)",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/WtInclineSitUpX",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Weighted",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Hook feet under foot brace and lie supine on incline board with hips bent. Hold plate on chest with both hands or use no weight.",
+    "execution": "Raise torso from bench by bending waist and hips. Return until back of shoulders contact padded incline board. Repeat."
+  },
+  {
+    "name": "Weighted Sit-up",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/WtSitUp",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Weighted",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Hook feet under support and lie supine on floor or mat with hips bent. Hold plate behind neck.",
+    "execution": "Raise torso from floor by bending waist and hips. Return until back of shoulders contact with floor or mat. Repeat."
+  },
+  {
+    "name": "Weighted Sit-up (arms crossed)",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/WtSitUpX",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Weighted",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Hook feet under support and lie supine on floor or mat with hips and knees bent. With both hands, hold plate on chest with forearms crossed or use no weight.",
+    "execution": "Raise torso from floor by bending waist and hips. Return until back of shoulders contact with floor or mat. Repeat."
+  },
+  {
+    "name": "Lever Seated Twisting Leg Raise Crunch (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/Obliques/LVSeatedTwistingLegRaiseCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Rectus Abdominis"
+    ],
+    "stabilizers": [
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Pectineus",
+      "Sartorius",
+      "Pectoralis Major, Sternal",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Triceps, Long Head",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on machine with position back against back support and lower legs under padded bar. Grasp handles above to each side.",
+    "execution": "Pull handles down while pulling lower leg bar up and over to one side by flexing and twisting waist and pelvis. Return and repeat movement to opposite side. Continue alternating between sides."
+  },
+  {
+    "name": "Weighted Incline Twisting Crunch (arms crossed)",
+    "url": "https://exrx.net/WeightExercises/Obliques/WtInclineTwistingCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Weighted",
+    "synergists": [
+      "Rectus Abdominis",
+      "Psoas Major"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Hook feet under padding and lie supine on incline bench with hips bent. Hold plate on upper chest with both hands or use no weight.",
+    "execution": "Flex and twist waist to raise upper torso from bench to one side. Return until back of shoulders contact padded incline board. Repeat to opposite side alternating twists."
+  },
+  {
+    "name": "Weighted Side Crunch",
+    "url": "https://exrx.net/WeightExercises/Obliques/WtSideCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Weighted",
+    "synergists": [
+      "Rectus Abdominis"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie upper back supine on floor or mat. With both legs together, knees and hips bent, position outside of leg down to side. Use no weight or hold weight to opposite side of head or across upper chest.",
+    "execution": "Flex waist, raising upper torso off surface. Return until back of shoulders return to surface. Repeat and continue with movement in opposite position."
+  },
+  {
+    "name": "Weighted Twisting Crunch",
+    "url": "https://exrx.net/WeightExercises/Obliques/WtTwistingCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Weighted",
+    "synergists": [
+      "Rectus Abdominis",
+      "Psoas major"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie supine on floor or bench with knees and hips bent. Hold plate behind neck or on chest with both hands.",
+    "execution": "Flex and twist waist to raise upper torso off surface to one side. Return until back of shoulders return to surface. Repeat to opposite side alternating twists."
+  },
+  {
+    "name": "Weighted Twisting Crunch (on stability ball)",
+    "url": "https://exrx.net/WeightExercises/Obliques/WtTwistingBallCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Weighted",
+    "synergists": [
+      "Rectus Abdominis"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on exercise ball. Walk forward on ball and lie back on ball with shoulders and head hanging off and knees and hips bent. Gently hyperextend back to contour of ball. Hold plate behind neck or on chest with both hands or use no weight.",
+    "execution": "Flex waist to raise upper torso. Return to original position and repeat."
+  },
+  {
+    "name": "Weighted Incline Twisting Sit-up",
+    "url": "https://exrx.net/WeightExercises/Obliques/WtInclineTwistingSitUp",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Weighted",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Rectus Abdominis"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Hook feet under foot or ankle brace and lie supine on incline bench with hips and knees bent. Hold plate behind neck with both hands.",
+    "execution": "Flex and twist waist to one direction while raising torso from bench by bending hips. Return until back of shoulders contact padded incline board. Repeat to opposite side, alternating twists."
+  },
+  {
+    "name": "Weighted Incline Twisting Sit-up (arms crossed)",
+    "url": "https://exrx.net/WeightExercises/Obliques/WtInclineTwistingSitUpX",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Weighted",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Rectus Abdominis"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Hook feet under foot brace and lie supine on incline board with hips and knees bent. Hold plate on chest with both hands or use no weight.",
+    "execution": "Flex and twist waist to one direction while raising torso from bench by bending hips. Return until back of shoulders contact padded incline board. Repeat to opposite side alternating twists."
+  },
+  {
+    "name": "Weighted Twisting Sit-up",
+    "url": "https://exrx.net/WeightExercises/Obliques/WtTwistingSitUp",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Weighted",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Rectus Abdominis"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place feet under low overhanging stationary object. Lie supine on floor or mat with hips and knees bent. Hold plate behind neck with both hands.",
+    "execution": "Flex and twist waist to one direction while raising torso from bench by bending hips. Return until back of shoulders contact floor or mat. Repeat to opposite side alternating twists."
+  },
+  {
+    "name": "Weighted Twisting Sit-up (arms crossed)",
+    "url": "https://exrx.net/WeightExercises/Obliques/WtTwistingSitUpX",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Weighted",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Rectus Abdominis"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place feet under low overhanging stationary object. Lie supine on floor or mat with hips and knees bent. With both hands, hold plate on chest with forearms crossed.",
+    "execution": "Flex and twist waist to one direction while raising torso from bench by bending hips. Return until back of shoulders contact floor or mat. Repeat to opposite side alternating twists."
+  },
+  {
+    "name": "Crunch",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/BWCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie supine on mat with lower legs on bench. Place hands behind neck or head.",
+    "execution": "Flex waist to raise upper torso from mat. Keep low back on mat and raise torso up as high as possible. Return until back of shoulders contact mat. Repeat."
+  },
+  {
+    "name": "Crunch (arms crossed)",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/BWCrunchX",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie supine on mat with lower legs on bench. Cross wrists on chest.",
+    "execution": "Flex waist to raise upper torso from mat. Keep low back on mat and raise torso up as high as possible. Return until back of shoulders contact mat. Repeat."
+  },
+  {
+    "name": "Crunch (arms down)",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/BWCrunchAD",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie supine on mat or bench. Bend knees and hips and place feet on floor. Extend arms down to sides.",
+    "execution": "Flex waist to raise upper torso from mat or bench. Keep low back on floor or mat and raise torso up as high as possible. Extend hands toward sides of heels. Return until back of shoulders contact mat or bench. Repeat."
+  },
+  {
+    "name": "Incline Crunch",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/BWInclineCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Hook feet under foot brace and lie supine on incline board with hips bent. Place hands behind neck or head.",
+    "execution": "Flex waist to raise upper torso from bench. Keep low back on bench and raise torso up as high as possible. Return until back of shoulders contact incline board. Repeat."
+  },
+  {
+    "name": "Incline Crunch (arms down)",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/BWInclineCrunchDown",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Hook feet under foot brace and lie supine on incline board with hips bent. Extend arms down to sides.",
+    "execution": "Flex waist to raise upper torso from bench. Keep low back on bench and raise torso up as high as possible. Return until back of shoulders contact incline board. Repeat."
+  },
+  {
+    "name": "Lever Reclined Shoulder Press",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/BWBallCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Deltoid, Anterior",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Deltoid, Lateral",
+      "Supraspinatus",
+      "Triceps Brachii",
+      "Coracobrachialis",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie on back pad facing up. Grasp lever handles to each side with overhand grip.",
+    "execution": "Press lever until arms are extended. Lower and repeat."
+  },
+  {
+    "name": "Crunch (on stability ball, arms crossed)",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/BWBallCrunchX",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on exercise ball. Walk forward on ball and lie back on ball with shoulders and head hanging off and knees and hips bent. Gently hyperextend back on contour of ball. Cross arms on chest.",
+    "execution": "Flex waist to raise upper torso. Return to original position. Repeat."
+  },
+  {
+    "name": "Hanging Leg-Hip Raise (with ab straps)",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/BWHangingLegHipRaiseAbStrap",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis",
+      "Obliques"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand below ab straps hanging from high bar. Place upper arms in straps and grasp straps above.",
+    "execution": "Raise legs by flexing hips and knees until hips are fully flexed. Continue to raise knees toward shoulders by flexing waist. Return until waist, hips, and knees are extended downward. Repeat."
+  },
+  {
+    "name": "Incline Sit-up",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/BWInclineSitUp",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Hook feet under support and lie supine on incline bench with hips bent. Place hands behind neck or on side of neck.",
+    "execution": "Raise torso from bench by bending waist and hips. Return until back of shoulders contact incline board. Repeat."
+  },
+  {
+    "name": "Incline Sit-up (arms crossed)",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/BWInclineSitUpX",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Hook feet under foot brace and lie supine on incline board with hips bent. Cross arms on chest.",
+    "execution": "Raise torso from bench by bending waist and hips. Raise crossed arms over knees at top. Return until back of shoulders contact incline board. Repeat."
+  },
+  {
+    "name": "Sit-up",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/BWSitUp",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Hook feet under foot brace or secure low overhang. Lie supine on floor or bench with hips bent. Place hands behind neck or on side of neck.",
+    "execution": "Raise torso from bench by bending waist and hips. Return until back of shoulders contact incline board. Repeat."
+  },
+  {
+    "name": "Sit-up (arms crossed)",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/BWSitUpX",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Hook feet under foot brace or secure low overhang. Lie supine on mat or bench with hips bent. Cross arms and place hands in front of shoulders.",
+    "execution": "Raise torso from mat or bench by bending waist and hips. Raise crossed arms over knees at top. Return until back of shoulders contact mat or bench. Repeat."
+  },
+  {
+    "name": "Sit-up (arms down)",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/BWSitUpAD",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Obliques"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie supine on mat or bench with hips bent and feet on floor or bench. Hook feet under foot brace or secure low overhang if required to keep feet down. Extend arms down to sides.",
+    "execution": "Raise torso from mat or bench by bending waist and hips. Extend hands toward sides of heels. Return until back of shoulders contact mat or bench. Repeat."
+  },
+  {
+    "name": "Suspended Jack-knife",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/STJackknife",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Suspended",
+    "synergists": [
+      "Obliques",
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Pectoralis Major",
+      "Serratus Anterior",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis",
+      "Quadriceps"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on floor facing suspension trainer loops in low position. Place right foot in left lower loop. Cross left leg over right leg placed in right lower loop. Turn body to right and place hands on floor, shoulder width apart. Turn body to kneel on hands and knees. Reposition hands squared with desired distance from suspension trainer, shoulder width or slightly wider. With arms straight, raise knees from ground so body is supported by arms and suspension trainer.",
+    "execution": "Pull legs under torso by bending hips and knees. Pull knees toward chest hips and knees until completely flexed. Return by extending hips and knees to original position. Repeat."
+  },
+  {
+    "name": "Suspended Pull Through",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/STPullThrough",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Suspended",
+    "synergists": [
+      "Obliques",
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Sartorius"
+    ],
+    "stabilizers": [
+      "Pectoralis Minor",
+      "Pectoralis Major",
+      "Latissimus Dorsi",
+      "Deltoid, Anterior",
+      "Trapezius, Lower",
+      "Triceps Brachii"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on floor with feet under suspension trainer loops in low position. If loops cannot be extended down close to floor, sit on bench near hanging suspension trainer, positioned perpendicular to body where hands will be placed. Place heels in loops with soles contacting handles (or ankles through loops as shown). Extend legs out straight. Sit up and place hands on floor or bench to sides at desired distance from suspension trainer. Raise hips from floor or bench by supporting upper body with arms extended.",
+    "execution": "Pull hips back while flexing spine in C shape. Raise hips up high by straightening spine and hips until straight. Repeat."
+  },
+  {
+    "name": "Front Plank",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/BWFrontPlank",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Isometric",
+    "synergists": [],
+    "stabilizers": [
+      "Obliques",
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Quadriceps",
+      "Sartorius",
+      "Pectoralis Major",
+      "Coracobrachialis",
+      "Serratus Anterior",
+      "Pectoralis Minor"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie prone on mat. Place forearms on mat, elbows under shoulders. Place legs together with forefeet on floor.",
+    "execution": "Raise body upward by straightening body in straight line. Hold position."
+  },
+  {
+    "name": "Lying (prone) Abdominal Stretch",
+    "url": "https://exrx.net/Stretches/RectusAbdominis/Prone",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Lie prone on mat or floor. Position hands on floor to sides of shoulders.",
+    "execution": "Push torso up keeping pelvis on floor. Hold stretch."
+  },
+  {
+    "name": "Standing Abdominal Stretch",
+    "url": "https://exrx.net/Stretches/RectusAbdominis/Standing",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Stand with arms extended overhead.",
+    "execution": "Arch back by lift chest up and bringing arms back as far as possible. Hold stretch."
+  },
+  {
+    "name": "Abdominal Vacuum",
+    "url": "https://exrx.net/WeightExercises/TransverseAbdominis/AbdominalVacuum",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Transverse Abdominis",
+    "equipment": "",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit, kneel, lie, or stand.",
+    "execution": "Pull navel into spine and hold."
+  },
+  {
+    "name": "Cable Side Bend",
+    "url": "https://exrx.net/WeightExercises/Obliques/CBSideBend",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Cable",
+    "synergists": [
+      "Quadratus lumborum",
+      "Psoas major",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae",
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "With side to low pulley, grasp stirrup attachment with near arm. Stand with arm straight.",
+    "execution": "Pull stirrup by bending sideways through waist so torso moves away from pulley. Lower stirrup by leaning torso toward pulley. Repeat. Continue with opposite side."
+  },
+  {
+    "name": "Cable Side Crunch",
+    "url": "https://exrx.net/WeightExercises/Obliques/CBSideCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Cable",
+    "synergists": [
+      "Quadratus lumborum",
+      "Psoas major",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis"
+    ],
+    "stabilizers": [
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Trapezius, Lower",
+      "Triceps, Long Head",
+      "Brachialis",
+      "Brachioradialis",
+      "Biceps Brachii",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "With side close to high pulley, grasp stirrup attachment with near hand. Position stirrup at side of shoulder, palm orientated inward, and elbow down to side.",
+    "execution": "Pull stirrup downward by bending toward cable column through waist so torso moves toward base of cable column. Bend in opposite direction by leaning torso away from cable column, allowing stirrup to rise upward. Repeat. Continue with opposite side."
+  },
+  {
+    "name": "Cable Seated Twist",
+    "url": "https://exrx.net/WeightExercises/Obliques/CBSeatedTwist",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Cable",
+    "synergists": [
+      "Psoas major",
+      "Quadratus lumborum",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Erector Spinae",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Deltoid, Anterior",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Deltoid, Lateral",
+      "Deltoid, Posterior",
+      "Triceps, Long Head",
+      "Coracobrachialis",
+      "Adductors, Hip"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp stirrup and straddle bench orientated with side facing medium height cable pulley. Sit with feet on floor. Hold onto stirrup with both hands with arms extending out straight toward stirrup.",
+    "execution": "Keeping arms straight, rotate torso to opposite side until cable makes contact with shoulder. Return to original position and repeat. Continue with opposite side."
+  },
+  {
+    "name": "Cable Twist",
+    "url": "https://exrx.net/WeightExercises/Obliques/CBTwist",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Cable",
+    "synergists": [
+      "Tensor fasciae latae",
+      "Gluteus medius",
+      "Gluteus minimus, anterior fibers",
+      "Adductors, Hip",
+      "Psoas major",
+      "Quadratus lumborum",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Erector Spinae",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Deltoid, Lateral",
+      "Deltoid, Posterior",
+      "Triceps",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp stirrup from shoulder height cable pulley with both hands. Step and turn lower body away from pulley until near arm is horizontal and straight. Position feet wide apart facing away from pulley, furthest foot further away from pulley. Raise heel of nearest foot off floor. Bend knees of both legs slightly. Place far hand over other hand or interlace fingers.",
+    "execution": "Keeping arms straight, rotate torso to opposite side until cable makes contact with shoulder. Return to original position and repeat. Continue with opposite side."
+  },
+  {
+    "name": "Dumbbell Side Bend",
+    "url": "https://exrx.net/WeightExercises/Obliques/DBSideBend",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Quadratus lumborum",
+      "Psoas major",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis"
+    ],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Trapezius, Middle",
+      "Levator Scapulae",
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp dumbbell with arm straight to side.",
+    "execution": "Bend waist to opposite side of dumbbell until slight stretch is felt. Lower to opposite side, same distance, and repeat. Continue with opposite side."
+  },
+  {
+    "name": "Lever Seated Side Leg Raise Crunch (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/Obliques/LVSeatedSideLegRaiseCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Rectus Abdominis"
+    ],
+    "stabilizers": [
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Pectineus",
+      "Sartorius",
+      "Pectoralis Major, Sternal",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Triceps, Long Head",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on machine with seat turned to one side. Position back against back support and lower legs under padded bar. Grasp handles above to each side.",
+    "execution": "Pull handles down while pulling lower leg bar up by flexing waist and pelvis. Return and repeat. Turn seat to opposite side and repeat."
+  },
+  {
+    "name": "Lever Kneeling Twist",
+    "url": "https://exrx.net/WeightExercises/Obliques/LVKneelingTwist",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Psoas major",
+      "Quadratus lumborum",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis"
+    ],
+    "stabilizers": [
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Deltoid, Anterior",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Deltoid, Posterior",
+      "Latissimus Dorsi",
+      "Triceps, Long Head",
+      "Gluteus Maximus"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Adjust range of motion setting on machine to one side. Kneel on padded stool with both knees between leg pads. Place torso against upper pads and grasp handles.",
+    "execution": "Rotate lower body through waist to opposite side. Return and repeat. Adjust range of motion setting to opposite side and repeat in opposite direction."
+  },
+  {
+    "name": "Lever Seated Twist",
+    "url": "https://exrx.net/WeightExercises/Obliques/LVTwist",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Psoas major",
+      "Quadratus lumborum",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis"
+    ],
+    "stabilizers": [
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Deltoid, Anterior",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Deltoid, Posterior",
+      "Latissimus Dorsi",
+      "Triceps, Long Head",
+      "Coracobrachialis",
+      "Adductors, Hip"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Adjust range of motion setting on machine to one side. Sit with legs against padding. Place torso against pad and grasp handles.",
+    "execution": "Rotate torso through waist to opposite side. Return and repeat. Adjust range of motion setting to opposite side and repeat in opposite direction."
+  },
+  {
+    "name": "Lever Seated Twist",
+    "url": "https://exrx.net/WeightExercises/Obliques/LVTwistLower",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Psoas major",
+      "Quadratus lumborum",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis"
+    ],
+    "stabilizers": [
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Deltoid, Anterior",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Deltoid, Posterior",
+      "Latissimus Dorsi",
+      "Triceps, Long Head",
+      "Coracobrachialis",
+      "Adductors, Hip"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Adjust range of motion setting on machine to one side. Sit with legs against padding. Place torso against pad and grasp handles.",
+    "execution": "Rotate lower body through waist to opposite side. Return and repeat. Adjust range of motion setting to opposite side and repeat in opposite direction."
+  },
+  {
+    "name": "Lever Seated Twist (gripless)",
+    "url": "https://exrx.net/WeightExercises/Obliques/LVTwistGripless",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Psoas major",
+      "Quadratus lumborum",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis"
+    ],
+    "stabilizers": [
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Deltoid, Anterior",
+      "Coracobrachialis",
+      "Adductors, Hip"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Adjust range of motion setting on seat to one side. Sit with legs straddled against padding. Wrap arms behind and under padded bars around each side.",
+    "execution": "Rotate torso through waist to opposite side. Return and repeat. Adjust range of motion setting to opposite side and repeat in opposite direction."
+  },
+  {
+    "name": "Sled Side Leg Hip Raise (ab coaster)",
+    "url": "https://exrx.net/WeightExercises/Obliques/SLSideHipRaiseAbCoaster",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Sled",
+    "synergists": [
+      "Rectus Abdominis",
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Sartorius",
+      "Rectus Femoris"
+    ],
+    "stabilizers": [
+      "Pectoralis Major, Sternal",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Triceps, Long Head"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Straddle machine facing handles with seat turned to one side. Grasp handles on each side and place forearms on pads. Place shins on padded sled with knees in front of turned seat and feet hanging off of back end. Sit back toward heels without bending over.",
+    "execution": "Slide forward and up by pulling knees up high. Deliberately attempt to flex waist in a \"C\" shape. Return sled down and back arching spine in opposite direction while keeping hips bent. Repeat. Turn seat to opposite side and repeat."
+  },
+  {
+    "name": "Cable Isolateral Push Pull",
+    "url": "https://exrx.net/WeightExercises/Power/CBPushPull",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Cable",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": null,
+    "category": "strength",
+    "preparation": "Stand between high and low pulleys, facing low pulley. Place one foot back and grasp high pulley stirrup from behind with hand on same side as rear foot. Position stirrup to side of chest and grasp low pulley stirrup with opposite hand (same side as forward foot) with arm extended straight. Face low pulley with hips turned out approximately 45 degrees.",
+    "execution": "Pull low pulley stirrup back to side of ribcage while pushing high pulley stirrup forward until arm is extended, allowing torso to rotate to opposite side. Return to starting position and repeat."
+  },
+  {
+    "name": "Dumbbell One Arm Straight Leg Deadlift",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/DBOneArmStraightLegDeadlift",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Obliques",
+      "Quadratus lumborum",
+      "Hamstrings",
+      "Gluteus Maximus",
+      "Adductor Magnus"
+    ],
+    "stabilizers": [
+      "Trapezius, Middle",
+      "Rhomboids",
+      "Latissimus Dorsi",
+      "Coracobrachialis",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with shoulder width or wide stance. Grasp dumbbell to side. Place opposite hand to side or behind low back.",
+    "execution": "With knees straight, lower dumbbell between feet by bending hips and twisting waist, so shoulder of weighted side is turned forward. Allow hips to fall back and waist to bend as dumbbell approaches floor. Lift dumbbell upward and back to side by extending hips and waist until standing upright. Pull shoulder back if rounded. Repeat. Perform exercise with opposite arm."
+  },
+  {
+    "name": "Lever Landmine Power Twist (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/Power/LVPowerTwist",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": null,
+    "category": "strength",
+    "preparation": "Stand to one side, near loaded end of barbell, opposite of landmine lever. Squat down and grasp end of barbell with one hand near end and other hand just below, thumbs facing back (toward nearest end of barbell). Lift end of barbell up to one side, upper thigh level. Stand with feet apart with each foot equal distance from landmine. Orientate foot and leg nearest to bar about 45 degrees toward (under) bar. Bend legs and raise heel of opposite leg (rear leg) so forefoot remains on floor.",
+    "execution": "Move end of barbell upward, across, and downward to opposite side while shifting stance to opposite orientation by pivoting on forefeet and planting new forward foot. Immediately return to opposite side in same pattern and repeat."
+  },
+  {
+    "name": "45° Side Bend",
+    "url": "https://exrx.net/WeightExercises/Obliques/BW45SideBendHandsBehindHead",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Quadratus lumborum",
+      "Psoas major",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis"
+    ],
+    "stabilizers": [
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Position side of thigh on upper padded surface and lower leg under lower padded bar. Place both hands behind head.",
+    "execution": "Raise torso upward by lateral flexing waist. Lower torso by bending waist downward. Repeat. Position body facing opposite side and continue same movement with opposite side."
+  },
+  {
+    "name": "Side Bend (on stability ball, hand behind head)",
+    "url": "https://exrx.net/WeightExercises/Obliques/BWBallSideBend",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Quadratus lumborum",
+      "Psoas major",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie on stability ball on side of torso, waist, and hip. Position legs outward with feet on floor or against floor board, one foot slightly forward and other behind. Place lower arm across abdomen and hand of upper arm behind or side of head.",
+    "execution": "Raise torso up by lateral flexing waist. Lower torso back onto ball and repeat. Lay with other side of body on ball and repeat movement."
+  },
+  {
+    "name": "Hanging Twisting Leg Raise",
+    "url": "https://exrx.net/WeightExercises/Obliques/BWHangingTwistingLegRaise",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Rectus Femoris"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp and hang from high bar with shoulder width or slightly wider overhand grip.",
+    "execution": "Raise legs to one side by flexing hips and knees until hips are completely flexed or knees are well above hips. Return until hips and knees are extended downward. Raise legs to opposite side in same manner. Continue by bending and lifting legs, alternating between sides."
+  },
+  {
+    "name": "Hanging Twisting Leg Hip Raise",
+    "url": "https://exrx.net/WeightExercises/Obliques/BWHangingTwistingLegHipRaise",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Rectus Abdominis",
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Pectineus",
+      "Sartorius",
+      "Adductor Longus",
+      "Adductor Brevis",
+      "Rectus Femoris"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp and hang from high bar with shoulder width or slightly wider overhand grip.",
+    "execution": "Raise legs to one side by flexing hips and knees until hips are completely flexed or knees are well above hips. Continue to raise knees toward shoulder by flexing waist toward one side. Return until waist, hips, and knees are extended downward. Raise legs to opposite side in same manner. Continue by bending legs and lifting knees high to each side until spine is full flexed to one side, alternating between sides."
+  },
+  {
+    "name": "Incline Twisting Sit-up (arms crossed)",
+    "url": "https://exrx.net/WeightExercises/Obliques/BWInclineTwistingSitUpX",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Rectus Abdominis"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Hook feet under foot or ankle brace and lie supine on incline bench with hips and knees bent. Cross arms on chest.",
+    "execution": "Flex and twist waist to one direction while raising torso from bench by bending hips. Raise crossed arm over opposite knees at top. Return until back of shoulders contact padded incline board. Repeat to opposite side alternating twists."
+  },
+  {
+    "name": "Twisting Sit-up",
+    "url": "https://exrx.net/WeightExercises/Obliques/BWTwistingSitUp",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Rectus Abdominis"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place feet under foot bar or low overhanging stationary object. Lie supine on floor, mat, or sit-up bench with hips and knees bent. Place hands behind neck.",
+    "execution": "Flex and twist waist to one direction while raising torso from bench by bending hips. Return until back of shoulders contact floor or mat. Repeat to opposite side alternating twists."
+  },
+  {
+    "name": "Twisting Sit-up (arms crossed)",
+    "url": "https://exrx.net/WeightExercises/Obliques/BWTwistingSitUpX",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Rectus Abdominis"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place feet under foot bar or low overhanging stationary object. Lie supine on floor, mat, or sit-up bench with hips and knees bent. Cross arms on chest.",
+    "execution": "Flex and twist waist to one direction while raising torso from bench by bending hips. Return until back of shoulders contact floor or mat. Repeat to opposite side alternating twists."
+  },
+  {
+    "name": "Incline Twisting Crunch",
+    "url": "https://exrx.net/WeightExercises/Obliques/BWInclineTwistingCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Rectus Abdominis",
+      "Psoas Major"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Hook feet under foot bar and lie supine on incline bench with hips bent. Place hands behind neck.",
+    "execution": "Flex and twist waist to raise upper torso from bench to one side. Return until back of shoulders contact padded incline board. Repeat to opposite side alternating twists."
+  },
+  {
+    "name": "Incline Twisting Crunch (arms crossed)",
+    "url": "https://exrx.net/WeightExercises/Obliques/BWInclineTwistingCrunchX",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Rectus Abdominis",
+      "Psoas Major"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Hook feet under foot bar and lie supine on incline bench with hips bent. Cross arms on chest.",
+    "execution": "Flex and twist waist to raise upper torso from bench to one side. Return until back of shoulders contact padded incline board. Repeat to opposite side alternating twists."
+  },
+  {
+    "name": "Side Crunch",
+    "url": "https://exrx.net/WeightExercises/Obliques/BWSideCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Rectus Abdominis"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie upper back supine on floor or mat. With both legs together, knees and hips bent, position outside of leg down to side. Place one hand base on of neck or place arms across upper chest.",
+    "execution": "Flex waist, raising upper torso off mat or floor. Return until back of shoulders return to mat or floor. Repeat and continue with movement in opposite position."
+  },
+  {
+    "name": "Twisting Crunch",
+    "url": "https://exrx.net/WeightExercises/Obliques/BWTwistingCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Rectus Abdominis",
+      "Psoas Major"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie supine on mat with lower legs on bench. Place hands behind neck or head.",
+    "execution": "Flex and twist waist to raise upper torso from mat to one side. Return until back of shoulders contact mat. Repeat to opposite side alternating twists."
+  },
+  {
+    "name": "Twisting Crunch (arms crossed)",
+    "url": "https://exrx.net/WeightExercises/Obliques/BWTwistingCrunchX",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Rectus Abdominis",
+      "Psoas Major"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie supine on mat with lower legs on bench. Cross arms on chest.",
+    "execution": "Flex and twist waist to raise upper torso from mat to one side. Return until back of shoulders contact mat. Repeat to opposite side alternating twists."
+  },
+  {
+    "name": "Twisting Crunch (on stability ball)",
+    "url": "https://exrx.net/WeightExercises/Obliques/BWTwistingBallCrunch",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Rectus Abdominis"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on exercise ball. Walk forward on ball and lie back on ball with shoulders and head hanging off, and knees and hips bent. Gently hyperextend back to contour of ball. Hold plate behind neck or on chest with both hands or use no weight.",
+    "execution": "Flex waist to raise upper torso. Return to original position. Repeat."
+  },
+  {
+    "name": "Suspended Side Bend",
+    "url": "https://exrx.net/WeightExercises/Obliques/STSideBend",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Suspended",
+    "synergists": [
+      "Quadratus lumborum",
+      "Psoas major",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis",
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Tensor Fasciae Latae",
+      "Adductors, Hip",
+      "Pectineus",
+      "Gracilis",
+      "Gluteus Maximus, Lower Fibers",
+      "Deltoid, Anterior",
+      "Deltoid, Lateral",
+      "Supraspinatus",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Serratus Anterior, Inferior Digitations",
+      "Brachialis",
+      "Brachioradialis",
+      "Biceps Brachii",
+      "Coracobrachialis",
+      "Wrist Flexors",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Triceps, Long Head"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp handles, step away, and face body to one side of suspension trainer anchor. Hold handles above head with arms bent. Stand far enough away to make suspension trainer straps taut. Step in just enough to achieve desired lean of body, while keeping tension on suspension trainer straps.",
+    "execution": "Lower hips away from direction of suspension trainer anchor by laterally flexing spine. Return to original upright position and repeat. Reposition body facing opposite direction. Continue with other side."
+  },
+  {
+    "name": "Suspended Twisting Jack-knife",
+    "url": "https://exrx.net/WeightExercises/Obliques/STTwistingJackknife",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Suspended",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Sartorius",
+      "Pectineus",
+      "Adductor Longus",
+      "Adductor Brevis",
+      "Quadratus lumborum",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Pectoralis Major",
+      "Serratus Anterior",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis",
+      "Quadriceps"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on floor facing suspension trainer loops in low position. Place right foot in left lower loop. Cross left leg over right leg placed in right lower loop. Turn body to right and place hands on floor, shoulder width apart. Turn body to kneel on hands and knees. Reposition hands (shoulder width or slightly wider) at desired distance from suspension trainer so that body is square with suspension trainer straps. With arms straight, raise knees from ground so body is supported by arms and suspension trainer.",
+    "execution": "Pull knees toward one elbow by bending hips a nd knees to one side. Twist legs to one side, until hips and knees are completely flexed. Return by extending hips and knees to original straight position. Perform movement to opposite side. Continue by alternating each side."
+  },
+  {
+    "name": "Side Plank",
+    "url": "https://exrx.net/WeightExercises/Obliques/BWSidePlank",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Isometric",
+    "synergists": [],
+    "stabilizers": [
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Tensor Fasciae Latae",
+      "Quadratus lumborum",
+      "Psoas major",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis",
+      "Adductors, Hip",
+      "Pectineus",
+      "Gracilis",
+      "Gluteus Maximus, Lower Fibers",
+      "Latissimus dorsi",
+      "Pectoralis major",
+      "Pectoralis minor",
+      "Levator Scapulae"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie on side on mat. Place forearm on mat under shoulder perpendicular to body. Place upper leg directly on top of lower leg and straighten knees and hips.",
+    "execution": "Raise body upward by straightening waist so body is ridged. Hold position. Repeat with opposite side."
+  },
+  {
+    "name": "Bent Knee Side Plank",
+    "url": "https://exrx.net/WeightExercises/Obliques/BWBentKneeSidePlank",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Isometric",
+    "synergists": [],
+    "stabilizers": [
+      "Gluteus Medius",
+      "Gluteus Minimus",
+      "Tensor Fasciae Latae",
+      "Quadratus lumborum",
+      "Psoas major",
+      "Iliocastalis lumborum",
+      "Iliocastalis thoracis",
+      "Adductors, Hip",
+      "Pectineus",
+      "Gluteus Maximus, Lower Fibers",
+      "Latissimus dorsi",
+      "Pectoralis major",
+      "Pectoralis minor",
+      "Levator Scapulae"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie on side on mat. Place forearm on mat under shoulder perpendicular to body. Bend knees at a right angle. Place upper leg directly on top of lower leg and straighten hips.",
+    "execution": "Raise body upward by straightening waist so hips and waist are ridged. Hold position. Repeat with opposite side."
+  },
+  {
+    "name": "Lying Crossover Stretch",
+    "url": "https://exrx.net/Stretches/Obliques/LyingCrossover",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "On floor or mat, lie supine with arms extended to sides. Lift one leg straight up.",
+    "execution": "Lower leg to opposite side toward hand. Hold stretch. Repeat with opposite side."
+  },
+  {
+    "name": "Pretzel Stretch",
+    "url": "https://exrx.net/Stretches/Obliques/Pretzel",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Sit on floor or mat with knees straight. Place one foot on floor to outside of other knee. Turn torso toward side of bent knee supporting body with extended arm behind. Place elbow of opposite arm to outside of bent knee.",
+    "execution": "Turn torso further around by pushing side of knee with elbow. Hold stretch. Repeat with opposite side."
+  },
+  {
+    "name": "Barbell Bent Knee Good-morning",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/BBBentKneeGoodMorning",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Barbell",
+    "synergists": [
+      "Gluteus Maximus",
+      "Hamstrings",
+      "Adductor Magnus"
+    ],
+    "stabilizers": [
+      "Quadriceps"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position barbell on back of shoulders and grasp bar to sides.",
+    "execution": "Bend hips to lower torso forward until parallel to floor. Bend knees slightly during descent. Raise torso until hips are extended. Repeat."
+  },
+  {
+    "name": "Barbell Deadlift",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/BBDeadlift",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Barbell",
+    "synergists": [
+      "Gluteus Maximus",
+      "Adductor Magnus",
+      "Quadriceps",
+      "Hamstrings",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Trapezius, Middle",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Rhomboids"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "With feet flat beneath bar, squat down and grasp bar with shoulder width or slightly wider overhand or mixed grip.",
+    "execution": "Lift bar by extending hips and knees to full extension. Pull shoulders back at top of lift if rounded. Return and repeat."
+  },
+  {
+    "name": "Lever Seated Crunch (chest pad)",
+    "url": "https://exrx.net/WeightExercises/RectusAbdominis/LVSeatedCrunchChestPad",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Rectus Abdominis",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Obliques"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Position seat so chest is same height of padded lever. Sit on machine with back of hips against hip pad. Place hands on outside of lever pad.",
+    "execution": "With hips stationary, flex waist in \"C\" shape so shoulders travel forward and downward. Return and repeat."
+  },
+  {
+    "name": "Incline Twisting Sit-up",
+    "url": "https://exrx.net/WeightExercises/Obliques/BWInclineTwistingSitUp",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Obliques",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Rectus Abdominis"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Hook feet under foot or ankle brace and lie supine on incline bench with hips and knees bent. Place hands behind neck.",
+    "execution": "Flex and twist waist to one direction while raising torso from bench by bending hips. Return until back of shoulders contact padded incline board. Repeat to opposite side alternating twists."
+  },
+  {
+    "name": "Barbell Stiff Leg Deadlift",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/BBStiffLegDeadlift",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Barbell",
+    "synergists": [
+      "Gluteus Maximus",
+      "Adductor Magnus",
+      "Hamstrings"
+    ],
+    "stabilizers": [
+      "Quadriceps",
+      "Trapezius, Middle",
+      "Rhomboids",
+      "Latissimus Dorsi",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Trapezius, Lower",
+      "Rectus Abdominis",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with shoulder width or narrower stance on shallow platform with feet flat beneath bar. Bend your knees and bend over with lower back straight. Grasp barbell with shoulder width overhand or mixed grip, shoulder width or slightly wider. Lift weight to standing position.",
+    "execution": "Lower bar to top of feet by bending hips. Bend knees slightly during descent and keep waist straight, flexing only slightly at bottom. With knees bent, lift bar by extending at hips until standing upright. Pull shoulders back slightly if rounded. Extend knees at top if desired. Repeat."
+  },
+  {
+    "name": "Barbell Straight Leg Deadlift",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/BBStraightLegDeadlift",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Barbell",
+    "synergists": [
+      "Hamstrings",
+      "Gluteus Maximus",
+      "Adductor Magnus"
+    ],
+    "stabilizers": [
+      "Trapezius, Middle",
+      "Rhomboids",
+      "Latissimus Dorsi",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with shoulder width or narrower stance on shallow platform with feet flat beneath bar. Bend knees and bend over with lower back straight. Grasp barbell with shoulder width overhand or mixed grip, shoulder width or slightly wider. Lift weight to standing position.",
+    "execution": "With knees straight, lower bar toward top of feet by bending hips and waist. Lift bar by extending waist and hip until standing upright. Pull shoulders back slightly if rounded. Repeat."
+  },
+  {
+    "name": "Barbell Hyperextension",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/BBHyperextension",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Barbell",
+    "synergists": [],
+    "stabilizers": [
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Triceps, Long Head",
+      "Brachialis",
+      "Brachioradialis",
+      "Biceps Brachii",
+      "Coracobrachialis",
+      "Trapezius, Lower",
+      "Pectoralis Minor",
+      "Rhomboids"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position thighs prone on large pad and lower legs under padded brace. Place barbell on back of shoulders and grasp bar to sides.",
+    "execution": "Raise upper body until hips and waist are fully extended. Lower body by bending hips and waist until mild stretch is felt or torso is vertical. Repeat."
+  },
+  {
+    "name": "Barbell 45° Hyperextension",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/BB45Hyperextension",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Barbell",
+    "synergists": [],
+    "stabilizers": [
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Triceps, Long Head",
+      "Brachialis",
+      "Brachioradialis",
+      "Biceps Brachii",
+      "Coracobrachialis",
+      "Trapezius, Lower",
+      "Pectoralis Minor",
+      "Rhomboids"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position thighs prone on padding. Hook heels on platform lip or under padded brace. Place barbell on back of shoulders and grasp bar to sides.",
+    "execution": "Raise upper body until hips and waist are fully extended. Lower body by bending hips and waist until mild stretch is felt or torso is approximately perpendicular to legs. Repeat."
+  },
+  {
+    "name": "Cable Stiff Leg Deadlift",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/CBStiffLegDeadlift",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Cable",
+    "synergists": [
+      "Gluteus Maximus",
+      "Adductor Magnus",
+      "Hamstrings"
+    ],
+    "stabilizers": [
+      "Quadriceps",
+      "Trapezius, Middle",
+      "Rhomboids",
+      "Latissimus Dorsi",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand between two very low pulleys with shoulder width or narrower stance. Squat down and grasp stirrup attachments to each side. Stand upright with arms straight down to sides.",
+    "execution": "Bow forward by bending hips. Bend knees slightly during descent and keep waist straight, flexing low back at bottom. With knees slightly bent, raise torso by extending at waist, then hips, gradually extending knees until standing upright. Pull shoulders back slightly if rounded. Repeat."
+  },
+  {
+    "name": "Lever Deadlift (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/LVDeadlift",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Gluteus Maximus",
+      "Adductor Magnus",
+      "Quadriceps",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Trapezius, Middle",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Rhomboids"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand in between lever handles. Squat down with feet flat and grasp handles to sides.",
+    "execution": "Lift lever by extending hips and knees to full extension. Pull shoulders back at top of lift if rounded. Return and repeat."
+  },
+  {
+    "name": "Lever Stiff Leg Deadlift (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/LVStiffLegDeadlift",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Gluteus Maximus",
+      "Adductor Magnus",
+      "Hamstrings"
+    ],
+    "stabilizers": [
+      "Quadriceps",
+      "Trapezius, Middle",
+      "Rhomboids",
+      "Latissimus Dorsi",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand between lever handles with shoulder width or narrower stance. Squat down and grasp handles to each side. Stand upright with arms straight down to sides.",
+    "execution": "Bow forward by bending hips. Bend knees slightly during descent and keep waist straight, flexing low back at bottom. With knees slightly bent, raise torso by extending at waist, then hips, gradually extending knees until standing upright. Pull shoulders back slightly if rounded. Repeat."
+  },
+  {
+    "name": "Lever Back Extension",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/LVBackExtensionN",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Lever (selectorized)",
+    "synergists": [],
+    "stabilizers": [
+      "Quadriceps",
+      "Gluteus Maximus",
+      "Adductor Magnus",
+      "Hamstrings"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on machine with back against padded lever. Push hips back against back of seat by pushing feet against platform. Arch back in \"C\" shape.",
+    "execution": "Extend spine until hyperextended. Return and repeat."
+  },
+  {
+    "name": "Lever Back Extension",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/LVBackExtension",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Lever (selectorized)",
+    "synergists": [],
+    "stabilizers": [
+      "Quadriceps"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit in machine with feet on platform, back under padded lever, and hips against back of seat.",
+    "execution": "Extend lower hips and low back until extended. Return and repeat."
+  },
+  {
+    "name": "Smith Bent Knee Good-morning",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/SMBentKneeGoodMorning",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Smith",
+    "synergists": [
+      "Gluteus Maximus",
+      "Hamstrings",
+      "Adductor Magnus"
+    ],
+    "stabilizers": [
+      "Quadriceps"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position bar on back of shoulders. Grasp bar to sides. Disengage bar by rotating bar back.",
+    "execution": "Bend hips to lower torso forward until parallel to floor. Bend knees slightly during descent. Raise torso until hips are extended. Repeat."
+  },
+  {
+    "name": "Smith Deadlift",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/SMDeadlift",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Smith",
+    "synergists": [
+      "Gluteus Maximus",
+      "Quadriceps",
+      "Adductor Magnus",
+      "Hamstrings",
+      "Soleus"
+    ],
+    "stabilizers": [
+      "Trapezius, Middle",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Rhomboids"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with shoulder width or narrower stance with feet flat beneath bar. Grasp bar with shoulder width or slightly wider mixed grip or slightly wider. Disengage bar by rotating bar back.",
+    "execution": "Squat down to lower bar by bending hips and knees. Lift bar by extending hips and knees to full extension. Pull shoulders back at top of lift if rounded. Return and repeat."
+  },
+  {
+    "name": "Smith Stiff Leg Deadlift",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/SMStiffLegDeadlift",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Smith",
+    "synergists": [
+      "Gluteus Maximus",
+      "Hamstrings",
+      "Adductor Magnus"
+    ],
+    "stabilizers": [
+      "Quadriceps",
+      "Trapezius, Middle",
+      "Rhomboids",
+      "Latissimus Dorsi",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand with shoulder width or narrower stance on elevated platform with thigh against bar. Grasp bar with shoulder width or slightly wider overhand grip. Disengage bar by rotating bar back.",
+    "execution": "With knees slightly bent, lower bar toward top of feet by bending hips. Keep waist straight, flexing only slightly at bottom. Lift bar by extending at hips until standing upright. Pull shoulders back slightly if rounded. Extend knees at top if desired. Repeat."
+  },
+  {
+    "name": "Weighted Hyperextension",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/WtHyperextension",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Weighted",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position thighs prone on large pad and lower legs under padded brace. Hold weight to chest or behind neck.",
+    "execution": "Raise upper body until hips and waist are fully extended. Lower body by bending hips and waist until mild stretch is felt or torso is vertical. Repeat."
+  },
+  {
+    "name": "Weighted 45° Hyperextension",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/Wt45Hyperextension",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Weighted",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position thighs prone on padding. Hook heels on platform lip or under padded brace. Hold weight to chest or behind neck.",
+    "execution": "Raise upper body until hips and waist are fully extended. Lower body by bending hips and waist until mild stretch is felt or torso is approximately perpendicular to legs. Repeat."
+  },
+  {
+    "name": "Cable Seated Row",
+    "url": "https://exrx.net/WeightExercises/BackGeneral/CBSeatedRow",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Cable",
+    "synergists": [
+      "Erector Spinae",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Infraspinatus",
+      "Teres Minor",
+      "Brachialis",
+      "Brachioradialis",
+      "Pectoralis Major, Sternal"
+    ],
+    "stabilizers": [
+      "Hamstrings",
+      "Gluteus Maximus",
+      "Adductor Magnus"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit slightly forward on seat or bench in order to grasp cable attachment. Place feet on vertical platform. Slide hips back positioning knees with slight bend.",
+    "execution": "Pull cable attachment to waist while straightening lower back. Pull shoulders back and push chest forward while arching back. Return until arms are extended, shoulders are stretched forward, and lower back is flexed forward. Repeat."
+  },
+  {
+    "name": "Cable Wide Grip Seated Row",
+    "url": "https://exrx.net/WeightExercises/BackGeneral/CBWideGripSeatedRow",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Cable",
+    "synergists": [
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Infraspinatus",
+      "Teres Minor",
+      "Brachialis",
+      "Brachioradialis",
+      "Pectoralis Major, Sternal",
+      "Erector Spinae"
+    ],
+    "stabilizers": [
+      "Hamstrings",
+      "Gluteus Maximus",
+      "Adductor Magnus"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit slightly forward on platform in order to grasp cable attachment with wider than shoulder width grip. Place feet on vertical platform and slide hips back positioning knees with slight bend.",
+    "execution": "Pull cable attachment to waist while pulling torso upright. Pull shoulders back and push chest forward while arching back. Return until arms are extended, shoulders are stretched forward, and lower back is flexed forward. Repeat."
+  },
+  {
+    "name": "Back Extension (on stability ball, arms down)",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/BWHyperextensionBall",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Bodyweight",
+    "synergists": [
+      "Gluteus Maximus",
+      "Adductor Magnus"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie prone on ball with feet against base of wall. Place arms to sides or clasp hands behind hips or low back.",
+    "execution": "Raise torso off of ball by hyperextending spine. Lower torso onto ball allowing spine to flex. Repeat."
+  },
+  {
+    "name": "Bird Dog",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/BWBirdDog",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Bodyweight",
+    "synergists": [
+      "Gluteus Maximus",
+      "Trapezius, Lower",
+      "Trapezius, Middle",
+      "Deltoid, Anterior",
+      "Deltoid, Lateral",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Gluteus medius",
+      "Gluteus minimus",
+      "Piriformis",
+      "Obturator externus",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Serratus Anterior",
+      "Triceps Brachii"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Kneel on mat on all fours with legs and hands slightly apart.",
+    "execution": "Raise arm out straight beside head while raising and extending leg on opposite side up out behind body. Lower arm and leg to floor to original position and repeat. Perform movement with opposite arm and leg."
+  },
+  {
+    "name": "Alternating Bird Dog",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/BWAlternatingBirdDog",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Bodyweight",
+    "synergists": [
+      "Gluteus Maximus",
+      "Trapezius, Lower",
+      "Trapezius, Middle",
+      "Deltoid, Anterior",
+      "Deltoid, Lateral",
+      "Coracobrachialis",
+      "Hamstrings"
+    ],
+    "stabilizers": [
+      "**Gluteus medius**",
+      "**Gluteus minimus**",
+      "Piriformis",
+      "Obturator externus",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Serratus Anterior",
+      "Triceps Brachii",
+      "Rectus Abdominis",
+      "Obliques"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Kneel on mat on all fours with legs and hands slightly apart.",
+    "execution": "Raise left arm out straight beside head while raising and extending right leg up out behind body. Lower arm and leg to floor to original position. Repeat by raising and lowering right arm and left leg in same manner. Repeat by alternating between opposite sides."
+  },
+  {
+    "name": "Hyperextension (45°)",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/BW45HyperextensionHips",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Bodyweight",
+    "synergists": [
+      "Gluteus Maximus",
+      "Hamstrings",
+      "Adductor Magnus"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position thighs prone on padding. Hook heels on platform lip or under padded brace. Clasp hands behind hips or low back.",
+    "execution": "Raise upper body until hips and waist are extended. Lower body by bending hips and waist until mild stretch is felt or torso is approximately perpendicular to legs. Repeat.\n\n### Comments\n\nPosition pad high enough to evenly distribute body weight on thigh but not so high that range of motion is limited; abdomen should not press on top side of pad when upper body is lowered. Do not lower weight beyond mild stretch throughout hamstrings and low back. Full range of motion will vary from person to person.\n\nBegin with arms in low position and gradually position arms in higher position to allow lower back adequate [adaptation](../../ExInfo/AdaptationCriteria). See [Arm Position During Waist Exercises](../../WeightTraining/Tips#ArmPosition)."
+  },
+  {
+    "name": "arms up",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/BW45HyperextensionArmsUp",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Bodyweight",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position thighs prone on padding. Hook heels on platform lip or under padded brace.  Place arms parallel extending upward to sides of head.",
+    "execution": "Raise upper body until hips and waist are extended. Lower body by bending hips and waist until mild stretch is felt or torso is approximately perpendicular to legs. Repeat.\n\n### Comments\n\nPosition pad high enough to evenly distribute body weight on thigh but not so high that range of motion is limited; abdomen should not press on top side of pad when upper body is lowered. Do not lower weight beyond mild stretch throughout hamstrings and low back. Full range of motion will vary from person to person.\n\nBegin with arms in low position and gradually position arms in higher position to allow lower back adequate [adaptation](../../ExInfo/AdaptationCriteria). See [Arm Position During Waist Exercises](../../WeightTraining/Tips#ArmPosition)."
+  },
+  {
+    "name": "hands behind neck",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/BW45HyperextensionNeck",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Bodyweight",
+    "synergists": [
+      "Gluteus Maximus",
+      "Hamstrings",
+      "Adductor Magnus"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Position thighs prone on padding. Hook heels on platform lip or under padded brace.  Place hands behind neck or to sides of head.",
+    "execution": "Raise upper body until hips and waist are extended. Lower body by bending hips and waist until mild stretch is felt or torso is approximately perpendicular to legs. Repeat."
+  },
+  {
+    "name": "Superman",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/Superman",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Bodyweight",
+    "synergists": [
+      "Gluteus Maximus",
+      "Hamstrings"
+    ],
+    "stabilizers": [
+      "Deltoid, Anterior",
+      "Deltoid, Lateral",
+      "Coracobrachialis",
+      "Trapezius, Lower",
+      "Trapezius, Middle",
+      "Splenius"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie prone on mat with legs together and arms extended out on floor approximately parallel.",
+    "execution": "Slowly raise upper body and legs off floor. Return upper body and legs to floor and repeat."
+  },
+  {
+    "name": "Contralateral Superman",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/ContraLateralSuperman",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Bodyweight",
+    "synergists": [
+      "Gluteus Maximus",
+      "Hamstrings",
+      "Trapezius, Lower",
+      "Trapezius, Middle"
+    ],
+    "stabilizers": [
+      "Deltoid, Anterior",
+      "Deltoid, Lateral",
+      "Coracobrachialis",
+      "Splenius"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie prone on mat with legs together and arms extended out on floor approximately parallel.",
+    "execution": "Raise left arm and shoulder and right leg up off floor. Lower arm and shoulder and leg to floor. Repeat by raising and lowering right arm and shoulder and left leg. Repeat by alternating between opposite sides."
+  },
+  {
+    "name": "Suspended Pull Through",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/STPullThrough",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Suspended",
+    "synergists": [
+      "Gluteus Maximus",
+      "Hamstrings"
+    ],
+    "stabilizers": [
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Triceps Brachii",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Pectoralis Minor",
+      "Pectoralis Major"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on floor with legs under suspension trainer loops in low position. If loops cannot be extended down close to floor, sit on bench near hanging suspension trainer, positioned perpendicular to body where hands will be placed as shown. Place heels in loops with soles contacting handles (or ankles through loops as shown). Extend legs out straight. Sit up and place hands on floor or bench to sides at desired distance from suspension trainer. Raise hips from floor or bench by supporting upper body with arms extended.",
+    "execution": "Pull hips back while flexing spine in C shape. Raise hips up high by straightening spine and hips until straight. Repeat."
+  },
+  {
+    "name": "Rear Bridge",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/BackPlank",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Isometric",
+    "synergists": [],
+    "stabilizers": [
+      "Gluteus Maximus",
+      "Triceps Brachii",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on mat or floor with legs bent and feet on floor or mat. Place hands back to sides on floor or mat so torso is reclined back slightly.",
+    "execution": "Raise hips up off floor until hips are straight. Hold position."
+  },
+  {
+    "name": "Incline Rear Bridge",
+    "url": "https://exrx.net/WeightExercises/ErectorSpinae/RearInclinePlank",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Isometric",
+    "synergists": [],
+    "stabilizers": [
+      "Gluteus Maximus",
+      "Hamstrings",
+      "Triceps Brachii",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on mat with legs straight and placed together. Place hands back to sides on floor or mat so torso is reclined back slightly.",
+    "execution": "Raise hips up off floor until hips are straight. Hold position."
+  },
+  {
+    "name": "Cat Stretch",
+    "url": "https://exrx.net/Stretches/ErectorSpinae/Cat",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Kneel on mat or floor. Place hands shoulder width apart.",
+    "execution": "Flex spine by hunching back up. Hold stretch."
+  },
+  {
+    "name": "Lying Lower Back Stretch",
+    "url": "https://exrx.net/Stretches/ErectorSpinae/Lying",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Lie supine on floor or mat. Raise both knees and grasp back of thighs behind knees.",
+    "execution": "Pull knees toward shoulders allowing hips to be raised further off floor. Hold stretch."
+  },
+  {
+    "name": "Seated Lower Back Stretch",
+    "url": "https://exrx.net/Stretches/ErectorSpinae/SeatedFloor",
+    "bodyRegion": "Waist",
+    "targetMuscle": "Erector Spinae",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Sit on floor or mat with feet apart and knees bent approximately 90 degrees.",
+    "execution": "Reach forward between feet. Hold stretch."
+  }
+]

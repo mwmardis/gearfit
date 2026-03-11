@@ -1,0 +1,1155 @@
+[
+  {
+    "name": "Machine-assisted Chest Dip",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/AsChestDip",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Assisted",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Mount [wide dip bar](../../WeightTraining/Tips#DipBar) with oblique grip (bar diagonal under palm), arms straight with shoulders above hands. Step down onto assistance lever with hips and knees bent.",
+    "execution": "Lower body by bending arms, allowing elbows to flare out to sides. When slight stretch is felt in chest or shoulders, push body up until arms are straight. Repeat."
+  },
+  {
+    "name": "Machine-assisted Chest Dip (kneeling)",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/AsChestDipKneeling",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Assisted",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Mount [wide dip bar](../../WeightTraining/Tips#DipBar) with oblique grip (bar diagonal under palm), arms straight with shoulders above hands. Kneel on padded platform, lowering it down slightly so hips are slightly bent.",
+    "execution": "Lower body by bending arms, allowing elbows to flare out to sides. When slight stretch is felt in chest or shoulders push body up until arms are straight. Repeat."
+  },
+  {
+    "name": "Barbell Bench Press",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/BBBenchPress",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Barbell",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis",
+      "Biceps Brachii, Short Head"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie supine on bench. Dismount barbell from rack over upper chest using wide oblique overhand grip.",
+    "execution": "Lower weight to chest. Press bar upward until arms are extended. Repeat."
+  },
+  {
+    "name": "Barbell Bench Press (power lift)",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/BBBenchPressPowerLift",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Barbell",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Gluteus Maximus"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie supine on bench. Grasp bar with overhand and slightly wider than shoulder width grip. Arch back, extend hips, and position feet back flat on floor. Dismount barbell from rack over chest.",
+    "execution": "Lower weight to lower chest. Press bar upward until arms are extended. Repeat."
+  },
+  {
+    "name": "Barbell Decline Bench Press",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/BBDeclineBenchPress",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Barbell",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis",
+      "Biceps Brachii, Short Head"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie supine on decline bench with feet under leg brace. Dismount barbell from rack over chest using wide oblique overhand grip.",
+    "execution": "Lower weight to chest. Press bar until arms are extended. Repeat."
+  },
+  {
+    "name": "Cable Isolateral Standing Chest Press",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/CBStandingChestPress",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Cable",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Pectoralis Minor",
+      "Serratus Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Stand between two shoulder height pulleys, facing away from cable columns. Grasp cable stirrups from each side. Position stirrups to sides of chest with elbows out to sides. Position forearms horizontally and parallel with hands elbow width. Step forward in lunging posture (one foot in front and other foot behind). Lean and step forward with one foot in front, bending forward leg.",
+    "execution": "Push stirrups forward until arms are straight and parallel to one another. Return stirrups to original position until slight stretch is felt in chest or shoulders. Repeat."
+  },
+  {
+    "name": "Dumbbell Bench Press",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/DBBenchPress",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis",
+      "Biceps Brachii, Short Head"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit down on bench with dumbbells resting on lower thigh. Kick weights to shoulder and lie back. Position dumbbells to sides of chest with bent arm under each dumbbell.",
+    "execution": "Press dumbbells up with elbows to sides until arms are extended. Lower weight to sides of chest until slight stretch is felt in chest or shoulder. Repeat."
+  },
+  {
+    "name": "Dumbbell Decline Bench Press",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/DBDeclineBenchPress",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis",
+      "Biceps Brachii, Short Head"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit down on decline bench with feet under leg brace and dumbbells resting on thigh. Lie back with dumbbells. Position dumbbells to sides of chest with bent arm under each dumbbell.",
+    "execution": "Press dumbbells up with elbows to sides until arms are extended. Lower weight to sides of chest until slight stretch is felt in chest or shoulder. Repeat."
+  },
+  {
+    "name": "Dumbbell Fly",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/DBFly",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Biceps Brachii, Short Head",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Biceps Brachii",
+      "Brachialis",
+      "Triceps Brachii",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp two dumbbells. Lie supine on bench. Support dumbbells above chest with arms fixed in slightly bent position. Internally rotate shoulders so elbows point out to sides.",
+    "execution": "Lower dumbbells to sides until chest muscles are stretched with elbows fixed in slightly bent position. Bring dumbbells together in wide hugging motion until dumbbells are nearly together. Repeat."
+  },
+  {
+    "name": "Dumbbell Pullover",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/DBPullover",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Triceps, Long Head",
+      "Deltoid, Posterior",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae"
+    ],
+    "stabilizers": [
+      "Triceps Brachii",
+      "Deltoid, Anterior",
+      "Pectoralis Major, Clavicular",
+      "Coracobrachialis",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie on upper back perpendicular to bench. Flex hips slightly. Grasp one dumbbell from behind or from side with both hands under inner plate of dumbbell. Position dumbbell over chest with elbows slightly bent.",
+    "execution": "Keeping elbows slightly bent throughout movement, lower dumbbell over and beyond head until upper arms are in-line with torso. Pull dumbbell up and over chest. Repeat."
+  },
+  {
+    "name": "Lever Chest Dip (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/LVChestDipH",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat and grasp handles with oblique grip. If available, place handles in [wider position](../../WeightTraining/Tips#DipBar). Lean forward slightly.",
+    "execution": "Push lever down with elbows away from body. Return until chest is slightly stretched. Repeat."
+  },
+  {
+    "name": "Lever Decline Chest Press (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/LVDeclineChestPressPL",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat with lever grips lower chest height. Grasp grips with wide overhand grip; elbows out to sides just below shoulders.",
+    "execution": "Press lever until arms are extended. Return weight until chest muscles are slightly stretched. Repeat."
+  },
+  {
+    "name": "Lever Chest Dip",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/LVChestDip",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "If possible, place handles in [wide position](../../WeightTraining/Tips#DipBar). Sit on seat and grasp handles with oblique grip. Lean forward slightly and allow elbows to flare out.",
+    "execution": "Push lever down by straightening arms. Return lever up with elbows flaring out until chest is slightly stretched. Repeat."
+  },
+  {
+    "name": "Lever Bench Press",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/LVBenchPress",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis",
+      "Biceps Brachii, Short Head"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie supine on bench with chest under lever bar. Grasp lever bar with wide oblique overhand grip.",
+    "execution": "Press bar until arms are extended. Lower weight to upp er chest. Repeat."
+  },
+  {
+    "name": "Lever Chest Press",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/LVChestPress",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat with chest approximately height of horizontal handles. If available, push foot lever until lever is within grasping range. Grasp handles with wide overhand grip; elbows out to sides just below shoulders. Release foot lever.",
+    "execution": "Press lever until arms are extended. Return weight until chest muscles are slightly stretched. Repeat."
+  },
+  {
+    "name": "Lever Isolateral Chest Press",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/LVChestPressS",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat with chest approximately height of handles. Grasp handles with wide overhand grip; elbows out to sides just below shoulders.",
+    "execution": "Press lever until arms are extended. Return weight until chest muscles are slightly stretched. Repeat."
+  },
+  {
+    "name": "Sled Standing Chest Dip",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/SLStandingChestDip",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Sled",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand between handles facing machine. Bend forward slightly and grasp parallel handles with oblique grip. Position elbows upward and outward. Bend knees just enough to raise selected weight up from remaining weight stack.",
+    "execution": "Push lever down by straightening arms. Return lever up with elbows flaring out until chest is slightly stretched. Repeat."
+  },
+  {
+    "name": "Smith Bench Press",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/SMBenchPress",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Smith",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis",
+      "Biceps Brachii, Short Head"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie supine on bench with chest under bar. Grasp bar with wide oblique overhand grip. Disengage bar by raising and rotating bar back.",
+    "execution": "Lower weight to chest. Press bar until arms are extended. Repeat."
+  },
+  {
+    "name": "Smith Decline Bench Press",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/SMDeclineBenchPress",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Smith",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie supine on decline bench with feet under leg brace and lower chest under bar. Grasp bar with wide oblique overhand grip. Disengage bar by raising and rotating bar back.",
+    "execution": "Lower weight to lower chest. Press bar until arms are extended. Repeat."
+  },
+  {
+    "name": "Weighted Chest Dip",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/WtChestDip",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Weighted",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place weight on dip belt around waist or place dumbbell between lower legs just above feet. Mount [wide dip bar](../../WeightTraining/Tips#DipBar) with oblique grip (bar diagonal under palm), arms straight with shoulders above hands. Keep hips and knees bent.",
+    "execution": "Lower body by bending arms, allowing elbows to flare out to sides. When slight stretch is felt in chest or shoulders, push body up until arms are straight. Repeat."
+  },
+  {
+    "name": "Weighted Push-up",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/WtPushup",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Weighted",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps",
+      "Pectoralis Minor",
+      "Serratus Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie prone on floor with hands slightly wider than shoulder width. Raise body up off floor by extending arms with body straight. Partner can place weight plate(s) on back if needed.",
+    "execution": "Keeping body straight, lower body to floor by bending arms. Push body up until arms are extended. Repeat."
+  },
+  {
+    "name": "Band-assisted Chest Dip",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/ASChestDipBand",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Band-assisted",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place one foot on middle of exercise band with ends looped on [wide dip bars](../../WeightTraining/Tips#DipBar). Push band down partially by extending leg. Mount dip bar with oblique grip (bar diagonal under palm), arms straight, and shoulders above hands. Place other foot on exercise band next to other foot. Bend knees and hips slightly.",
+    "execution": "Lower body by bending arms, allowing elbows to flare out to sides. When slight stretch is felt in chest or shoulders, push body up until arms are straight. Repeat."
+  },
+  {
+    "name": "Chest Dip",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/BWChestDip",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Mount [wide dip bar](../../WeightTraining/Tips#DipBar) with oblique grip (bar diagonal under palm), arms straight with shoulders above hands. Bend knees and hips slightly.",
+    "execution": "Lower body by bending arms, allowing elbows to flare out to sides. When slight stretch is felt in chest or shoulders, push body up until arms are straight. Repeat."
+  },
+  {
+    "name": "Push-up",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/BWPushup",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Serratus Anterior",
+      "Pectoralis Minor",
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie prone with forefeet on floor and hands slightly wider than shoulder width. Raise body up off floor by extending arms with body straight.",
+    "execution": "Keeping body straight, lower body to floor by bending arms. Push body up until arms are extended. Repeat."
+  },
+  {
+    "name": "Archer Push-up",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/BWArcherPushup",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Serratus Anterior",
+      "Pectoralis Minor",
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie prone with forefeet on floor and hands pointed outward, one close to rib cage and other at arm's length away. Position head facing toward extended arm.",
+    "execution": "Keeping extended arm and body reasonably straight, push body up with arm closest to body until arm is extended. Turn head head and lower body to opposite side. Repeat."
+  },
+  {
+    "name": "Incline Push-up",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/BWInclinePushup",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Pectoralis Minor",
+      "Serratus Anterior",
+      "Quadriceps",
+      "Gastrocnemius",
+      "Soleus"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand facing bench or sturdy elevated platform. Place hands on edge of bench or platform, slightly wider than shoulder width. Position forefoot back from bench or platform with arms and body straight. Arms should be perpendicular to body.",
+    "execution": "Keeping body straight, lower chest to edge of box or platform by bending arms. Push body up until arms are extended. Repeat."
+  },
+  {
+    "name": "Push-up (on knees)",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/BWPushupKnee",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Serratus Anterior",
+      "Pectoralis Minor",
+      "Rectus Abdominis",
+      "Obliques"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie prone on floor with hands slightly wider than shoulder width. Bend knees and raise body up off floor by extending arms with body straight.",
+    "execution": "Keeping body straight and knees bent, lower body to floor by bending arms. Push body up until arms are extended. Repeat."
+  },
+  {
+    "name": "Self-assisted Chest Dip",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/AsChestDipSelf",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Self-assisted",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand on bench or elevation between parallel bars. Mount [wide dip bar](../../WeightTraining/Tips#DipBar) with oblique grip (bar diagonal under palm), arms straight with shoulders above hands. Bend knees and hips slightly and place forefoot on bench or elevation below.",
+    "execution": "Lower body by bending arms, allowing elbows to flare out to sides. If necessary, use minimal assistance of lower body to control descent, allowing knees and hips to bend, keeping forefeet in contact with bench or elevation. When slight stretch is felt in chest or shoulders, push body up until arms are straight and repeat, again with minimal assistance from legs."
+  },
+  {
+    "name": "Suspended Self-assisted Chest Dip",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/STSelfAssistedChestDip",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Suspended",
+    "synergists": [
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Latissimus Dorsi",
+      "Teres Major",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Trapezius, Lower"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Stand between two suspension handles, approximately mid-thigh height. Grasp handles on each side and straighten arms with shoulders above hands. Hold position firmly and place portion of body weight on handles.",
+    "execution": "Lower body by bending arms back. If necessary, use minimal assistance of lower body to control descent, allowing knees to bend, keeping feet in contact with floor. When slight stretch is felt in chest or shoulders, push body up back up until arms are straight. Repeat with minimal assistance from legs."
+  },
+  {
+    "name": "Suspended Chest Press",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/STChestPress",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Sternal",
+    "equipment": "Suspended",
+    "synergists": [
+      "Pectoralis Major, Clavicular",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Pectoralis Minor",
+      "Serratus Anterior",
+      "Quadriceps",
+      "Gastrocnemius",
+      "Soleus"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp handles and step forward between suspension trainers. Position arms downward and slightly forward, nearly parallel with suspension straps. Lean forward, placing upper body weight onto handles with arms straight, while stepping back onto forefeet so body is leaning forward at desired angle. Straighten body so torso is in-line with legs.",
+    "execution": "Lower body by bending arms while keeping body straight. Allow handles to come apart slightly to keep in-line with elbows flaring out. Stop descent once mild stretch is felt through shoulders or chest. Push body up to original position, allowing handles to travel inward to keep in line with elbows converging until arms are fully extended. Repeat."
+  },
+  {
+    "name": "Cable Close Grip Pulldown",
+    "url": "https://exrx.net/WeightExercises/PectoralSternal/STFly",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Latissimus Dorsi",
+    "equipment": "Suspended",
+    "synergists": [
+      "Brachialis",
+      "Brachioradialis",
+      "Teres Major",
+      "Deltoid, Posterior",
+      "Rhomboids",
+      "Levator Scapulae",
+      "Trapezius, Lower",
+      "Trapezius, Middle",
+      "Pectoralis Major, Sternal",
+      "Pectoralis Minor",
+      "Biceps Brachii",
+      "Triceps, Long Head"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Grasp parallel cable attachment. Sit with thighs under supports.",
+    "execution": "Pull down cable attachment to upper chest. Return until arms and shoulders are fully extended. Repeat."
+  },
+  {
+    "name": "Behind Head Chest Stretch",
+    "url": "https://exrx.net/Stretches/ChestGeneral/BehindHead",
+    "bodyRegion": "Chest",
+    "targetMuscle": "",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Place hands behind head.",
+    "execution": "Pull elbows back further behind ears. Hold stretch."
+  },
+  {
+    "name": "Doorway Chest Stretch",
+    "url": "https://exrx.net/Stretches/ChestGeneral/Doorway",
+    "bodyRegion": "Chest",
+    "targetMuscle": "",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Stand at end of wall or in doorway facing perpendicular to wall. Place inside of bent arm on surface of wall. Position bent elbow shoulder height.",
+    "execution": "Turn body away from positioned arm. Hold stretch. Repeat with opposite arm."
+  },
+  {
+    "name": "Straight Arm Chest Stretch",
+    "url": "https://exrx.net/Stretches/ChestGeneral/StraightArm",
+    "bodyRegion": "Chest",
+    "targetMuscle": "",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "With arm extended, position hand on fixed structure shoulder height.",
+    "execution": "Turn body away from positioned arm. Hold stretch. Repeat with opposite arm."
+  },
+  {
+    "name": "Doorway Modified Chest Stretch",
+    "url": "https://exrx.net/Stretches/PectoralisMinor/Doorway",
+    "bodyRegion": "Chest",
+    "targetMuscle": "",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Stand at end of wall or in doorway facing perpendicular to wall. Place front of shoulder and inside of bent arm on surface of wall. Position bent elbow around same height of shoulder. Position both feet back behind original stance.",
+    "execution": "Lean into wall allowing shoulder to be pushed back. Turn body away from positioned arm. Hold stretch. Repeat with opposite arm."
+  },
+  {
+    "name": "Barbell Incline Bench Press",
+    "url": "https://exrx.net/WeightExercises/PectoralClavicular/BBInclineBenchPress",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Clavicular",
+    "equipment": "Barbell",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie supine on incline bench. Dismount barbell from rack over upper chest using wide oblique overhand grip.",
+    "execution": "Lower weight to chest. Press bar until arms are extended. Repeat."
+  },
+  {
+    "name": "Dumbbell Incline Bench Press",
+    "url": "https://exrx.net/WeightExercises/PectoralClavicular/DBInclineBenchPress",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Clavicular",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Pectoralis Major, Sternal",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit down on incline bench with dumbbells resting on lower thigh. Kick weights to shoulders and lean back. Position dumbbells to sides of chest with upper arm under each dumbbell.",
+    "execution": "Press dumbbells up with elbows to sides until arms are extended. Lower weight to sides of upper chest until slight stretch is felt in chest or shoulder. Repeat."
+  },
+  {
+    "name": "Dumbbell Incline Fly",
+    "url": "https://exrx.net/WeightExercises/PectoralClavicular/DBInclineFly",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Clavicular",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Pectoralis Major, Sternal",
+      "Deltoid, Anterior",
+      "Biceps Brachii, Short Head",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Biceps Brachii",
+      "Brachialis",
+      "Triceps Brachii",
+      "Wrist Flexors"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Grasp two dumbbells. Lie supine on bench. Support dumbbells above upper chest with arms fixed in slightly bent position. Bend elbows slightly and internally rotate shoulders so elbows point out to sides.",
+    "execution": "Lower dumbbells outward to sides of shoulders. Keep elbows fixed in slightly bent position. When a stretch is felt in chest or shoulders, bring dumbbells back together in hugging motion above upper chest until dumbbells are nearly together. Repeat."
+  },
+  {
+    "name": "Lever Isolateral Incline Chest Press (on Hammer military press, plate loaded)",
+    "url": "https://exrx.net/WeightExercises/PectoralClavicular/LVInclineChestPressOnHammerMilitaryPress",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Clavicular",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Pectoralis Major, Sternal",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis",
+      "Biceps Brachii, Short Head"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat with upper chest just above base of handles on lever. Grasp grips with wide overhand grip. Lift levers into starting position with elbows slightly low.",
+    "execution": "Press levers until arms are extended. Return weight until chest muscles are slightly stretched with elbows positioned out to sides. Repeat."
+  },
+  {
+    "name": "Lever Incline Chest Press",
+    "url": "https://exrx.net/WeightExercises/PectoralClavicular/LVInclineChestPress",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Clavicular",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Pectoralis Major, Sternal",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat with upper chest just above grips on lever. If available, push foot lever until handles are within grasping range. Grasp handles with wide oblique overhand grip and position elbows out to sides. Release foot lever.",
+    "execution": "Press lever until arms are extended. Return weight until shoulders or chest feels slightly stretched. Repeat."
+  },
+  {
+    "name": "Lever Isolateral Incline Chest Press",
+    "url": "https://exrx.net/WeightExercises/PectoralClavicular/LVInclineChestPressH",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Clavicular",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Pectoralis Major, Sternal",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis",
+      "Biceps Brachii, Short Head"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat with upper chest just above grips on lever. Grasp grips with wide overhand grip and position elbows out to sides.",
+    "execution": "Press lever until arms are extended. Return weight until chest muscles are slightly stretched. Repeat."
+  },
+  {
+    "name": "Smith Incline Bench Press",
+    "url": "https://exrx.net/WeightExercises/PectoralClavicular/SMInclineBenchPress",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Clavicular",
+    "equipment": "Smith",
+    "synergists": [
+      "Pectoralis Major, Sternal",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis",
+      "Biceps Brachii, Short Head"
+    ],
+    "stabilizers": [],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Lie supine on incline bench with chest under bar. Grasp bar with wide oblique overhand grip. Disengage bar by raising and rotating bar back.",
+    "execution": "Lower weight to chest. Press bar until arms are extended. Repeat."
+  },
+  {
+    "name": "Decline Push-up",
+    "url": "https://exrx.net/WeightExercises/PectoralClavicular/BWDeclinePushup",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Major, Clavicular",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Pectoralis Major, Sternal",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Serratus Anterior",
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Kneel on floor with bench or elevation behind body. Position hands on floor slightly wider than shoulder width. Place feet on bench or elevation. Raise body in plank position with body straight and arms extended.",
+    "execution": "Keeping body straight, lower upper body to floor by bending arms. To allow for full descent, pull head back slightly without arching back. Push body up until arms are extended. Repeat."
+  },
+  {
+    "name": "Wall Angel",
+    "url": "https://exrx.net/Stretches/PectoralisMinor/Wall",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Minor",
+    "equipment": "Weighted",
+    "synergists": [],
+    "stabilizers": [
+      "Deltoid, Posterior",
+      "Deltoid, Lateral",
+      "Infraspinatus",
+      "Teres Minor"
+    ],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Position back against wall. Place feet away from wall, slightly bending hips and knees. Bend elbows and position back of arms against wall with elbows to sides.",
+    "execution": "Push shoulders and back of arms and hands into wall and slowly raise arms as high as possible. Still pushing shoulders arms, slowly lower arms to starting position."
+  },
+  {
+    "name": "Broom Stick Subscapularis Stretch",
+    "url": "https://exrx.net/Stretches/Subscapularis/Broomstick",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Minor",
+    "equipment": "Weighted",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Grasp end of pole with one hand. Flip pole over upper arm. Position bent arm to side of body with other end of pole behind arm. Reach across body as far as possible with opposite arm and grasp lower end of pole. Position elbow at height of shoulder with pole positioned on back side of upper arm.",
+    "execution": "Pull lower end of pole forward and upward so shoulder is externally rotated. Hold stretch. Repeat with opposite arm."
+  },
+  {
+    "name": "Premium Content",
+    "url": "https://exrx.net/WeightExercises/Other/STAngle",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Pectoralis Minor",
+    "equipment": "Weighted",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "strength",
+    "preparation": "",
+    "execution": ""
+  },
+  {
+    "name": "Incline Twisting Sit-up",
+    "url": "https://exrx.net/WeightExercises/SerratusAnterior/BBInclineShoulderRaise",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Obliques",
+    "equipment": "Barbell",
+    "synergists": [
+      "Iliopsoas",
+      "Tensor Fasciae Latae",
+      "Rectus Femoris",
+      "Sartorius",
+      "Rectus Abdominis"
+    ],
+    "stabilizers": [
+      "Tibialis Anterior"
+    ],
+    "mechanics": "compound",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Hook feet under foot or ankle brace and lie supine on incline bench with hips and knees bent. Place hands behind neck.",
+    "execution": "Flex and twist waist to one direction while raising torso from bench by bending hips. Return until back of shoulders contact padded incline board. Repeat to opposite side alternating twists."
+  },
+  {
+    "name": "Dumbbell Incline Shoulder Raise",
+    "url": "https://exrx.net/WeightExercises/SerratusAnterior/DBInclineShoulderRaise",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Serratus Anterior",
+    "equipment": "Dumbbell",
+    "synergists": [
+      "Pectoralis Major, Clavicular"
+    ],
+    "stabilizers": [
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit down on incline bench with dumbbells resting on lower thigh. Kick weights to shoulders and lean back. Position dumbbells above shoulders with elbows extended.",
+    "execution": "Raise shoulders toward dumbbells as high as possible. Lower shoulders to bench and repeat."
+  },
+  {
+    "name": "Lever Incline Shoulder Raise",
+    "url": "https://exrx.net/WeightExercises/SerratusAnterior/LVInclineShoulderRaise",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Serratus Anterior",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Pectoralis Major, Clavicular"
+    ],
+    "stabilizers": [
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on lever chest press machine with shoulders aligned with lever grips. Grasp lever grips with shoulder width overhand grip. Push weight up so arms are straight.",
+    "execution": "Raise shoulders toward lever grips as far as possible. Lower shoulders to bench and repeat."
+  },
+  {
+    "name": "Smith Incline Shoulder Raise",
+    "url": "https://exrx.net/WeightExercises/SerratusAnterior/SMInclineShoulderRaise",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Serratus Anterior",
+    "equipment": "Smith",
+    "synergists": [
+      "Pectoralis Major, Clavicular"
+    ],
+    "stabilizers": [
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie supine on incline bench with shoulders under bar. Grasp bar with shoulder width overhand grip. Extend elbows. Disengage bar by rotating bar back.",
+    "execution": "Raise shoulders toward bar as high as possible. Lower shoulders to bench and repeat."
+  },
+  {
+    "name": "Push-up Plus",
+    "url": "https://exrx.net/WeightExercises/SerratusAnterior/BWPushUpPlus",
+    "bodyRegion": "Chest",
+    "targetMuscle": "Serratus Anterior",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps"
+    ],
+    "mechanics": "compound",
+    "force": "push",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Lie prone with forefeet on floor and hands slightly wider than shoulder width. Raise body up off floor by extending arms with body straight.",
+    "execution": "Keeping body straight, lower body to floor by bending arms. Push body up until arms are extended. Continue lifting body further up by pushing shoulders infront of chest. Repeat."
+  }
+]

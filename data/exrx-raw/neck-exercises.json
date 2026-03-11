@@ -1,0 +1,450 @@
+[
+  {
+    "name": "Cable Neck Flexion",
+    "url": "https://exrx.net/WeightExercises/Sternocleidomastoid/CBNeckFlx",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Sternocleidomastoid",
+    "synergists": [],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques"
+    ],
+    "equipment": "Cable",
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on bench facing away from middle pulley. Place neck in harness cable attachment. Place arms on lower thighs for support.",
+    "execution": "Move head away from pulley by bending neck forward until chin touches upper chest. Return head by hyperextending neck and repeat."
+  },
+  {
+    "name": "Lever Neck Flexion (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/Sternocleidomastoid/LVNeckFlexionH",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Sternocleidomastoid",
+    "synergists": [],
+    "stabilizers": [
+      "Latissimus Dorsi",
+      "Deltoid, Posterior",
+      "Rhomboids",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Triceps Brachii",
+      "Rectus Abdominis",
+      "Obliques"
+    ],
+    "equipment": "Lever (plate loaded)",
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat in machine. Position padded lever on face. Position body so neck is in line with lever axis. Grasp handles for support.",
+    "execution": "Move head forward by flexing neck until chin touches upper chest. Return head by hyperextending neck and repeat."
+  },
+  {
+    "name": "Lever Lateral Neck Flexion (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/Sternocleidomastoid/LVLateralNeckFlexionH",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Sternocleidomastoid",
+    "synergists": [],
+    "stabilizers": [],
+    "equipment": "Lever (plate loaded)",
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on seat in machine with feet apart . Position padded lever on side of head. Center body so neck is in line with lever axis. Grasp handles for support.",
+    "execution": "Move head down to side by laterally flexing neck. Return head to opposite side and repeat. Sit in machine backwards and continue with opposite side."
+  },
+  {
+    "name": "Lever Neck Flexion",
+    "url": "https://exrx.net/WeightExercises/Sternocleidomastoid/LVNeckFlx",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Sternocleidomastoid",
+    "synergists": [],
+    "stabilizers": [
+      "Latissimus Dorsi",
+      "Deltoid, Posterior",
+      "Rhomboids",
+      "Trapezius, Middle",
+      "Trapezius, Lower",
+      "Triceps Brachii",
+      "Rectus Abdominis",
+      "Obliques"
+    ],
+    "equipment": "Lever (selectorized)",
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat in machine. Position padded lever on face. Position body so neck is in line with lever axis. Grasp handles for support.",
+    "execution": "Move head forward by flexing neck until chin touches upper chest. Return head by hyperextending neck and repeat."
+  },
+  {
+    "name": "Lever Lateral Neck Flexion",
+    "url": "https://exrx.net/WeightExercises/Sternocleidomastoid/LVNeckLtrFlx",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Sternocleidomastoid",
+    "synergists": [],
+    "stabilizers": [],
+    "equipment": "Lever (selectorized)",
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Sit on seat in machine with feet apart. Position side of head on padded lever. Center body so neck is in line with lever axis. Grasp handles for support.",
+    "execution": "Move head down to side by laterally flexing neck. Return head to opposite side and repeat. Sit in machine backwards and continue with opposite side."
+  },
+  {
+    "name": "Weighted Neck Flexion",
+    "url": "https://exrx.net/WeightExercises/Sternocleidomastoid/WtNeckFlx",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Sternocleidomastoid",
+    "synergists": [],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques"
+    ],
+    "equipment": "Weighted",
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place folded towel on weight plate. Lie supine perpendicular on bench with low back and hips extending off and feet on floor. Place weight and towel on forehead. Place plates on forehead with towel placed in between for comfort.",
+    "execution": "Move head up by flexing neck until chin touches upper chest. Return by hyperextending neck and repeat."
+  },
+  {
+    "name": "Weighted Lateral Neck Flexion",
+    "url": "https://exrx.net/WeightExercises/Sternocleidomastoid/WtNeckLateralFlex",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Sternocleidomastoid",
+    "synergists": [
+      "Splenius",
+      "Erector Spinae",
+      "Levator Scapulae",
+      "Trapezius, Upper"
+    ],
+    "stabilizers": [],
+    "equipment": "Weighted",
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Place folded towel on weight plate. Lie on bench on side with knees and hips bent and arm hanging over edge. Position weight and towel on side of upper head. Hold weight on side of head with hand of upper arm. Place hand of lower arm on floor for support.",
+    "execution": "Move head up to side by laterally flexing neck. Lower head to opposite side and repeat. Lie on other side and continue."
+  },
+  {
+    "name": "Wall Front Neck Bridge",
+    "url": "https://exrx.net/WeightExercises/Sternocleidomastoid/BWWallFrontNeckBridge",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Sternocleidomastoid",
+    "synergists": [
+      "Splenius",
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Erector Spinae, Cervicis & Capitis Fibers"
+    ],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps"
+    ],
+    "equipment": "Body Weight",
+    "mechanics": "isolated",
+    "force": "push",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place small or folded cushioned mat on wall or column approximately chest height. With hands supporting mat on each side, stand back so feet are away from wall or column with body leaning forward. Place top of forehead on mat. Fold hands behind low back or hips.",
+    "execution": "Roll down onto forehead until nose touches mat. Roll up onto top of head until chin touches upper chest. Repeat."
+  },
+  {
+    "name": "Wall Side Neck Bridge",
+    "url": "https://exrx.net/WeightExercises/Sternocleidomastoid/BWWallSideNeckBridge",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Sternocleidomastoid",
+    "synergists": [],
+    "stabilizers": [
+      "Gluteus Medius",
+      "Gluteus Minimus"
+    ],
+    "equipment": "Body Weight",
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Place small or folded cushioned mat on column or at end of wall approximately shoulder height. With hands supporting mat, stand with side toward mat. Step far to side so feet are away from wall or column forward. Place side of head on mat with shoulder extending over end of adjacent side of column or wall so body leans to side. Fold hands behind low back or hips.",
+    "execution": "Push side of head into mat and roll onto top of head moving body away from mat. Return to original position by rolling back down to side of head while bringing shoulder back over end of column or wall. Repeat."
+  },
+  {
+    "name": "Neck Retraction Stretch",
+    "url": "https://exrx.net/Stretches/Sternocleidomastoid/NeckRetraction",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Sternocleidomastoid",
+    "synergists": [],
+    "stabilizers": [],
+    "equipment": "Stretch",
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Stand or sit.",
+    "execution": "Pull head back as far possible while looking slightly down and hold stretch."
+  },
+  {
+    "name": "Suspended Neck Flexion",
+    "url": "https://exrx.net/WeightExercises/Sternocleidomastoid/STNeckFlexion",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Sternocleidomastoid",
+    "synergists": [],
+    "stabilizers": [
+      "Rectus Abdominis",
+      "Obliques",
+      "Quadriceps"
+    ],
+    "equipment": "Suspended",
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place belt or strap around end of suspension trainer. Face away from suspension trainer with belt in hand. Place belt around head above ears and clamp belt snugly around head by tightly gripping ends close to back of mid-head. Step forward until suspension trainer is taut. Lean forward at angle against support of belt and suspension trainer by stepping back slightly while keeping head and body straight.",
+    "execution": "Increase angle of body by bowing head until chin touches upper chest. Lower angle of body by raising head. Repeat."
+  },
+  {
+    "name": "Suspended Lateral Neck Flexion",
+    "url": "https://exrx.net/WeightExercises/Sternocleidomastoid/STNeckLateralFlexion",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Sternocleidomastoid",
+    "synergists": [],
+    "stabilizers": [],
+    "equipment": "Suspended",
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "Place belt or strap around end of suspension trainer. Hold belt in hand and stand away from suspension trainer so it hangs to one side. Place belt around head above ears and clamp belt snugly around head by tightly gripping ends close to head above ear closest to suspension trainer. Step further away from suspension trainer until it is taut. Lean away at angle against support of belt and suspension trainer by positioning feet closer to side of suspension trainer while keeping head and body straight.",
+    "execution": "Lower angle of body by tilting head to side of suspension trainer. Increase angle of body by tilting head away from side of suspension trainer. Repeat and continue in opposite position."
+  },
+  {
+    "name": "Cable Neck Extension",
+    "url": "https://exrx.net/WeightExercises/Splenius/CBNeckExt",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Splenius",
+    "equipment": "Cable",
+    "synergists": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Erector Spinae, Cervicis & Capitis Fibers",
+      "Sternocleidomastoid, Posterior Fibers"
+    ],
+    "stabilizers": [
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Latissimus Dorsi",
+      "Rhomboids",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on bench facing pulley. Place neck in harness cable attachment. Place forearms on lower thighs for support.",
+    "execution": "Move head away from pulley by hyperextending neck. Return by bending neck forward until chin touches upper chest. Repeat."
+  },
+  {
+    "name": "Lever Neck Extension (plate loaded)",
+    "url": "https://exrx.net/WeightExercises/Splenius/LVNeckExtentionH",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Splenius",
+    "equipment": "Lever (plate loaded)",
+    "synergists": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Erector Spinae, Cervicis & Capitis Fibers",
+      "Sternocleidomastoid, Posterior Fibers"
+    ],
+    "stabilizers": [
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Serratus Anterior",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat in machine. Place back of head under padded lever. Position body so neck is in line with lever axis. Grasp handles for support.",
+    "execution": "Move head back by hyperextending neck. Return by bending neck forward until chin touches upper chest. Repeat."
+  },
+  {
+    "name": "Lever Neck Extension",
+    "url": "https://exrx.net/WeightExercises/Splenius/LVNeckExt",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Splenius",
+    "equipment": "Lever (selectorized)",
+    "synergists": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Erector Spinae, Cervicis & Capitis Fibers",
+      "Sternocleidomastoid, Posterior Fibers"
+    ],
+    "stabilizers": [
+      "Pectoralis Major, Sternal",
+      "Pectoralis Major, Clavicular",
+      "Pectoralis Minor",
+      "Serratus Anterior",
+      "Deltoid, Anterior",
+      "Triceps Brachii",
+      "Coracobrachialis"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on seat in machine. Place back of head under padded lever. Position body so neck is in line with lever axis. Grasp handles for support.",
+    "execution": "Move head back by hyperextending neck. Return by bending neck forward until chin touches upper chest. Repeat."
+  },
+  {
+    "name": "Weighted Seated Neck Extension",
+    "url": "https://exrx.net/WeightExercises/Splenius/WtNeckExt",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Splenius",
+    "equipment": "Weighted",
+    "synergists": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Erector Spinae, Cervicis & Capitis Fibers",
+      "Sternocleidomastoid, Posterior Fibers"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place folded towel on weight plate. On bench or stool, sit bent over on thighs. With both hands, place plate(s) on back of head with towel placed in between for comfort.",
+    "execution": "Move head up by hyperextending neck up as high as possible. Return by bending neck down until chin touches upper chest. Repeat."
+  },
+  {
+    "name": "Weighted Neck Harness Extension",
+    "url": "https://exrx.net/WeightExercises/Splenius/WtNeckHarnessExt",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Splenius",
+    "equipment": "Weighted",
+    "synergists": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Erector Spinae, Cervicis & Capitis Fibers",
+      "Sternocleidomastoid, Posterior Fibers"
+    ],
+    "stabilizers": [],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Sit on bench with weighted neck harness on head. Allow weight to dangle in front by bending over.",
+    "execution": "Move head up by hyperextending neck. Return by bending neck down until chin touches upper chest. Repeat."
+  },
+  {
+    "name": "Band Resistive Neck Retraction",
+    "url": "https://exrx.net/WeightExercises/Splenius/BRNeckRetraction",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Splenius",
+    "equipment": "Band Resistive",
+    "synergists": [],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Erector Spinae, Cervicis & Capitis Fibers"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "",
+    "execution": ""
+  },
+  {
+    "name": "Wall Rear Neck Bridge",
+    "url": "https://exrx.net/WeightExercises/Splenius/BWWallRearNeckBridge",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Splenius",
+    "equipment": "Body Weight",
+    "synergists": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Sternocleidomastoid, Posterior Fibers",
+      "Erector Spinae",
+      "Quadriceps"
+    ],
+    "stabilizers": [
+      "Gluteus Maximus"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Hold small or folded cushioned mat behind head. Facing away from wall or column position head and back of shoulders low on wall or column with mat between. Stand with feet far away from wall or column so body is angled back. Position hips and back straight and bend knees just slightly. Place arms to side or hold hands on abdomen.",
+    "execution": "Push head back into mat and roll head upward. Arch spine and straighten knees. Hyperextend neck so head is facing up. Return to original position by rolling head down while allowing low back to straighten and knees to bend slightly. Continue down until back of head and shoulders make contact with mat. Repeat."
+  },
+  {
+    "name": "Lying Neck Retraction Isometric",
+    "url": "https://exrx.net/WeightExercises/Splenius/LyingIsometricNeckRetr",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Splenius",
+    "equipment": "Isometric",
+    "synergists": [],
+    "stabilizers": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Erector Spinae, Cervicis & Capitis Fibers"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "auxiliary",
+    "category": "strength",
+    "preparation": "",
+    "execution": ""
+  },
+  {
+    "name": "Neck Extensor Stretch",
+    "url": "https://exrx.net/Stretches/Splenius/Neck",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Splenius",
+    "equipment": "Stretch",
+    "synergists": [],
+    "stabilizers": [],
+    "mechanics": null,
+    "force": null,
+    "utility": null,
+    "category": "stretch",
+    "preparation": "Bow head forward with jaw shut. Depress chin into top of sternum.",
+    "execution": "Slightly turn head to one side. Hold stretch. Repeat to other side."
+  },
+  {
+    "name": "Suspended Neck Extension",
+    "url": "https://exrx.net/WeightExercises/Splenius/STNeckExtension",
+    "bodyRegion": "Neck",
+    "targetMuscle": "Splenius",
+    "equipment": "Suspended",
+    "synergists": [
+      "Trapezius, Upper",
+      "Levator Scapulae",
+      "Sternocleidomastoid, Posterior Fibers"
+    ],
+    "stabilizers": [
+      "Erector Spinae",
+      "Gluteus Maximus",
+      "Hamstrings"
+    ],
+    "mechanics": "isolated",
+    "force": "pull",
+    "utility": "basic",
+    "category": "strength",
+    "preparation": "Place belt or strap around end of suspension trainer. Place belt around head above ears and clamp belt snugly around head by tightly gripping ends close to forehead. Step back facing direction of suspension trainer until it is taut. Lean back at angle against support of belt and suspension trainer by stepping forward slightly while keeping head and body straight.",
+    "execution": "Lower angle of body by bowing head until chin is near upper chest. Increase angle of body by raising head. Repeat."
+  }
+]
