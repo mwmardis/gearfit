@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Assisted"
+  },
+  {
+    "name": "Band Resistive"
+  },
+  {
+    "name": "Barbell"
+  },
+  {
+    "name": "Bodyweight"
+  },
+  {
+    "name": "Cable"
+  },
+  {
+    "name": "Dumbbell"
+  },
+  {
+    "name": "Isometric"
+  },
+  {
+    "name": "Lever (plate loaded)"
+  },
+  {
+    "name": "Lever (selectorized)"
+  },
+  {
+    "name": "Self-assisted"
+  },
+  {
+    "name": "Sled"
+  },
+  {
+    "name": "Smith"
+  },
+  {
+    "name": "Stretch"
+  },
+  {
+    "name": "Suspended"
+  },
+  {
+    "name": "Weighted"
+  }
+]
