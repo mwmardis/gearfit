@@ -23,6 +23,7 @@ export function ProfileForm({ profile, email }: ProfileFormProps) {
   const [isPending, startTransition] = useTransition();
   const [saved, setSaved] = useState(false);
   const [units, setUnits] = useState(profile.preferredUnits);
+  const [trainingGoal, setTrainingGoal] = useState(profile.trainingGoal ?? "hypertrophy");
 
   function handleSubmit(formData: FormData) {
     setSaved(false);
@@ -88,6 +89,34 @@ export function ProfileForm({ profile, email }: ProfileFormProps) {
                   kg
                 </Button>
               </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-base">Training Goal</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="space-y-2">
+              <Label>Goal</Label>
+              <div className="flex gap-2">
+                <input type="hidden" name="training_goal" value={trainingGoal} />
+                {(["hypertrophy", "strength", "endurance"] as const).map((goal) => (
+                  <Button
+                    key={goal}
+                    type="button"
+                    variant={trainingGoal === goal ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => setTrainingGoal(goal)}
+                  >
+                    {goal.charAt(0).toUpperCase() + goal.slice(1)}
+                  </Button>
+                ))}
+              </div>
+              <p className="text-xs text-muted-foreground">
+                Adjusts your weekly volume targets on the dashboard.
+              </p>
             </div>
           </CardContent>
         </Card>
