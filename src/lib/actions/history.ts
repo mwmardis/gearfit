@@ -2,9 +2,11 @@
 "use server";
 
 import { db } from "@/lib/db";
-import { workoutSessions, sessionSets, exercises, exerciseMuscles, muscles } from "@/lib/db/schema";
+import { workoutSessions, sessionSets, exercises, exerciseMuscles, muscles, profiles } from "@/lib/db/schema";
 import { eq, and, gte, lte, desc, asc } from "drizzle-orm";
 import { requireAuth, getOptionalAuth } from "@/lib/auth-utils";
+import { getVolumeTargets, type TrainingGoal } from "@/lib/volume-targets";
+import { computeVolumeStatus, type MuscleVolumeStatus } from "@/lib/volume-analysis";
 
 export async function getSessionsByMonth(year: number, month: number) {
   const { profileId } = await requireAuth();
@@ -221,4 +223,51 @@ export async function getWeeklyMuscleCoverage() {
   return Array.from(coverage.entries())
     .map(([group, sets]) => ({ group, sets }))
     .sort((a, b) => b.sets - a.sets);
+}
+
+export async function getWeeklyVolumeStatus(): Promise<MuscleVolumeStatus[]> {
+  const authUser = await getOptionalAuth();
+  if (!authUser) return [];
+
+  const [profile] = await db
+    .select({ trainingGoal: profiles.trainingGoal })
+    .from(profiles)
+    .where(eq(profiles.id, authUser.profileId))
+    .limit(1);
+
+  const goal = (profile?.trainingGoal ?? "hypertrophy") as TrainingGoal;
+  const targets = getVolumeTargets(goal);
+
+  const sevenDaysAgo = new Date();
+  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+  const cutoff = sevenDaysAgo.toISOString().split("T")[0];
+
+  const sets = await db.query.sessionSets.findMany({
+    with: {
+      exercise: {
+        with: {
+          exerciseMuscles: {
+            with: { muscle: true },
+          },
+        },
+      },
+      session: true,
+    },
+  });
+
+  const userSets = sets.filter(
+    (s) =>
+      s.session.userId === authUser.profileId &&
+      s.session.completed &&
+      s.session.date >= cutoff
+  );
+
+  const setsWithMuscles = userSets.map((s) => ({
+    muscles: s.exercise.exerciseMuscles.map((em) => ({
+      muscleGroup: em.muscle?.muscleGroup ?? "",
+      role: em.role as "primary" | "secondary",
+    })),
+  }));
+
+  return computeVolumeStatus(setsWithMuscles, targets);
 }
