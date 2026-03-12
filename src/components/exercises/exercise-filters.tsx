@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import { ChevronDown } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -52,22 +52,12 @@ export function ExerciseFilters({
   onMuscleFilterChange,
   onAvailableOnlyChange,
 }: ExerciseFiltersProps) {
-  const subRowRef = useRef<HTMLDivElement>(null);
   const activeCategory = muscleFilter.category;
   const subMuscles = useMemo(
     () => (activeCategory ? muscleGroupMap[activeCategory] ?? [] : []),
     [activeCategory]
   );
-
-  useEffect(() => {
-    const el = subRowRef.current;
-    if (!el) return;
-    if (subMuscles.length > 0) {
-      el.style.maxHeight = el.scrollHeight + "px";
-    } else {
-      el.style.maxHeight = "0px";
-    }
-  }, [subMuscles]);
+  const isSubRowOpen = subMuscles.length > 0;
 
   function handleCategoryClick(value: string) {
     if (value === "" || value === activeCategory) {
@@ -98,6 +88,7 @@ export function ExerciseFilters({
           {muscleGroups.map((mg) => (
             <Button
               key={mg.value}
+              aria-pressed={activeCategory === mg.value}
               variant={activeCategory === mg.value ? "default" : "outline"}
               size="sm"
               onClick={() => handleCategoryClick(mg.value)}
@@ -110,6 +101,7 @@ export function ExerciseFilters({
           ))}
         </div>
         <Button
+          aria-pressed={availableOnly}
           variant={availableOnly ? "default" : "outline"}
           size="sm"
           onClick={() => onAvailableOnlyChange(!availableOnly)}
@@ -118,14 +110,15 @@ export function ExerciseFilters({
         </Button>
       </div>
       <div
-        ref={subRowRef}
-        className="overflow-hidden transition-all duration-200"
-        style={{ maxHeight: 0 }}
+        className="grid transition-all duration-200"
+        style={{ gridTemplateRows: isSubRowOpen ? "1fr" : "0fr" }}
       >
+        <div className="overflow-hidden">
         <div className="flex flex-wrap gap-1 pt-1">
           {subMuscles.map((muscle) => (
             <Button
               key={muscle}
+              aria-pressed={muscleFilter.specific === muscle}
               variant={muscleFilter.specific === muscle ? "secondary" : "outline"}
               size="xs"
               onClick={() => handleSpecificClick(muscle)}
@@ -133,6 +126,7 @@ export function ExerciseFilters({
               {subMuscleLabels[muscle] ?? muscle}
             </Button>
           ))}
+        </div>
         </div>
       </div>
     </div>
