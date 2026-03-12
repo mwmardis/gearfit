@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { ExerciseFilters } from "@/components/exercises/exercise-filters";
+import { ExerciseFilters, muscleGroupMap, type MuscleFilter } from "@/components/exercises/exercise-filters";
 import { ExerciseCard } from "@/components/exercises/exercise-card";
 import { AICopilotPanel } from "@/components/ai/ai-copilot-panel";
 
@@ -29,7 +29,7 @@ export function ExercisesPageClient({
   equipmentNames,
 }: ExercisesPageClientProps) {
   const [search, setSearch] = useState("");
-  const [muscleGroup, setMuscleGroup] = useState("");
+  const [muscleFilter, setMuscleFilter] = useState<MuscleFilter>({ category: "", specific: "" });
   const [availableOnly, setAvailableOnly] = useState(false);
 
   const filtered = useMemo(() => {
@@ -40,17 +40,28 @@ export function ExercisesPageClient({
       result = result.filter((ex) => ex.name.toLowerCase().includes(lower));
     }
 
-    if (muscleGroup) {
+    if (muscleFilter.specific) {
       result = result.filter((ex) =>
         ex.exerciseMuscles.some(
           (em) =>
-            em.muscle?.muscleGroup === muscleGroup && em.role === "primary"
+            em.muscle?.muscleGroup === muscleFilter.specific &&
+            em.role === "primary"
+        )
+      );
+    } else if (muscleFilter.category) {
+      const dbGroups = muscleGroupMap[muscleFilter.category] ?? [muscleFilter.category];
+      result = result.filter((ex) =>
+        ex.exerciseMuscles.some(
+          (em) =>
+            em.muscle?.muscleGroup &&
+            dbGroups.includes(em.muscle.muscleGroup) &&
+            em.role === "primary"
         )
       );
     }
 
     return result;
-  }, [initialExercises, search, muscleGroup]);
+  }, [initialExercises, search, muscleFilter]);
 
   return (
     <div className="space-y-6">
@@ -61,10 +72,10 @@ export function ExercisesPageClient({
 
       <ExerciseFilters
         search={search}
-        muscleGroup={muscleGroup}
+        muscleFilter={muscleFilter}
         availableOnly={availableOnly}
         onSearchChange={setSearch}
-        onMuscleGroupChange={setMuscleGroup}
+        onMuscleFilterChange={setMuscleFilter}
         onAvailableOnlyChange={setAvailableOnly}
       />
 

@@ -117,11 +117,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Adductor Magnus', 'stabilizer'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Bent-over Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Bent-over Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Underhand Bent-over Row
 WITH ex AS (
@@ -130,11 +130,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Biceps Brachii', 'secondary'), ('Triceps Brachii, Long Head', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Adductor Magnus', 'stabilizer'), ('Quadriceps', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Underhand Bent-over Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Underhand Bent-over Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable One Arm Bent-over Row
 WITH ex AS (
@@ -143,11 +143,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Triceps Brachii', 'stabilizer'), ('Obliques', 'stabilizer'), ('Psoas Major', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Iliocostalis Lumborum', 'stabilizer'), ('Iliocostalis Thoracis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable One Arm Bent-over Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable One Arm Bent-over Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable One Arm Straight Back Seated High Row
 WITH ex AS (
@@ -156,11 +156,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Obliques', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable One Arm Straight Back Seated High Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable One Arm Straight Back Seated High Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Seated Row
 WITH ex AS (
@@ -169,11 +169,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Adductor Magnus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Seated Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Seated Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Straight Back Seated Row
 WITH ex AS (
@@ -182,11 +182,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Adductor Magnus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Straight Back Seated Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Straight Back Seated Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Wide Grip Seated Row
 WITH ex AS (
@@ -195,11 +195,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Erector Spinae', 'secondary'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Adductor Magnus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Wide Grip Seated Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Wide Grip Seated Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Wide Grip Straight Back Seated Row
 WITH ex AS (
@@ -208,11 +208,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Adductor Magnus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Wide Grip Straight Back Seated Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Wide Grip Straight Back Seated Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Bent-over Row
 WITH ex AS (
@@ -221,7 +221,7 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 
 -- Dumbbell Lying Row
 WITH ex AS (
@@ -230,11 +230,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Biceps Brachii', 'secondary'), ('Triceps Brachii, Long Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Dumbbell Lying Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Lying Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Neutral Grip Incline Row (plate loaded)
 WITH ex AS (
@@ -243,11 +243,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Neutral Grip Incline Row (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Neutral Grip Incline Row (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Wide Grip Incline Row (plate loaded)
 WITH ex AS (
@@ -256,11 +256,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Wide Grip Incline Row (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Wide Grip Incline Row (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Isolateral Wide Grip Seated Row (plate loaded)
 WITH ex AS (
@@ -269,11 +269,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Isolateral Wide Grip Seated Row (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Isolateral Wide Grip Seated Row (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever T-bar Row (plate loaded)
 WITH ex AS (
@@ -282,11 +282,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Adductor Magnus', 'stabilizer'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever T-bar Row (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever T-bar Row (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Close Grip T-bar Row (plate loaded)
 WITH ex AS (
@@ -295,11 +295,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Adductor Magnus', 'stabilizer'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Close Grip T-bar Row (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Close Grip T-bar Row (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Seated Row
 WITH ex AS (
@@ -308,11 +308,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Seated Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Seated Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Wide Grip Seated Row
 WITH ex AS (
@@ -321,11 +321,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Biceps Brachii', 'secondary'), ('Triceps Brachii, Long Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Wide Grip Seated Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Wide Grip Seated Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Seated Row (no chest pad)
 WITH ex AS (
@@ -334,11 +334,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Adductor Magnus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Seated Row (no chest pad)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Seated Row (no chest pad)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Straight Back Seated Row (no chest pad)
 WITH ex AS (
@@ -347,11 +347,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Adductor Magnus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Straight Back Seated Row (no chest pad)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Straight Back Seated Row (no chest pad)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Smith Bent-over Row
 WITH ex AS (
@@ -360,11 +360,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Adductor Magnus', 'stabilizer'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Smith Bent-over Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Smith Bent-over Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Inverted Row
 WITH ex AS (
@@ -373,11 +373,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Hamstrings', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Weighted Inverted Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Inverted Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Inverted Row
 WITH ex AS (
@@ -386,11 +386,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Inverted Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Inverted Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Inverted Row (feet elevated)
 WITH ex AS (
@@ -399,11 +399,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Inverted Row (feet elevated)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Inverted Row (feet elevated)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Row (high bar)
 WITH ex AS (
@@ -412,11 +412,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Row (high bar)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Row (high bar)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Inverted Row
 WITH ex AS (
@@ -425,11 +425,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Hamstrings', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Suspended Inverted Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Inverted Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Row
 WITH ex AS (
@@ -438,11 +438,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Hamstrings', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Suspended Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended One Arm Row
 WITH ex AS (
@@ -451,11 +451,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Hamstrings', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Suspended One Arm Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended One Arm Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Fixed Bar Back Stretch
 WITH ex AS (
@@ -464,7 +464,7 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 
 -- Lever Back Stretch
 WITH ex AS (
@@ -473,7 +473,7 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 
 -- Inverted Biceps Row
 WITH ex AS (
@@ -482,11 +482,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Biceps Brachii', 'primary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Inverted Biceps Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Inverted Biceps Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Machine-assisted Chin-up
 WITH ex AS (
@@ -495,11 +495,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Assisted') FROM ex WHERE pg_temp.get_eq('Assisted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Assisted') FROM ex WHERE pg_temp.get_eq('Assisted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Biceps Brachii', 'secondary'), ('Triceps Brachii, Long Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Machine-assisted Chin-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Machine-assisted Chin-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Machine-assisted Pull-up (open-centered bar, standing)
 WITH ex AS (
@@ -508,11 +508,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Assisted') FROM ex WHERE pg_temp.get_eq('Assisted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Assisted') FROM ex WHERE pg_temp.get_eq('Assisted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Teres Major', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Coracobrachialis', 'secondary'), ('Triceps Brachii, Long Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Machine-assisted Pull-up (open-centered bar, standing)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Machine-assisted Pull-up (open-centered bar, standing)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Machine-assisted Parallel Close Grip Pull-up
 WITH ex AS (
@@ -521,11 +521,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Assisted') FROM ex WHERE pg_temp.get_eq('Assisted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Assisted') FROM ex WHERE pg_temp.get_eq('Assisted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Minor', 'secondary')) AS m(name, role)
-WHERE e.name = 'Machine-assisted Parallel Close Grip Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Machine-assisted Parallel Close Grip Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Pullover
 WITH ex AS (
@@ -534,11 +534,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Pectoralis Major, Sternal', 'secondary'), ('Triceps Brachii, Long Head', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Triceps Brachii', 'stabilizer'), ('Deltoid, Anterior', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Pullover' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Pullover' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Bent-over Pullover
 WITH ex AS (
@@ -547,11 +547,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Pectoralis Major, Sternal', 'secondary'), ('Triceps Brachii, Long Head', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Triceps Brachii', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Bent-over Pullover' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Bent-over Pullover' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Pulldown
 WITH ex AS (
@@ -560,11 +560,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Coracobrachialis', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Triceps Brachii, Long Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Cable Pulldown' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Pulldown' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Parallel Grip Pulldown
 WITH ex AS (
@@ -573,11 +573,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Biceps Brachii', 'secondary'), ('Triceps Brachii, Long Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Cable Parallel Grip Pulldown' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Parallel Grip Pulldown' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Chin-up
 WITH ex AS (
@@ -586,11 +586,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Minor', 'secondary')) AS m(name, role)
-WHERE e.name = 'Cable Chin-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Chin-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Parallel Close Grip Pull-up
 WITH ex AS (
@@ -599,11 +599,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Minor', 'secondary')) AS m(name, role)
-WHERE e.name = 'Cable Parallel Close Grip Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Parallel Close Grip Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Parallel Grip Pull-up
 WITH ex AS (
@@ -612,11 +612,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Minor', 'secondary')) AS m(name, role)
-WHERE e.name = 'Cable Parallel Grip Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Parallel Grip Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Pull-up
 WITH ex AS (
@@ -625,11 +625,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Coracobrachialis', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Triceps Brachii, Long Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Cable Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Underhand Pulldown
 WITH ex AS (
@@ -638,11 +638,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Biceps Brachii', 'secondary'), ('Triceps Brachii, Long Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Cable Underhand Pulldown' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Underhand Pulldown' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Close Grip Pulldown
 WITH ex AS (
@@ -651,11 +651,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Minor', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Close Grip Pulldown' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Close Grip Pulldown' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Front Pulldown
 WITH ex AS (
@@ -664,11 +664,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Coracobrachialis', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Triceps Brachii, Long Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Front Pulldown' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Front Pulldown' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Pullover
 WITH ex AS (
@@ -677,11 +677,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Triceps Brachii, Long Head', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Pullover' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Pullover' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Chin-up
 WITH ex AS (
@@ -690,11 +690,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Coracobrachialis', 'secondary'), ('Pectoralis Minor', 'secondary')) AS m(name, role)
-WHERE e.name = 'Weighted Chin-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Chin-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Parallel Close Grip Pull-up
 WITH ex AS (
@@ -703,11 +703,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Minor', 'secondary')) AS m(name, role)
-WHERE e.name = 'Weighted Parallel Close Grip Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Parallel Close Grip Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Pull-up
 WITH ex AS (
@@ -716,11 +716,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Coracobrachialis', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Triceps Brachii, Long Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Weighted Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Band-assisted Archer Pull-up
 WITH ex AS (
@@ -729,11 +729,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Band Resistive') FROM ex WHERE pg_temp.get_eq('Band Resistive') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Band Resistive') FROM ex WHERE pg_temp.get_eq('Band Resistive') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Coracobrachialis', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Triceps Brachii', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Band-assisted Archer Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Band-assisted Archer Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Band-assisted Chin-up
 WITH ex AS (
@@ -742,11 +742,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Band Resistive') FROM ex WHERE pg_temp.get_eq('Band Resistive') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Band Resistive') FROM ex WHERE pg_temp.get_eq('Band Resistive') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Biceps Brachii', 'secondary'), ('Triceps Brachii, Long Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Band-assisted Chin-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Band-assisted Chin-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Band-assisted Pull-up
 WITH ex AS (
@@ -755,11 +755,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Band Resistive') FROM ex WHERE pg_temp.get_eq('Band Resistive') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Band Resistive') FROM ex WHERE pg_temp.get_eq('Band Resistive') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Coracobrachialis', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Minor', 'secondary')) AS m(name, role)
-WHERE e.name = 'Band-assisted Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Band-assisted Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Band-assisted Parallel Grip Pull-up
 WITH ex AS (
@@ -768,11 +768,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Band Resistive') FROM ex WHERE pg_temp.get_eq('Band Resistive') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Band Resistive') FROM ex WHERE pg_temp.get_eq('Band Resistive') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Coracobrachialis', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Biceps Brachii', 'secondary'), ('Triceps Brachii, Long Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Band-assisted Parallel Grip Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Band-assisted Parallel Grip Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Archer Pull-up
 WITH ex AS (
@@ -781,11 +781,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Coracobrachialis', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Triceps Brachii', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Archer Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Archer Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Chin-up
 WITH ex AS (
@@ -794,11 +794,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Biceps Brachii', 'secondary'), ('Triceps Brachii, Long Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Chin-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Chin-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- One Arm Pull-up
 WITH ex AS (
@@ -807,11 +807,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Minor', 'secondary')) AS m(name, role)
-WHERE e.name = 'One Arm Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'One Arm Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Parallel Close Grip Pull-up
 WITH ex AS (
@@ -820,11 +820,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Biceps Brachii', 'secondary'), ('Triceps Brachii, Long Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Parallel Close Grip Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Parallel Close Grip Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Pull-up
 WITH ex AS (
@@ -833,11 +833,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Coracobrachialis', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Minor', 'secondary')) AS m(name, role)
-WHERE e.name = 'Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Partner-assisted Chin-up
 WITH ex AS (
@@ -846,11 +846,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Assisted') FROM ex WHERE pg_temp.get_eq('Assisted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Assisted') FROM ex WHERE pg_temp.get_eq('Assisted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Biceps Brachii', 'secondary'), ('Triceps Brachii, Long Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Partner-assisted Chin-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Partner-assisted Chin-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Partner-assisted Pull-up
 WITH ex AS (
@@ -859,11 +859,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Assisted') FROM ex WHERE pg_temp.get_eq('Assisted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Assisted') FROM ex WHERE pg_temp.get_eq('Assisted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Coracobrachialis', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Pectoralis Minor', 'secondary')) AS m(name, role)
-WHERE e.name = 'Partner-assisted Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Partner-assisted Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Self-assisted Chin-up
 WITH ex AS (
@@ -872,11 +872,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Self-assisted') FROM ex WHERE pg_temp.get_eq('Self-assisted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Self-assisted') FROM ex WHERE pg_temp.get_eq('Self-assisted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Minor', 'secondary')) AS m(name, role)
-WHERE e.name = 'Self-assisted Chin-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Self-assisted Chin-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Self-assisted Pull-up
 WITH ex AS (
@@ -885,11 +885,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Self-assisted') FROM ex WHERE pg_temp.get_eq('Self-assisted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Self-assisted') FROM ex WHERE pg_temp.get_eq('Self-assisted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Coracobrachialis', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Pectoralis Minor', 'secondary')) AS m(name, role)
-WHERE e.name = 'Self-assisted Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Self-assisted Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Pull-up
 WITH ex AS (
@@ -898,11 +898,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Teres Major', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Coracobrachialis', 'secondary'), ('Pectoralis Minor', 'secondary')) AS m(name, role)
-WHERE e.name = 'Suspended Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Self-assisted Pull-up
 WITH ex AS (
@@ -911,11 +911,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Coracobrachialis', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Pectoralis Minor', 'secondary')) AS m(name, role)
-WHERE e.name = 'Suspended Self-assisted Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Self-assisted Pull-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Premium Content
 WITH ex AS (
@@ -924,11 +924,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary')) AS m(name, role)
-WHERE e.name = 'Premium Content' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Premium Content' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Bar Lat Stretch
 WITH ex AS (
@@ -937,11 +937,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary')) AS m(name, role)
-WHERE e.name = 'Bar Lat Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Bar Lat Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Lat Stretch
 WITH ex AS (
@@ -950,11 +950,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary')) AS m(name, role)
-WHERE e.name = 'Lever Lat Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Lat Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Overhead Lat Stretch
 WITH ex AS (
@@ -963,11 +963,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary')) AS m(name, role)
-WHERE e.name = 'Overhead Lat Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Overhead Lat Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Standing Side Reach Lat Stretch
 WITH ex AS (
@@ -976,11 +976,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary')) AS m(name, role)
-WHERE e.name = 'Standing Side Reach Lat Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Standing Side Reach Lat Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Supine Lat Stretch
 WITH ex AS (
@@ -989,11 +989,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary')) AS m(name, role)
-WHERE e.name = 'Supine Lat Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Supine Lat Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Shrug
 WITH ex AS (
@@ -1002,11 +1002,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Upper', 'primary'), ('Trapezius, Middle', 'secondary'), ('Levator Scapulae', 'secondary'), ('Erector Spinae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Shrug' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Shrug' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Trap Bar Shrug
 WITH ex AS (
@@ -1015,11 +1015,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Upper', 'primary'), ('Trapezius, Middle', 'secondary'), ('Levator Scapulae', 'secondary'), ('Erector Spinae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Trap Bar Shrug' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Trap Bar Shrug' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Shrug
 WITH ex AS (
@@ -1028,11 +1028,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Upper', 'primary'), ('Trapezius, Middle', 'secondary'), ('Levator Scapulae', 'secondary'), ('Erector Spinae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Shrug' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Shrug' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Isolateral Shrug
 WITH ex AS (
@@ -1041,11 +1041,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Upper', 'primary'), ('Trapezius, Middle', 'secondary'), ('Levator Scapulae', 'secondary'), ('Erector Spinae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Isolateral Shrug' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Isolateral Shrug' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Shrug
 WITH ex AS (
@@ -1054,11 +1054,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Upper', 'primary'), ('Trapezius, Middle', 'secondary'), ('Levator Scapulae', 'secondary'), ('Erector Spinae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Shrug' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Shrug' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Seated Shrug (plate loaded)
 WITH ex AS (
@@ -1067,11 +1067,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Upper', 'primary'), ('Trapezius, Middle', 'secondary'), ('Levator Scapulae', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Seated Shrug (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Seated Shrug (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Shrug (plate loaded)
 WITH ex AS (
@@ -1080,11 +1080,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Upper', 'primary'), ('Trapezius, Middle', 'secondary'), ('Levator Scapulae', 'secondary'), ('Erector Spinae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Shrug (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Shrug (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Shrug
 WITH ex AS (
@@ -1093,11 +1093,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Upper', 'primary'), ('Trapezius, Middle', 'secondary'), ('Levator Scapulae', 'secondary'), ('Erector Spinae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Shrug' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Shrug' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Sled Gripless Shrug
 WITH ex AS (
@@ -1106,11 +1106,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Upper', 'primary'), ('Trapezius, Middle', 'secondary'), ('Levator Scapulae', 'secondary'), ('Erector Spinae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Sled Gripless Shrug' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Sled Gripless Shrug' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Smith Shrug
 WITH ex AS (
@@ -1119,11 +1119,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Upper', 'primary'), ('Trapezius, Middle', 'secondary'), ('Levator Scapulae', 'secondary'), ('Erector Spinae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Smith Shrug' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Smith Shrug' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Inverted Shrug (on parallel bars)
 WITH ex AS (
@@ -1132,11 +1132,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Upper', 'primary'), ('Trapezius, Middle', 'secondary'), ('Levator Scapulae', 'secondary')) AS m(name, role)
-WHERE e.name = 'Inverted Shrug (on parallel bars)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Inverted Shrug (on parallel bars)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Inverted Shrug
 WITH ex AS (
@@ -1145,11 +1145,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Upper', 'primary'), ('Trapezius, Middle', 'secondary'), ('Levator Scapulae', 'secondary')) AS m(name, role)
-WHERE e.name = 'Suspended Inverted Shrug' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Inverted Shrug' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Upper Trapezius Stretch
 WITH ex AS (
@@ -1158,11 +1158,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Trapezius, Upper', 'primary')) AS m(name, role)
-WHERE e.name = 'Upper Trapezius Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Upper Trapezius Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Fixed Bar Rhomboids Stretch
 WITH ex AS (
@@ -1171,11 +1171,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rhomboids', 'primary')) AS m(name, role)
-WHERE e.name = 'Fixed Bar Rhomboids Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Fixed Bar Rhomboids Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Hugging Stretch
 WITH ex AS (
@@ -1184,11 +1184,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rhomboids', 'primary')) AS m(name, role)
-WHERE e.name = 'Hugging Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Hugging Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Standing Shoulder External Rotation
 WITH ex AS (
@@ -1197,11 +1197,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Infraspinatus', 'primary'), ('Teres Minor', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Deltoid, Lateral', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Standing Shoulder External Rotation' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Standing Shoulder External Rotation' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Lying Shoulder External Rotation
 WITH ex AS (
@@ -1210,11 +1210,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Infraspinatus', 'primary'), ('Teres Minor', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Lying Shoulder External Rotation' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Lying Shoulder External Rotation' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Upright Shoulder External Rotation (with support)
 WITH ex AS (
@@ -1223,11 +1223,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Teres Minor', 'primary'), ('Infraspinatus', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Supraspinatus', 'secondary'), ('Serratus Anterior', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Upright Shoulder External Rotation (with support)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Upright Shoulder External Rotation (with support)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Shoulder External Rotation
 WITH ex AS (
@@ -1236,11 +1236,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Infraspinatus', 'primary'), ('Teres Minor', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Trapezius, Lower', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Shoulder External Rotation' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Shoulder External Rotation' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Broom Stick Infraspinatus Stretch
 WITH ex AS (
@@ -1249,11 +1249,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Infraspinatus', 'primary')) AS m(name, role)
-WHERE e.name = 'Broom Stick Infraspinatus Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Broom Stick Infraspinatus Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Side Lying Infraspinatus Stretch
 WITH ex AS (
@@ -1262,11 +1262,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Infraspinatus', 'primary')) AS m(name, role)
-WHERE e.name = 'Side Lying Infraspinatus Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Side Lying Infraspinatus Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Side Lying Teres Minor Stretch
 WITH ex AS (
@@ -1275,11 +1275,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Infraspinatus', 'primary')) AS m(name, role)
-WHERE e.name = 'Side Lying Teres Minor Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Side Lying Teres Minor Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Shoulder External Rotation
 WITH ex AS (
@@ -1290,11 +1290,11 @@ Step back until suspension straps are taut. While keeping bent elbows to side, s
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Infraspinatus', 'primary'), ('Teres Minor', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Wrist Extensors', 'stabilizer'), ('Erector Spinae', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Hamstrings', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Suspended Shoulder External Rotation' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Shoulder External Rotation' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Standing Shoulder Internal Rotation
 WITH ex AS (
@@ -1303,11 +1303,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Subscapularis', 'primary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Coracobrachialis', 'secondary'), ('Pectoralis Minor', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Standing Shoulder Internal Rotation' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Standing Shoulder Internal Rotation' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Shoulder Internal Rotation (on floor)
 WITH ex AS (
@@ -1316,11 +1316,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Subscapularis', 'primary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Coracobrachialis', 'secondary'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Shoulder Internal Rotation (on floor)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Shoulder Internal Rotation (on floor)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Shoulder Internal Rotation
 WITH ex AS (
@@ -1329,11 +1329,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Subscapularis', 'primary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Coracobrachialis', 'secondary'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Shoulder Internal Rotation' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Shoulder Internal Rotation' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Broom Stick Subscapularis Stretch
 WITH ex AS (
@@ -1342,11 +1342,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Subscapularis', 'primary')) AS m(name, role)
-WHERE e.name = 'Broom Stick Subscapularis Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Broom Stick Subscapularis Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Doorway Subscapularis Stretch
 WITH ex AS (
@@ -1355,11 +1355,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Subscapularis', 'primary')) AS m(name, role)
-WHERE e.name = 'Doorway Subscapularis Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Doorway Subscapularis Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Standing Leg Calf Raise
 WITH ex AS (
@@ -1368,11 +1368,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Barbell Standing Leg Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Standing Leg Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Belt Calf Raise
 WITH ex AS (
@@ -1381,11 +1381,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Cable Belt Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Belt Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable One Arm Single Leg Calf Raise
 WITH ex AS (
@@ -1394,11 +1394,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable One Arm Single Leg Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable One Arm Single Leg Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Standing Calf Raise
 WITH ex AS (
@@ -1407,11 +1407,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Standing Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Standing Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Single Leg Calf Raise
 WITH ex AS (
@@ -1420,11 +1420,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Single Leg Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Single Leg Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever 45° Calf Press (plate loaded)
 WITH ex AS (
@@ -1433,11 +1433,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever 45° Calf Press (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever 45° Calf Press (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Calf Extension (plate loaded)
 WITH ex AS (
@@ -1446,11 +1446,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Calf Extension (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Calf Extension (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Standing Calf Raise (plate loaded)
 WITH ex AS (
@@ -1459,11 +1459,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Standing Calf Raise (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Standing Calf Raise (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever 45° Calf Raise
 WITH ex AS (
@@ -1472,11 +1472,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever 45° Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever 45° Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Calf Extension
 WITH ex AS (
@@ -1485,11 +1485,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Calf Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Calf Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Donkey Calf Raise
 WITH ex AS (
@@ -1498,11 +1498,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary'), ('Serratus Anterior', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Coracobrachialis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Donkey Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Donkey Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Seated Calf Press
 WITH ex AS (
@@ -1511,11 +1511,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Seated Calf Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Seated Calf Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Standing Calf Raise
 WITH ex AS (
@@ -1524,11 +1524,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Standing Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Standing Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Sled 45° Calf Press
 WITH ex AS (
@@ -1537,11 +1537,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Sled 45° Calf Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Sled 45° Calf Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Sled 45° Calf Raise
 WITH ex AS (
@@ -1550,11 +1550,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Sled 45° Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Sled 45° Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Sled Donkey Calf Raise
 WITH ex AS (
@@ -1563,11 +1563,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary'), ('Serratus Anterior', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Coracobrachialis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Sled Donkey Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Sled Donkey Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Sled Lying Calf Press
 WITH ex AS (
@@ -1576,11 +1576,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Sled Lying Calf Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Sled Lying Calf Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Sled Seated Calf Press
 WITH ex AS (
@@ -1589,11 +1589,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Sled Seated Calf Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Sled Seated Calf Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Sled Standing Calf Raise
 WITH ex AS (
@@ -1602,11 +1602,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Sled Standing Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Sled Standing Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Smith Standing Leg Calf Raise
 WITH ex AS (
@@ -1615,11 +1615,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Smith Standing Leg Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Smith Standing Leg Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Single Leg Calf Raise
 WITH ex AS (
@@ -1628,11 +1628,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Weighted Single Leg Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Single Leg Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Standing Calf Raise
 WITH ex AS (
@@ -1641,11 +1641,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Standing Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Standing Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Single Leg Calf Raise
 WITH ex AS (
@@ -1654,11 +1654,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Single Leg Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Single Leg Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Self-assisted Single Leg Calf Raise
 WITH ex AS (
@@ -1667,11 +1667,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Self-assisted') FROM ex WHERE pg_temp.get_eq('Self-assisted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Self-assisted') FROM ex WHERE pg_temp.get_eq('Self-assisted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Self-assisted Single Leg Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Self-assisted Single Leg Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Forward Angled Single Leg Calf Raise
 WITH ex AS (
@@ -1680,11 +1680,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gastrocnemius', 'primary'), ('Soleus', 'secondary'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer'), ('Hip External Rotators', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Serratus Anterior', 'stabilizer'), ('Triceps Brachii', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Quadriceps', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Suspended Forward Angled Single Leg Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Forward Angled Single Leg Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Floor Board Straight Leg Calf Stretch
 WITH ex AS (
@@ -1693,7 +1693,7 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 
 -- Pike Straight Leg Calf Stretch
 WITH ex AS (
@@ -1702,7 +1702,7 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 
 -- Step Straight Leg Calf Stretch
 WITH ex AS (
@@ -1711,7 +1711,7 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 
 -- Wall Straight Leg Calf Stretch
 WITH ex AS (
@@ -1720,7 +1720,7 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 
 -- Safety Bar Seated Calf Raise
 WITH ex AS (
@@ -1729,11 +1729,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Soleus', 'primary'), ('Gastrocnemius', 'secondary')) AS m(name, role)
-WHERE e.name = 'Safety Bar Seated Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Safety Bar Seated Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Seated Calf Raise (plate loaded)
 WITH ex AS (
@@ -1742,11 +1742,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Soleus', 'primary'), ('Gastrocnemius', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Seated Calf Raise (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Seated Calf Raise (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Seated Calf Raise
 WITH ex AS (
@@ -1755,11 +1755,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Soleus', 'primary'), ('Gastrocnemius', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Seated Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Seated Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Smith Seated Calf Raise
 WITH ex AS (
@@ -1768,11 +1768,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Soleus', 'primary'), ('Gastrocnemius', 'secondary')) AS m(name, role)
-WHERE e.name = 'Smith Seated Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Smith Seated Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Floor Board Bent Knee Calf Stretch
 WITH ex AS (
@@ -1781,11 +1781,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Soleus', 'primary')) AS m(name, role)
-WHERE e.name = 'Floor Board Bent Knee Calf Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Floor Board Bent Knee Calf Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Seated Bent Leg Calf Stretch
 WITH ex AS (
@@ -1794,11 +1794,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Soleus', 'primary')) AS m(name, role)
-WHERE e.name = 'Seated Bent Leg Calf Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Seated Bent Leg Calf Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Step Bent Knee Calf Stretch
 WITH ex AS (
@@ -1807,11 +1807,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Soleus', 'primary')) AS m(name, role)
-WHERE e.name = 'Step Bent Knee Calf Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Step Bent Knee Calf Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Wall Bent Knee Calf Stretch
 WITH ex AS (
@@ -1820,11 +1820,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Soleus', 'primary')) AS m(name, role)
-WHERE e.name = 'Wall Bent Knee Calf Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Wall Bent Knee Calf Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Safety Bar Reverse Calf Raise
 WITH ex AS (
@@ -1833,11 +1833,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Tibialis Anterior', 'primary')) AS m(name, role)
-WHERE e.name = 'Safety Bar Reverse Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Safety Bar Reverse Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Reverse Calf Raise
 WITH ex AS (
@@ -1846,11 +1846,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Tibialis Anterior', 'primary')) AS m(name, role)
-WHERE e.name = 'Cable Reverse Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Reverse Calf Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Machine-assisted Chest Dip
 WITH ex AS (
@@ -1859,11 +1859,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Assisted') FROM ex WHERE pg_temp.get_eq('Assisted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Assisted') FROM ex WHERE pg_temp.get_eq('Assisted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Machine-assisted Chest Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Machine-assisted Chest Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Machine-assisted Chest Dip (kneeling)
 WITH ex AS (
@@ -1872,11 +1872,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Assisted') FROM ex WHERE pg_temp.get_eq('Assisted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Assisted') FROM ex WHERE pg_temp.get_eq('Assisted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Machine-assisted Chest Dip (kneeling)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Machine-assisted Chest Dip (kneeling)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Bench Press
 WITH ex AS (
@@ -1885,11 +1885,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii, Short Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Barbell Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Bench Press (power lift)
 WITH ex AS (
@@ -1898,11 +1898,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Maximus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Bench Press (power lift)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Bench Press (power lift)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Decline Bench Press
 WITH ex AS (
@@ -1911,11 +1911,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii, Short Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Barbell Decline Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Decline Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Isolateral Standing Chest Press
 WITH ex AS (
@@ -1924,11 +1924,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Pectoralis Minor', 'stabilizer'), ('Serratus Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Isolateral Standing Chest Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Isolateral Standing Chest Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Bench Press
 WITH ex AS (
@@ -1937,11 +1937,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii, Short Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Dumbbell Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Decline Bench Press
 WITH ex AS (
@@ -1950,11 +1950,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii, Short Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Dumbbell Decline Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Decline Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Fly
 WITH ex AS (
@@ -1963,11 +1963,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Biceps Brachii, Short Head', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii', 'stabilizer'), ('Brachialis', 'stabilizer'), ('Triceps Brachii', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Fly' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Fly' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Pullover
 WITH ex AS (
@@ -1976,11 +1976,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Triceps Brachii, Long Head', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Triceps Brachii', 'stabilizer'), ('Deltoid, Anterior', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Pullover' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Pullover' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Chest Dip (plate loaded)
 WITH ex AS (
@@ -1989,11 +1989,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Chest Dip (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Chest Dip (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Decline Chest Press (plate loaded)
 WITH ex AS (
@@ -2002,11 +2002,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Decline Chest Press (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Decline Chest Press (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Chest Dip
 WITH ex AS (
@@ -2015,11 +2015,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Chest Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Chest Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Bench Press
 WITH ex AS (
@@ -2028,11 +2028,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii, Short Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Chest Press
 WITH ex AS (
@@ -2041,11 +2041,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Chest Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Chest Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Isolateral Chest Press
 WITH ex AS (
@@ -2054,11 +2054,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Isolateral Chest Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Isolateral Chest Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Sled Standing Chest Dip
 WITH ex AS (
@@ -2067,11 +2067,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Sled Standing Chest Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Sled Standing Chest Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Smith Bench Press
 WITH ex AS (
@@ -2080,11 +2080,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii, Short Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Smith Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Smith Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Smith Decline Bench Press
 WITH ex AS (
@@ -2093,11 +2093,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary')) AS m(name, role)
-WHERE e.name = 'Smith Decline Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Smith Decline Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Chest Dip
 WITH ex AS (
@@ -2106,11 +2106,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Weighted Chest Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Chest Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Push-up
 WITH ex AS (
@@ -2119,11 +2119,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer'), ('Quadriceps', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Serratus Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Weighted Push-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Push-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Band-assisted Chest Dip
 WITH ex AS (
@@ -2132,11 +2132,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Band Resistive') FROM ex WHERE pg_temp.get_eq('Band Resistive') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Band Resistive') FROM ex WHERE pg_temp.get_eq('Band Resistive') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Band-assisted Chest Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Band-assisted Chest Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Chest Dip
 WITH ex AS (
@@ -2145,11 +2145,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Chest Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Chest Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Push-up
 WITH ex AS (
@@ -2158,11 +2158,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Serratus Anterior', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Push-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Push-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Archer Push-up
 WITH ex AS (
@@ -2171,11 +2171,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Serratus Anterior', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Archer Push-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Archer Push-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Incline Push-up
 WITH ex AS (
@@ -2184,11 +2184,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Serratus Anterior', 'stabilizer'), ('Quadriceps', 'stabilizer'), ('Gastrocnemius', 'stabilizer'), ('Soleus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Incline Push-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Incline Push-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Push-up (on knees)
 WITH ex AS (
@@ -2197,11 +2197,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Serratus Anterior', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Push-up (on knees)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Push-up (on knees)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Self-assisted Chest Dip
 WITH ex AS (
@@ -2210,11 +2210,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Self-assisted') FROM ex WHERE pg_temp.get_eq('Self-assisted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Self-assisted') FROM ex WHERE pg_temp.get_eq('Self-assisted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Self-assisted Chest Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Self-assisted Chest Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Self-assisted Chest Dip
 WITH ex AS (
@@ -2223,11 +2223,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Suspended Self-assisted Chest Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Self-assisted Chest Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Chest Press
 WITH ex AS (
@@ -2236,11 +2236,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Sternal', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Serratus Anterior', 'stabilizer'), ('Quadriceps', 'stabilizer'), ('Gastrocnemius', 'stabilizer'), ('Soleus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Suspended Chest Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Chest Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Close Grip Pulldown
 WITH ex AS (
@@ -2249,11 +2249,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Latissimus Dorsi', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Teres Major', 'secondary'), ('Deltoid, Posterior', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Biceps Brachii', 'secondary'), ('Triceps Brachii, Long Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Cable Close Grip Pulldown' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Close Grip Pulldown' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Behind Head Chest Stretch
 WITH ex AS (
@@ -2262,7 +2262,7 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 
 -- Doorway Chest Stretch
 WITH ex AS (
@@ -2271,7 +2271,7 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 
 -- Straight Arm Chest Stretch
 WITH ex AS (
@@ -2280,7 +2280,7 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 
 -- Doorway Modified Chest Stretch
 WITH ex AS (
@@ -2289,7 +2289,7 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 
 -- Barbell Incline Bench Press
 WITH ex AS (
@@ -2298,11 +2298,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Clavicular', 'primary')) AS m(name, role)
-WHERE e.name = 'Barbell Incline Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Incline Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Incline Bench Press
 WITH ex AS (
@@ -2311,11 +2311,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Clavicular', 'primary'), ('Pectoralis Major, Sternal', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary')) AS m(name, role)
-WHERE e.name = 'Dumbbell Incline Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Incline Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Incline Fly
 WITH ex AS (
@@ -2324,11 +2324,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Clavicular', 'primary'), ('Pectoralis Major, Sternal', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Biceps Brachii, Short Head', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii', 'stabilizer'), ('Brachialis', 'stabilizer'), ('Triceps Brachii', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Incline Fly' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Incline Fly' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Isolateral Incline Chest Press (on Hammer military press, plate loaded)
 WITH ex AS (
@@ -2337,11 +2337,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Clavicular', 'primary'), ('Pectoralis Major, Sternal', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii, Short Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Isolateral Incline Chest Press (on Hammer military press, plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Isolateral Incline Chest Press (on Hammer military press, plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Incline Chest Press
 WITH ex AS (
@@ -2350,11 +2350,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Clavicular', 'primary'), ('Pectoralis Major, Sternal', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Incline Chest Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Incline Chest Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Isolateral Incline Chest Press
 WITH ex AS (
@@ -2363,11 +2363,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Clavicular', 'primary'), ('Pectoralis Major, Sternal', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii, Short Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Isolateral Incline Chest Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Isolateral Incline Chest Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Smith Incline Bench Press
 WITH ex AS (
@@ -2376,11 +2376,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Clavicular', 'primary'), ('Pectoralis Major, Sternal', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii, Short Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Smith Incline Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Smith Incline Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Decline Push-up
 WITH ex AS (
@@ -2389,11 +2389,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Major, Clavicular', 'primary'), ('Pectoralis Major, Sternal', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Serratus Anterior', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Decline Push-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Decline Push-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Wall Angel
 WITH ex AS (
@@ -2402,11 +2402,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Minor', 'primary'), ('Deltoid, Posterior', 'stabilizer'), ('Deltoid, Lateral', 'stabilizer'), ('Infraspinatus', 'stabilizer'), ('Teres Minor', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Wall Angel' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Wall Angel' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Premium Content
 WITH ex AS (
@@ -2415,11 +2415,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Pectoralis Minor', 'primary')) AS m(name, role)
-WHERE e.name = 'Premium Content' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Premium Content' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Incline Twisting Sit-up
 WITH ex AS (
@@ -2428,11 +2428,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Rectus Femoris', 'secondary'), ('Sartorius', 'secondary'), ('Rectus Abdominis', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Incline Twisting Sit-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Incline Twisting Sit-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Incline Shoulder Raise
 WITH ex AS (
@@ -2441,11 +2441,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Serratus Anterior', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'stabilizer'), ('Triceps Brachii', 'stabilizer'), ('Coracobrachialis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Incline Shoulder Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Incline Shoulder Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Incline Shoulder Raise
 WITH ex AS (
@@ -2454,11 +2454,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Serratus Anterior', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'stabilizer'), ('Triceps Brachii', 'stabilizer'), ('Coracobrachialis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Incline Shoulder Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Incline Shoulder Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Smith Incline Shoulder Raise
 WITH ex AS (
@@ -2467,11 +2467,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Serratus Anterior', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'stabilizer'), ('Triceps Brachii', 'stabilizer'), ('Coracobrachialis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Smith Incline Shoulder Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Smith Incline Shoulder Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Push-up Plus
 WITH ex AS (
@@ -2480,11 +2480,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Serratus Anterior', 'primary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Push-up Plus' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Push-up Plus' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Reverse Curl
 WITH ex AS (
@@ -2493,11 +2493,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Brachioradialis', 'primary'), ('Brachialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Deltoid, Anterior', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Reverse Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Reverse Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Reverse Curl
 WITH ex AS (
@@ -2506,11 +2506,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Brachioradialis', 'primary'), ('Brachialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Deltoid, Anterior', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Reverse Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Reverse Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Hammer Curl
 WITH ex AS (
@@ -2519,11 +2519,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Brachioradialis', 'primary'), ('Brachialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Deltoid, Anterior', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Flexor Carpi Radialis', 'stabilizer'), ('Extensor Carpi Radialis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Hammer Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Hammer Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Standing Brachioradialis Stretch
 WITH ex AS (
@@ -2532,11 +2532,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Brachioradialis', 'primary')) AS m(name, role)
-WHERE e.name = 'Standing Brachioradialis Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Standing Brachioradialis Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Wrist Curl
 WITH ex AS (
@@ -2545,11 +2545,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Wrist Flexors', 'primary')) AS m(name, role)
-WHERE e.name = 'Barbell Wrist Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Wrist Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Wrist Curl
 WITH ex AS (
@@ -2558,11 +2558,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Wrist Flexors', 'primary')) AS m(name, role)
-WHERE e.name = 'Cable Wrist Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Wrist Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Wrist Curl
 WITH ex AS (
@@ -2571,11 +2571,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Wrist Flexors', 'primary')) AS m(name, role)
-WHERE e.name = 'Dumbbell Wrist Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Wrist Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Grip (plate loaded)
 WITH ex AS (
@@ -2584,11 +2584,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Wrist Flexors', 'primary')) AS m(name, role)
-WHERE e.name = 'Lever Grip (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Grip (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Wrist Curl (plate loaded)
 WITH ex AS (
@@ -2597,11 +2597,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Wrist Flexors', 'primary')) AS m(name, role)
-WHERE e.name = 'Lever Wrist Curl (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Wrist Curl (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Sled One Hand Grip
 WITH ex AS (
@@ -2610,11 +2610,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Wrist Flexors', 'primary')) AS m(name, role)
-WHERE e.name = 'Sled One Hand Grip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Sled One Hand Grip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Sled One Hand Grip (plate loaded)
 WITH ex AS (
@@ -2623,11 +2623,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Wrist Flexors', 'primary')) AS m(name, role)
-WHERE e.name = 'Sled One Hand Grip (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Sled One Hand Grip (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Kneeling Wrist Flexor Stretch
 WITH ex AS (
@@ -2636,11 +2636,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Wrist Flexors', 'primary')) AS m(name, role)
-WHERE e.name = 'Kneeling Wrist Flexor Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Kneeling Wrist Flexor Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Seated Wrist Flexor Stretch
 WITH ex AS (
@@ -2649,11 +2649,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Wrist Flexors', 'primary')) AS m(name, role)
-WHERE e.name = 'Seated Wrist Flexor Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Seated Wrist Flexor Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Reverse Wrist Curl
 WITH ex AS (
@@ -2662,11 +2662,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Wrist Extensors', 'primary')) AS m(name, role)
-WHERE e.name = 'Barbell Reverse Wrist Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Reverse Wrist Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Reverse Wrist Curl
 WITH ex AS (
@@ -2675,11 +2675,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Wrist Extensors', 'primary')) AS m(name, role)
-WHERE e.name = 'Cable Reverse Wrist Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Reverse Wrist Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Reverse Wrist Curl
 WITH ex AS (
@@ -2688,11 +2688,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Wrist Extensors', 'primary')) AS m(name, role)
-WHERE e.name = 'Dumbbell Reverse Wrist Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Reverse Wrist Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Reverse Wrist Curl (plate loaded)
 WITH ex AS (
@@ -2701,11 +2701,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Wrist Extensors', 'primary')) AS m(name, role)
-WHERE e.name = 'Lever Reverse Wrist Curl (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Reverse Wrist Curl (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Kneeling Wrist Extensor Stretch
 WITH ex AS (
@@ -2714,11 +2714,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Wrist Extensors', 'primary')) AS m(name, role)
-WHERE e.name = 'Kneeling Wrist Extensor Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Kneeling Wrist Extensor Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Single Arm Wrist Extensor Stretch
 WITH ex AS (
@@ -2727,11 +2727,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Wrist Extensors', 'primary')) AS m(name, role)
-WHERE e.name = 'Single Arm Wrist Extensor Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Single Arm Wrist Extensor Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Seated Pronation
 WITH ex AS (
@@ -2740,11 +2740,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Wrist Extensors', 'primary')) AS m(name, role)
-WHERE e.name = 'Dumbbell Seated Pronation' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Seated Pronation' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Seated Supination
 WITH ex AS (
@@ -2753,11 +2753,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Wrist Extensors', 'primary'), ('Biceps Brachii', 'secondary')) AS m(name, role)
-WHERE e.name = 'Dumbbell Seated Supination' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Seated Supination' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Bent Knee Good-morning
 WITH ex AS (
@@ -2766,11 +2766,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Adductor Magnus', 'secondary'), ('Hamstrings', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Bent Knee Good-morning' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Bent Knee Good-morning' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Deadlift
 WITH ex AS (
@@ -2779,11 +2779,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Hamstrings', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Rhomboids', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Stiff Leg Deadlift
 WITH ex AS (
@@ -2792,11 +2792,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Erector Spinae', 'secondary'), ('Adductor Magnus', 'secondary'), ('Hamstrings', 'secondary'), ('Quadriceps', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Stiff Leg Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Stiff Leg Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Straight-back Stiff-leg Deadlift
 WITH ex AS (
@@ -2805,11 +2805,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Hamstrings', 'secondary'), ('Adductor Magnus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Quadriceps', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Straight-back Stiff-leg Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Straight-back Stiff-leg Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Hip Thrust
 WITH ex AS (
@@ -2818,11 +2818,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Erector Spinae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Hip Thrust' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Hip Thrust' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Lunge
 WITH ex AS (
@@ -2831,11 +2831,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Tibialis Anterior', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Rear Lunge
 WITH ex AS (
@@ -2844,11 +2844,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Hamstrings', 'secondary'), ('Gastrocnemius', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Rear Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Rear Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Single Leg Split Squat
 WITH ex AS (
@@ -2857,11 +2857,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Single Leg Split Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Single Leg Split Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Single Leg Squat
 WITH ex AS (
@@ -2870,11 +2870,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'secondary'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Iliopsoas', 'stabilizer'), ('Tensor Fasciae Latae', 'stabilizer'), ('Pectineus', 'stabilizer'), ('Sartorius', 'stabilizer'), ('Deltoid, Anterior', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Deltoid, Lateral', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Serratus Anterior, Inferior Digitations', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Single Leg Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Single Leg Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Split Squat
 WITH ex AS (
@@ -2883,11 +2883,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Hamstrings', 'secondary'), ('Gastrocnemius', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Split Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Split Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Squat (low bar)
 WITH ex AS (
@@ -2896,11 +2896,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Squat (low bar)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Squat (low bar)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Front Squat
 WITH ex AS (
@@ -2909,11 +2909,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Deltoid, Anterior', 'stabilizer'), ('Deltoid, Lateral', 'stabilizer'), ('Supraspinatus', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Serratus Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Front Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Front Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Safety Barbell Squat
 WITH ex AS (
@@ -2922,11 +2922,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Safety Barbell Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Safety Barbell Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Step-up
 WITH ex AS (
@@ -2935,11 +2935,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Gastrocnemius', 'secondary'), ('Hamstrings', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer'), ('Rectus Abdominis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Step-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Step-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Glute Kickback
 WITH ex AS (
@@ -2948,11 +2948,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Adductor Magnus', 'secondary'), ('Hamstrings', 'secondary'), ('Obliques', 'stabilizer'), ('Erector Spinae', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Glute Kickback' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Glute Kickback' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Rear Lunge
 WITH ex AS (
@@ -2961,11 +2961,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Hamstrings', 'secondary'), ('Gastrocnemius', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Rear Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Rear Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Split Squat
 WITH ex AS (
@@ -2974,11 +2974,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Hamstrings', 'secondary'), ('Gastrocnemius', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Erector Spinae', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Split Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Split Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Squat
 WITH ex AS (
@@ -2987,11 +2987,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Standing Hip Extension
 WITH ex AS (
@@ -3000,11 +3000,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Hamstrings', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Obliques', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Rectus Abdominis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Standing Hip Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Standing Hip Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Bent-over Hip Extension
 WITH ex AS (
@@ -3013,11 +3013,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Hamstrings', 'secondary'), ('Obliques', 'stabilizer'), ('Erector Spinae', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Bent-over Hip Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Bent-over Hip Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Step-up
 WITH ex AS (
@@ -3026,11 +3026,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Gastrocnemius', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Step-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Step-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Stiff Leg Deadlift
 WITH ex AS (
@@ -3039,11 +3039,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Erector Spinae', 'secondary'), ('Adductor Magnus', 'secondary'), ('Hamstrings', 'secondary'), ('Quadriceps', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Stiff Leg Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Stiff Leg Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Straight-back Stiff-leg Deadlift
 WITH ex AS (
@@ -3052,11 +3052,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Hamstrings', 'secondary'), ('Adductor Magnus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Quadriceps', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Straight-back Stiff-leg Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Straight-back Stiff-leg Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Lunge
 WITH ex AS (
@@ -3065,11 +3065,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Hamstrings', 'secondary'), ('Gastrocnemius', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Tibialis Anterior', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Rear Lunge
 WITH ex AS (
@@ -3078,11 +3078,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Hamstrings', 'secondary'), ('Gastrocnemius', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Rear Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Rear Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Split Squat
 WITH ex AS (
@@ -3091,11 +3091,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Hamstrings', 'secondary'), ('Gastrocnemius', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Split Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Split Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Squat
 WITH ex AS (
@@ -3104,11 +3104,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Rhomboids', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Front Squat
 WITH ex AS (
@@ -3117,11 +3117,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Front Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Front Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Step-up
 WITH ex AS (
@@ -3130,11 +3130,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Gastrocnemius', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Step-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Step-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Step Down
 WITH ex AS (
@@ -3143,11 +3143,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Gastrocnemius', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Step Down' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Step Down' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Deadlift (plate loaded)
 WITH ex AS (
@@ -3156,11 +3156,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Rhomboids', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Deadlift (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Deadlift (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Stiff Leg Deadlift (plate loaded)
 WITH ex AS (
@@ -3169,11 +3169,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Erector Spinae', 'secondary'), ('Adductor Magnus', 'secondary'), ('Hamstrings', 'secondary'), ('Quadriceps', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Stiff Leg Deadlift (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Stiff Leg Deadlift (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Straight-back Stiff-leg Deadlift (plate loaded)
 WITH ex AS (
@@ -3182,11 +3182,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Hamstrings', 'secondary'), ('Adductor Magnus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Quadriceps', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Straight-back Stiff-leg Deadlift (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Straight-back Stiff-leg Deadlift (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever 45° Leg Press (plate loaded)
 WITH ex AS (
@@ -3195,11 +3195,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Hamstrings', 'secondary'), ('Gastrocnemius', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever 45° Leg Press (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever 45° Leg Press (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Lying Leg Press (plate loaded)
 WITH ex AS (
@@ -3208,11 +3208,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Gluteus Maximus', 'primary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Lying Leg Press (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Lying Leg Press (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Neck Flexion
 WITH ex AS (
@@ -3221,11 +3221,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Sternocleidomastoid', 'primary'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Neck Flexion' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Neck Flexion' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Neck Flexion (plate loaded)
 WITH ex AS (
@@ -3234,11 +3234,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Sternocleidomastoid', 'primary'), ('Latissimus Dorsi', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Triceps Brachii', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Neck Flexion (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Neck Flexion (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Lateral Neck Flexion (plate loaded)
 WITH ex AS (
@@ -3247,11 +3247,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Sternocleidomastoid', 'primary')) AS m(name, role)
-WHERE e.name = 'Lever Lateral Neck Flexion (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Lateral Neck Flexion (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Neck Flexion
 WITH ex AS (
@@ -3260,11 +3260,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Sternocleidomastoid', 'primary'), ('Latissimus Dorsi', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Triceps Brachii', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Neck Flexion' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Neck Flexion' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Lateral Neck Flexion
 WITH ex AS (
@@ -3273,11 +3273,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Sternocleidomastoid', 'primary')) AS m(name, role)
-WHERE e.name = 'Lever Lateral Neck Flexion' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Lateral Neck Flexion' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Neck Flexion
 WITH ex AS (
@@ -3286,11 +3286,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Sternocleidomastoid', 'primary'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Weighted Neck Flexion' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Neck Flexion' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Lateral Neck Flexion
 WITH ex AS (
@@ -3299,11 +3299,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Sternocleidomastoid', 'primary'), ('Splenius', 'secondary'), ('Erector Spinae', 'secondary'), ('Levator Scapulae', 'secondary'), ('Trapezius, Upper', 'secondary')) AS m(name, role)
-WHERE e.name = 'Weighted Lateral Neck Flexion' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Lateral Neck Flexion' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Wall Front Neck Bridge
 WITH ex AS (
@@ -3312,11 +3312,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Sternocleidomastoid', 'primary'), ('Splenius', 'secondary'), ('Trapezius, Upper', 'secondary'), ('Levator Scapulae', 'secondary'), ('Erector Spinae, Cervicis & Capitis Fibers', 'secondary'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Wall Front Neck Bridge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Wall Front Neck Bridge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Wall Side Neck Bridge
 WITH ex AS (
@@ -3325,11 +3325,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Sternocleidomastoid', 'primary'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Wall Side Neck Bridge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Wall Side Neck Bridge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Neck Retraction Stretch
 WITH ex AS (
@@ -3338,11 +3338,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Sternocleidomastoid', 'primary')) AS m(name, role)
-WHERE e.name = 'Neck Retraction Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Neck Retraction Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Neck Flexion
 WITH ex AS (
@@ -3351,11 +3351,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Sternocleidomastoid', 'primary'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Suspended Neck Flexion' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Neck Flexion' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Lateral Neck Flexion
 WITH ex AS (
@@ -3364,11 +3364,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Sternocleidomastoid', 'primary')) AS m(name, role)
-WHERE e.name = 'Suspended Lateral Neck Flexion' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Lateral Neck Flexion' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Neck Extension
 WITH ex AS (
@@ -3377,11 +3377,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Splenius', 'primary'), ('Trapezius, Upper', 'secondary'), ('Levator Scapulae', 'secondary'), ('Erector Spinae, Cervicis & Capitis Fibers', 'secondary'), ('Sternocleidomastoid', 'secondary'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Triceps Brachii', 'stabilizer'), ('Coracobrachialis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Neck Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Neck Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Neck Extension (plate loaded)
 WITH ex AS (
@@ -3390,11 +3390,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Splenius', 'primary'), ('Trapezius, Upper', 'secondary'), ('Levator Scapulae', 'secondary'), ('Erector Spinae, Cervicis & Capitis Fibers', 'secondary'), ('Sternocleidomastoid', 'secondary'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Serratus Anterior', 'stabilizer'), ('Deltoid, Anterior', 'stabilizer'), ('Triceps Brachii', 'stabilizer'), ('Coracobrachialis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Neck Extension (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Neck Extension (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Neck Extension
 WITH ex AS (
@@ -3403,11 +3403,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Splenius', 'primary'), ('Trapezius, Upper', 'secondary'), ('Levator Scapulae', 'secondary'), ('Erector Spinae, Cervicis & Capitis Fibers', 'secondary'), ('Sternocleidomastoid', 'secondary'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Serratus Anterior', 'stabilizer'), ('Deltoid, Anterior', 'stabilizer'), ('Triceps Brachii', 'stabilizer'), ('Coracobrachialis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Neck Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Neck Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Seated Neck Extension
 WITH ex AS (
@@ -3416,11 +3416,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Splenius', 'primary'), ('Trapezius, Upper', 'secondary'), ('Levator Scapulae', 'secondary'), ('Erector Spinae, Cervicis & Capitis Fibers', 'secondary'), ('Sternocleidomastoid', 'secondary')) AS m(name, role)
-WHERE e.name = 'Weighted Seated Neck Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Seated Neck Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Neck Harness Extension
 WITH ex AS (
@@ -3429,11 +3429,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Splenius', 'primary'), ('Trapezius, Upper', 'secondary'), ('Levator Scapulae', 'secondary'), ('Erector Spinae, Cervicis & Capitis Fibers', 'secondary'), ('Sternocleidomastoid', 'secondary')) AS m(name, role)
-WHERE e.name = 'Weighted Neck Harness Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Neck Harness Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Band Resistive Neck Retraction
 WITH ex AS (
@@ -3442,11 +3442,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Band Resistive') FROM ex WHERE pg_temp.get_eq('Band Resistive') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Band Resistive') FROM ex WHERE pg_temp.get_eq('Band Resistive') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Splenius', 'primary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Erector Spinae, Cervicis & Capitis Fibers', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Band Resistive Neck Retraction' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Band Resistive Neck Retraction' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Wall Rear Neck Bridge
 WITH ex AS (
@@ -3455,11 +3455,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Splenius', 'primary'), ('Trapezius, Upper', 'secondary'), ('Levator Scapulae', 'secondary'), ('Sternocleidomastoid', 'secondary'), ('Erector Spinae', 'secondary'), ('Quadriceps', 'secondary'), ('Gluteus Maximus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Wall Rear Neck Bridge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Wall Rear Neck Bridge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lying Neck Retraction Isometric
 WITH ex AS (
@@ -3468,11 +3468,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Isometric') FROM ex WHERE pg_temp.get_eq('Isometric') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Isometric') FROM ex WHERE pg_temp.get_eq('Isometric') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Splenius', 'primary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Erector Spinae, Cervicis & Capitis Fibers', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lying Neck Retraction Isometric' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lying Neck Retraction Isometric' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Neck Extensor Stretch
 WITH ex AS (
@@ -3481,11 +3481,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Splenius', 'primary')) AS m(name, role)
-WHERE e.name = 'Neck Extensor Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Neck Extensor Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Neck Extension
 WITH ex AS (
@@ -3494,11 +3494,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Splenius', 'primary'), ('Trapezius, Upper', 'secondary'), ('Levator Scapulae', 'secondary'), ('Sternocleidomastoid', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Hamstrings', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Suspended Neck Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Neck Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Front Raise
 WITH ex AS (
@@ -3507,11 +3507,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Front Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Front Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Military Press
 WITH ex AS (
@@ -3520,11 +3520,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Triceps Brachii', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Military Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Military Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Seated Military Press
 WITH ex AS (
@@ -3533,11 +3533,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Deltoid, Lateral', 'secondary'), ('Supraspinatus', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Triceps Brachii, Long Head', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Seated Military Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Seated Military Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Isolateral Seated Front Raise
 WITH ex AS (
@@ -3546,11 +3546,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Isolateral Seated Front Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Isolateral Seated Front Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Alternating Isolateral Front Raise
 WITH ex AS (
@@ -3559,11 +3559,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Alternating Isolateral Front Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Alternating Isolateral Front Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable One Arm Front Raise
 WITH ex AS (
@@ -3572,11 +3572,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable One Arm Front Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable One Arm Front Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Isolateral Shoulder Press
 WITH ex AS (
@@ -3585,11 +3585,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Deltoid, Lateral', 'secondary'), ('Supraspinatus', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Isolateral Shoulder Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Isolateral Shoulder Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Arnold Press
 WITH ex AS (
@@ -3598,11 +3598,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Deltoid, Lateral', 'secondary'), ('Supraspinatus', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Arnold Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Arnold Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Front Raise
 WITH ex AS (
@@ -3611,11 +3611,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Front Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Front Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Alternating Front Raise
 WITH ex AS (
@@ -3624,11 +3624,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Alternating Front Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Alternating Front Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Shoulder Press
 WITH ex AS (
@@ -3637,11 +3637,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Deltoid, Lateral', 'secondary'), ('Supraspinatus', 'secondary'), ('Triceps Brachii', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Shoulder Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Shoulder Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell One Arm Shoulder Press
 WITH ex AS (
@@ -3650,11 +3650,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Deltoid, Lateral', 'secondary'), ('Supraspinatus', 'secondary'), ('Triceps Brachii', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Coracobrachialis', 'secondary'), ('Obliques', 'secondary'), ('Psoas Major', 'secondary'), ('Iliocostalis Lumborum', 'secondary'), ('Iliocostalis Thoracis', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell One Arm Shoulder Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell One Arm Shoulder Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Reclined Shoulder Press (plate loaded)
 WITH ex AS (
@@ -3663,11 +3663,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Deltoid, Lateral', 'secondary'), ('Supraspinatus', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Reclined Shoulder Press (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Reclined Shoulder Press (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Shoulder Press
 WITH ex AS (
@@ -3676,11 +3676,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Deltoid, Lateral', 'secondary'), ('Supraspinatus', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Shoulder Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Shoulder Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Shoulder Press (parallel grip)
 WITH ex AS (
@@ -3689,11 +3689,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Triceps Brachii', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Shoulder Press (parallel grip)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Shoulder Press (parallel grip)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Sled Shoulder Press
 WITH ex AS (
@@ -3702,11 +3702,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Deltoid, Lateral', 'secondary'), ('Supraspinatus', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Sled Shoulder Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Sled Shoulder Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Smith Shoulder Press
 WITH ex AS (
@@ -3715,11 +3715,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Triceps Brachii', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Smith Shoulder Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Smith Shoulder Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Pike Press (between benches)
 WITH ex AS (
@@ -3728,11 +3728,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Triceps Brachii', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Serratus Anterior', 'stabilizer'), ('Quadriceps', 'stabilizer'), ('Iliopsoas', 'stabilizer'), ('Tensor Fasciae Latae', 'stabilizer'), ('Sartorius', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Pike Press (between benches)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Pike Press (between benches)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Elevated Pike Press (between benches)
 WITH ex AS (
@@ -3741,11 +3741,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Triceps Brachii', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Quadriceps', 'stabilizer'), ('Iliopsoas', 'stabilizer'), ('Tensor Fasciae Latae', 'stabilizer'), ('Sartorius', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Elevated Pike Press (between benches)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Elevated Pike Press (between benches)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Front Raise
 WITH ex AS (
@@ -3754,11 +3754,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Suspended Front Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Front Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Doorway Front Deltoid Stretch
 WITH ex AS (
@@ -3767,11 +3767,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary')) AS m(name, role)
-WHERE e.name = 'Doorway Front Deltoid Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Doorway Front Deltoid Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Wall Front Deltoid Stretch
 WITH ex AS (
@@ -3780,11 +3780,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary')) AS m(name, role)
-WHERE e.name = 'Wall Front Deltoid Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Wall Front Deltoid Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Upright Row
 WITH ex AS (
@@ -3793,11 +3793,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Lateral', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Supraspinatus', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Upright Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Upright Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Isolateral Lateral Raise
 WITH ex AS (
@@ -3806,11 +3806,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Lateral', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Supraspinatus', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Isolateral Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Isolateral Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable One Arm Lateral Raise
 WITH ex AS (
@@ -3819,11 +3819,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Lateral', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Supraspinatus', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable One Arm Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable One Arm Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Upright Row
 WITH ex AS (
@@ -3832,11 +3832,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Lateral', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Supraspinatus', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Upright Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Upright Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable One Arm Upright Row
 WITH ex AS (
@@ -3845,11 +3845,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Lateral', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Supraspinatus', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable One Arm Upright Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable One Arm Upright Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Upright Row (with rope attachment)
 WITH ex AS (
@@ -3858,11 +3858,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Lateral', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Supraspinatus', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Upright Row (with rope attachment)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Upright Row (with rope attachment)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Incline Lateral Raise
 WITH ex AS (
@@ -3871,11 +3871,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Lateral', 'primary'), ('Deltoid, Posterior', 'secondary'), ('Supraspinatus', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Wrist Extensors', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Incline Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Incline Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Lateral Raise
 WITH ex AS (
@@ -3884,11 +3884,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Lateral', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Supraspinatus', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Lying Lateral Raise
 WITH ex AS (
@@ -3897,11 +3897,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Lateral', 'primary'), ('Deltoid, Posterior', 'secondary'), ('Supraspinatus', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Wrist Extensors', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Lying Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Lying Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Upright Row
 WITH ex AS (
@@ -3910,11 +3910,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Lateral', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Supraspinatus', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Upright Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Upright Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell One Arm Upright Row
 WITH ex AS (
@@ -3923,11 +3923,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Lateral', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Supraspinatus', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell One Arm Upright Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell One Arm Upright Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Isolateral Lateral Raise
 WITH ex AS (
@@ -3936,11 +3936,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Lateral', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Supraspinatus', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Isolateral Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Isolateral Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Smith Upright Row
 WITH ex AS (
@@ -3949,11 +3949,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Lateral', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Supraspinatus', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Smith Upright Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Smith Upright Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Side Deltoid Stretch
 WITH ex AS (
@@ -3962,11 +3962,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Lateral', 'primary')) AS m(name, role)
-WHERE e.name = 'Side Deltoid Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Side Deltoid Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Y Lateral Raise
 WITH ex AS (
@@ -3975,11 +3975,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Lateral', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Supraspinatus', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Teres Minor', 'secondary'), ('Infraspinatus', 'secondary'), ('Coracobrachialis', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Suspended Y Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Y Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Rear Delt Row
 WITH ex AS (
@@ -3988,11 +3988,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Posterior', 'primary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Adductor Magnus', 'stabilizer'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Rear Delt Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Rear Delt Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Rear Delt Row
 WITH ex AS (
@@ -4001,11 +4001,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Posterior', 'primary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Adductor Magnus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Rear Delt Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Rear Delt Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Standing Rear Delt Row (with rope)
 WITH ex AS (
@@ -4014,11 +4014,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Posterior', 'primary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Erector Spinae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Standing Rear Delt Row (with rope)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Standing Rear Delt Row (with rope)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Isolateral Standing Rear Delt Row
 WITH ex AS (
@@ -4027,11 +4027,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Posterior', 'primary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Erector Spinae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Isolateral Standing Rear Delt Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Isolateral Standing Rear Delt Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Rear Delt Row
 WITH ex AS (
@@ -4040,11 +4040,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Posterior', 'primary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Rhomboids', 'secondary'), ('Triceps Brachii', 'stabilizer'), ('Obliques', 'stabilizer'), ('Psoas Major', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Iliocostalis Lumborum', 'stabilizer'), ('Iliocostalis Thoracis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Rear Delt Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Rear Delt Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Rear Lateral Raise
 WITH ex AS (
@@ -4053,11 +4053,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Posterior', 'primary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Triceps Brachii', 'stabilizer'), ('Wrist Extensors', 'stabilizer'), ('Erector Spinae', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Adductor Magnus', 'stabilizer'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Rear Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Rear Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Seated Rear Lateral Raise
 WITH ex AS (
@@ -4066,11 +4066,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Posterior', 'primary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Triceps Brachii', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Seated Rear Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Seated Rear Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Isolateral Rear Delt Row (plate loaded)
 WITH ex AS (
@@ -4079,11 +4079,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Posterior', 'primary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Deltoid, Lateral', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Isolateral Rear Delt Row (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Isolateral Rear Delt Row (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Seated Rear Delt Row
 WITH ex AS (
@@ -4092,11 +4092,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Posterior', 'primary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Biceps Brachii', 'secondary'), ('Deltoid, Lateral', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Seated Rear Delt Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Seated Rear Delt Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Isolateral Seated Reverse Fly (pronated parallel grip)
 WITH ex AS (
@@ -4105,11 +4105,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Posterior', 'primary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Triceps Brachii', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Isolateral Seated Reverse Fly (pronated parallel grip)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Isolateral Seated Reverse Fly (pronated parallel grip)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Smith Rear Delt Row
 WITH ex AS (
@@ -4118,11 +4118,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Posterior', 'primary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Rhomboids', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Adductor Magnus', 'stabilizer'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Smith Rear Delt Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Smith Rear Delt Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Rear Delt Inverted Row (high bar)
 WITH ex AS (
@@ -4131,11 +4131,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Posterior', 'primary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Deltoid, Lateral', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Rear Delt Inverted Row (high bar)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Rear Delt Inverted Row (high bar)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Rear Delt Row
 WITH ex AS (
@@ -4145,11 +4145,11 @@ Position body and legs straight at desired angle hanging from handles with arms 
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Posterior', 'primary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Deltoid, Lateral', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Suspended Rear Delt Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Rear Delt Row' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Reverse Fly
 WITH ex AS (
@@ -4158,11 +4158,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Posterior', 'primary'), ('Infraspinatus', 'secondary'), ('Teres Minor', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Rhomboids', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Deltoid, Lateral', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Suspended Reverse Fly' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Reverse Fly' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Rear Deltoid Stretch
 WITH ex AS (
@@ -4171,11 +4171,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Posterior', 'primary')) AS m(name, role)
-WHERE e.name = 'Rear Deltoid Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Rear Deltoid Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Front Lateral Raise
 WITH ex AS (
@@ -4184,11 +4184,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Supraspinatus', 'primary'), ('Deltoid, Lateral', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Front Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Front Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Front Lateral Raise
 WITH ex AS (
@@ -4197,11 +4197,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Supraspinatus', 'primary'), ('Deltoid, Lateral', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Front Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Front Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Full Can Lateral Raise
 WITH ex AS (
@@ -4210,11 +4210,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Supraspinatus', 'primary'), ('Deltoid, Lateral', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Full Can Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Full Can Lateral Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Lunge
 WITH ex AS (
@@ -4223,11 +4223,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Tibialis Anterior', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Rear Lunge
 WITH ex AS (
@@ -4236,11 +4236,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Hamstrings', 'secondary'), ('Gastrocnemius', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Rear Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Rear Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Single Leg Split Squat
 WITH ex AS (
@@ -4249,11 +4249,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Single Leg Split Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Single Leg Split Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Split Squat
 WITH ex AS (
@@ -4262,11 +4262,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Hamstrings', 'secondary'), ('Gastrocnemius', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Split Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Split Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Squat
 WITH ex AS (
@@ -4275,11 +4275,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Front Squat
 WITH ex AS (
@@ -4288,11 +4288,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Deltoid, Anterior', 'stabilizer'), ('Deltoid, Lateral', 'stabilizer'), ('Supraspinatus', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Serratus Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Front Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Front Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Trap Bar Squat
 WITH ex AS (
@@ -4301,11 +4301,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Rhomboids', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Trap Bar Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Trap Bar Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Step-up
 WITH ex AS (
@@ -4314,11 +4314,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Gastrocnemius', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Step-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Step-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Rear Lunge
 WITH ex AS (
@@ -4327,11 +4327,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Hamstrings', 'secondary'), ('Gastrocnemius', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Rear Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Rear Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Split Squat
 WITH ex AS (
@@ -4340,11 +4340,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Hamstrings', 'secondary'), ('Gastrocnemius', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Erector Spinae', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Split Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Split Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Squat
 WITH ex AS (
@@ -4353,11 +4353,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Step Down
 WITH ex AS (
@@ -4366,11 +4366,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Step Down' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Step Down' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Step-up
 WITH ex AS (
@@ -4379,11 +4379,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Gastrocnemius', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Step-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Step-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Lunge
 WITH ex AS (
@@ -4392,11 +4392,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Tibialis Anterior', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Rear Lunge
 WITH ex AS (
@@ -4405,11 +4405,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Hamstrings', 'secondary'), ('Gastrocnemius', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Rear Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Rear Lunge' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Split Squat
 WITH ex AS (
@@ -4418,11 +4418,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Hamstrings', 'secondary'), ('Gastrocnemius', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Split Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Split Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Squat
 WITH ex AS (
@@ -4431,11 +4431,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Rhomboids', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Front Squat
 WITH ex AS (
@@ -4444,11 +4444,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Front Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Front Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Step-up
 WITH ex AS (
@@ -4457,11 +4457,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Gastrocnemius', 'secondary'), ('Hamstrings', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer'), ('Rectus Abdominis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Step-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Step-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Step Down
 WITH ex AS (
@@ -4470,11 +4470,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Gastrocnemius', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Step Down' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Step Down' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Premium Content
 WITH ex AS (
@@ -4483,11 +4483,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary')) AS m(name, role)
-WHERE e.name = 'Premium Content' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Premium Content' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever 45° Leg Press (plate loaded)
 WITH ex AS (
@@ -4496,11 +4496,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Hamstrings', 'secondary'), ('Gastrocnemius', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever 45° Leg Press (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever 45° Leg Press (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Lying Leg Press (plate loaded)
 WITH ex AS (
@@ -4509,11 +4509,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Lying Leg Press (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Lying Leg Press (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Seated Leg Press (plate loaded)
 WITH ex AS (
@@ -4522,11 +4522,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Seated Leg Press (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Seated Leg Press (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Single Leg Squat (plate loaded)
 WITH ex AS (
@@ -4535,11 +4535,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Hamstrings', 'secondary'), ('Gastrocnemius', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Single Leg Squat (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Single Leg Squat (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Split Squat (plate loaded)
 WITH ex AS (
@@ -4548,11 +4548,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Split Squat (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Split Squat (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Squat (plate loaded)
 WITH ex AS (
@@ -4561,11 +4561,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Squat (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Squat (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Barbell Squat (plate loaded)
 WITH ex AS (
@@ -4574,11 +4574,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Barbell Squat (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Barbell Squat (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Leg Extension
 WITH ex AS (
@@ -4587,11 +4587,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Brachioradialis', 'stabilizer'), ('Brachialis', 'stabilizer'), ('Biceps Brachii', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Leg Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Leg Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Seated Leg Press
 WITH ex AS (
@@ -4600,11 +4600,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Seated Leg Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Seated Leg Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Squat
 WITH ex AS (
@@ -4613,11 +4613,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever V-Squat
 WITH ex AS (
@@ -4626,11 +4626,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever V-Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever V-Squat' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Sled 45° Leg Press
 WITH ex AS (
@@ -4639,11 +4639,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Quadriceps', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Soleus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Sled 45° Leg Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Sled 45° Leg Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Machine-assisted Triceps Dip
 WITH ex AS (
@@ -4652,11 +4652,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Assisted') FROM ex WHERE pg_temp.get_eq('Assisted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Assisted') FROM ex WHERE pg_temp.get_eq('Assisted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Machine-assisted Triceps Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Machine-assisted Triceps Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Machine-assisted Triceps Dip (kneeling)
 WITH ex AS (
@@ -4665,11 +4665,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Assisted') FROM ex WHERE pg_temp.get_eq('Assisted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Assisted') FROM ex WHERE pg_temp.get_eq('Assisted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Machine-assisted Triceps Dip (kneeling)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Machine-assisted Triceps Dip (kneeling)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Close Grip Bench Press
 WITH ex AS (
@@ -4678,11 +4678,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii', 'secondary')) AS m(name, role)
-WHERE e.name = 'Barbell Close Grip Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Close Grip Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Lying Triceps Extension
 WITH ex AS (
@@ -4691,11 +4691,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Lying Triceps Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Lying Triceps Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Lying Triceps Extension "Skull Crusher"
 WITH ex AS (
@@ -4704,11 +4704,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Lying Triceps Extension "Skull Crusher"' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Lying Triceps Extension "Skull Crusher"' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Triceps Extension
 WITH ex AS (
@@ -4717,11 +4717,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Triceps Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Triceps Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Bent-over Triceps Extension
 WITH ex AS (
@@ -4730,11 +4730,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Wrist Flexors', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Bent-over Triceps Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Bent-over Triceps Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Lying Triceps Extension
 WITH ex AS (
@@ -4743,11 +4743,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Lying Triceps Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Lying Triceps Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Pushdown
 WITH ex AS (
@@ -4756,11 +4756,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Pushdown' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Pushdown' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable One Arm Pushdown
 WITH ex AS (
@@ -4769,11 +4769,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Obliques', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Wrist Extensors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable One Arm Pushdown' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable One Arm Pushdown' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Pushdown (with back support)
 WITH ex AS (
@@ -4782,11 +4782,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Pushdown (with back support)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Pushdown (with back support)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Pushdown (with V-bar)
 WITH ex AS (
@@ -4795,11 +4795,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Pushdown (with V-bar)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Pushdown (with V-bar)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Triceps Dip
 WITH ex AS (
@@ -4808,11 +4808,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Triceps Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Triceps Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Triceps Extension
 WITH ex AS (
@@ -4821,11 +4821,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Triceps Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Triceps Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Triceps Extension (with rope)
 WITH ex AS (
@@ -4834,11 +4834,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Triceps Extension (with rope)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Triceps Extension (with rope)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Kickback
 WITH ex AS (
@@ -4847,11 +4847,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Posterior', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Extensor Carpi Ulnaris', 'stabilizer'), ('Flexor Carpi Ulnaris', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Kickback' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Kickback' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Lying Triceps Extension
 WITH ex AS (
@@ -4860,11 +4860,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Extensor Carpi Ulnaris', 'stabilizer'), ('Flexor Carpi Ulnaris', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Lying Triceps Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Lying Triceps Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell One Arm Triceps Extension (on bench)
 WITH ex AS (
@@ -4873,11 +4873,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Wrist Extensors', 'stabilizer'), ('Flexor Carpi Ulnaris', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell One Arm Triceps Extension (on bench)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell One Arm Triceps Extension (on bench)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Triceps Extension
 WITH ex AS (
@@ -4886,11 +4886,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Triceps Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Triceps Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Triceps Dip (plate loaded)
 WITH ex AS (
@@ -4899,11 +4899,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Triceps Dip (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Triceps Dip (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Triceps Extension (plate loaded)
 WITH ex AS (
@@ -4912,11 +4912,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Triceps Extension (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Triceps Extension (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Triceps Dip
 WITH ex AS (
@@ -4925,11 +4925,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Triceps Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Triceps Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Triceps Dip
 WITH ex AS (
@@ -4938,11 +4938,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Triceps Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Triceps Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Triceps Extension
 WITH ex AS (
@@ -4951,11 +4951,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Extensor Carpi Ulnaris', 'stabilizer'), ('Flexor Carpi Ulnaris', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Triceps Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Triceps Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Triceps Extension (with preacher pad)
 WITH ex AS (
@@ -4964,11 +4964,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Extensor Carpi Ulnaris', 'stabilizer'), ('Flexor Carpi Ulnaris', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Triceps Extension (with preacher pad)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Triceps Extension (with preacher pad)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Sled Standing Triceps Dip
 WITH ex AS (
@@ -4977,11 +4977,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Sled Standing Triceps Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Sled Standing Triceps Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Smith Close Grip Bench Press
 WITH ex AS (
@@ -4990,11 +4990,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii', 'secondary')) AS m(name, role)
-WHERE e.name = 'Smith Close Grip Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Smith Close Grip Bench Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Bench Dip
 WITH ex AS (
@@ -5003,11 +5003,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Weighted Bench Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Bench Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Triceps Dip
 WITH ex AS (
@@ -5016,11 +5016,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Weighted Triceps Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Triceps Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Band-assisted Triceps Dip
 WITH ex AS (
@@ -5029,11 +5029,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Band Resistive') FROM ex WHERE pg_temp.get_eq('Band Resistive') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Band Resistive') FROM ex WHERE pg_temp.get_eq('Band Resistive') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Band-assisted Triceps Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Band-assisted Triceps Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Bench Dip
 WITH ex AS (
@@ -5042,11 +5042,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Bench Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Bench Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Bench Dip (heels on floor)
 WITH ex AS (
@@ -5055,11 +5055,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Bench Dip (heels on floor)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Bench Dip (heels on floor)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Close Grip Push-up
 WITH ex AS (
@@ -5068,11 +5068,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Coracobrachialis', 'secondary'), ('Serratus Anterior', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Close Grip Push-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Close Grip Push-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Close Grip Incline Push-up (on bar)
 WITH ex AS (
@@ -5081,11 +5081,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Coracobrachialis', 'secondary'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer'), ('Quadriceps', 'stabilizer'), ('Gastrocnemius', 'stabilizer'), ('Soleus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Close Grip Incline Push-up (on bar)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Close Grip Incline Push-up (on bar)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Close Grip Push-up (on knees)
 WITH ex AS (
@@ -5094,11 +5094,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Coracobrachialis', 'secondary'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Close Grip Push-up (on knees)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Close Grip Push-up (on knees)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Triceps Dip
 WITH ex AS (
@@ -5107,11 +5107,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Coracobrachialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Triceps Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Triceps Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Triceps Extension
 WITH ex AS (
@@ -5120,11 +5120,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Serratus Anterior', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer'), ('Quadriceps', 'stabilizer'), ('Gastrocnemius', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Suspended Triceps Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Triceps Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Self-assisted Triceps Dip
 WITH ex AS (
@@ -5133,11 +5133,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Self-assisted') FROM ex WHERE pg_temp.get_eq('Self-assisted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Self-assisted') FROM ex WHERE pg_temp.get_eq('Self-assisted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary'), ('Deltoid, Anterior', 'secondary'), ('Pectoralis Major, Sternal', 'secondary'), ('Pectoralis Major, Clavicular', 'secondary'), ('Pectoralis Minor', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Self-assisted Triceps Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Self-assisted Triceps Dip' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Overhead Triceps Stretch
 WITH ex AS (
@@ -5146,11 +5146,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary')) AS m(name, role)
-WHERE e.name = 'Overhead Triceps Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Overhead Triceps Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Towel Triceps Stretch
 WITH ex AS (
@@ -5159,11 +5159,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Triceps Brachii', 'primary')) AS m(name, role)
-WHERE e.name = 'Towel Triceps Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Towel Triceps Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Curl
 WITH ex AS (
@@ -5172,11 +5172,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Biceps Brachii', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Deltoid, Anterior', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Curl
 WITH ex AS (
@@ -5185,11 +5185,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Biceps Brachii', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Deltoid, Anterior', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Isolateral Curl
 WITH ex AS (
@@ -5198,11 +5198,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Biceps Brachii', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Flexors', 'stabilizer'), ('Coracobrachialis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Isolateral Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Isolateral Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable One Arm Curl
 WITH ex AS (
@@ -5211,11 +5211,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Biceps Brachii', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Deltoid, Anterior', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable One Arm Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable One Arm Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Curl
 WITH ex AS (
@@ -5224,11 +5224,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Biceps Brachii', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Deltoid, Anterior', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Incline Curl
 WITH ex AS (
@@ -5237,11 +5237,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Biceps Brachii', 'primary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Deltoid, Anterior', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Incline Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Incline Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Doorway Biceps Stretch
 WITH ex AS (
@@ -5250,11 +5250,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Biceps Brachii', 'primary')) AS m(name, role)
-WHERE e.name = 'Doorway Biceps Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Doorway Biceps Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Seated Biceps Stretch
 WITH ex AS (
@@ -5263,11 +5263,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Biceps Brachii', 'primary')) AS m(name, role)
-WHERE e.name = 'Seated Biceps Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Seated Biceps Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Preacher Curl
 WITH ex AS (
@@ -5276,11 +5276,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Brachialis', 'primary'), ('Biceps Brachii', 'secondary'), ('Brachioradialis', 'secondary'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Preacher Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Preacher Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Prone Incline Curl
 WITH ex AS (
@@ -5289,11 +5289,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Brachialis', 'primary'), ('Biceps Brachii', 'secondary'), ('Brachioradialis', 'secondary'), ('Wrist Flexors', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Rhomboids', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Prone Incline Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Prone Incline Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Concentration Curl
 WITH ex AS (
@@ -5302,11 +5302,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Brachialis', 'primary'), ('Biceps Brachii', 'secondary'), ('Brachioradialis', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Obliques', 'stabilizer'), ('Erector Spinae', 'stabilizer'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Concentration Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Concentration Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Preacher Curl
 WITH ex AS (
@@ -5315,11 +5315,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Brachialis', 'primary'), ('Biceps Brachii', 'secondary'), ('Brachioradialis', 'secondary'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Preacher Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Preacher Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Isolateral Preacher Curl
 WITH ex AS (
@@ -5328,11 +5328,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Brachialis', 'primary'), ('Biceps Brachii', 'secondary'), ('Brachioradialis', 'secondary'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Isolateral Preacher Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Isolateral Preacher Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Preacher Curl
 WITH ex AS (
@@ -5341,11 +5341,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Brachialis', 'primary'), ('Biceps Brachii', 'secondary'), ('Brachioradialis', 'secondary'), ('Wrist Flexors', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Preacher Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Preacher Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Isolateral Preacher Curl (arms high, plate loaded)
 WITH ex AS (
@@ -5354,11 +5354,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Brachialis', 'primary'), ('Biceps Brachii', 'secondary'), ('Brachioradialis', 'secondary'), ('Wrist Flexors', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Isolateral Preacher Curl (arms high, plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Isolateral Preacher Curl (arms high, plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Preacher Curl
 WITH ex AS (
@@ -5367,11 +5367,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Brachialis', 'primary'), ('Biceps Brachii', 'secondary'), ('Brachioradialis', 'secondary'), ('Wrist Flexors', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Preacher Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Preacher Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Arm Curl
 WITH ex AS (
@@ -5380,11 +5380,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Brachialis', 'primary'), ('Biceps Brachii', 'secondary'), ('Brachioradialis', 'secondary'), ('Erector Spinae', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Hamstrings', 'stabilizer'), ('Wrist Flexors', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Rhomboids', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Suspended Arm Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Arm Curl' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Push Crunch
 WITH ex AS (
@@ -5393,11 +5393,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Serratus Anterior', 'stabilizer'), ('Triceps Brachii', 'stabilizer'), ('Coracobrachialis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Push Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Push Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Kneeling Crunch
 WITH ex AS (
@@ -5406,11 +5406,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary'), ('Iliopsoas', 'stabilizer'), ('Tensor Fasciae Latae', 'stabilizer'), ('Rectus Femoris', 'stabilizer'), ('Sartorius', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Serratus Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Kneeling Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Kneeling Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Seated Crunch
 WITH ex AS (
@@ -5419,11 +5419,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary')) AS m(name, role)
-WHERE e.name = 'Cable Seated Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Seated Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Standing Overhead Crunch
 WITH ex AS (
@@ -5432,11 +5432,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary'), ('Iliopsoas', 'stabilizer'), ('Tensor Fasciae Latae', 'stabilizer'), ('Rectus Femoris', 'stabilizer'), ('Sartorius', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Serratus Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Standing Overhead Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Standing Overhead Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Push Crunch
 WITH ex AS (
@@ -5445,11 +5445,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Serratus Anterior', 'stabilizer'), ('Triceps Brachii', 'stabilizer'), ('Coracobrachialis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Push Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Push Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Lying Crunch (plate loaded)
 WITH ex AS (
@@ -5458,11 +5458,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Lying Crunch (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Lying Crunch (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Seated Leg Raise Crunch (plate loaded)
 WITH ex AS (
@@ -5471,11 +5471,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary'), ('Tensor Fasciae Latae', 'stabilizer'), ('Rectus Femoris', 'stabilizer'), ('Pectineus', 'stabilizer'), ('Sartorius', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Seated Leg Raise Crunch (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Seated Leg Raise Crunch (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Seated Crunch
 WITH ex AS (
@@ -5484,11 +5484,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Seated Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Seated Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Seated Crunch (arm bar)
 WITH ex AS (
@@ -5497,11 +5497,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer'), ('Coracobrachialis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Seated Crunch (arm bar)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Seated Crunch (arm bar)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Seated Crunch (arm pad)
 WITH ex AS (
@@ -5510,11 +5510,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Seated Crunch (arm pad)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Seated Crunch (arm pad)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Sled Leg Hip Raise (ab coaster)
 WITH ex AS (
@@ -5523,11 +5523,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Sartorius', 'secondary'), ('Rectus Femoris', 'secondary'), ('Obliques', 'secondary'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Sled Leg Hip Raise (ab coaster)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Sled Leg Hip Raise (ab coaster)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Crunch
 WITH ex AS (
@@ -5536,11 +5536,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary')) AS m(name, role)
-WHERE e.name = 'Weighted Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Crunch (plate on chest)
 WITH ex AS (
@@ -5549,11 +5549,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary')) AS m(name, role)
-WHERE e.name = 'Weighted Crunch (plate on chest)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Crunch (plate on chest)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Crunch (on stability ball)
 WITH ex AS (
@@ -5562,11 +5562,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary')) AS m(name, role)
-WHERE e.name = 'Weighted Crunch (on stability ball)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Crunch (on stability ball)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Incline Crunch
 WITH ex AS (
@@ -5575,11 +5575,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Weighted Incline Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Incline Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Incline Crunch (arms crossed)
 WITH ex AS (
@@ -5588,11 +5588,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Weighted Incline Crunch (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Incline Crunch (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Incline Sit-up
 WITH ex AS (
@@ -5601,11 +5601,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Rectus Femoris', 'secondary'), ('Sartorius', 'secondary'), ('Obliques', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Weighted Incline Sit-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Incline Sit-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Incline Sit-up (arms crossed)
 WITH ex AS (
@@ -5614,11 +5614,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Rectus Femoris', 'secondary'), ('Sartorius', 'secondary'), ('Obliques', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Weighted Incline Sit-up (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Incline Sit-up (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Sit-up
 WITH ex AS (
@@ -5627,11 +5627,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Rectus Femoris', 'secondary'), ('Sartorius', 'secondary'), ('Obliques', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Weighted Sit-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Sit-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Sit-up (arms crossed)
 WITH ex AS (
@@ -5640,11 +5640,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Rectus Femoris', 'secondary'), ('Sartorius', 'secondary'), ('Obliques', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Weighted Sit-up (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Sit-up (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Seated Twisting Leg Raise Crunch (plate loaded)
 WITH ex AS (
@@ -5653,11 +5653,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Rectus Abdominis', 'secondary'), ('Tensor Fasciae Latae', 'stabilizer'), ('Rectus Femoris', 'stabilizer'), ('Pectineus', 'stabilizer'), ('Sartorius', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer'), ('Coracobrachialis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Seated Twisting Leg Raise Crunch (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Seated Twisting Leg Raise Crunch (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Incline Twisting Crunch (arms crossed)
 WITH ex AS (
@@ -5666,11 +5666,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Rectus Abdominis', 'secondary'), ('Psoas Major', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Weighted Incline Twisting Crunch (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Incline Twisting Crunch (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Side Crunch
 WITH ex AS (
@@ -5679,11 +5679,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Rectus Abdominis', 'secondary')) AS m(name, role)
-WHERE e.name = 'Weighted Side Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Side Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Twisting Crunch
 WITH ex AS (
@@ -5692,11 +5692,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Rectus Abdominis', 'secondary'), ('Psoas Major', 'secondary')) AS m(name, role)
-WHERE e.name = 'Weighted Twisting Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Twisting Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Twisting Crunch (on stability ball)
 WITH ex AS (
@@ -5705,11 +5705,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Rectus Abdominis', 'secondary')) AS m(name, role)
-WHERE e.name = 'Weighted Twisting Crunch (on stability ball)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Twisting Crunch (on stability ball)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Incline Twisting Sit-up
 WITH ex AS (
@@ -5718,11 +5718,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Rectus Femoris', 'secondary'), ('Sartorius', 'secondary'), ('Rectus Abdominis', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Weighted Incline Twisting Sit-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Incline Twisting Sit-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Incline Twisting Sit-up (arms crossed)
 WITH ex AS (
@@ -5731,11 +5731,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Rectus Femoris', 'secondary'), ('Sartorius', 'secondary'), ('Rectus Abdominis', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Weighted Incline Twisting Sit-up (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Incline Twisting Sit-up (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Twisting Sit-up
 WITH ex AS (
@@ -5744,11 +5744,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Rectus Femoris', 'secondary'), ('Sartorius', 'secondary'), ('Rectus Abdominis', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Weighted Twisting Sit-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Twisting Sit-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Twisting Sit-up (arms crossed)
 WITH ex AS (
@@ -5757,11 +5757,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Rectus Femoris', 'secondary'), ('Sartorius', 'secondary'), ('Rectus Abdominis', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Weighted Twisting Sit-up (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Twisting Sit-up (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Crunch
 WITH ex AS (
@@ -5770,11 +5770,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary')) AS m(name, role)
-WHERE e.name = 'Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Crunch (arms crossed)
 WITH ex AS (
@@ -5783,11 +5783,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary')) AS m(name, role)
-WHERE e.name = 'Crunch (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Crunch (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Crunch (arms down)
 WITH ex AS (
@@ -5796,11 +5796,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary')) AS m(name, role)
-WHERE e.name = 'Crunch (arms down)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Crunch (arms down)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Incline Crunch
 WITH ex AS (
@@ -5809,11 +5809,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Incline Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Incline Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Incline Crunch (arms down)
 WITH ex AS (
@@ -5822,11 +5822,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Incline Crunch (arms down)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Incline Crunch (arms down)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Reclined Shoulder Press
 WITH ex AS (
@@ -5835,11 +5835,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Deltoid, Anterior', 'primary'), ('Deltoid, Lateral', 'secondary'), ('Supraspinatus', 'secondary'), ('Triceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Reclined Shoulder Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Reclined Shoulder Press' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Crunch (on stability ball, arms crossed)
 WITH ex AS (
@@ -5848,11 +5848,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary')) AS m(name, role)
-WHERE e.name = 'Crunch (on stability ball, arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Crunch (on stability ball, arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Hanging Leg-Hip Raise (with ab straps)
 WITH ex AS (
@@ -5861,11 +5861,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Pectineus', 'secondary'), ('Sartorius', 'secondary'), ('Adductor Longus', 'secondary'), ('Adductor Brevis', 'secondary'), ('Obliques', 'secondary')) AS m(name, role)
-WHERE e.name = 'Hanging Leg-Hip Raise (with ab straps)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Hanging Leg-Hip Raise (with ab straps)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Incline Sit-up
 WITH ex AS (
@@ -5874,11 +5874,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Rectus Femoris', 'secondary'), ('Sartorius', 'secondary'), ('Obliques', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Incline Sit-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Incline Sit-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Incline Sit-up (arms crossed)
 WITH ex AS (
@@ -5887,11 +5887,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Rectus Femoris', 'secondary'), ('Sartorius', 'secondary'), ('Obliques', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Incline Sit-up (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Incline Sit-up (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Sit-up
 WITH ex AS (
@@ -5900,11 +5900,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Rectus Femoris', 'secondary'), ('Sartorius', 'secondary'), ('Obliques', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Sit-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Sit-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Sit-up (arms crossed)
 WITH ex AS (
@@ -5913,11 +5913,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Rectus Femoris', 'secondary'), ('Sartorius', 'secondary'), ('Obliques', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Sit-up (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Sit-up (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Sit-up (arms down)
 WITH ex AS (
@@ -5926,11 +5926,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Rectus Femoris', 'secondary'), ('Sartorius', 'secondary'), ('Obliques', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Sit-up (arms down)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Sit-up (arms down)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Jack-knife
 WITH ex AS (
@@ -5939,11 +5939,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Pectineus', 'secondary'), ('Sartorius', 'secondary'), ('Adductor Longus', 'secondary'), ('Adductor Brevis', 'secondary'), ('Pectoralis Major', 'stabilizer'), ('Serratus Anterior', 'stabilizer'), ('Deltoid, Anterior', 'stabilizer'), ('Triceps Brachii', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Suspended Jack-knife' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Jack-knife' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Pull Through
 WITH ex AS (
@@ -5952,11 +5952,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Sartorius', 'secondary'), ('Pectoralis Minor', 'stabilizer'), ('Pectoralis Major', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Deltoid, Anterior', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Triceps Brachii', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Suspended Pull Through' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Pull Through' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Front Plank
 WITH ex AS (
@@ -5965,11 +5965,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Isometric') FROM ex WHERE pg_temp.get_eq('Isometric') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Isometric') FROM ex WHERE pg_temp.get_eq('Isometric') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'stabilizer'), ('Iliopsoas', 'stabilizer'), ('Tensor Fasciae Latae', 'stabilizer'), ('Quadriceps', 'stabilizer'), ('Sartorius', 'stabilizer'), ('Pectoralis Major', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Serratus Anterior', 'stabilizer'), ('Pectoralis Minor', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Front Plank' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Front Plank' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lying (prone) Abdominal Stretch
 WITH ex AS (
@@ -5978,11 +5978,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary')) AS m(name, role)
-WHERE e.name = 'Lying (prone) Abdominal Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lying (prone) Abdominal Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Standing Abdominal Stretch
 WITH ex AS (
@@ -5991,11 +5991,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary')) AS m(name, role)
-WHERE e.name = 'Standing Abdominal Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Standing Abdominal Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Abdominal Vacuum
 WITH ex AS (
@@ -6007,7 +6007,7 @@ SELECT 1 FROM ex; -- no equipment
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Transverse Abdominis', 'primary')) AS m(name, role)
-WHERE e.name = 'Abdominal Vacuum' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Abdominal Vacuum' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Side Bend
 WITH ex AS (
@@ -6016,11 +6016,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Quadratus Lumborum', 'secondary'), ('Psoas Major', 'secondary'), ('Iliocostalis Lumborum', 'secondary'), ('Iliocostalis Thoracis', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Side Bend' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Side Bend' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Side Crunch
 WITH ex AS (
@@ -6029,11 +6029,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Quadratus Lumborum', 'secondary'), ('Psoas Major', 'secondary'), ('Iliocostalis Lumborum', 'secondary'), ('Iliocostalis Thoracis', 'secondary'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer'), ('Brachialis', 'stabilizer'), ('Brachioradialis', 'stabilizer'), ('Biceps Brachii', 'stabilizer'), ('Coracobrachialis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Side Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Side Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Seated Twist
 WITH ex AS (
@@ -6042,11 +6042,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Psoas Major', 'secondary'), ('Quadratus Lumborum', 'secondary'), ('Iliocostalis Lumborum', 'secondary'), ('Iliocostalis Thoracis', 'secondary'), ('Rectus Abdominis', 'stabilizer'), ('Erector Spinae', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Deltoid, Anterior', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Deltoid, Lateral', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Adductors, Hip', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Seated Twist' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Seated Twist' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Twist
 WITH ex AS (
@@ -6055,11 +6055,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Tensor Fasciae Latae', 'secondary'), ('Gluteus Medius', 'secondary'), ('Gluteus Minimus', 'secondary'), ('Adductors, Hip', 'secondary'), ('Psoas Major', 'secondary'), ('Quadratus Lumborum', 'secondary'), ('Iliocostalis Lumborum', 'secondary'), ('Iliocostalis Thoracis', 'secondary'), ('Rectus Abdominis', 'stabilizer'), ('Erector Spinae', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Deltoid, Lateral', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Triceps Brachii', 'stabilizer'), ('Coracobrachialis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Twist' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Twist' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell Side Bend
 WITH ex AS (
@@ -6068,11 +6068,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Quadratus Lumborum', 'secondary'), ('Psoas Major', 'secondary'), ('Iliocostalis Lumborum', 'secondary'), ('Iliocostalis Thoracis', 'secondary'), ('Trapezius, Upper', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell Side Bend' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell Side Bend' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Seated Side Leg Raise Crunch (plate loaded)
 WITH ex AS (
@@ -6081,11 +6081,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Rectus Abdominis', 'secondary'), ('Tensor Fasciae Latae', 'stabilizer'), ('Rectus Femoris', 'stabilizer'), ('Pectineus', 'stabilizer'), ('Sartorius', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer'), ('Coracobrachialis', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Seated Side Leg Raise Crunch (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Seated Side Leg Raise Crunch (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Kneeling Twist
 WITH ex AS (
@@ -6094,11 +6094,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Psoas Major', 'secondary'), ('Quadratus Lumborum', 'secondary'), ('Iliocostalis Lumborum', 'secondary'), ('Iliocostalis Thoracis', 'secondary'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Deltoid, Anterior', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer'), ('Gluteus Maximus', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Kneeling Twist' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Kneeling Twist' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Seated Twist
 WITH ex AS (
@@ -6107,11 +6107,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Psoas Major', 'secondary'), ('Quadratus Lumborum', 'secondary'), ('Iliocostalis Lumborum', 'secondary'), ('Iliocostalis Thoracis', 'secondary'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Deltoid, Anterior', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Adductors, Hip', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Seated Twist' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Seated Twist' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Seated Twist
 WITH ex AS (
@@ -6120,11 +6120,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Psoas Major', 'secondary'), ('Quadratus Lumborum', 'secondary'), ('Iliocostalis Lumborum', 'secondary'), ('Iliocostalis Thoracis', 'secondary'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Deltoid, Anterior', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Adductors, Hip', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Seated Twist' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Seated Twist' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Seated Twist (gripless)
 WITH ex AS (
@@ -6133,11 +6133,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Psoas Major', 'secondary'), ('Quadratus Lumborum', 'secondary'), ('Iliocostalis Lumborum', 'secondary'), ('Iliocostalis Thoracis', 'secondary'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Deltoid, Anterior', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Adductors, Hip', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Seated Twist (gripless)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Seated Twist (gripless)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Sled Side Leg Hip Raise (ab coaster)
 WITH ex AS (
@@ -6146,11 +6146,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Sled') FROM ex WHERE pg_temp.get_eq('Sled') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Rectus Abdominis', 'secondary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Sartorius', 'secondary'), ('Rectus Femoris', 'secondary'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Sled Side Leg Hip Raise (ab coaster)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Sled Side Leg Hip Raise (ab coaster)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Isolateral Push Pull
 WITH ex AS (
@@ -6159,11 +6159,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary')) AS m(name, role)
-WHERE e.name = 'Cable Isolateral Push Pull' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Isolateral Push Pull' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Dumbbell One Arm Straight Leg Deadlift
 WITH ex AS (
@@ -6172,11 +6172,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Dumbbell') FROM ex WHERE pg_temp.get_eq('Dumbbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary'), ('Obliques', 'secondary'), ('Quadratus Lumborum', 'secondary'), ('Hamstrings', 'secondary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Trapezius, Middle', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Dumbbell One Arm Straight Leg Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Dumbbell One Arm Straight Leg Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Landmine Power Twist (plate loaded)
 WITH ex AS (
@@ -6185,11 +6185,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary')) AS m(name, role)
-WHERE e.name = 'Lever Landmine Power Twist (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Landmine Power Twist (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- 45° Side Bend
 WITH ex AS (
@@ -6198,11 +6198,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Quadratus Lumborum', 'secondary'), ('Psoas Major', 'secondary'), ('Iliocostalis Lumborum', 'secondary'), ('Iliocostalis Thoracis', 'secondary'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer')) AS m(name, role)
-WHERE e.name = '45° Side Bend' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = '45° Side Bend' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Side Bend (on stability ball, hand behind head)
 WITH ex AS (
@@ -6211,11 +6211,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Quadratus Lumborum', 'secondary'), ('Psoas Major', 'secondary'), ('Iliocostalis Lumborum', 'secondary'), ('Iliocostalis Thoracis', 'secondary')) AS m(name, role)
-WHERE e.name = 'Side Bend (on stability ball, hand behind head)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Side Bend (on stability ball, hand behind head)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Hanging Twisting Leg Raise
 WITH ex AS (
@@ -6224,11 +6224,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Pectineus', 'secondary'), ('Sartorius', 'secondary'), ('Adductor Longus', 'secondary'), ('Adductor Brevis', 'secondary'), ('Rectus Abdominis', 'stabilizer'), ('Rectus Femoris', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Hanging Twisting Leg Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Hanging Twisting Leg Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Hanging Twisting Leg Hip Raise
 WITH ex AS (
@@ -6237,11 +6237,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Rectus Abdominis', 'secondary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Pectineus', 'secondary'), ('Sartorius', 'secondary'), ('Adductor Longus', 'secondary'), ('Adductor Brevis', 'secondary'), ('Rectus Femoris', 'secondary')) AS m(name, role)
-WHERE e.name = 'Hanging Twisting Leg Hip Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Hanging Twisting Leg Hip Raise' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Incline Twisting Sit-up (arms crossed)
 WITH ex AS (
@@ -6250,11 +6250,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Rectus Femoris', 'secondary'), ('Sartorius', 'secondary'), ('Rectus Abdominis', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Incline Twisting Sit-up (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Incline Twisting Sit-up (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Twisting Sit-up
 WITH ex AS (
@@ -6263,11 +6263,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Rectus Femoris', 'secondary'), ('Sartorius', 'secondary'), ('Rectus Abdominis', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Twisting Sit-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Twisting Sit-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Twisting Sit-up (arms crossed)
 WITH ex AS (
@@ -6276,11 +6276,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Rectus Femoris', 'secondary'), ('Sartorius', 'secondary'), ('Rectus Abdominis', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Twisting Sit-up (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Twisting Sit-up (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Incline Twisting Crunch
 WITH ex AS (
@@ -6289,11 +6289,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Rectus Abdominis', 'secondary'), ('Psoas Major', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Incline Twisting Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Incline Twisting Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Incline Twisting Crunch (arms crossed)
 WITH ex AS (
@@ -6302,11 +6302,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Rectus Abdominis', 'secondary'), ('Psoas Major', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Incline Twisting Crunch (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Incline Twisting Crunch (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Side Crunch
 WITH ex AS (
@@ -6315,11 +6315,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Rectus Abdominis', 'secondary')) AS m(name, role)
-WHERE e.name = 'Side Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Side Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Twisting Crunch
 WITH ex AS (
@@ -6328,11 +6328,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Rectus Abdominis', 'secondary'), ('Psoas Major', 'secondary')) AS m(name, role)
-WHERE e.name = 'Twisting Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Twisting Crunch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Twisting Crunch (arms crossed)
 WITH ex AS (
@@ -6341,11 +6341,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Rectus Abdominis', 'secondary'), ('Psoas Major', 'secondary')) AS m(name, role)
-WHERE e.name = 'Twisting Crunch (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Twisting Crunch (arms crossed)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Twisting Crunch (on stability ball)
 WITH ex AS (
@@ -6354,11 +6354,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Rectus Abdominis', 'secondary')) AS m(name, role)
-WHERE e.name = 'Twisting Crunch (on stability ball)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Twisting Crunch (on stability ball)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Side Bend
 WITH ex AS (
@@ -6367,11 +6367,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Quadratus Lumborum', 'secondary'), ('Psoas Major', 'secondary'), ('Iliocostalis Lumborum', 'secondary'), ('Iliocostalis Thoracis', 'secondary'), ('Gluteus Medius', 'secondary'), ('Gluteus Minimus', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Adductors, Hip', 'secondary'), ('Pectineus', 'secondary'), ('Gracilis', 'secondary'), ('Gluteus Maximus, Lower Fibers', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Supraspinatus', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Serratus Anterior, Inferior Digitations', 'secondary'), ('Brachialis', 'secondary'), ('Brachioradialis', 'secondary'), ('Biceps Brachii', 'secondary'), ('Coracobrachialis', 'secondary'), ('Wrist Flexors', 'secondary'), ('Latissimus Dorsi', 'secondary'), ('Teres Major', 'secondary'), ('Rhomboids', 'secondary'), ('Levator Scapulae', 'secondary'), ('Triceps Brachii, Long Head', 'secondary')) AS m(name, role)
-WHERE e.name = 'Suspended Side Bend' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Side Bend' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Suspended Twisting Jack-knife
 WITH ex AS (
@@ -6380,11 +6380,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Suspended') FROM ex WHERE pg_temp.get_eq('Suspended') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Sartorius', 'secondary'), ('Pectineus', 'secondary'), ('Adductor Longus', 'secondary'), ('Adductor Brevis', 'secondary'), ('Quadratus Lumborum', 'secondary'), ('Iliocostalis Lumborum', 'secondary'), ('Iliocostalis Thoracis', 'secondary'), ('Rectus Abdominis', 'stabilizer'), ('Pectoralis Major', 'stabilizer'), ('Serratus Anterior', 'stabilizer'), ('Deltoid, Anterior', 'stabilizer'), ('Triceps Brachii', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Suspended Twisting Jack-knife' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Suspended Twisting Jack-knife' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Side Plank
 WITH ex AS (
@@ -6393,11 +6393,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Isometric') FROM ex WHERE pg_temp.get_eq('Isometric') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Isometric') FROM ex WHERE pg_temp.get_eq('Isometric') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Tensor Fasciae Latae', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Psoas Major', 'stabilizer'), ('Iliocostalis Lumborum', 'stabilizer'), ('Iliocostalis Thoracis', 'stabilizer'), ('Adductors, Hip', 'stabilizer'), ('Pectineus', 'stabilizer'), ('Gracilis', 'stabilizer'), ('Gluteus Maximus, Lower Fibers', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Pectoralis Major', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Side Plank' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Side Plank' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Bent Knee Side Plank
 WITH ex AS (
@@ -6406,11 +6406,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Isometric') FROM ex WHERE pg_temp.get_eq('Isometric') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Isometric') FROM ex WHERE pg_temp.get_eq('Isometric') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Tensor Fasciae Latae', 'stabilizer'), ('Quadratus Lumborum', 'stabilizer'), ('Psoas Major', 'stabilizer'), ('Iliocostalis Lumborum', 'stabilizer'), ('Iliocostalis Thoracis', 'stabilizer'), ('Adductors, Hip', 'stabilizer'), ('Pectineus', 'stabilizer'), ('Gluteus Maximus, Lower Fibers', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Pectoralis Major', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Levator Scapulae', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Bent Knee Side Plank' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Bent Knee Side Plank' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lying Crossover Stretch
 WITH ex AS (
@@ -6419,11 +6419,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary')) AS m(name, role)
-WHERE e.name = 'Lying Crossover Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lying Crossover Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Pretzel Stretch
 WITH ex AS (
@@ -6432,11 +6432,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Stretch') FROM ex WHERE pg_temp.get_eq('Stretch') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary')) AS m(name, role)
-WHERE e.name = 'Pretzel Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Pretzel Stretch' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Bent Knee Good-morning
 WITH ex AS (
@@ -6445,11 +6445,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary'), ('Gluteus Maximus', 'secondary'), ('Hamstrings', 'secondary'), ('Adductor Magnus', 'secondary'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Bent Knee Good-morning' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Bent Knee Good-morning' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Deadlift
 WITH ex AS (
@@ -6458,11 +6458,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Quadriceps', 'secondary'), ('Hamstrings', 'secondary'), ('Soleus', 'secondary'), ('Trapezius, Middle', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Rhomboids', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Seated Crunch (chest pad)
 WITH ex AS (
@@ -6471,11 +6471,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Rectus Abdominis', 'primary'), ('Obliques', 'secondary')) AS m(name, role)
-WHERE e.name = 'Lever Seated Crunch (chest pad)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Seated Crunch (chest pad)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Incline Twisting Sit-up
 WITH ex AS (
@@ -6484,11 +6484,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Obliques', 'primary'), ('Iliopsoas', 'secondary'), ('Tensor Fasciae Latae', 'secondary'), ('Rectus Femoris', 'secondary'), ('Sartorius', 'secondary'), ('Rectus Abdominis', 'secondary'), ('Tibialis Anterior', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Incline Twisting Sit-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Incline Twisting Sit-up' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Stiff Leg Deadlift
 WITH ex AS (
@@ -6497,11 +6497,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Hamstrings', 'secondary'), ('Quadriceps', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Stiff Leg Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Stiff Leg Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Straight Leg Deadlift
 WITH ex AS (
@@ -6510,11 +6510,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary'), ('Hamstrings', 'secondary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Trapezius, Middle', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Straight Leg Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Straight Leg Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell Hyperextension
 WITH ex AS (
@@ -6523,11 +6523,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer'), ('Brachialis', 'stabilizer'), ('Brachioradialis', 'stabilizer'), ('Biceps Brachii', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Rhomboids', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell Hyperextension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell Hyperextension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Barbell 45° Hyperextension
 WITH ex AS (
@@ -6536,11 +6536,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Barbell') FROM ex WHERE pg_temp.get_eq('Barbell') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary'), ('Latissimus Dorsi', 'stabilizer'), ('Teres Major', 'stabilizer'), ('Deltoid, Posterior', 'stabilizer'), ('Triceps Brachii, Long Head', 'stabilizer'), ('Brachialis', 'stabilizer'), ('Brachioradialis', 'stabilizer'), ('Biceps Brachii', 'stabilizer'), ('Coracobrachialis', 'stabilizer'), ('Trapezius, Lower', 'stabilizer'), ('Pectoralis Minor', 'stabilizer'), ('Rhomboids', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Barbell 45° Hyperextension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Barbell 45° Hyperextension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Cable Stiff Leg Deadlift
 WITH ex AS (
@@ -6549,11 +6549,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Cable') FROM ex WHERE pg_temp.get_eq('Cable') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Hamstrings', 'secondary'), ('Quadriceps', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Cable Stiff Leg Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Cable Stiff Leg Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Deadlift (plate loaded)
 WITH ex AS (
@@ -6562,11 +6562,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Quadriceps', 'secondary'), ('Soleus', 'secondary'), ('Trapezius, Middle', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Rhomboids', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Deadlift (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Deadlift (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Stiff Leg Deadlift (plate loaded)
 WITH ex AS (
@@ -6575,11 +6575,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (plate loaded)') FROM ex WHERE pg_temp.get_eq('Lever (plate loaded)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary'), ('Hamstrings', 'secondary'), ('Quadriceps', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Stiff Leg Deadlift (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Stiff Leg Deadlift (plate loaded)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Back Extension
 WITH ex AS (
@@ -6588,11 +6588,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary'), ('Quadriceps', 'stabilizer'), ('Gluteus Maximus', 'stabilizer'), ('Adductor Magnus', 'stabilizer'), ('Hamstrings', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Back Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Back Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Lever Back Extension
 WITH ex AS (
@@ -6601,11 +6601,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Lever (selectorized)') FROM ex WHERE pg_temp.get_eq('Lever (selectorized)') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Lever Back Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Lever Back Extension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Smith Bent Knee Good-morning
 WITH ex AS (
@@ -6614,11 +6614,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary'), ('Gluteus Maximus', 'secondary'), ('Hamstrings', 'secondary'), ('Adductor Magnus', 'secondary'), ('Quadriceps', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Smith Bent Knee Good-morning' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Smith Bent Knee Good-morning' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Smith Deadlift
 WITH ex AS (
@@ -6627,11 +6627,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary'), ('Gluteus Maximus', 'secondary'), ('Quadriceps', 'secondary'), ('Adductor Magnus', 'secondary'), ('Hamstrings', 'secondary'), ('Soleus', 'secondary'), ('Trapezius, Middle', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Rhomboids', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Smith Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Smith Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Smith Stiff Leg Deadlift
 WITH ex AS (
@@ -6640,11 +6640,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Smith') FROM ex WHERE pg_temp.get_eq('Smith') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary'), ('Gluteus Maximus', 'secondary'), ('Hamstrings', 'secondary'), ('Adductor Magnus', 'secondary'), ('Quadriceps', 'stabilizer'), ('Trapezius, Middle', 'stabilizer'), ('Rhomboids', 'stabilizer'), ('Latissimus Dorsi', 'stabilizer'), ('Trapezius, Upper', 'stabilizer'), ('Levator Scapulae', 'stabilizer'), ('Trapezius, Lower', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Smith Stiff Leg Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Smith Stiff Leg Deadlift' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted Hyperextension
 WITH ex AS (
@@ -6653,11 +6653,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary')) AS m(name, role)
-WHERE e.name = 'Weighted Hyperextension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted Hyperextension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Weighted 45° Hyperextension
 WITH ex AS (
@@ -6666,11 +6666,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Weighted') FROM ex WHERE pg_temp.get_eq('Weighted') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary')) AS m(name, role)
-WHERE e.name = 'Weighted 45° Hyperextension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Weighted 45° Hyperextension' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Back Extension (on stability ball, arms down)
 WITH ex AS (
@@ -6679,11 +6679,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary'), ('Gluteus Maximus', 'secondary'), ('Adductor Magnus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Back Extension (on stability ball, arms down)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Back Extension (on stability ball, arms down)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Bird Dog
 WITH ex AS (
@@ -6692,11 +6692,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary'), ('Gluteus Maximus', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Coracobrachialis', 'secondary'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Piriformis', 'stabilizer'), ('Hip External Rotators', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Serratus Anterior', 'stabilizer'), ('Triceps Brachii', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Bird Dog' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Bird Dog' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Alternating Bird Dog
 WITH ex AS (
@@ -6705,11 +6705,11 @@ WITH ex AS (
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary'), ('Gluteus Maximus', 'secondary'), ('Trapezius, Lower', 'secondary'), ('Trapezius, Middle', 'secondary'), ('Deltoid, Anterior', 'secondary'), ('Deltoid, Lateral', 'secondary'), ('Coracobrachialis', 'secondary'), ('Hamstrings', 'secondary'), ('Gluteus Medius', 'stabilizer'), ('Gluteus Minimus', 'stabilizer'), ('Piriformis', 'stabilizer'), ('Hip External Rotators', 'stabilizer'), ('Pectoralis Major, Sternal', 'stabilizer'), ('Pectoralis Major, Clavicular', 'stabilizer'), ('Serratus Anterior', 'stabilizer'), ('Triceps Brachii', 'stabilizer'), ('Rectus Abdominis', 'stabilizer'), ('Obliques', 'stabilizer')) AS m(name, role)
-WHERE e.name = 'Alternating Bird Dog' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Alternating Bird Dog' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 -- Hyperextension (45°)
 WITH ex AS (
@@ -6724,10 +6724,10 @@ Begin with arms in low position and gradually position arms in higher position t
   RETURNING id
 )
 INSERT INTO public.exercise_equipment (exercise_id, equipment_id)
-SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL;
+SELECT ex.id, pg_temp.get_eq('Bodyweight') FROM ex WHERE pg_temp.get_eq('Bodyweight') IS NOT NULL ON CONFLICT (exercise_id, equipment_id) DO NOTHING;
 INSERT INTO public.exercise_muscles (exercise_id, muscle_id, role)
 SELECT e.id, pg_temp.get_mu(m.name), m.role FROM public.exercises e,
   (VALUES ('Erector Spinae', 'primary'), ('Gluteus Maximus', 'secondary'), ('Hamstrings', 'secondary'), ('Adductor Magnus', 'secondary')) AS m(name, role)
-WHERE e.name = 'Hyperextension (45°)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL;
+WHERE e.name = 'Hyperextension (45°)' AND e.is_custom = false AND pg_temp.get_mu(m.name) IS NOT NULL ON CONFLICT (exercise_id, muscle_id) DO NOTHING;
 
 COMMIT;
