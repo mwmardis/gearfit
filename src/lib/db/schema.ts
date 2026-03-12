@@ -19,6 +19,7 @@ export const profiles = pgTable("profiles", {
   displayName: text("display_name"),
   avatarUrl: text("avatar_url"),
   preferredUnits: text("preferred_units").notNull().default("lbs"),
+  trainingGoal: text("training_goal").notNull().default("hypertrophy"),
   overloadSessionsThreshold: integer("overload_sessions_threshold").notNull().default(3),
   overloadIncrementLbs: numeric("overload_increment_lbs").notNull().default("5"),
   overloadIncrementKg: numeric("overload_increment_kg").notNull().default("2.5"),
