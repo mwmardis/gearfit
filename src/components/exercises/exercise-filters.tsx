@@ -88,7 +88,7 @@ export function ExerciseFilters({
           {muscleGroups.map((mg) => (
             <Button
               key={mg.value}
-              aria-pressed={activeCategory === mg.value}
+              aria-pressed={mg.value ? activeCategory === mg.value : undefined}
               variant={activeCategory === mg.value ? "default" : "outline"}
               size="sm"
               onClick={() => handleCategoryClick(mg.value)}
