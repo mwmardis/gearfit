@@ -1,10 +1,10 @@
-import { getWeeklyMuscleCoverage } from "@/lib/actions/history";
+import { getWeeklyVolumeStatus, getWorkoutRecommendation } from "@/lib/actions/history";
 import { getTemplates } from "@/lib/actions/templates";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { workoutSessions, workoutTemplates } from "@/lib/db/schema";
 import { eq, desc, and, sql } from "drizzle-orm";
-import { MuscleCoverage } from "@/components/dashboard/muscle-coverage";
+import { VolumeReport } from "@/components/dashboard/volume-report";
 import { TodaysWorkout } from "@/components/dashboard/todays-workout";
 import { RecentSessions } from "@/components/dashboard/recent-sessions";
 import { QuickActions } from "@/components/dashboard/quick-actions";
@@ -14,32 +14,44 @@ export default async function DashboardPage() {
   const session = await auth();
   const profileId = (session?.user as { profileId?: string })?.profileId;
 
-  const [coverage, templates, recentSessionsData] = await Promise.all([
-    getWeeklyMuscleCoverage(),
-    getTemplates(),
-    profileId
-      ? db
-          .select({
-            id: workoutSessions.id,
-            date: workoutSessions.date,
-            durationMinutes: workoutSessions.durationMinutes,
-            templateName: workoutTemplates.name,
-            totalSets: sql<number>`(select count(*) from session_sets where session_id = ${workoutSessions.id})`.as("total_sets"),
-          })
-          .from(workoutSessions)
-          .leftJoin(workoutTemplates, eq(workoutSessions.templateId, workoutTemplates.id))
-          .where(
-            and(
-              eq(workoutSessions.userId, profileId),
-              eq(workoutSessions.completed, true)
+  const [recommendation, volumeStatus, templates, recentSessionsData] =
+    await Promise.all([
+      getWorkoutRecommendation(),
+      getWeeklyVolumeStatus(),
+      getTemplates(),
+      profileId
+        ? db
+            .select({
+              id: workoutSessions.id,
+              date: workoutSessions.date,
+              durationMinutes: workoutSessions.durationMinutes,
+              templateName: workoutTemplates.name,
+              totalSets:
+                sql<number>`(select count(*) from session_sets where session_id = ${workoutSessions.id})`.as(
+                  "total_sets"
+                ),
+            })
+            .from(workoutSessions)
+            .leftJoin(
+              workoutTemplates,
+              eq(workoutSessions.templateId, workoutTemplates.id)
             )
-          )
-          .orderBy(desc(workoutSessions.date))
-          .limit(5)
-      : Promise.resolve([]),
-  ]);
+            .where(
+              and(
+                eq(workoutSessions.userId, profileId),
+                eq(workoutSessions.completed, true)
+              )
+            )
+            .orderBy(desc(workoutSessions.date))
+            .limit(5)
+        : Promise.resolve([]),
+    ]);
 
-  const todaysTemplate = templates.length > 0 ? templates[0] : null;
+  // Find the recommended template's exercises for display
+  const recommendedTemplate =
+    recommendation.type === "workout" && recommendation.template
+      ? templates.find((t) => t.id === recommendation.template!.id)
+      : null;
 
   const recentSessions = recentSessionsData.map((s) => ({
     id: s.id,
@@ -70,12 +82,15 @@ export default async function DashboardPage() {
         </div>
       </div>
 
-      {/* Today's workout — hero card */}
-      <TodaysWorkout template={todaysTemplate} />
+      {/* Today's workout — recommendation card */}
+      <TodaysWorkout
+        recommendation={recommendation}
+        templateExercises={recommendedTemplate?.templateExercises}
+      />
 
       {/* Two-column grid */}
       <div className="grid gap-6 md:grid-cols-2">
-        <MuscleCoverage coverage={coverage} />
+        <VolumeReport volumeStatus={volumeStatus} />
         <QuickActions />
       </div>
 

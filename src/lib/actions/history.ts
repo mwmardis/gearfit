@@ -2,9 +2,12 @@
 "use server";
 
 import { db } from "@/lib/db";
-import { workoutSessions, sessionSets, exercises, exerciseMuscles, muscles } from "@/lib/db/schema";
-import { eq, and, gte, lte, desc, asc } from "drizzle-orm";
+import { workoutSessions, sessionSets, exercises, exerciseMuscles, muscles, profiles, workoutTemplates } from "@/lib/db/schema";
+import { eq, and, gte, lte, desc, asc, sql } from "drizzle-orm";
+import { getRecommendation, type TemplateForScoring, type WorkoutRecommendation } from "@/lib/workout-recommender";
 import { requireAuth, getOptionalAuth } from "@/lib/auth-utils";
+import { getVolumeTargets, type TrainingGoal } from "@/lib/volume-targets";
+import { computeVolumeStatus, type MuscleVolumeStatus } from "@/lib/volume-analysis";
 
 export async function getSessionsByMonth(year: number, month: number) {
   const { profileId } = await requireAuth();
@@ -221,4 +224,175 @@ export async function getWeeklyMuscleCoverage() {
   return Array.from(coverage.entries())
     .map(([group, sets]) => ({ group, sets }))
     .sort((a, b) => b.sets - a.sets);
+}
+
+export async function getWeeklyVolumeStatus(): Promise<MuscleVolumeStatus[]> {
+  const authUser = await getOptionalAuth();
+  if (!authUser) return [];
+
+  const [profile] = await db
+    .select({ trainingGoal: profiles.trainingGoal })
+    .from(profiles)
+    .where(eq(profiles.id, authUser.profileId))
+    .limit(1);
+
+  const goal = (profile?.trainingGoal ?? "hypertrophy") as TrainingGoal;
+  const targets = getVolumeTargets(goal);
+
+  const sevenDaysAgo = new Date();
+  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+  const cutoff = sevenDaysAgo.toISOString().split("T")[0];
+
+  const sets = await db.query.sessionSets.findMany({
+    with: {
+      exercise: {
+        with: {
+          exerciseMuscles: {
+            with: { muscle: true },
+          },
+        },
+      },
+      session: true,
+    },
+  });
+
+  const userSets = sets.filter(
+    (s) =>
+      s.session.userId === authUser.profileId &&
+      s.session.completed &&
+      s.session.date >= cutoff
+  );
+
+  const setsWithMuscles = userSets.map((s) => ({
+    muscles: s.exercise.exerciseMuscles.map((em) => ({
+      muscleGroup: em.muscle?.muscleGroup ?? "",
+      role: em.role as "primary" | "secondary",
+    })),
+  }));
+
+  return computeVolumeStatus(setsWithMuscles, targets);
+}
+
+export async function getConsecutiveTrainingDays(): Promise<number> {
+  const authUser = await getOptionalAuth();
+  if (!authUser) return 0;
+
+  const recentSessions = await db
+    .select({ date: workoutSessions.date })
+    .from(workoutSessions)
+    .where(
+      and(
+        eq(workoutSessions.userId, authUser.profileId),
+        eq(workoutSessions.completed, true)
+      )
+    )
+    .orderBy(desc(workoutSessions.date))
+    .limit(30);
+
+  if (recentSessions.length === 0) return 0;
+
+  const dates = [...new Set(recentSessions.map((s) => s.date))].sort().reverse();
+  const today = new Date().toISOString().split("T")[0];
+
+  const mostRecent = dates[0];
+  const diffFromToday = Math.round(
+    (new Date(today).getTime() - new Date(mostRecent).getTime()) / (1000 * 60 * 60 * 24)
+  );
+  if (diffFromToday > 1) return 0;
+
+  let streak = 0;
+  const expected = new Date(mostRecent);
+  for (const dateStr of dates) {
+    const expectedStr = expected.toISOString().split("T")[0];
+    if (dateStr === expectedStr) {
+      streak++;
+      expected.setDate(expected.getDate() - 1);
+    } else {
+      break;
+    }
+  }
+
+  return streak;
+}
+
+export async function getWorkoutRecommendation(): Promise<WorkoutRecommendation> {
+  const authUser = await getOptionalAuth();
+  if (!authUser) {
+    return { type: "workout", reason: "Sign in to get personalized recommendations." };
+  }
+
+  const [volumeStatus, consecutiveDays] = await Promise.all([
+    getWeeklyVolumeStatus(),
+    getConsecutiveTrainingDays(),
+  ]);
+
+  const today = new Date().toISOString().split("T")[0];
+
+  // Get user's templates with their exercises
+  const userTemplates = await db.query.workoutTemplates.findMany({
+    where: eq(workoutTemplates.userId, authUser.profileId),
+    with: {
+      templateExercises: {
+        with: {
+          exercise: {
+            with: {
+              exerciseMuscles: {
+                with: { muscle: true },
+              },
+            },
+          },
+        },
+      },
+    },
+  });
+
+  // Get last-used dates per template
+  const recentSessions = await db
+    .select({
+      templateId: workoutSessions.templateId,
+      date: workoutSessions.date,
+    })
+    .from(workoutSessions)
+    .where(
+      and(
+        eq(workoutSessions.userId, authUser.profileId),
+        eq(workoutSessions.completed, true)
+      )
+    )
+    .orderBy(desc(workoutSessions.date));
+
+  const lastUsedMap = new Map<string, string>();
+  for (const s of recentSessions) {
+    if (s.templateId && !lastUsedMap.has(s.templateId)) {
+      lastUsedMap.set(s.templateId, s.date);
+    }
+  }
+
+  // Build scoring input
+  const templatesForScoring: TemplateForScoring[] = userTemplates.map((t) => {
+    const muscleGroupSet = new Set<string>();
+    for (const te of t.templateExercises) {
+      if (te.exercise) {
+        for (const em of te.exercise.exerciseMuscles) {
+          if (em.role === "primary" && em.muscle) {
+            muscleGroupSet.add(em.muscle.muscleGroup);
+          }
+        }
+      }
+    }
+
+    return {
+      id: t.id,
+      name: t.name,
+      muscleGroups: [...muscleGroupSet],
+      lastUsedDate: lastUsedMap.get(t.id) ?? null,
+    };
+  });
+
+  const volumeInput = volumeStatus.map((v) => ({
+    muscleGroup: v.muscleGroup,
+    status: v.status,
+  }));
+
+  return getRecommendation(templatesForScoring, volumeInput, consecutiveDays, today);
 }

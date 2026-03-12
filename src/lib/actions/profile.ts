@@ -28,12 +28,14 @@ export async function updateProfile(formData: FormData) {
   const overloadSessionsThreshold = Number(formData.get("overload_sessions_threshold"));
   const overloadIncrementLbs = Number(formData.get("overload_increment_lbs"));
   const overloadIncrementKg = Number(formData.get("overload_increment_kg"));
+  const trainingGoal = formData.get("training_goal") as string;
 
   await db
     .update(profiles)
     .set({
       displayName: displayName || null,
       preferredUnits,
+      trainingGoal: trainingGoal || "hypertrophy",
       overloadSessionsThreshold,
       overloadIncrementLbs: String(overloadIncrementLbs),
       overloadIncrementKg: String(overloadIncrementKg),
